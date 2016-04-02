@@ -1,0 +1,53 @@
+.hero {
+	margin-top: 2em;
+	margin-bottom: 1.5em;
+}
+
+article {
+	@include container;
+		@include breakpoint($mobile) {
+      		padding-left: 1em;
+      		padding-right: 1em;
+  	}
+}
+
+article p {
+	font-size: .8em;
+}
+
+
+.block-3 {
+	@include span(4 of 12);
+		margin-bottom: 2em;
+		@include breakpoint($mobile) {
+      		@include span(12);
+      		margin-bottom: 1em;
+  	}
+}
+
+
+.last {
+	@include last;
+}
+
+
+.page-contnet-area {
+	@include span(3 of 4);
+		@include breakpoint($mobile) {
+      		@include span(4);
+  	}
+}
+
+.page-contnet-area-full {
+	@include span(4);
+		@include breakpoint($mobile) {
+			
+  	}
+}
+
+.right-sidebar {
+	@include span(1 of 4 last);
+		@include breakpoint($mobile) {
+      		@include span(4);
+  	}
+}

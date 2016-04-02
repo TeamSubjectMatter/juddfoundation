@@ -42,14 +42,38 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
+
+/*--------------------------------------------------------------
+# Import libraries & Normalize
+--------------------------------------------------------------*/
+@import 'normalize';
+@import 'lib/bourbon/bourbon';
+@import "lib/susy/susy";
+@import "lib/breakpoint/breakpoint";
+
+/*--------------------------------------------------------------
+# Base styles
+--------------------------------------------------------------*/
+@import "variables";
+@import "base/sitewide";
+@import "base/typography";
+@import "components/buttons";
+@import "components/forms";
+@import "components/lists";
+@import "components/tables";
+
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+@import "utilities/utilities";
+@import "utilities/mixins";
+
+/*--------------------------------------------------------------
+# Import libraries
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-@import "normalize";
 
 /*--------------------------------------------------------------
 # Typography

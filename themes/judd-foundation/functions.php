@@ -121,6 +121,69 @@ function home_body_class( $classes ) {
      
 }
 
+/*
+* Creating a function to create our Locations custom post type
+*/
+
+function custom_post_type() {
+
+// Set UI labels for Custom Post Type
+	$labels = array(
+		'name'                => _x( 'Artwork', 'Post Type General Name', 'judd-foundation' ),
+		'singular_name'       => _x( 'Artwork', 'Post Type Singular Name', 'judd-foundation' ),
+		'menu_name'           => __( 'Artwork', 'judd-foundation' ),
+		'parent_item_colon'   => __( 'Parent Locations', 'judd-foundation' ),
+		'all_items'           => __( 'All Artwork', 'judd-foundation' ),
+		'view_item'           => __( 'View Artwork', 'judd-foundation' ),
+		'add_new_item'        => __( 'Add New Artwork', 'judd-foundation' ),
+		'add_new'             => __( 'Add New', 'judd-foundation' ),
+		'edit_item'           => __( 'Edit Artwork', 'judd-foundation' ),
+		'update_item'         => __( 'Update Artwork', 'judd-foundation' ),
+		'search_items'        => __( 'Search Artwork', 'judd-foundation' ),
+		'not_found'           => __( 'Not Found', 'judd-foundation' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
+	);
+	
+// Set other options for Custom Post Type
+	
+	$args = array(
+		'label'               => __( 'artwork', 'judd-foundation' ),
+		'description'         => __( 'Donald Judd artwork', 'judd-foundation' ),
+		'labels'              => $labels,
+		// Features this CPT supports in Post Editor
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+		// You can associate this CPT with a taxonomy or custom taxonomy. 
+		'taxonomies' => array('category',),
+		/* A hierarchical CPT is like Pages and can have
+		* Parent and child items. A non-hierarchical CPT
+		* is like Posts.
+		*/	
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+	);
+	
+	// Registering your Custom Post Type
+	register_post_type( 'artwork', $args );
+
+}
+
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not 
+* unnecessarily executed. 
+*/
+
+add_action( 'init', 'custom_post_type', 0 );
+
 /**
  * Enqueue scripts and styles.
  */

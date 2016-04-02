@@ -1,0 +1,24 @@
+
+
+.top-nav {
+	@include container;
+	margin-bottom: 1em;
+		@include breakpoint($mobile) {
+      		padding-left: .5em;
+      		padding-right: .5em;
+     }
+}
+
+.top-nav li {
+	display: inline-block;
+	margin-right: 1.5em;
+	font-size: .9em;
+}
+
+.top-nav a {
+	color: $black;
+}
+
+.top-nav a:hover {
+	color: $gold;
+}

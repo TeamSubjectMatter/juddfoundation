@@ -1,0 +1,40 @@
+footer {
+	background-color: $black;
+	color: $white;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+}
+
+footer a {
+	color: $white;
+}
+
+.footer-container {
+	@include container;
+		@include breakpoint($mobile) {
+      		padding-left: 1em;
+      		padding-right: 1em;
+     }
+}
+
+.footer-left {
+	@include span(5 of 12);
+		@include breakpoint($mobile) {
+      		@include span(12);
+     }
+}
+
+.footer-right {
+	@include push (2);
+	@include span(4 of 12 last);
+		@include breakpoint($mobile) {
+      		@include span(12);
+     }
+}
+
+.footer-nav li {
+	display: inline-block;
+	list-style: none;
+	margin-right: 15px;
+	font-size: .8em;
+}
