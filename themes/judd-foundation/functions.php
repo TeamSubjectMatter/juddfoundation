@@ -110,6 +110,17 @@ function judd_foundation_widgets_init() {
 }
 add_action( 'widgets_init', 'judd_foundation_widgets_init' );
 
+add_filter( 'body_class','home_body_class' );
+function home_body_class( $classes ) {
+ 
+    if ( is_page_template( 'front-page.php' ) ) {
+        $classes[] = 'home';
+    }
+     
+    return $classes;
+     
+}
+
 /**
  * Enqueue scripts and styles.
  */
@@ -150,3 +161,7 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );

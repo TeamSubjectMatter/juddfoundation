@@ -14,6 +14,13 @@
 
 get_header('home'); ?>
 
+<style>
+	.home {
+	@include background-image(url("images/judd-foundation-homepage-image.jpg"));
+  	background-size: cover;
+}
+</style>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

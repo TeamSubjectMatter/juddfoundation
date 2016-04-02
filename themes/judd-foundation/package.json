@@ -1,0 +1,37 @@
+{
+  "name": "wp-gulp",
+  "version": "1.0.0",
+  "description": "Gulp tasks to compile sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamSubjectMatter/juddfoundation.git"
+  },
+  "keywords": [
+    "Wordpress",
+    "gulp",
+    "node"
+  ],
+  "author": "Peter Kaizer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeamSubjectMatter/juddfoundation/issues"
+  },
+  "homepage": "https://github.com/TeamSubjectMatter/juddfoundation#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.1.2",
+    "gulp": "^3.9.1",
+    "browser-sync": "^2.10.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-watch": "^4.3.5",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-postcss": "^6.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}
