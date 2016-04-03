@@ -122,17 +122,17 @@ function home_body_class( $classes ) {
 }
 
 /*
-* Creating a function to create our Locations custom post type
+A function to create our Donald Judd Art Work custom post type and Foundation Spaces custom post type
 */
 
 function custom_post_type() {
 
-// Set UI labels for Custom Post Type
+// Set UI labels for Custom Post Types
 	$labels = array(
 		'name'                => _x( 'Artwork', 'Post Type General Name', 'judd-foundation' ),
 		'singular_name'       => _x( 'Artwork', 'Post Type Singular Name', 'judd-foundation' ),
 		'menu_name'           => __( 'Artwork', 'judd-foundation' ),
-		'parent_item_colon'   => __( 'Parent Locations', 'judd-foundation' ),
+		'parent_item_colon'   => __( 'Parent Artwork', 'judd-foundation' ),
 		'all_items'           => __( 'All Artwork', 'judd-foundation' ),
 		'view_item'           => __( 'View Artwork', 'judd-foundation' ),
 		'add_new_item'        => __( 'Add New Artwork', 'judd-foundation' ),
@@ -144,7 +144,7 @@ function custom_post_type() {
 		'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
 	);
 	
-// Set other options for Custom Post Type
+// Set other options for Custom Post Types
 	
 	$args = array(
 		'label'               => __( 'artwork', 'judd-foundation' ),
@@ -172,7 +172,7 @@ function custom_post_type() {
 		'capability_type'     => 'post',
 	);
 	
-	// Registering your Custom Post Type
+	// Registering your Custom Post Types
 	register_post_type( 'artwork', $args );
 
 }
@@ -183,6 +183,7 @@ function custom_post_type() {
 */
 
 add_action( 'init', 'custom_post_type', 0 );
+
 
 /**
  * Enqueue scripts and styles.
