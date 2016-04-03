@@ -21,11 +21,8 @@
 
 </head>
 
-<body <?php body_class(); ?>>
-
+<body <?php body_class(); ?> style="background: url('<?php the_field("homepage_image"); ?>') no-repeat center center fixed; background-size: cover;">
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'judd-foundation' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'menu' => 'Home Page Nav' ) ); ?>
 		</nav><!-- #site-navigation -->
-
