@@ -1,6 +1,10 @@
 .hero {
 	margin-top: 2em;
 	margin-bottom: 1.5em;
+	min-height: 500px;
+		@include breakpoint($mobile) {
+			min-height: 200px;
+	}
 }
 
 article {

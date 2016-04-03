@@ -1,0 +1,32 @@
+.available-headers .random-header {
+    clear: both;
+    margin: 15px 20px 20px 0;
+    vertical-align: middle;
+}
+
+.available-headers .default-header {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+#side-sortables .available-headers .default-header {
+	margin-right: 0;
+}
+
+.available-headers label {
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.available-headers label input {
+	margin-right: 10px;
+}
+
+.available-headers label img {
+	vertical-align: middle;
+}
+
+.available-headers h4 {
+	margin: 1.5em 0;
+	text-shadow: 0 1px 0 #FFFFFF;
+}

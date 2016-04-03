@@ -9,6 +9,14 @@
 
 ?>
 
+<style>
+	.hero {
+		background-image: url('<?php the_field('hero_image'); ?>');
+  		background-repeat: no-repeat;
+  		background-size: cover;
+	}
+</style>
+
 <section class="hero">
-	<img src="<?php the_field('hero_image'); ?>" class="img-responsive" alt="" />
+	
 </section>

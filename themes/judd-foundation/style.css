@@ -668,7 +668,11 @@ footer a {
 
 .hero {
   margin-top: 2em;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  min-height: 500px; }
+  @media (min-width: 280px) and (max-width: 650px) {
+    .hero {
+      min-height: 200px; } }
 
 article {
   max-width: 1100px;

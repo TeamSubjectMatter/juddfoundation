@@ -1,0 +1,101 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Display Header v1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2011-05-06 13:31+0100\n"
+"Last-Translator: Pietro Rossi <lang@pietrorossi.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#@ wp-display-header
+#: obenland-wp-plugins.php:123
+msgid "Donate"
+msgstr "Dona"
+
+#@ wp-display-header
+#. translators: plugin header field 'Name'
+#: wp-display-header.php:0
+msgid "WP Display Header"
+msgstr ""
+
+#@ wp-display-header
+#. translators: plugin header field 'PluginURI'
+#: wp-display-header.php:0
+msgid "http://www.obenlands.de/en/portfolio/wp-display-header/?utm_source=wordpress&utm_medium=plugin&utm_campaign=wp-display-header"
+msgstr ""
+
+#@ wp-display-header
+#. translators: plugin header field 'Description'
+#: wp-display-header.php:0
+msgid "This plugin lets you specify a header image for each post individually from your default headers and custom headers."
+msgstr "Questo plugin permette di specificare una immagine di testata per ogni tuo singolo post scegliendola dalle tue testate predefinite e personalizzate."
+
+#@ wp-display-header
+#. translators: plugin header field 'Author'
+#: wp-display-header.php:0
+msgid "Konstantin Obenland"
+msgstr ""
+
+#@ wp-display-header
+#. translators: plugin header field 'AuthorURI'
+#: wp-display-header.php:0
+msgid "http://www.obenlands.de/en/?utm_source=wordpress&utm_medium=plugin&utm_campaign=wp-display-header"
+msgstr ""
+
+#@ wp-display-header
+#: wp-display-header.php:131
+msgid "Your current theme does not support Custom Headers"
+msgstr "Il tema che stai utilizzando non supporta testate personalizzate (custom headers)"
+
+#@ default
+#: wp-display-header.php:184
+msgid "Header"
+msgstr "Testata"
+
+#@ default
+#: wp-display-header.php:297
+msgid "Random"
+msgstr "Casuale"
+
+#@ wp-display-header
+#. translators: plugin header field 'Version'
+#: wp-display-header.php:0
+msgid "1.2.1"
+msgstr ""
+
+#@ wp-display-header
+#: wp-display-header.php:357
+msgid "Store header images in this template folder"
+msgstr "Carica immagini di testata in questa cartella dedicata"
+
+#@ wp-display-header
+#: wp-display-header.php:385
+msgid "Default is <code>images/headers</code>"
+msgstr "<code>images/headers</code> è la predefinita"
+
+#@ wp-display-header
+#: wp-display-header.php:411
+msgid "Header images should not be stored in the root directory of your theme. Please specify a folder and try again."
+msgstr "Le immagini di testata non dovrebbero essere caricate nella directory radice del tuo tema. Si prega di specificare una cartella e provare ancora."
+
+#@ wp-display-header
+#: wp-display-header.php:420
+msgid "The specified folder does not exist! Please create the folder, make it writable and try again."
+msgstr "La cartella specificata non esiste! Per favore, crea la cartella, rendila accessibile in scrittura e prova ancora."
+
+#@ wp-display-header
+#: wp-display-header.php:429
+msgid "The specified folder is not writable! Please make it writable and try again."
+msgstr "La cartella specificata non è accessibile in scrittura! Per favore, rendila accessibile in scrittura e prova ancora."
+
