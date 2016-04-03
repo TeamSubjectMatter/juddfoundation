@@ -5,12 +5,6 @@ $susy: (
   container: 1100px,
   gutters: 0.35,
   global-box-sizing: border-box,
-	  debug: (
-	    image: show,
-	    color: rgba(#66f, .25),
-	    output: overlay,
-	    toggle: bottom right,
-	  ),
   );
 
 $desktop: 1100px 3000px;

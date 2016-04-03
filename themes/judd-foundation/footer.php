@@ -11,16 +11,27 @@
 
 ?>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'judd-foundation' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'judd-foundation' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'judd-foundation' ), 'judd-foundation', '<a href="http://teamsubjectmatter.com" rel="designer">Peter Kaizer</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer>
+	<section class="footer-container">
+		<div class="footer-left">
+			<ul class="footer-nav">
+				<li><a href="">Foundation</a></li>
+				<li><a href="">Spaces</a></li>
+				<li><a href="">Donald Judd</a></li>
+				<li><a href="">Research</a></li>
+				<li><a href="">Visit</a></li>
+				<li><a href="">News</a></li>
+			</ul>
+		</div>
+		<div class="footer-right">
+			<ul class="footer-nav">
+				<li><a href="">Join Our Newsletter</a></li>
+				<li><a href="">Contact Us</a></li>
+				<li><a href="">Make a Gift</a></li>
+			</ul>	
+		</div>
+	</section>
+</footer>
 
 <?php wp_footer(); ?>
 

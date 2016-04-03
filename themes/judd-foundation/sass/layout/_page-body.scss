@@ -25,6 +25,10 @@ article p {
   	}
 }
 
+.block-3:nth-child(3n+3) {  
+	@include last;
+}
+
 
 .last {
 	@include last;
