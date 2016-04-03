@@ -1,6 +1,6 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-node_modules/
+themes/node_modules/
 upgrade/
 uploads/
