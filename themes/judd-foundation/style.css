@@ -227,6 +227,12 @@ th {
 .gold {
   color: #ecb731; }
 
+.blue {
+  color: #1565c0; }
+
+.black {
+  color: #000; }
+
 body {
   color: #333;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;

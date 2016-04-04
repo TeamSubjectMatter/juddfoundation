@@ -25,7 +25,7 @@
 <header>
 	<section class="header-container">
 		<div class="header-left">
-			<h1><span class="gold">JUDD</span> / <?php the_field("site_section"); ?></h1>
+			<h1><span class="<?php the_field("logo_color"); ?>">JUDD</span> / <?php the_field("site_section"); ?></h1>
 		</div>
 		<div class="header-right">
 			<i class="fa fa-bars fa-3x"></i>
