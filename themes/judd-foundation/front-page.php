@@ -14,7 +14,7 @@
 
 get_header('home'); ?>
 
-	<div id="primary" >
+	<div id="primary" class="main-nav">
 		<main id="main" class="site-main" role="main">
 		</main><!-- #main -->		
 	</div><!-- #primary -->

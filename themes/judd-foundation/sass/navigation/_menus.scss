@@ -103,3 +103,21 @@
 		width: 50%;
 	}
 }
+
+.main-navigation {
+	margin-top: 500px;
+	background-color: rgba(155,145,135, .75)
+}
+
+.menu-primary-navigation {
+	@include container;
+}
+
+.menu li {
+	display: inline-block;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	margin-right: 3em;
+	font-weight: bold;
+	font-size: 1.2em;
+}

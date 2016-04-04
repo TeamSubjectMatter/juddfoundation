@@ -23,4 +23,16 @@
 
 	</section>
 
+	<section class="right-sidebar">
+
+		<?php if( have_rows('right_side_images') ): the_row(); ?>
+			<div class="">
+			<?php while( have_rows('right_side_images') ): the_row(); ?>
+		        <img src="<?php the_sub_field('image'); ?>" alt="">
+		    <?php endwhile; ?>
+		 	</div>
+		<?php endif; ?>
+
+	</section>
+
 </article>
