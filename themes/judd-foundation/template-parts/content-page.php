@@ -9,11 +9,15 @@
 
 ?>
 
+
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php the_post_thumbnail(); ?>
+	<section class="page-content-area-full">
+		<?php the_post_thumbnail(); ?>
+	</section>
 
-	<section class="page-contnet-area">
+	<section class="page-content-area">
 	
 		<h1><?php the_title(); ?></h1>
 	
@@ -26,11 +30,11 @@
 	<section class="right-sidebar">
 
 		<?php if( have_rows('right_side_images') ): the_row(); ?>
-			<div class="">
 			<?php while( have_rows('right_side_images') ): the_row(); ?>
-		        <img src="<?php the_sub_field('image'); ?>" class="img-responsive" alt="">
+				<div class="right-side-images">
+		        	<img src="<?php the_sub_field('image'); ?>" class="img-responsive" alt="">
+		        </div>
 		    <?php endwhile; ?>
-		 	</div>
 		<?php endif; ?>
 
 	</section>

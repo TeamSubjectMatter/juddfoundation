@@ -750,6 +750,9 @@ footer a {
   margin-right: 15px;
   font-size: .8em; }
 
+footer a {
+  color: #fff; }
+
 .top-nav {
   max-width: 1100px;
   margin-left: auto;
@@ -820,27 +823,32 @@ article p {
   float: right;
   margin-right: 0; }
 
-.page-contnet-area {
-  width: 73.26733%;
-  float: left;
-  margin-right: 6.93069%; }
-  @media (min-width: 280px) and (max-width: 650px) {
-    .page-contnet-area {
-      width: 31.8612%;
-      float: left;
-      margin-right: 2.2082%; } }
-
-.page-contnet-area-full {
-  width: 31.8612%;
+.page-content-area {
+  width: 74.44795%;
   float: left;
   margin-right: 2.2082%; }
+  @media (min-width: 280px) and (max-width: 650px) {
+    .page-content-area {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; } }
+
+.page-content-area-full {
+  width: 100%;
+  float: right;
+  margin-right: 0; }
 
 .right-sidebar {
-  width: 19.80198%;
+  width: 23.34385%;
   float: right;
   margin-right: 0; }
   @media (min-width: 280px) and (max-width: 650px) {
     .right-sidebar {
-      width: 31.8612%;
+      width: 100%;
       float: left;
-      margin-right: 2.2082%; } }
+      margin-left: 0;
+      margin-right: 0; } }
+
+.right-side-images {
+  padding-top: 2em; }

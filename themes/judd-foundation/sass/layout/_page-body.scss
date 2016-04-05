@@ -39,23 +39,28 @@ article p {
 }
 
 
-.page-contnet-area {
-	@include span(3 of 4);
+.page-content-area {
+	@include span(9 of 12);
 		@include breakpoint($mobile) {
-      		@include span(4);
+      		@include span(12);
   	}
 }
 
-.page-contnet-area-full {
-	@include span(4);
-		@include breakpoint($mobile) {
-			
-  	}
+.page-content-area-full {
+	@include span(12 of 12 last);
 }
 
 .right-sidebar {
-	@include span(1 of 4 last);
+	@include span(3 of 12 last);
 		@include breakpoint($mobile) {
-      		@include span(4);
+      		@include span(12);
   	}
 }
+
+.right-side-images {
+	padding-top: 2em;
+}
+
+
+
+
