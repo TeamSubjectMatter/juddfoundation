@@ -1,9 +1,26 @@
-.main-navigation {
+.menu-primary-navigation {
+	@include container;
+}
+
+/*
+ * Primary Navigation -- The home page menu bar
+ */
+.primary-navigation {
 	clear: both;
 	display: block;
 	float: left;
 	width: 100%;
+	height: 6em;
+	margin-top: 15%;
+	background-color: rgba(155,145,135, .7);
 
+	.menu li {
+		display: inline-block;
+		padding-top: .25em;
+		padding-bottom: .25em;
+		margin-right: 1em;
+		font-size: 1em;
+	}
 	ul {
 		display: none;
 		list-style: none;
@@ -11,7 +28,8 @@
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0);
+			background-color: rgba(155,145,135, .4);
 			float: left;
 			position: absolute;
 			top: 1.5em;
@@ -31,7 +49,7 @@
 			}
 
 			a {
-				width: 200px;
+				width: 10em;
 			}
 
 			:hover > a,
@@ -70,7 +88,7 @@
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
+.primary-navigation.toggled ul {
 	display: block;
 }
 
@@ -78,13 +96,11 @@
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation ul {
+	.primary-navigation ul {
 		display: block;
 	}
 }
 
-.comment-navigation,
-.posts-navigation,
 .post-navigation {
 
 	.site-main & {
@@ -104,20 +120,20 @@
 	}
 }
 
-.main-navigation {
-	margin-top: 500px;
-	background-color: rgba(155,145,135, .75)
+.global-footer-left-navigation {
+	.menu {
+		ul {
+			li {
+				display: inline-block;
+				vertical-align: top;
+				width: 50%;
+				float: left;
+			}
+		}
+	}
 }
 
-.menu-primary-navigation {
-	@include container;
+.global-footer-right-navigation {
+
 }
 
-.menu li {
-	display: inline-block;
-	padding-top: 2em;
-	padding-bottom: 2em;
-	margin-right: 3em;
-	font-weight: bold;
-	font-size: 1.2em;
-}

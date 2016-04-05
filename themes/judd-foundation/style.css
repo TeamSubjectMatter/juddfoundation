@@ -547,75 +547,6 @@ a {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5em;
-      left: -999em;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
-
-.main-navigation {
-  margin-top: 500px;
-  background-color: rgba(155, 145, 135, 0.75); }
-
 .menu-primary-navigation {
   max-width: 100%;
   margin-left: auto;
@@ -625,13 +556,83 @@ a {
     display: block;
     clear: both; }
 
-.menu li {
+/*
+ * Primary Navigation -- The home page menu bar
+ */
+.primary-navigation {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
+  height: 6em;
+  margin-top: 15%;
+  background-color: rgba(155, 145, 135, 0.7); }
+  .primary-navigation .menu li {
+    display: inline-block;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    margin-right: 1em;
+    font-size: 1em; }
+  .primary-navigation ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0; }
+    .primary-navigation ul ul {
+      box-shadow: 0 3px 3px transparent;
+      background-color: rgba(155, 145, 135, 0.4);
+      float: left;
+      position: absolute;
+      top: 1.5em;
+      left: -999em;
+      z-index: 99999; }
+      .primary-navigation ul ul ul {
+        left: -999em;
+        top: 0; }
+      .primary-navigation ul ul li:hover > ul,
+      .primary-navigation ul ul li.focus > ul {
+        left: 100%; }
+      .primary-navigation ul ul a {
+        width: 10em; }
+    .primary-navigation ul li:hover > ul,
+    .primary-navigation ul li.focus > ul {
+      left: auto; }
+  .primary-navigation li {
+    float: left;
+    position: relative; }
+  .primary-navigation a {
+    display: block;
+    text-decoration: none; }
+
+/* Small menu. */
+.menu-toggle,
+.primary-navigation.toggled ul {
+  display: block; }
+
+@media screen and (min-width: 37.5em) {
+  .menu-toggle {
+    display: none; }
+  .primary-navigation ul {
+    display: block; } }
+
+.site-main .post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden; }
+
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
+
+.global-footer-left-navigation .menu ul li {
   display: inline-block;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  margin-right: 3em;
-  font-weight: bold;
-  font-size: 1.2em; }
+  vertical-align: top;
+  width: 50%;
+  float: left; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -781,6 +782,8 @@ footer a {
 .hero {
   margin-top: 2em;
   margin-bottom: 1.5em;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 500px; }
   @media (min-width: 280px) and (max-width: 650px) {
     .hero {

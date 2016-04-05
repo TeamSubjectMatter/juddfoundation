@@ -1,6 +1,6 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-themes/judd-foundation/node_modules/
+node_modules/
 upgrade/
 uploads/

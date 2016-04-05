@@ -13,12 +13,12 @@
 
 <footer>
 	<section class="footer-container">
-		<div class="footer-left">
+		<nav id="site-navigation" class="global-foot-left-navigation" role="navigation">
 			<?php wp_nav_menu( array( 'menu' => 'Global Footer Left Navigation' ) ); ?>
-		</div>
-		<div class="footer-right">
+		</nav>
+		<nav id="site-navigation" class="global-foot-right-navigation" role="navigation">
 			<?php wp_nav_menu( array( 'menu' => 'Global Footer Right Navigation' ) ); ?>
-		</div>
+		</nav>
 	</section>
 </footer>
 
