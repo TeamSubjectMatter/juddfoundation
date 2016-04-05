@@ -822,6 +822,23 @@ article p {
   float: right;
   margin-right: 0; }
 
+.block-4 {
+  width: 23.34385%;
+  float: left;
+  margin-right: 2.2082%;
+  margin-bottom: 2em; }
+  @media (min-width: 280px) and (max-width: 650px) {
+    .block-4 {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 1em; } }
+
+.block-4:nth-child(4n+4) {
+  float: right;
+  margin-right: 0; }
+
 .last {
   float: right;
   margin-right: 0; }
