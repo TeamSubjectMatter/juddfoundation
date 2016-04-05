@@ -30,10 +30,7 @@ gulp.task('sass', function() {
     //.pipe(sourcemaps.write())
     .pipe(customPlumber('Error Running Sass'))
     .pipe(sass())
-    .pipe(gulp.dest(''))
-    .pipe(browserSync.reload({
-        stream: true
-    }));
+    .pipe(gulp.dest(''));
 })
 
 gulp.task('watch', ['sass', 'autoprefixer'], function () {

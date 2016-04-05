@@ -9,38 +9,21 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="sectionLanding">
+	<header>
+		<h1><?php the_title(); ?></h1>
+		<h2><?php the_content(); ?></h2>
+	</header>
 	
-	<h1><?php the_title(); ?></h1>
+	<?php while( have_rows('content_blocks') ): the_row(); ?>
 
-	<?php the_content(); ?>
-
-</article>
-
-<article>
-	
-	<?php if( have_rows('content_blocks') ): ?>
-	<?php while( have_rows('content_blocks') ): the_row(); 
-		// vars
-		$heading = get_sub_field('heading');
-		$image = get_sub_field('image');
-		$text = get_sub_field('text');
-		$more = get_sub_field('more_text');
-		$link = get_sub_field('link');
-	?>
-
-	<div class="block-3">
-		<img src="<?php echo $image; ?>" class="img-responsive" alt="" />
-
-		<h2><?php echo $heading; ?></h2>
-
-		<?php echo $text; ?>
-
-		<p><a href="<?php echo $link; ?>"><?php echo $more; ?></a></p>
-
-	</div>
+	<section class="block-3">
+		<img src="<?= get_sub_field('image'); ?>" class="img-responsive" alt="<?= "" ?>" />
+		<h3><?= get_sub_field('heading'); ?></h3>
+		<h4><?= get_sub_field('text'); ?></h4>
+		<h5><a href="get_sub_field('link');" class="">Read More</a></h5>
+	</section>
 
 	<?php endwhile; ?>
-	<?php endif; ?>
 
 </article>
