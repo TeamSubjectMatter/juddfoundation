@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="sectionLanding">
+<article id="page-<?php the_ID(); ?>" class="sectionLanding">
 	<header>
 		<h1><?php the_title(); ?></h1>
 		<h2><?php the_content(); ?></h2>

@@ -16,17 +16,15 @@
 	</section>
 	
 	<h1><?php the_title(); ?></h1>
-
-	<?php the_content(); ?>
+	<h2><?php the_content(); ?></h2>
 
 </article>
 
 <article>
-	<?php if( have_rows('gallery_block_b') ): ?>
+
     <?php while ( have_rows('gallery_block_b') ) : the_row(); ?>  
 	<div class="block-4">
-		<?php $post_object = get_sub_field('gallery_b_item'); ?>
-        <?php if( $post_object ): ?>
+        <?php if( get_sub_field('gallery_b_item') ): ?>
         <?php $post = $post_object; setup_postdata( $post ); ?>
         <a href="<?php the_permalink(); ?>" class="">
         <?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></a>
@@ -34,6 +32,5 @@
         <?php endif; ?>
 	</div>
 	<?php endwhile; ?>
-    <?php endif; ?>
 
 </article>

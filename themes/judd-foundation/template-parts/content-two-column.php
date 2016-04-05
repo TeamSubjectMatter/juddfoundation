@@ -8,8 +8,9 @@
  */
 
 ?>
+<?php get_page_children( $page_id, $pages ) ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="page-<?php the_ID(); ?>" class="twoColumn">
 	<h1><?php the_title(); ?></h1>
 </article>
 
