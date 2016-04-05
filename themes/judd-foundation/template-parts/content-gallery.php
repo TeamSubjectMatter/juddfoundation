@@ -9,36 +9,29 @@
 
 ?>
 
-<article>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
 	<h1><?php the_title(); ?></h1>
+
+	<?php the_content(); ?>
+
 </article>
 
-
-	
-	<?php if( have_rows('content_blocks') ): ?>
-		<article>
-		<?php while( have_rows('content_blocks') ): the_row(); 
-			// vars
-			$heading = get_sub_field('heading');
-			$image = get_sub_field('image');
-			$text = get_sub_field('text');
-			$more = get_sub_field('more_text');
-			$link = get_sub_field('link');
-		?>
-
-			<img src="<?php echo $image; ?>" class="img-responsive" alt="" />
-
-			<h2><?php echo $heading; ?></h2>
-
-			<?php echo $text; ?>
-
-			<p><a href="<?php echo $link; ?>"><?php echo $more; ?></a></p>
-
-
-
-		<?php endwhile; ?>
-		</article>
-	<?php endif; ?>
+<article>
+	<div class-"gallery-view">
+	<?php if( have_rows('gallery_view') ): ?>
+    <?php while ( have_rows('gallery_view') ) : the_row(); ?>  
+		<?php $post_object = get_sub_field('gallery_item'); ?>
+        <?php if( $post_object ): ?>
+        <?php $post = $post_object; setup_postdata( $post ); ?>
+        <a href="<?php the_permalink(); ?>" class="">
+        <?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></a>
+        <?php wp_reset_postdata(); ?>
+        <?php endif; ?>
+	<?php endwhile; ?>
+    <?php endif; ?>
+	</div>
+</article>
 
 
 

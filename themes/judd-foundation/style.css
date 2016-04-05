@@ -894,3 +894,32 @@ article p {
       float: left;
       margin-left: 0;
       margin-right: 0; } }
+
+.gallery-view img {
+  width: 14.8265%;
+  float: left; }
+  .gallery-view img:nth-child(6n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0; }
+  .gallery-view img:nth-child(6n + 2) {
+    margin-left: 17.0347%;
+    margin-right: -100%;
+    clear: none; }
+  .gallery-view img:nth-child(6n + 3) {
+    margin-left: 34.0694%;
+    margin-right: -100%;
+    clear: none; }
+  .gallery-view img:nth-child(6n + 4) {
+    margin-left: 51.1041%;
+    margin-right: -100%;
+    clear: none; }
+  .gallery-view img:nth-child(6n + 5) {
+    margin-left: 68.1388%;
+    margin-right: -100%;
+    clear: none; }
+  .gallery-view img:nth-child(6n + 6) {
+    margin-left: 85.1735%;
+    margin-right: -100%;
+    clear: none; }

@@ -89,3 +89,11 @@ article p {
       		@include span(12);
   	}
 }
+
+
+// each img will span 3 of 12 columns,
+// with 4 images in each row:
+.gallery-view img {
+  @include gallery(2 of 12);
+}
+
