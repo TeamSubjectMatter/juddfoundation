@@ -15,9 +15,9 @@
 
 
 	
-	<?php if( have_rows('content_blocks') ): ?>
+	<?php if( have_rows('long_content_blocks') ): ?>
 		<article>
-		<?php while( have_rows('content_blocks') ): the_row(); 
+		<?php while( have_rows('long_content_blocks') ): the_row(); 
 			// vars
 			$heading = get_sub_field('heading');
 			$image = get_sub_field('image');
