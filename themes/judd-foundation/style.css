@@ -855,3 +855,25 @@ article p {
 
 .right-side-images {
   padding-top: 2em; }
+
+.column-one {
+  width: 48.8959%;
+  float: left;
+  margin-right: 2.2082%; }
+  @media (min-width: 280px) and (max-width: 650px) {
+    .column-one {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; } }
+
+.column-two {
+  width: 40.37855%;
+  float: right;
+  margin-right: 0; }
+  @media (min-width: 280px) and (max-width: 650px) {
+    .column-two {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; } }

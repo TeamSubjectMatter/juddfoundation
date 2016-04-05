@@ -63,6 +63,16 @@ article p {
 	padding-top: 2em;
 }
 
+.column-one {
+	@include span(6 of 12);
+		@include breakpoint($mobile) {
+      		@include span(12);
+  	}
+}
 
-
-
+.column-two {
+	@include span(5 of 12 last);
+		@include breakpoint($mobile) {
+      		@include span(12);
+  	}
+}
