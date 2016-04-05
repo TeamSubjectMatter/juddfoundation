@@ -8,7 +8,7 @@
  * different template.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
- *Template Name: Two Column Utility 
+ * Template Name: Two Column Utility 
  * @package judd-foundation
  */
 
