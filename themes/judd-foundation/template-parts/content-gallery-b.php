@@ -22,31 +22,18 @@
 </article>
 
 <article>
-	
-	<?php if( have_rows('content_blocks') ): ?>
-	<?php while( have_rows('content_blocks') ): the_row(); 
-		// vars
-		$heading = get_sub_field('heading');
-		$image = get_sub_field('image');
-		$text = get_sub_field('text');
-		$more = get_sub_field('more_text');
-		$link = get_sub_field('link');
-	?>
-
-	<div class="block-3">
-		<img src="<?php echo $image; ?>" class="img-responsive" alt="" />
-
-		<h2><?php echo $heading; ?></h2>
-
-		<?php echo $text; ?>
-
-		<p><a href="<?php echo $link; ?>"><?php echo $more; ?></a></p>
-
+	<?php if( have_rows('gallery_block_b') ): ?>
+    <?php while ( have_rows('gallery_block_b') ) : the_row(); ?>  
+	<div class="block-4">
+		<?php $post_object = get_sub_field('gallery_b_item'); ?>
+        <?php if( $post_object ): ?>
+        <?php $post = $post_object; setup_postdata( $post ); ?>
+        <a href="<?php the_permalink(); ?>" class="">
+        <?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></a>
+        <?php wp_reset_postdata(); ?>
+        <?php endif; ?>
 	</div>
-
 	<?php endwhile; ?>
-	<?php endif; ?>
+    <?php endif; ?>
 
 </article>
-
-
