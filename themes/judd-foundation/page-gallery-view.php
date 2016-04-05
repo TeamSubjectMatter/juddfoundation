@@ -8,7 +8,7 @@
  * different template.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
- *Template Name: List view page
+ *Template Name: Gallery View
  * @package judd-foundation
  */
 

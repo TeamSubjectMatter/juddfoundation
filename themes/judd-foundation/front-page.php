@@ -12,12 +12,6 @@
  * @package judd-foundation
  */
 
-get_header('home'); ?>
+get_header('home');
 
-	<div id="primary" class="main-nav">
-		<main id="main" class="site-main" role="main">
-		</main><!-- #main -->		
-	</div><!-- #primary -->
-
-<?php
 get_footer('home');
