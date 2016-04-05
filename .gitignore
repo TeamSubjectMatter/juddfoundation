@@ -4,3 +4,4 @@
 node_modules/
 upgrade/
 uploads/
+*.log
