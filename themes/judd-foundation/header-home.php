@@ -24,5 +24,5 @@
 <body <?php body_class(); ?> style="background: url('<?php the_field("homepage_image"); ?>') no-repeat center center fixed; background-size: cover;">
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<?php wp_nav_menu( array( 'menu' => 'Home Page Nav' ) ); ?>
+			<?php wp_nav_menu( array( 'menu' => 'Primary Navigation' ) ); ?>
 		</nav><!-- #site-navigation -->

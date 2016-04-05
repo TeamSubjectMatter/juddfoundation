@@ -14,21 +14,10 @@
 <footer>
 	<section class="footer-container">
 		<div class="footer-left">
-			<ul class="footer-nav">
-				<li><a href="">Foundation</a></li>
-				<li><a href="">Spaces</a></li>
-				<li><a href="">Donald Judd</a></li>
-				<li><a href="">Research</a></li>
-				<li><a href="">Visit</a></li>
-				<li><a href="">News</a></li>
-			</ul>
+			<?php wp_nav_menu( array( 'menu' => 'Global Footer Left Navigation' ) ); ?>
 		</div>
 		<div class="footer-right">
-			<ul class="footer-nav">
-				<li><a href="">Join Our Newsletter</a></li>
-				<li><a href="">Contact Us</a></li>
-				<li><a href="">Make a Gift</a></li>
-			</ul>	
+			<?php wp_nav_menu( array( 'menu' => 'Global Footer Left Navigation' ) ); ?>
 		</div>
 	</section>
 </footer>
