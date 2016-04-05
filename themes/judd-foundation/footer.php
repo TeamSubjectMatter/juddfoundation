@@ -17,7 +17,7 @@
 			<?php wp_nav_menu( array( 'menu' => 'Global Footer Left Navigation' ) ); ?>
 		</div>
 		<div class="footer-right">
-			<?php wp_nav_menu( array( 'menu' => 'Global Footer Left Navigation' ) ); ?>
+			<?php wp_nav_menu( array( 'menu' => 'Global Footer Right Navigation' ) ); ?>
 		</div>
 	</section>
 </footer>
