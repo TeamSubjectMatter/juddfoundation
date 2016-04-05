@@ -33,6 +33,19 @@ article p {
 	@include last;
 }
 
+.block-4 {
+	@include span(3 of 12);
+		margin-bottom: 2em;
+		@include breakpoint($mobile) {
+      		@include span(12);
+      		margin-bottom: 1em;
+  	}
+}
+
+.block-4:nth-child(4n+4) {  
+	@include last;
+}
+
 
 .last {
 	@include last;
