@@ -16,14 +16,12 @@
 	</header>
 	
 	<?php while( have_rows('content_blocks') ): the_row(); ?>
-
 	<section class="block-3">
 		<img src="<?= get_sub_field('image'); ?>" class="img-responsive" alt="<?= "" ?>" />
 		<h3><?= get_sub_field('heading'); ?></h3>
 		<h4><?= get_sub_field('text'); ?></h4>
 		<h5><a href="get_sub_field('link');" class="">Read More</a></h5>
 	</section>
-
 	<?php endwhile; ?>
 
 </article>
