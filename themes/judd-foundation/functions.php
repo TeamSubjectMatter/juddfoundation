@@ -7,6 +7,14 @@
  * @package judd-foundation
  */
 
+//deregister default post type -- there are custom post types to help channel content entry
+add_action('admin_menu','remove_default_post_type');    
+function remove_default_post_type() {  	
+	remove_menu_page('edit.php');  
+}
+
+
+
 if ( ! function_exists( 'judd_foundation_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -15,6 +23,7 @@ if ( ! function_exists( 'judd_foundation_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+
 function judd_foundation_setup() {
 	/*
 	 * Make theme available for translation.
@@ -122,42 +131,34 @@ function home_body_class( $classes ) {
 }
 
 /*
-A function to create our Donald Judd Art Work custom post type and Foundation Spaces custom post type
+* Creating a function to create our custom post types
 */
 
 function custom_post_type() {
 
-// Set UI labels for Custom Post Types
-	$labels = array(
-		'name'                => _x( 'Artwork', 'Post Type General Name', 'judd-foundation' ),
-		'singular_name'       => _x( 'Artwork', 'Post Type Singular Name', 'judd-foundation' ),
-		'menu_name'           => __( 'Artwork', 'judd-foundation' ),
-		'parent_item_colon'   => __( 'Parent Artwork', 'judd-foundation' ),
-		'all_items'           => __( 'All Artwork', 'judd-foundation' ),
-		'view_item'           => __( 'View Artwork', 'judd-foundation' ),
-		'add_new_item'        => __( 'Add New Artwork', 'judd-foundation' ),
-		'add_new'             => __( 'Add New', 'judd-foundation' ),
-		'edit_item'           => __( 'Edit Artwork', 'judd-foundation' ),
-		'update_item'         => __( 'Update Artwork', 'judd-foundation' ),
-		'search_items'        => __( 'Search Artwork', 'judd-foundation' ),
-		'not_found'           => __( 'Not Found', 'judd-foundation' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
-	);
-	
-// Set other options for Custom Post Types
-	
+	/*
+	 * Art
+	 */
 	$args = array(
-		'label'               => __( 'artwork', 'judd-foundation' ),
-		'description'         => __( 'Donald Judd artwork', 'judd-foundation' ),
-		'labels'              => $labels,
-		// Features this CPT supports in Post Editor
+		'label'               => __( 'art', 'judd-foundation' ),
+		'description'         => __( 'Donald Judd\'s Art', 'judd-foundation' ),
+		'labels'              => array(
+									'name'                => _x( 'Art', 'Post Type General Name', 'judd-foundation' ),
+									'singular_name'       => _x( 'Art', 'Post Type Singular Name', 'judd-foundation' ),
+									'menu_name'           => __( 'Art', 'judd-foundation' ),
+									'parent_item_colon'   => __( 'Parent Locations', 'judd-foundation' ),
+									'all_items'           => __( 'All Art', 'judd-foundation' ),
+									'view_item'           => __( 'View Art', 'judd-foundation' ),
+									'add_new_item'        => __( 'Add New Art', 'judd-foundation' ),
+									'add_new'             => __( 'Add New', 'judd-foundation' ),
+									'edit_item'           => __( 'Edit Art', 'judd-foundation' ),
+									'update_item'         => __( 'Update Art', 'judd-foundation' ),
+									'search_items'        => __( 'Search Artw', 'judd-foundation' ),
+									'not_found'           => __( 'Not Found', 'judd-foundation' ),
+									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
+								),
 		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-		// You can associate this CPT with a taxonomy or custom taxonomy. 
-		'taxonomies' => array('category',),
-		/* A hierarchical CPT is like Pages and can have
-		* Parent and child items. A non-hierarchical CPT
-		* is like Posts.
-		*/	
+		'taxonomies' 		  => array('category',),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -172,8 +173,123 @@ function custom_post_type() {
 		'capability_type'     => 'post',
 	);
 	
-	// Registering your Custom Post Types
-	register_post_type( 'artwork', $args );
+	register_post_type( 'art', $args );
+
+	/*
+	 * Furniture
+	 */
+	$args = array(
+		'label'               => __( 'furniture', 'judd-foundation' ),
+		'description'         => __( 'Donald Judd\'s Furniture', 'judd-foundation' ),
+		'labels'              => array(
+									'name'                => _x( 'Furniture', 'Post Type General Name', 'judd-foundation' ),
+									'singular_name'       => _x( 'Furniture', 'Post Type Singular Name', 'judd-foundation' ),
+									'menu_name'           => __( 'Furniture', 'judd-foundation' ),
+									'parent_item_colon'   => __( 'Parent Locations', 'judd-foundation' ),
+									'all_items'           => __( 'All Furniture', 'judd-foundation' ),
+									'view_item'           => __( 'View Furniture', 'judd-foundation' ),
+									'add_new_item'        => __( 'Add New Furniture', 'judd-foundation' ),
+									'add_new'             => __( 'Add New', 'judd-foundation' ),
+									'edit_item'           => __( 'Edit Furniture', 'judd-foundation' ),
+									'update_item'         => __( 'Update Furniture', 'judd-foundation' ),
+									'search_items'        => __( 'Search Furniture', 'judd-foundation' ),
+									'not_found'           => __( 'Not Found', 'judd-foundation' ),
+									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
+								),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+		'taxonomies' 		  => array('category',),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 6,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+	);
+	register_post_type( 'furniture', $args );
+
+	/*
+	 * Writing
+	 */
+	$args = array(
+		'label'               => __( 'writing', 'judd-foundation' ),
+		'description'         => __( 'Donald Judd\'s Writing', 'judd-foundation' ),
+		'labels'              => array(
+									'name'                => _x( 'Writing', 'Post Type General Name', 'judd-foundation' ),
+									'singular_name'       => _x( 'Writing', 'Post Type Singular Name', 'judd-foundation' ),
+									'menu_name'           => __( 'Writing', 'judd-foundation' ),
+									'parent_item_colon'   => __( 'Parent Locations', 'judd-foundation' ),
+									'all_items'           => __( 'All Writing', 'judd-foundation' ),
+									'view_item'           => __( 'View Writing', 'judd-foundation' ),
+									'add_new_item'        => __( 'Add New Writing', 'judd-foundation' ),
+									'add_new'             => __( 'Add New', 'judd-foundation' ),
+									'edit_item'           => __( 'Edit Writing', 'judd-foundation' ),
+									'update_item'         => __( 'Update Writing', 'judd-foundation' ),
+									'search_items'        => __( 'Search Writing', 'judd-foundation' ),
+									'not_found'           => __( 'Not Found', 'judd-foundation' ),
+									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
+								),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+		'taxonomies' 		  => array('category',),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 6,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+	);
+	
+	register_post_type( 'writing', $args );
+
+	/*
+	 * Spaces
+	 */
+	$args = array(
+		'label'               => __( 'spaces', 'judd-foundation' ),
+		'description'         => __( 'Donald Judd\'s Spaces', 'judd-foundation' ),
+		'labels'              => array(
+									'name'                => _x( 'Spaces', 'Post Type General Name', 'judd-foundation' ),
+									'singular_name'       => _x( 'Spaces', 'Post Type Singular Name', 'judd-foundation' ),
+									'menu_name'           => __( 'Spaces', 'judd-foundation' ),
+									'parent_item_colon'   => __( 'Parent Locations', 'judd-foundation' ),
+									'all_items'           => __( 'All Spaces', 'judd-foundation' ),
+									'view_item'           => __( 'View Spaces', 'judd-foundation' ),
+									'add_new_item'        => __( 'Add New Spaces', 'judd-foundation' ),
+									'add_new'             => __( 'Add New', 'judd-foundation' ),
+									'edit_item'           => __( 'Edit Spaces', 'judd-foundation' ),
+									'update_item'         => __( 'Update Spaces', 'judd-foundation' ),
+									'search_items'        => __( 'Search Spaces', 'judd-foundation' ),
+									'not_found'           => __( 'Not Found', 'judd-foundation' ),
+									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
+								),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+		'taxonomies' 		  => array('category',),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 6,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+	);
+	
+	register_post_type( 'spaces', $args );
 
 }
 
@@ -184,17 +300,13 @@ function custom_post_type() {
 
 add_action( 'init', 'custom_post_type', 0 );
 
-
 /**
  * Enqueue scripts and styles.
  */
 function judd_foundation_scripts() {
 	wp_enqueue_style( 'judd-foundation-style', get_stylesheet_uri() );
-
 	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'); 
-
 	wp_enqueue_script( 'judd-foundation-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
 	wp_enqueue_script( 'judd-foundation-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -227,7 +339,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-@ini_set( 'upload_max_size' , '64M' );
-@ini_set( 'post_max_size', '64M');
-@ini_set( 'max_execution_time', '300' );
