@@ -9,12 +9,14 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="galleryViewB">
 
+	<!--
 	<section class="page-content-area-full">
 		<?php the_post_thumbnail(); ?>
 	</section>
-	
+	-->
+
 	<h1><?php the_title(); ?></h1>
 	<h2><?php the_content(); ?></h2>
 
@@ -22,7 +24,7 @@
 
 <article>
 
-    <?php while ( have_rows('gallery_block_b') ) : the_row(); ?>  
+    <?php while ( have_rows('content_blocks') ) : the_row(); ?>  
 	<div class="block-4">
         <?php if( get_sub_field('gallery_b_item') ): ?>
         <?php $post = $post_object; setup_postdata( $post ); ?>
