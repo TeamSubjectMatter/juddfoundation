@@ -330,24 +330,24 @@ function custom_post_type() {
 	
 	register_post_type( 'programs', $args );
 
-		/*
-	 * Art
+	/*
+	 * Visit
 	 */
 	$args = array(
-		'label'               => __( 'art', 'judd-foundation' ),
-		'description'         => __( 'Donald Judd\'s Art', 'judd-foundation' ),
+		'label'               => __( 'visit', 'judd-foundation' ),
+		'description'         => __( 'Donald Judd\'s Visit', 'judd-foundation' ),
 		'labels'              => array(
-									'name'                => _x( 'Art', 'Post Type General Name', 'judd-foundation' ),
-									'singular_name'       => _x( 'Art', 'Post Type Singular Name', 'judd-foundation' ),
-									'menu_name'           => __( 'Art', 'judd-foundation' ),
+									'name'                => _x( 'Visit', 'Post Type General Name', 'judd-foundation' ),
+									'singular_name'       => _x( 'Visit', 'Post Type Singular Name', 'judd-foundation' ),
+									'menu_name'           => __( 'Visit', 'judd-foundation' ),
 									'parent_item_colon'   => __( 'Parent Locations', 'judd-foundation' ),
-									'all_items'           => __( 'All Art', 'judd-foundation' ),
-									'view_item'           => __( 'View Art', 'judd-foundation' ),
-									'add_new_item'        => __( 'Add New Art', 'judd-foundation' ),
+									'all_items'           => __( 'All Visit', 'judd-foundation' ),
+									'view_item'           => __( 'View Visit', 'judd-foundation' ),
+									'add_new_item'        => __( 'Add New Visit', 'judd-foundation' ),
 									'add_new'             => __( 'Add New', 'judd-foundation' ),
-									'edit_item'           => __( 'Edit Art', 'judd-foundation' ),
-									'update_item'         => __( 'Update Art', 'judd-foundation' ),
-									'search_items'        => __( 'Search Art', 'judd-foundation' ),
+									'edit_item'           => __( 'Edit Visit', 'judd-foundation' ),
+									'update_item'         => __( 'Update Visit', 'judd-foundation' ),
+									'search_items'        => __( 'Search Visit', 'judd-foundation' ),
 									'not_found'           => __( 'Not Found', 'judd-foundation' ),
 									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
 								),
@@ -367,7 +367,7 @@ function custom_post_type() {
 		'capability_type'     => 'post',
 	);
 	
-	register_post_type( 'art', $args );
+	register_post_type( 'visit', $args );
 
 }
 
