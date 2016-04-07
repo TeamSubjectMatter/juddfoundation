@@ -79,3 +79,33 @@
 		}
 	}
 } )();
+(function( $ ) {
+
+	$( "ul.menu li" ).hover(
+	  	 function() {
+	  	 	$('div.overlay').css('display','block');
+	  	 	$('div.top-bar').css('display','none');
+
+	  	 },
+	  	 function() {
+	  	 	$('div.overlay').css('display','none');
+	  	 	$('div.top-bar').css('display','block');
+	  	 }
+	);
+
+	//Displays Navigation
+	 $('div.header-right i.fa-bars').click(function(e) {
+
+        if ($('.active').hasClass('active')) {
+            $(this).removeClass('active');
+            $('div.navigation-overlay').css('display','none');
+        } 
+        else{
+        	$('i.fa-bars').addClass('active');
+        	$('div.navigation-overlay').css('display','block');
+        }
+
+    });
+
+})
+(jQuery);

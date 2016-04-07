@@ -9,6 +9,6 @@ get_header();
 while ( have_posts() ) : the_post();
 	get_template_part( 'template-parts/content', 'hero' );
 	get_template_part( 'template-parts/content', 'landing' );
-endwhile; // End of the loop.
-
+endwhile; 
+//get footer
 get_footer();

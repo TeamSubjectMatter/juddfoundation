@@ -21,7 +21,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+<div class="navigation-overlay">
+	<nav id="site-navigation" class="primary-navigation" role="navigation">
+		<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) ); ?>
+	</nav>
+</div>
 <header>
 	<section class="header-container">
 		<div class="header-left">
@@ -29,6 +33,7 @@
 		</div>
 		<div class="header-right">
 			<i class="fa fa-bars fa-3x"></i>
+			
 		</div>
 	</section>
 </header>
