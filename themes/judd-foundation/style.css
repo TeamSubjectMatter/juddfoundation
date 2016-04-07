@@ -536,7 +536,7 @@ div#multiColumn {
 a {
   color: royalblue; }
   a:visited {
-    color: purple; }
+    color: #fff; }
   a:hover, a:focus, a:active {
     color: midnightblue; }
   a:focus {
@@ -629,7 +629,8 @@ a {
   background: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
+  overflow: scroll;
   display: none; }
   .navigation-overlay .primary-navigation {
     background-color: white;
@@ -664,11 +665,20 @@ a {
   text-align: right;
   width: 50%; }
 
-.global-footer-left-navigation .menu ul li {
-  display: inline-block;
-  vertical-align: top;
-  width: 50%;
-  float: left; }
+.global-foot-right-navigation {
+  text-align: right; }
+  .global-foot-right-navigation li:last-child {
+    padding-right: 0px; }
+
+.footer-container ul {
+  float: left;
+  width: 50%; }
+  .footer-container ul li {
+    display: inline-block;
+    padding: 0 9px;
+    font-size: 13px; }
+  .footer-container ul li:first-child {
+    padding-left: 0px; }
 
 /****Tablet Break***/
 @media screen and (max-width: 768px) {
@@ -676,14 +686,36 @@ a {
     display: none; }
   .primary-navigation {
     bottom: inherit;
-    height: 100%;
+    min-height: 100%;
     background: none; }
     .primary-navigation div.menu-primary-navigation-container {
       background-color: rgba(255, 255, 255, 0.5);
-      width: 60%;
-      height: 100%; }
-      .primary-navigation div.menu-primary-navigation-container ul.menu li {
-        display: block; } }
+      width: 70%;
+      min-height: 100vh; }
+      .primary-navigation div.menu-primary-navigation-container ul.menu {
+        padding: 40% 0;
+        display: block; }
+        .primary-navigation div.menu-primary-navigation-container ul.menu li {
+          display: block;
+          padding: .6em 1.3em;
+          font-size: 2em; }
+        .primary-navigation div.menu-primary-navigation-container ul.menu li:first-child {
+          padding-top: 0; }
+  .navigation-overlay {
+    min-height: 100%;
+    height: auto; }
+    .navigation-overlay .primary-navigation {
+      background: none;
+      top: 0; }
+      .navigation-overlay .primary-navigation div.menu-primary-navigation-container {
+        background: none; }
+        .navigation-overlay .primary-navigation div.menu-primary-navigation-container ul.menu li a {
+          color: #fff; } }
+
+/***** Mobile Break ****/
+@media screen and (max-width: 420px) {
+  .primary-navigation div.menu-primary-navigation-container ul.menu li {
+    font-size: 1.4em; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -710,8 +742,9 @@ a {
 # Layout styles
 --------------------------------------------------------------*/
 header h1 {
-  font-size: 1.5em; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  font-size: 1.2em;
+  font-weight: 300; }
+  @media (min-width: 280px) and (max-width: 769px) {
     header h1 {
       font-size: 1.25em; } }
 
@@ -725,26 +758,28 @@ header h1 {
     content: " ";
     display: block;
     clear: both; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     .header-container {
-      padding-left: .5em; } }
+      padding: 0 1em; } }
 
 .header-left {
   width: 23.34385%;
   float: left;
   margin-right: 2.2082%; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     .header-left {
       width: 74.44795%;
       float: left;
       margin-right: 2.2082%; } }
 
 .header-right {
-  margin-left: 68.1388%;
+  text-align: right;
   width: 6.30915%;
   float: right;
   margin-right: 0; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  .header-right .fa-3x {
+    font-size: 2em; }
+  @media (min-width: 280px) and (max-width: 769px) {
     .header-right {
       margin-left: 0%;
       width: 23.34385%;
@@ -763,12 +798,13 @@ footer a {
 .footer-container {
   max-width: 1100px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  width: 90%; }
   .footer-container:after {
     content: " ";
     display: block;
     clear: both; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     .footer-container {
       padding-left: 1em;
       padding-right: 1em; } }
@@ -777,7 +813,7 @@ footer a {
   width: 40.37855%;
   float: left;
   margin-right: 2.2082%; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     .footer-left {
       width: 100%;
       float: left;
@@ -789,7 +825,7 @@ footer a {
   width: 31.8612%;
   float: right;
   margin-right: 0; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     .footer-right {
       width: 100%;
       float: left;
@@ -805,6 +841,30 @@ footer a {
 footer a {
   color: #fff; }
 
+.global-foot-right-navigation {
+  text-align: right; }
+  .global-foot-right-navigation li:last-child {
+    padding-right: 0px; }
+
+.footer-container ul {
+  float: left;
+  width: 50%; }
+  .footer-container ul li {
+    display: inline-block;
+    padding: 0 9px;
+    font-size: 13px; }
+  .footer-container ul li:first-child {
+    padding-left: 0px; }
+
+@media (min-width: 280px) and (max-width: 769px) {
+  .footer-container {
+    text-align: center; }
+    .footer-container ul {
+      width: 100%;
+      float: none; }
+    .footer-container .global-foot-right-navigation {
+      text-align: center; } }
+
 .top-nav {
   max-width: 1100px;
   margin-left: auto;
@@ -814,7 +874,7 @@ footer a {
     content: " ";
     display: block;
     clear: both; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     .top-nav {
       padding-left: .5em;
       padding-right: .5em; } }
@@ -836,7 +896,7 @@ footer a {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 500px; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     .hero {
       min-height: 200px; } }
 
@@ -848,20 +908,21 @@ article {
     content: " ";
     display: block;
     clear: both; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     article {
       padding-left: 1em;
       padding-right: 1em; } }
 
 article p {
-  font-size: .8em; }
+  font-size: .875em;
+  font-weight: 200; }
 
 .block-3 {
   width: 31.8612%;
   float: left;
   margin-right: 2.2082%;
   margin-bottom: 2em; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     .block-3 {
       width: 100%;
       float: left;
@@ -878,7 +939,7 @@ article p {
   float: left;
   margin-right: 2.2082%;
   margin-bottom: 2em; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     .block-4 {
       width: 100%;
       float: left;
@@ -898,7 +959,7 @@ article p {
   width: 74.44795%;
   float: left;
   margin-right: 2.2082%; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     .page-content-area {
       width: 100%;
       float: left;
@@ -914,7 +975,7 @@ article p {
   width: 23.34385%;
   float: right;
   margin-right: 0; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     .right-sidebar {
       width: 100%;
       float: left;
@@ -928,7 +989,7 @@ article p {
   width: 48.8959%;
   float: left;
   margin-right: 2.2082%; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     .column-one {
       width: 100%;
       float: left;
@@ -939,7 +1000,7 @@ article p {
   width: 40.37855%;
   float: right;
   margin-right: 0; }
-  @media (min-width: 280px) and (max-width: 650px) {
+  @media (min-width: 280px) and (max-width: 769px) {
     .column-two {
       width: 100%;
       float: left;
@@ -1030,3 +1091,27 @@ div.overlay {
   text-decoration: underline;
   color: #fff;
   padding: 11px 0; }
+
+/** News Page Styles ***/
+.page-template-page-list-view h2 {
+  padding-top: 29px;
+  padding-left: 19px;
+  margin-bottom: 13px; }
+
+.page-template-page-list-view p {
+  padding-left: 19px;
+  margin-bottom: 37px; }
+
+@media screen and (max-width: 789px) {
+  .page-template-page-list-view p, .page-template-page-list-view h2 {
+    padding-left: 0px; } }
+
+/*** Global Page Styles ***/
+.container {
+  min-height: 91vh;
+  width: 90%;
+  margin: auto; }
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 300; }

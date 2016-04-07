@@ -1,5 +1,6 @@
 header h1 {
-	font-size: 1.5em;
+	font-size: 1.2em;
+	font-weight: 300;
 		@include breakpoint($mobile) {
       	 font-size: 1.25em;	
     }
@@ -10,7 +11,7 @@ header h1 {
 	padding-top: 1.5em;
 	padding-bottom: .25em;
 		@include breakpoint($mobile) {
-      		padding-left: .5em;
+      		padding: 0 1em;
     }
 }
 
@@ -22,8 +23,11 @@ header h1 {
 }
 
 .header-right {
-	@include push (8);
+	text-align:right;
 	@include span(1 of 12 last);
+	.fa-3x{
+		font-size:2em;
+	}
 		@include breakpoint($mobile) {
 			@include push (0);
 			@include span(3 of 12 last);

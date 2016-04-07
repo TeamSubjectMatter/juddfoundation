@@ -10,7 +10,7 @@
  */
 
 ?>
-
+</div>
 <footer>
 	<section class="footer-container">
 		<nav id="site-navigation" class="global-foot-left-navigation" role="navigation">

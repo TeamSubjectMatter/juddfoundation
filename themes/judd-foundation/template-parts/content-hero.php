@@ -6,7 +6,8 @@
  * @package judd-foundation
  */
 
+$hero = the_field('hero_image');
 ?>
 
-<div class="hero" style="background-image: url('<?php the_field('hero_image'); ?>');">
+<div class="hero" style='background-image: url("http://<?php echo $hero ?>");'>
 </div>

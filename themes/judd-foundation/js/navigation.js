@@ -99,10 +99,12 @@
         if ($('.active').hasClass('active')) {
             $(this).removeClass('active');
             $('div.navigation-overlay').css('display','none');
+            $('body').css('overflow','auto');
         } 
         else{
         	$('i.fa-bars').addClass('active');
         	$('div.navigation-overlay').css('display','block');
+        	$('body').css('overflow','hidden');
         }
 
     });

@@ -11,6 +11,7 @@ footer a {
 
 .footer-container {
 	@include container;
+	width:90%;
 		@include breakpoint($mobile) {
       		padding-left: 1em;
       		padding-right: 1em;
@@ -41,4 +42,39 @@ footer a {
 
 footer a {
 	color: $white;
+}
+.global-foot-right-navigation {
+	text-align: right;
+	li:last-child {
+		padding-right: 0px;
+	}
+}
+
+.footer-container {
+	ul{
+		float: left;
+		width: 50%;
+		li{
+			display: inline-block;
+			padding: 0 9px;
+			font-size: 13px;
+		}
+		li:first-child{
+			padding-left: 0px;
+		}
+	}
+	
+}
+
+@include breakpoint($mobile){
+	.footer-container{ 
+		text-align: center;
+		ul{
+			width: 100%;
+			float:none;
+		}
+		.global-foot-right-navigation{
+			text-align: center
+		}
+	}
 }

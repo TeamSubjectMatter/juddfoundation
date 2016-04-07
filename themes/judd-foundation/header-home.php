@@ -25,4 +25,10 @@
 	<div class="top-bar"><?php echo the_field('site_section') ?></div>
 	<nav id="site-navigation" class="primary-navigation" role="navigation">
 		<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) ); ?>
+		<!--<i class="fa fa-search"></i>
+		<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+		<div><input type="text" size="18" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" />
+		<input type="submit" id="searchsubmit" value="Search" class="btn" />
+		</div>
+		</form>-->
 	</nav><!-- #site-navigation -->
