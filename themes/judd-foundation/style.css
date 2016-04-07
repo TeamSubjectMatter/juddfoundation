@@ -564,15 +564,40 @@ a {
   display: block;
   float: left;
   width: 100%;
-  height: 6em;
-  margin-top: 15%;
-  background-color: rgba(155, 145, 135, 0.7); }
-  .primary-navigation .menu li {
-    display: inline-block;
-    padding-top: .25em;
-    padding-bottom: .25em;
-    margin-right: 1em;
-    font-size: 1em; }
+  bottom: 13em;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5); }
+  .primary-navigation div.menu-primary-navigation-container {
+    max-width: 800px;
+    margin: auto; }
+    .primary-navigation div.menu-primary-navigation-container ul.menu {
+      text-align: center; }
+      .primary-navigation div.menu-primary-navigation-container ul.menu li {
+        display: inline-block;
+        padding: 1.25em 1.3em;
+        font-size: 1.2em; }
+        .primary-navigation div.menu-primary-navigation-container ul.menu li a {
+          color: #000; }
+      .primary-navigation div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
+        display: block;
+        height: 100vh;
+        width: 140px;
+        box-shadow: 0 3px 3px transparent;
+        background-color: rgba(155, 145, 135, 0.4);
+        position: absolute;
+        bottom: 4em; }
+      .primary-navigation div.menu-primary-navigation-container ul.menu div.sub-container {
+        display: none; }
+      .primary-navigation div.menu-primary-navigation-container ul.menu ul.sub-menu {
+        text-align: left;
+        bottom: 0; }
+        .primary-navigation div.menu-primary-navigation-container ul.menu ul.sub-menu li {
+          font-size: .9em;
+          margin: 0px;
+          padding: .5em .8em; }
+          .primary-navigation div.menu-primary-navigation-container ul.menu ul.sub-menu li a {
+            color: #fff;
+            width: 131px; }
   .primary-navigation ul {
     display: none;
     list-style: none;
@@ -580,11 +605,7 @@ a {
     padding-left: 0; }
     .primary-navigation ul ul {
       box-shadow: 0 3px 3px transparent;
-      background-color: rgba(155, 145, 135, 0.4);
-      float: left;
       position: absolute;
-      top: 1.5em;
-      left: -999em;
       z-index: 99999; }
       .primary-navigation ul ul ul {
         left: -999em;
@@ -598,11 +619,26 @@ a {
     .primary-navigation ul li.focus > ul {
       left: auto; }
   .primary-navigation li {
-    float: left;
     position: relative; }
   .primary-navigation a {
     display: block;
     text-decoration: none; }
+
+/*Navigation on All pages excpet Home */
+.navigation-overlay {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: none; }
+  .navigation-overlay .primary-navigation {
+    background-color: white;
+    top: 50%;
+    bottom: inherit; }
+
+.fa-bars.active {
+  color: #fff;
+  transform: rotate(90deg); }
 
 /* Small menu. */
 .menu-toggle,
@@ -633,6 +669,21 @@ a {
   vertical-align: top;
   width: 50%;
   float: left; }
+
+/****Tablet Break***/
+@media screen and (max-width: 768px) {
+  .top-bar {
+    display: none; }
+  .primary-navigation {
+    bottom: inherit;
+    height: 100%;
+    background: none; }
+    .primary-navigation div.menu-primary-navigation-container {
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 60%;
+      height: 100%; }
+      .primary-navigation div.menu-primary-navigation-container ul.menu li {
+        display: block; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -923,3 +974,59 @@ article p {
     margin-left: 85.1735%;
     margin-right: -100%;
     clear: none; }
+
+/*--------------------------------------------------------------
+# Page styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Pages
+--------------------------------------------------------------*/
+/*
+.home {
+	@include background-image(url("images/judd-foundation-homepage-image.jpg"));
+  	background-size: cover;
+}
+
+.home-nav-bar {
+	margin-top: 550px;
+	background-color: rgba(155,145,135, .75)
+}
+
+.main-nav {
+	@include container;
+}
+
+.main-nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.main-nav li {
+	display: inline-block;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	margin-right: 3em;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.primary-nav {
+	@include push (2);
+	@include span(10 of 12 last);
+}
+*/
+div.overlay {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  display: none; }
+
+.top-bar {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  text-decoration: underline;
+  color: #fff;
+  padding: 11px 0; }

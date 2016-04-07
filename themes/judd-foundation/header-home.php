@@ -21,7 +21,8 @@
 </head>
 
 <body <?php body_class(); ?> style="background: url('<?php the_field("homepage_image"); ?>') no-repeat center center fixed; background-size: cover;">
-
+	<div class="overlay"></div>
+	<div class="top-bar"><?php echo the_field('site_section') ?></div>
 	<nav id="site-navigation" class="primary-navigation" role="navigation">
-		<?php wp_nav_menu( array( 'menu' => 'Primary Navigation' ) ); ?>
+		<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) ); ?>
 	</nav><!-- #site-navigation -->

@@ -10,16 +10,48 @@
 	display: block;
 	float: left;
 	width: 100%;
-	height: 6em;
-	margin-top: 15%;
-	background-color: rgba(155,145,135, .7);
-
-	.menu li {
-		display: inline-block;
-		padding-top: .25em;
-		padding-bottom: .25em;
-		margin-right: 1em;
-		font-size: 1em;
+	bottom: 13em;
+    position: absolute;
+	background-color: rgba(255,255,255,0.5);
+	div.menu-primary-navigation-container{
+		max-width: 800px;
+    	margin: auto;
+		ul.menu{
+			text-align: center;
+			li{
+				display: inline-block;
+				padding: 1.25em 1.3em;
+				font-size: 1.2em;
+				a{
+					color: #000;
+				}
+			}
+			li:hover div.sub-container{
+				display: block;
+				height: 100vh;
+			    width: 140px;
+			    box-shadow: 0 3px 3px transparent;
+			    background-color: rgba(155, 145, 135, 0.4);
+			    position: absolute;
+			    bottom: 4em;
+			}
+			div.sub-container{
+				display: none;
+			}
+			ul.sub-menu{
+				text-align: left;
+				bottom: 0;
+				li{
+					font-size: .9em;
+					margin:0px;
+					padding:.5em .8em;
+					a{
+						color: #fff;
+						width: 131px;
+					}
+				}
+			}
+		}
 	}
 	ul {
 		display: none;
@@ -29,11 +61,7 @@
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0);
-			background-color: rgba(155,145,135, .4);
-			float: left;
 			position: absolute;
-			top: 1.5em;
-			left: -999em;
 			z-index: 99999;
 
 			ul {
@@ -67,7 +95,6 @@
 		}
 	}
 	li {
-		float: left;
 		position: relative;
 
 		&:hover > a,
@@ -86,6 +113,23 @@
 	}
 }
 
+/*Navigation on All pages excpet Home */
+.navigation-overlay{
+	background: rgba(0,0,0,.8);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: none;  
+    .primary-navigation{
+    	background-color: rgba(255, 255, 255, 1);
+    	top: 50%;
+    	bottom: inherit;
+    }
+}
+.fa-bars.active{
+	color:#fff;
+	transform: rotate(90deg);
+}
 /* Small menu. */
 .menu-toggle,
 .primary-navigation.toggled ul {
@@ -136,3 +180,27 @@
 .global-footer-right-navigation {
 
 }
+
+/****Tablet Break***/
+@media screen and (max-width: 768px){
+	.top-bar{
+		display: none;
+	}
+	.primary-navigation{
+		bottom: inherit;
+		height:100%;
+		background: none;
+		div.menu-primary-navigation-container {
+			background-color: rgba(255, 255, 255, 0.5);
+		    width: 60%;
+		    height: 100%;
+
+			ul.menu li{
+			display: block;
+			}
+		}
+	}
+}
+
+
+
