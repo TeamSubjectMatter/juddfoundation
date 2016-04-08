@@ -56,8 +56,11 @@ footer a {
 		width: 50%;
 		li{
 			display: inline-block;
-			padding: 0 9px;
+			padding: 0 2.6px;
 			font-size: 13px;
+			a:visited{
+				color:#fff;
+			}
 		}
 		li:first-child{
 			padding-left: 0px;

@@ -859,8 +859,10 @@ footer a {
   width: 50%; }
   .footer-container ul li {
     display: inline-block;
-    padding: 0 9px;
+    padding: 0 2.6px;
     font-size: 13px; }
+    .footer-container ul li a:visited {
+      color: #fff; }
   .footer-container ul li:first-child {
     padding-left: 0px; }
 

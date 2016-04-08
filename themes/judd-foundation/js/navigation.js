@@ -82,7 +82,7 @@
 } )();
 (function( $ ) {
 
-	$( "ul.menu li" ).hover(
+	$( "ul.menu" ).hover(
 	  	 function() {
 	  	 	$('div.overlay').css('display','block');
 	  	 	$('div.top-bar').css('display','none');

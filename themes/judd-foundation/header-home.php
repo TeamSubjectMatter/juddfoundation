@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?> style="background: url('<?php the_field("homepage_image"); ?>') no-repeat center center fixed; background-size: cover;">
 	<div class="overlay"></div>
-	<div class="top-bar"><?php echo the_field('site_section') ?></div>
+	<div class="top-bar"><?php echo the_content(); ?></div>
 	<nav id="site-navigation" class="primary-navigation" role="navigation">
 		<div class="menu-container">
 			<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) ); get_search_form(); ?>
