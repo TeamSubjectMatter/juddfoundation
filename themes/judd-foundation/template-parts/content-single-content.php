@@ -18,11 +18,22 @@
 	</section>
 
 	<section class="right-sidebar">
-	<?php while( have_rows('sidebar_content_blocks') ): the_row(); ?>
-		<div class="right-side-images">
-        	<img src="<?php the_sub_field('image'); ?>" class="img-responsive" alt="">
-        </div>
-    <?php endwhile; ?>
-	</section>
+    <?php
+
+	$post_objects = get_field('sidebar_content_blocks');
+	
+	if( $post_objects ): ?>
+		<ul>
+		<?php foreach( $post_objects as $post):  ?>
+			<?php setup_postdata($post); ?>
+			<li>
+				<a class="right-side-images" href="<?php the_permalink(); ?>"><img src="<?php the_field('hero_image', 14); ?>"></a>
+				
+			</li>
+		<?php endforeach; ?>
+		</ul>
+		<?php wp_reset_postdata();  ?>
+	<?php endif; ?>
+   </section>
 
 </article>

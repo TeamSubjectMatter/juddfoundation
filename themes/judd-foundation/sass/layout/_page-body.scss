@@ -1,13 +1,31 @@
 .hero {
-	margin-top: 1.2em;
-	margin-bottom: 1.5em;
+
+	margin-top: 2em;
+	margin-bottom: 3em;	
 	background-repeat: no-repeat;
+	background-position:center;
   	background-size: cover;
 	min-height: 500px;
 		@include breakpoint($mobile) {
 			min-height: 200px;
 	}
 }
+
+.hero-body-width {
+	margin-top: 2em;
+	margin-bottom: 3em;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:1100px;
+	background-repeat: no-repeat;
+	background-position:center;
+  	background-size: cover;
+	min-height: 500px;
+		@include breakpoint($mobile) {
+			min-height: 200px;
+	}
+}
+
 
 article {
 	@include container;
@@ -57,7 +75,6 @@ article p {
 	@include last;
 }
 
-
 .page-content-area {
 	@include span(9 of 12);
 		@include breakpoint($mobile) {
@@ -70,14 +87,17 @@ article p {
 }
 
 .right-sidebar {
-	@include span(3 of 12 last);
+	margin-top:1.5em;
+		@include span(3 of 12 last);
 		@include breakpoint($mobile) {
       		@include span(12);
   	}
 }
 
 .right-side-images {
-	padding-top: 2em;
+	margin-top:1em;
+	text-align:right;
+	display:inline-block;
 }
 
 .column-one {
