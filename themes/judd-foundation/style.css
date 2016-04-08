@@ -959,6 +959,9 @@ article p {
   float: left;
   padding-right: 2.2082%;
   margin-bottom: 2em; }
+  .block-3 img {
+    width: 100%;
+    height: 228px; }
   @media (min-width: 280px) and (max-width: 769px) {
     .block-3 {
       width: 100%;
@@ -967,7 +970,8 @@ article p {
       margin-right: 0;
       margin-bottom: 1em; }
       .block-3 img {
-        width: 100%; } }
+        width: 100%;
+        height: auto; } }
 
 .block-3:nth-child(4n+1) {
   clear: left; }

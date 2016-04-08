@@ -46,11 +46,16 @@ article p {
     float: left;
     padding-right: 2.2082%;
     margin-bottom: 2em;
+    img{
+  			width:100%;
+  			height:228px;
+  		}
 	@include breakpoint($mobile) {
   		@include span(12);
   		margin-bottom: 1em;
   		img{
   			width:100%;
+  			height:auto;
   		}
   	}
 }
