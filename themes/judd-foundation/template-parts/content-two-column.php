@@ -10,11 +10,10 @@
 ?>
 <?php get_page_children( $page_id, $pages ) ?>
 
-<article id="page-<?php the_ID(); ?>" class="twoColumn">
-	<h1><?php the_title(); ?></h1>
-</article>
 
-<article>
+
+<article id="page-<?php the_ID(); ?>" class="twoColumn">
+	<!--<h2><?php the_title(); ?></h2>-->
 	<div class="column-one">
 		<?php the_field('column_1_text'); ?>
 	</div>
