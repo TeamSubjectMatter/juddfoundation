@@ -1,6 +1,7 @@
 .hero {
+
 	margin-top: 2em;
-	margin-bottom: 3em;
+	margin-bottom: 3em;	
 	background-repeat: no-repeat;
 	background-position:center;
   	background-size: cover;
@@ -73,7 +74,6 @@ article p {
 .last {
 	@include last;
 }
-
 
 .page-content-area {
 	@include span(9 of 12);

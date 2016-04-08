@@ -81,19 +81,19 @@
 	}
 } )();
 (function( $ ) {
+	if($(window).width() > 768){
+		$( "ul.menu" ).hover(
+		  	 function() {
+		  	 	$('div.overlay').css('display','block');
+		  	 	$('div.top-bar').css('display','none');
 
-	$( "ul.menu" ).hover(
-	  	 function() {
-	  	 	$('div.overlay').css('display','block');
-	  	 	$('div.top-bar').css('display','none');
-
-	  	 },
-	  	 function() {
-	  	 	$('div.overlay').css('display','none');
-	  	 	$('div.top-bar').css('display','block');
-	  	 }
-	);
-
+		  	 },
+		  	 function() {
+		  	 	$('div.overlay').css('display','none');
+		  	 	$('div.top-bar').css('display','block');
+		  	 }
+		);
+	}
 	//Displays Navigation
 	 $('div.header-right i.fa-bars').click(function(e) {
 

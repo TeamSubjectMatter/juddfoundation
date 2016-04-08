@@ -17,6 +17,10 @@ h5 a:visited{
 }
 article{
 	width:90%;
+	margin: 80px auto;
+	p{
+		line-height:1.7;
+	}
 }
 a:visited{
 	color: $gold;
