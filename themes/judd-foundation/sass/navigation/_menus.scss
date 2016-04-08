@@ -206,11 +206,14 @@
 				ul.menu{
 					padding-top: 40%;
 				 	display: block;
-				 	padding-bottom: 13px;
+				 	    padding-bottom: 13px;
 					li{
 						display: block;
 					    padding: .6em 1em;
 					    font-size: 1.8em;
+					}
+					li:hover div.sub-container{
+						display:none;
 					}
 					li:first-child{
 						padding-top:0;

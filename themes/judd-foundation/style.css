@@ -703,6 +703,8 @@ a {
             display: block;
             padding: .6em 1em;
             font-size: 1.8em; }
+          .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
+            display: none; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
             padding-top: 0; }
   .navigation-overlay {
@@ -1172,7 +1174,8 @@ a:visited {
   float: left; }
 
 .page-template-page-two-column-utility .field-container {
-  position: relative; }
+  position: relative;
+  z-index: -1; }
   .page-template-page-two-column-utility .field-container p:first-child {
     position: absolute;
     top: 3px;
