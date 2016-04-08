@@ -13,8 +13,6 @@
 	<h1><?php the_title(); ?></h1>
 </article>
 
-
-	
 	<?php if( have_rows('content_blocks') ): ?>
 		<article>
 		<?php while( have_rows('content_blocks') ): the_row(); 
@@ -34,11 +32,6 @@
 
 			<p><a href="<?php echo the_permalink() ?>">More<?php echo $more; ?></a></p>
 
-
-
 		<?php endwhile; ?>
 		</article>
 	<?php endif; ?>
-
-
-
