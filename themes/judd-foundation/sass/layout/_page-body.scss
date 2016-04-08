@@ -24,16 +24,17 @@ article p {
 
 
 .block-3 {
-	@include span(4 of 12);
-		margin-bottom: 2em;
-		@include breakpoint($mobile) {
-      		@include span(12);
-      		margin-bottom: 1em;
+	width: 33.333%;
+    float: left;
+    padding-right: 2.2082%;
+    margin-bottom: 2em;
+	@include breakpoint($mobile) {
+  		@include span(12);
+  		margin-bottom: 1em;
+  		img{
+  			width:100%;
+  		}
   	}
-}
-
-.block-3:nth-child(3n+3) {  
-	@include last;
 }
 
 .block-4 {

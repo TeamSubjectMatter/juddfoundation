@@ -20,7 +20,7 @@
 		<a href="<?php echo get_sub_field('link');?>"><img src="<?= get_sub_field('image'); ?>" class="img-responsive" alt="<?= "" ?>" /></a>
 		<h3><?= get_sub_field('heading'); ?></h3>
 		<h4><?= get_sub_field('text'); ?></h4>
-		<h5><a href="<?php echo get_sub_field('link');?>" class="">Read More</a></h5>
+		<h5><a href="<?php echo get_sub_field('link');?>" class="gold">Read More</a></h5>
 	</section>
 	<?php endwhile; ?>
 
