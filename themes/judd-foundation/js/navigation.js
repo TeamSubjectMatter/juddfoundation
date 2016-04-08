@@ -110,7 +110,7 @@
 
     });
 	
-	if(window.width>769){
+	if($(window).width() > 768){
 		//Shows search
 		$('.primary-navigation div div.search i:first-child').click(function(e) {
 			$('.search form').show();
