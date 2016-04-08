@@ -796,6 +796,9 @@ header h1 {
       float: right;
       margin-right: 0; } }
 
+header {
+  padding-top: 17px; }
+
 footer {
   background-color: #000;
   color: #fff;
@@ -903,7 +906,7 @@ footer a {
   color: #ecb731; }
 
 .hero {
-  margin-top: 2em;
+  margin-top: 1.2em;
   margin-bottom: 1.5em;
   background-repeat: no-repeat;
   background-size: cover;
