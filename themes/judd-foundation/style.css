@@ -263,6 +263,7 @@ a {
   text-decoration: none;
   transition: color 150ms ease; }
   a:active, a:focus, a:hover {
+    text-decoration: underline;
     color: #104c90; }
 
 hr {
@@ -1004,6 +1005,7 @@ article p {
   margin-right: 0; }
 
 .right-sidebar {
+  margin-top: 1.5em;
   width: 23.34385%;
   float: right;
   margin-right: 0; }
@@ -1015,7 +1017,9 @@ article p {
       margin-right: 0; } }
 
 .right-side-images {
-  padding-top: 2em; }
+  margin-top: 1em;
+  text-align: right;
+  display: inline-block; }
 
 .column-one {
   width: 48.8959%;
@@ -1161,10 +1165,10 @@ a:visited {
   color: #ecb731; }
 
 .page-template-page-section-landing article {
-  margin-top: 80px; }
+  margin-top: 20px; }
 
 .page-template-page-section-landing h2 {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   line-height: 1.7; }
 
 .page-template-page-section-landing h3, .page-template-page-section-landing h4, .page-template-page-section-landing h5 {

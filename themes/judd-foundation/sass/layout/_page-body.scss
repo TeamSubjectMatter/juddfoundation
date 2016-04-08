@@ -87,14 +87,17 @@ article p {
 }
 
 .right-sidebar {
-	@include span(3 of 12 last);
+	margin-top:1.5em;
+		@include span(3 of 12 last);
 		@include breakpoint($mobile) {
       		@include span(12);
   	}
 }
 
 .right-side-images {
-	padding-top: 2em;
+	margin-top:1em;
+	text-align:right;
+	display:inline-block;
 }
 
 .column-one {
