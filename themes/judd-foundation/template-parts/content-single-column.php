@@ -19,10 +19,9 @@
 
 	<section class="block-1">
 		<h3><?= get_sub_field('title'); ?></h3>
-		<h4><?= get_sub_field('text'); ?></h4>
+		<h4><?= get_sub_field('content'); ?></h4>
 	</section>
 
 	<?php endwhile; ?>
 
 </article>
-
