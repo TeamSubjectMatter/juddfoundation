@@ -2,7 +2,6 @@
 
 .container{
 	min-height:91vh;
-	width:90%;
 	margin:auto;
 }
 h2{
@@ -10,5 +9,15 @@ h2{
     font-weight: 300;
 }
 h5 a:visited{
+	color: $gold;
+}
+.container>header{
+	width:90%;
+	margin:auto;
+}
+article{
+	width:90%;
+}
+a:visited{
 	color: $gold;
 }    

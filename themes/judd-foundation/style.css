@@ -1115,7 +1115,6 @@ div.overlay {
 /*** Global Page Styles ***/
 .container {
   min-height: 91vh;
-  width: 90%;
   margin: auto; }
 
 h2 {
@@ -1123,6 +1122,16 @@ h2 {
   font-weight: 300; }
 
 h5 a:visited {
+  color: #ecb731; }
+
+.container > header {
+  width: 90%;
+  margin: auto; }
+
+article {
+  width: 90%; }
+
+a:visited {
   color: #ecb731; }
 
 .page-template-page-section-landing article {
