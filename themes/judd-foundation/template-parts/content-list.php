@@ -32,7 +32,7 @@
 
 			<?php echo $text; ?>
 
-			<p><a href="<?php echo $link; ?>"><?php echo $more; ?></a></p>
+			<p><a href="<?php echo the_permalink() ?>">More<?php echo $more; ?></a></p>
 
 
 

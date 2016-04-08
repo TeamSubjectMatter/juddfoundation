@@ -24,7 +24,9 @@
 	<div class="container">
 		<div class="navigation-overlay">
 			<nav id="site-navigation" class="primary-navigation" role="navigation">
-				<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) ); ?>
+				<div class="menu-container">
+					<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) ); get_search_form(); ?>
+				</div>
 			</nav>
 		</div>
 		<header>

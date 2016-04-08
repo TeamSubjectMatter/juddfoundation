@@ -567,37 +567,51 @@ a {
   bottom: 13em;
   position: absolute;
   background-color: rgba(255, 255, 255, 0.5); }
-  .primary-navigation div.menu-primary-navigation-container {
-    max-width: 800px;
-    margin: auto; }
-    .primary-navigation div.menu-primary-navigation-container ul.menu {
-      text-align: center; }
-      .primary-navigation div.menu-primary-navigation-container ul.menu li {
-        display: inline-block;
-        padding: 1.25em 1.3em;
-        font-size: 1.2em; }
-        .primary-navigation div.menu-primary-navigation-container ul.menu li a {
-          color: #000; }
-      .primary-navigation div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
-        display: block;
-        height: 100vh;
-        width: 140px;
-        box-shadow: 0 3px 3px transparent;
-        background-color: rgba(155, 145, 135, 0.4);
-        position: absolute;
-        bottom: 4em; }
-      .primary-navigation div.menu-primary-navigation-container ul.menu div.sub-container {
+  .primary-navigation div.menu-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center; }
+    .primary-navigation div.menu-container div.menu-primary-navigation-container {
+      display: inline-block;
+      margin: auto; }
+      .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu {
+        text-align: center; }
+        .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
+          display: inline-block;
+          padding: 1.25em 1em;
+          font-size: 1.2em; }
+          .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li a {
+            color: #000; }
+        .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
+          display: block;
+          height: 100vh;
+          width: 140px;
+          box-shadow: 0 3px 3px transparent;
+          background-color: rgba(155, 145, 135, 0.4);
+          position: absolute;
+          bottom: 4em; }
+        .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu div.sub-container {
+          display: none; }
+        .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu {
+          text-align: left;
+          bottom: 0; }
+          .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li {
+            font-size: .9em;
+            margin: 0px;
+            padding: .5em .8em; }
+            .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li a {
+              color: #fff;
+              width: 131px; }
+    .primary-navigation div.menu-container div.search {
+      display: inline-block;
+      padding: 0 1em;
+      position: relative; }
+      .primary-navigation div.menu-container div.search form {
         display: none; }
-      .primary-navigation div.menu-primary-navigation-container ul.menu ul.sub-menu {
-        text-align: left;
-        bottom: 0; }
-        .primary-navigation div.menu-primary-navigation-container ul.menu ul.sub-menu li {
-          font-size: .9em;
-          margin: 0px;
-          padding: .5em .8em; }
-          .primary-navigation div.menu-primary-navigation-container ul.menu ul.sub-menu li a {
-            color: #fff;
-            width: 131px; }
+      .primary-navigation div.menu-container div.search i.in-search-box {
+        top: 10px;
+        right: 27px;
+        position: absolute; }
   .primary-navigation ul {
     display: none;
     list-style: none;
@@ -631,7 +645,8 @@ a {
   height: 100vh;
   position: fixed;
   overflow: scroll;
-  display: none; }
+  display: none;
+  left: 0; }
   .navigation-overlay .primary-navigation {
     background-color: white;
     top: 50%;
@@ -665,21 +680,6 @@ a {
   text-align: right;
   width: 50%; }
 
-.global-foot-right-navigation {
-  text-align: right; }
-  .global-foot-right-navigation li:last-child {
-    padding-right: 0px; }
-
-.footer-container ul {
-  float: left;
-  width: 50%; }
-  .footer-container ul li {
-    display: inline-block;
-    padding: 0 9px;
-    font-size: 13px; }
-  .footer-container ul li:first-child {
-    padding-left: 0px; }
-
 /****Tablet Break***/
 @media screen and (max-width: 768px) {
   .top-bar {
@@ -688,29 +688,37 @@ a {
     bottom: inherit;
     min-height: 100%;
     background: none; }
-    .primary-navigation div.menu-primary-navigation-container {
+    .primary-navigation div.menu-container {
       background-color: rgba(255, 255, 255, 0.5);
       width: 70%;
-      min-height: 100vh; }
-      .primary-navigation div.menu-primary-navigation-container ul.menu {
-        padding: 40% 0;
+      min-height: 100vh;
+      margin: auto; }
+      .primary-navigation div.menu-container div.menu-primary-navigation-container {
         display: block; }
-        .primary-navigation div.menu-primary-navigation-container ul.menu li {
+        .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu {
+          padding-top: 40%;
           display: block;
-          padding: .6em 1.3em;
-          font-size: 2em; }
-        .primary-navigation div.menu-primary-navigation-container ul.menu li:first-child {
-          padding-top: 0; }
+          padding-bottom: 13px; }
+          .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
+            display: block;
+            padding: .6em 1em;
+            font-size: 1.8em; }
+          .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
+            padding-top: 0; }
   .navigation-overlay {
     min-height: 100%;
     height: auto; }
     .navigation-overlay .primary-navigation {
       background: none;
       top: 0; }
-      .navigation-overlay .primary-navigation div.menu-primary-navigation-container {
+      .navigation-overlay .primary-navigation div.menu-container {
         background: none; }
-        .navigation-overlay .primary-navigation div.menu-primary-navigation-container ul.menu li a {
-          color: #fff; } }
+        .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container {
+          background: none; }
+          .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li a {
+            color: #fff; }
+      .navigation-overlay .primary-navigation i:first-child {
+        color: #fff; } }
 
 /***** Mobile Break ****/
 @media screen and (max-width: 420px) {

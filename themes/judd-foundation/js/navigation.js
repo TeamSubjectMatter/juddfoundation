@@ -46,6 +46,7 @@
 	links    = menu.getElementsByTagName( 'a' );
 	subMenus = menu.getElementsByTagName( 'ul' );
 
+
 	// Set menu items with submenus to aria-haspopup="true".
 	for ( var i = 0, len = subMenus.length; i < len; i++ ) {
 		subMenus[i].parentNode.setAttribute( 'aria-haspopup', 'true' );
@@ -108,6 +109,24 @@
         }
 
     });
+	
+	if(window.width>769){
+		//Shows search
+		$('.primary-navigation div div.search i:first-child').click(function(e) {
+			$('.search form').show();
+			$(this).hide();
 
+		});
+	}
+	else{
+		$('.search form').show();
+		$('.primary-navigation div div.search i:first-child').hide();
+	}
+			
+		
+	//Hide sub navigation on mobile
+	$( "ul.menu li" ).click(function(){
+		$('.sub-container').hide();
+	})
 })
 (jQuery);
