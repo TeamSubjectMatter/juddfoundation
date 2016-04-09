@@ -9,5 +9,9 @@
 
 ?>
 
-<div class="hero" style='background-image: url("<?php echo the_field('hero_image'); ?>");'>
+<?php if (has_post_thumbnail( ) ): ?>
+<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( ), 'single-post-thumbnail' ); ?>
+<?php endif; ?>
+
+<div class="hero" style='background-image: url("<?php echo $image[0]; ?>");'>
 </div>
