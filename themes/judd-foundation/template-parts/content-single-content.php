@@ -25,7 +25,7 @@
 	
 		<?php while( have_rows('sidebar_content_blocks') ): the_row();  ?>
 			<li>
-				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); ?>
+				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(the_sub_field('sidebar_post')->ID), 'single-post-thumbnail' ); ?>
 				<a class="right-side-images" href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>"></a>
 			</li>
 		<?php endwhile; ?>
