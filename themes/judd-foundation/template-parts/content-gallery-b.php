@@ -18,17 +18,26 @@
 
 <?php 
 	query_posts( array( 
-					'post_type' => array(get_post_field( 'post_name', get_post() )),
+					/* query custom post types based on page slug */
+					'post_type' => array(get_post_field( 'post_name', get_post() ) ),
 					'showposts' => 10
 				 ) );
-
 	while(have_posts()) : the_post(); 
+
 ?>
- 
+
+<?php
+$custom_fields = get_post_custom();
+
+foreach ( $custom_fields as $field_key => $field_values ) {
+	foreach ( $field_values as $key => $value )
+		echo $field_key . ' - ' . $value . '<br />';
+}
+?>
 	<div class="block-4">
         <a href="<?php the_permalink(); ?>" class="">
         <?php the_title(); ?>
-        <?php the_field('image', array('class' => 'img-responsive')); ?></a>
+        </a>
 	</div>
 <?php 
 	endwhile; 
