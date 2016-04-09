@@ -13,22 +13,20 @@
 	<h1><?php the_title(); ?></h1>
 </article>
 
-	<?php if( have_rows('content_blocks') ): ?>
-		<article>
-		<?php while( have_rows('content_blocks') ): the_row(); 
-			// vars
-			$heading = get_sub_field('heading');
-			$image = get_sub_field('image');
-			$text = get_sub_field('text');
-			$more = get_sub_field('more_text');
-			$link = get_sub_field('link');
-		?>
+<?php
+echo "post type=" . get_post_field( 'post_name', get_post() ) 
+	// query custom post types based on page slug 
+	query_posts( array( 
+					'post_type' => array(get_post_field( 'post_name', get_post() ) )
+				 ) );
+	while(have_posts()) : the_post(); 
+?>
 
-			<img src="<?php echo $image; ?>" class="img-responsive" alt="" />
+	<img src="<?php echo $image; ?>" class="img-responsive" alt="" />
 
-			<h2><?php echo $heading; ?></h2>
+	<h2><?php echo $heading; ?></h2>
 
-			<?php echo $text; ?>
+	<?php echo $text; ?>
 
 			<p><a href="<?php echo $link; ?>">More<?php echo $more; ?></a></p>
 

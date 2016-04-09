@@ -19,7 +19,6 @@
 <?php 
 	// query custom post types based on page slug 
 	query_posts( array( 
-					
 					'post_type' => array(get_post_field( 'post_name', get_post() ) )
 				 ) );
 	while(have_posts()) : the_post(); 
