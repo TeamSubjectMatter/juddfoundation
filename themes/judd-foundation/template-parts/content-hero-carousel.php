@@ -15,17 +15,13 @@
         <div style="position:absolute;display:block;background:url('<?= get_template_directory_uri (); ?>/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
     </div>
     <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
-       	<?php
-        $images = get_field('images');
-	
-		if( $images ): ?>
-		<?php foreach( $images as $image):  ?>
 
-			<?php var_dump($image); ?>
+       	<?php if( have_rows('images') ): ?>
+		<?php while( have_rows('images') ): the_row();  ?>
         <div data-p="225.00">
-            <img data-u="image" src="<?php echo $image->image; ?>" />
+            <img data-u="image" src="<?php the_sub_field('image'); ?>" />
         </div>        
-		<?php endforeach; ?>
+		<?php endwhile; ?>
 		<?php endif; ?>
     </div>
     <!-- Arrow Navigator -->
