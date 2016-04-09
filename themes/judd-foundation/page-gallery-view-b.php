@@ -15,9 +15,6 @@
 get_header(); 
 
 get_template_part('template-parts/content', 'hero');
-
-while ( have_posts() ) : the_post();
-	get_template_part( 'template-parts/content', 'gallery-b' );
-endwhile; // End of the loop.
+get_template_part( 'template-parts/content', 'gallery-b' );
 
 get_footer();
