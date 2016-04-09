@@ -24,9 +24,10 @@
 	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 	$thumb_url = $thumb_url_array[0];
 ?>
+<article>
+	<div class="hero" style='background-image: url("<?php echo $thumb_url; ?>");'></div>
 
 
-	<img src="<?php echo $thumb_url; ?>" class="img-responsive" alt="" />
 
 	<h2><?php the_title(); ?></h2>
 
@@ -36,6 +37,6 @@
 
 	<?php endwhile; ?>
 		
-		</article>
+</article>
 		<div class="nav-previous alignleft"><?php next_posts_link( 'Previous Page' ); ?></div>
 		<div class="nav-next alignright"><?php previous_posts_link( 'Next Page' ); ?></div>
