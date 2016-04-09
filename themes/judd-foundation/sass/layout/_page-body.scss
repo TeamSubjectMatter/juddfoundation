@@ -67,8 +67,31 @@ article p {
 	float: left;
 	padding-right: 2.2082%;
 	img {
-		width: 100%;
+		width: auto;
 		height: 228px;
+	}
+	.overlay {
+	    background: #000000;
+	    height: 100%;
+	    width: 100%;
+	    opacity: 0;
+	    top: 0;
+	    left: 0;
+	    position: absolute;
+	    padding: 0;
+	    transition: opacity .5s;
+
+	    p {
+	      color: #FFFFFF;
+	      font-family: 'Helvetica';
+	      text-align: center;
+	    }
+  	}
+	&:hover {
+	    .overlay {
+	    	opacity: .9;
+	      	transition: opacity .5s;
+	   	}
 	}
 	@include span(3 of 12);
 		margin-bottom: 2em;
@@ -77,6 +100,12 @@ article p {
       		margin-bottom: 1em;
   	}
 }
+
+
+
+
+
+
 
 .block-4:nth-child(4n+4) {  
 	@include last;

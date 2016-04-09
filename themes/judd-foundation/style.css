@@ -985,8 +985,25 @@ article p {
   margin-right: 2.2082%;
   margin-bottom: 2em; }
   .block-4 img {
-    width: 100%;
+    width: auto;
     height: 228px; }
+  .block-4 .overlay {
+    background: #000000;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 0;
+    transition: opacity .5s; }
+    .block-4 .overlay p {
+      color: #FFFFFF;
+      font-family: 'Helvetica';
+      text-align: center; }
+  .block-4:hover .overlay {
+    opacity: .9;
+    transition: opacity .5s; }
   @media (min-width: 280px) and (max-width: 769px) {
     .block-4 {
       width: 100%;
