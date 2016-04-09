@@ -31,11 +31,12 @@
 	$thumb_url = $thumb_url_array[0];
 ?>
 	<div class="block-4">
-        <a href="<?php the_permalink(); ?>" class="">
         	<img src="<?= $thumb_url; ?>">
 			<div class="overlay">
-				<span><?php the_title(); ?></span>
+				<p><?php the_title(); ?></p>
 			</div>
+		        <a href="<?php the_permalink(); ?>" class="">
+
         </a>
 	</div>
 <?php endwhile; ?>

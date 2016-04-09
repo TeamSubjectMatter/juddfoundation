@@ -980,6 +980,8 @@ article p {
   width: 25%;
   float: left;
   padding-right: 2.2082%;
+  position: relative;
+  display: block;
   width: 23.34385%;
   float: left;
   margin-right: 2.2082%;
