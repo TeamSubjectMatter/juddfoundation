@@ -33,6 +33,3 @@ while(have_posts()) : the_post();
 <?php endwhile; ?>
 		
 </article>
-
-<div class="nav-previous alignleft"><?php next_posts_link( 'Previous Page' ); ?></div>
-<div class="nav-next alignright"><?php previous_posts_link( 'Next Page' ); ?></div>
