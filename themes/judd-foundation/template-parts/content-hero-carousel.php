@@ -24,6 +24,17 @@
         <div data-p="225.00">
             <img data-u="image" src="<?= get_template_directory_uri (); ?>/img/red.jpg" />
         </div>        
+
+       	<?php
+        $images = get_field('images');
+	
+		if( $images ): ?>
+		<?php foreach( $images as $image):  ?>
+        <div data-p="225.00">
+            <img data-u="image" src="<?php echo $image; ?>" />
+        </div>        
+		<?php endforeach; ?>
+		<?php endif; ?>
     </div>
     <!-- Arrow Navigator -->
     <span data-u="arrowleft" class="jssora22l" style="top:0px;left:12px;width:40px;height:58px;" data-autocenter="2"></span>
