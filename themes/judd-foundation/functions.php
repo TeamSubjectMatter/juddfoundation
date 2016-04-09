@@ -331,7 +331,7 @@ function custom_post_type() {
 	register_post_type( 'programs', $args );
 
 	/*
-	 * Programs
+	 * News
 	 */
 	$args = array(
 		'label'               => __( 'news', 'judd-foundation' ),
