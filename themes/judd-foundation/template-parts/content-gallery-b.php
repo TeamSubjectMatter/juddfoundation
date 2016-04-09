@@ -15,6 +15,8 @@
 	<?php get_the_content(); ?>
 	here
 	<?php the_content(); ?>
+	there
+	<?php get_field('post_content'); ?>
 </article>
 
 <article>
