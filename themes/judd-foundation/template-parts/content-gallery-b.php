@@ -11,12 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" class="galleryViewB">
 	<h1><?php the_title(); ?></h1>
-	<?php var_dump($post); ?>
-	<?php get_the_content(); ?>
-	here
-	<?php the_content(); ?>
-	there
-	<?php get_field('post_content'); ?>
+	<h2><?php the_content(); ?></h2>
 </article>
 
 <article>
