@@ -8,7 +8,7 @@
  * different template.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
- * Template Name: Single Content Page 
+ * 
  * @package judd-foundation
  */
 
