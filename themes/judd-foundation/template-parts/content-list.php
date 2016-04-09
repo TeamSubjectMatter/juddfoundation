@@ -35,4 +35,3 @@ echo "post type=" . get_post_field( 'post_name', get_post() ) ;
 		</article>
 		<div class="nav-previous alignleft"><?php next_posts_link( 'Previous Page' ); ?></div>
 		<div class="nav-next alignright"><?php previous_posts_link( 'Next Page' ); ?></div>
-	<?php endif; ?>
