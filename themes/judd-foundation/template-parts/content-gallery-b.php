@@ -28,11 +28,15 @@
 
 <?php
 $custom_fields = get_post_custom();
-	get_field('image');
+
+$thumb_id = get_post_thumbnail_id();
+$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+$thumb_url = $thumb_url_array[0];
 ?>
 	<div class="block-4">
         <a href="<?php the_permalink(); ?>" class="">
         <?php the_title(); ?>
+        <img src ="<?php echo $thumb_url; ?>">
         </a>
 	</div>
 <?php 
