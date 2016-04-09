@@ -28,7 +28,7 @@
 	<div class="block-4">
         <a href="<?php the_permalink(); ?>" class="">
         <?php the_title(); ?>
-        <?php the_field('hero', array('class' => 'img-responsive')); ?></a>
+        <?php the_field('image', array('class' => 'img-responsive')); ?></a>
 	</div>
 <?php 
 	endwhile; 
