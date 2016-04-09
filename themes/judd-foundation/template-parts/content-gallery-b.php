@@ -10,29 +10,28 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" class="galleryViewB">
-
-	<!--
-	<section class="page-content-area-full">
-		<?php the_post_thumbnail(); ?>
-	</section>
-	-->
-
 	<h1><?php the_title(); ?></h1>
 	<h2><?php the_content(); ?></h2>
-
 </article>
 
 <article>
 
-    <?php while ( have_rows('content_blocks') ) : the_row(); ?>  
+<?php 
+
+	$args = array(
+		'post_type' => 'spaces'
+	);
+	$query = new WP_Query($args);
+	
+	if(have_posts()) : 
+		while(have_posts()) : the_post(); 
+?>
+ 
 	<div class="block-4">
-        <?php if( get_sub_field('gallery_b_item') ): ?>
-        <?php $post = $post_object; setup_postdata( $post ); ?>
         <a href="<?php the_permalink(); ?>" class="">
+        <?php the_title(); ?>
         <?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></a>
-        <?php wp_reset_postdata(); ?>
-        <?php endif; ?>
 	</div>
-	<?php endwhile; ?>
+	<?php endwhile; endif; ?>
 
 </article>
