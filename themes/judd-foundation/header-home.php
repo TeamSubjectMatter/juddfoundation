@@ -20,7 +20,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> style="background: url('<?php get_the_post_thumbnail(); ?>') no-repeat center center fixed; background-size: cover;">
+<body <?php body_class(); ?> style="background: url('<?php the_post_thumbnail(); ?>') no-repeat center center fixed; background-size: cover;">
 	<div class="overlay"></div>
 	<div class="top-bar"><?php echo the_content(); ?></div>
 	<nav id="site-navigation" class="primary-navigation" role="navigation">
