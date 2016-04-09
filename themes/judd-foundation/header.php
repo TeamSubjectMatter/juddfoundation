@@ -36,7 +36,6 @@
 				</div>
 				<div class="header-right">
 					<i class="fa fa-bars fa-3x"></i>
-					
 				</div>
 			</section>
 		</header>
