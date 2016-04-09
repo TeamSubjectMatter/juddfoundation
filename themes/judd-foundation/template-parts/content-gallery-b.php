@@ -11,7 +11,10 @@
 
 <article id="post-<?php the_ID(); ?>" class="galleryViewB">
 	<h1><?php the_title(); ?></h1>
+	<?php var_dump($post); ?>
 	<?php get_the_content(); ?>
+	here
+	<?php the_content(); ?>
 </article>
 
 <article>
