@@ -23,7 +23,7 @@
 
 			<?php var_dump($image); ?>
         <div data-p="225.00">
-            <img data-u="image" src="<?php echo $image; ?>" />
+            <img data-u="image" src="<?php echo get_field('image'); ?>" />
         </div>        
 		<?php endforeach; ?>
 		<?php endif; ?>
