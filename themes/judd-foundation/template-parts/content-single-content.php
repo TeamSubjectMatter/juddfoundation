@@ -29,7 +29,7 @@
 		<?php foreach( $post_objects as $post):  ?>
 			<?php setup_postdata($post); ?>
 			<li>
-				<?php $image = get_the_post_thumbnail ( $post->ID ); ?>
+				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( ), 'single-post-thumbnail' ); ?>
 				<a class="right-side-images" href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>"></a>
 			</li>
 		<?php endforeach; ?>
