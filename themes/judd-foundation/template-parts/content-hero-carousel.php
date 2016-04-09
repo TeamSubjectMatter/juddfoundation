@@ -8,7 +8,5 @@
 
 
 ?>
-carousel
 <div class="hero" style='background-image: url("<?php echo the_field('hero_image'); ?>");'>
 </div>
-
