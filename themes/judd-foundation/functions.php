@@ -158,7 +158,7 @@ function custom_post_type() {
 									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
 								),
 		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-		'taxonomies' 		  => array('category',),
+		'taxonomies' 		  => array(''	),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -197,7 +197,7 @@ function custom_post_type() {
 									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
 								),
 		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-		'taxonomies' 		  => array('category',),
+		'taxonomies' 		  => array(),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -235,7 +235,7 @@ function custom_post_type() {
 									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
 								),
 		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-		'taxonomies' 		  => array('category',),
+		'taxonomies' 		  => array(),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -291,7 +291,7 @@ function custom_post_type() {
 	
 	register_post_type( 'spaces', $args );
 
-		/*
+	/*
 	 * Programs
 	 */
 	$args = array(
@@ -329,6 +329,45 @@ function custom_post_type() {
 	);
 	
 	register_post_type( 'programs', $args );
+
+	/*
+	 * Programs
+	 */
+	$args = array(
+		'label'               => __( 'news', 'judd-foundation' ),
+		'description'         => __( 'Donald Judd\'s News', 'judd-foundation' ),
+		'labels'              => array(
+									'name'                => _x( 'News', 'Post Type General Name', 'judd-foundation' ),
+									'singular_name'       => _x( 'News', 'Post Type Singular Name', 'judd-foundation' ),
+									'menu_name'           => __( 'News', 'judd-foundation' ),
+									'parent_item_colon'   => __( 'Parent Locations', 'judd-foundation' ),
+									'all_items'           => __( 'All News', 'judd-foundation' ),
+									'view_item'           => __( 'Views News', 'judd-foundation' ),
+									'add_new_item'        => __( 'Add New News', 'judd-foundation' ),
+									'add_new'             => __( 'Add New', 'judd-foundation' ),
+									'edit_item'           => __( 'Edit News', 'judd-foundation' ),
+									'update_item'         => __( 'Update News', 'judd-foundation' ),
+									'search_items'        => __( 'Search News', 'judd-foundation' ),
+									'not_found'           => __( 'Not Found', 'judd-foundation' ),
+									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
+								),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+		'taxonomies' 		  => array(),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 6,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+	);
+	
+	register_post_type( 'news', $args );
 
 	/*
 	 * Visit
@@ -377,6 +416,80 @@ function custom_post_type() {
 */
 
 add_action( 'init', 'custom_post_type', 0 );
+
+function add_custom_taxonomies() {
+  // Add new "Locations" taxonomy to Posts
+  register_taxonomy('art_type', 'art', array(
+    // Hierarchical taxonomy (like categories)
+    'hierarchical' => true,
+    // This array of options controls the labels displayed in the WordPress Admin UI
+    'labels' => array(
+      'name' => _x( 'Art Types', 'taxonomy general name' ),
+      'singular_name' => _x( 'Art Type', 'taxonomy singular name' ),
+      'search_items' =>  __( 'Search Art Types' ),
+      'all_items' => __( 'All Art Types' ),
+      'edit_item' => __( 'Edit Art Type' ),
+      'update_item' => __( 'Update Art Type' ),
+      'add_new_item' => __( 'Add New Art Type' ),
+      'new_item_name' => __( 'New Art Type' ),
+      'menu_name' => __( 'Art Types' ),
+    ),
+    // Control the slugs used for this taxonomy
+    'rewrite' => array(
+      'slug' => 'art_type', // This controls the base slug that will display before each term
+      'with_front' => false, // Don't display the category base before "/locations/"
+      'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
+    ),
+  ));
+
+  register_taxonomy('writing_type', 'writing', array(
+    // Hierarchical taxonomy (like categories)
+    'hierarchical' => true,
+    // This array of options controls the labels displayed in the WordPress Admin UI
+    'labels' => array(
+      'name' => _x( 'Writing Types', 'taxonomy general name' ),
+      'singular_name' => _x( 'Writing Type', 'taxonomy singular name' ),
+      'search_items' =>  __( 'Search Writing Types' ),
+      'all_items' => __( 'All Writing Types' ),
+      'edit_item' => __( 'Edit Writing Type' ),
+      'update_item' => __( 'Update Writing Type' ),
+      'add_new_item' => __( 'Add New Writing Type' ),
+      'new_item_name' => __( 'New Writing Type' ),
+      'menu_name' => __( 'Writing Types' ),
+    ),
+    // Control the slugs used for this taxonomy
+    'rewrite' => array(
+      'slug' => 'writing_type', // This controls the base slug that will display before each term
+      'with_front' => false, // Don't display the category base before "/locations/"
+      'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
+    ),
+  ));
+
+  register_taxonomy('furniture_type', 'furniture', array(
+    // Hierarchical taxonomy (like categories)
+    'hierarchical' => true,
+    // This array of options controls the labels displayed in the WordPress Admin UI
+    'labels' => array(
+      'name' => _x( 'Furniture Types', 'taxonomy general name' ),
+      'singular_name' => _x( 'Furniture Type', 'taxonomy singular name' ),
+      'search_items' =>  __( 'Search Furniture Types' ),
+      'all_items' => __( 'All Furniture Types' ),
+      'edit_item' => __( 'Edit Furniture Type' ),
+      'update_item' => __( 'Update Furniture Type' ),
+      'add_new_item' => __( 'Add New Furniture Type' ),
+      'new_item_name' => __( 'New Furniture Type' ),
+      'menu_name' => __( 'Furniture Types' ),
+    ),
+    // Control the slugs used for this taxonomy
+    'rewrite' => array(
+      'slug' => 'writing_type', // This controls the base slug that will display before each term
+      'with_front' => false, // Don't display the category base before "/locations/"
+      'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
+    ),
+  ));
+}
+add_action( 'init', 'add_custom_taxonomies', 0 );
+
 
 /**
  * Enqueue scripts and styles.
