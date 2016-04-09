@@ -28,7 +28,6 @@
 		<ul>
 		<?php foreach( $post_objects as $post):  ?>
 			<?php setup_postdata($post); ?>
-			<?php var_dump($post); ?>
 			<li>
 				<?php $image = get_the_post_thumbnail ( $post->ID ); ?>
 				<a class="right-side-images" href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>"></a>
