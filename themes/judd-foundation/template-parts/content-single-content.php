@@ -14,7 +14,6 @@
 	<section class="page-content-area">
 		<h1><?php the_title(); ?></h1>
 		
-
 		<?php the_field('location'); ?>
 		<?php the_content(); ?>
 	</section>
