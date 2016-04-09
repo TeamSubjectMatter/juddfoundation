@@ -32,6 +32,9 @@
         <?php the_title(); ?>
         <?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></a>
 	</div>
-	<?php endwhile; endif; ?>
-
+	<?php 
+			wp_reset_postdata();
+		endwhile; 
+	endif; 
+	?>
 </article>
