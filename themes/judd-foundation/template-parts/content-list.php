@@ -14,7 +14,7 @@
 </article>
 
 <?php
-echo "post type=" . get_post_field( 'post_name', get_post() ) 
+echo "post type=" . get_post_field( 'post_name', get_post() ) ;
 	// query custom post types based on page slug 
 	query_posts( array( 
 					'post_type' => array(get_post_field( 'post_name', get_post() ) )
