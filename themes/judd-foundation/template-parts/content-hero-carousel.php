@@ -22,14 +22,14 @@
 			$thumb_url = $thumb_url_array[0];
 		?>
 		<div data-p="225.00">
-            <img data-u="image" src="<?php echo $thumb_url; ?>" />
+            <img data-u="image" src="<?php echo $thumb_url; ?>" style="height: 100%; width: auto;"/>
         </div>
 
 		<!-- get other images -->
        	<?php if( have_rows('images') ): ?>
 		<?php while( have_rows('images') ): the_row();  ?>
         <div data-p="225.00">
-            <img data-u="image" src="<?php the_sub_field('image'); ?>" />
+            <img data-u="image" src="<?php the_sub_field('image'); ?>" style="height: 100%; width: auto;" />
         </div>        
 		<?php endwhile; ?>
 		<?php endif; ?>
