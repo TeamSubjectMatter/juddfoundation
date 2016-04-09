@@ -28,6 +28,7 @@
 		<ul>
 		<?php foreach( $post_objects as $post):  ?>
 			<?php setup_postdata($post); ?>
+			<?php echo $post->ID; ?>
 			<li>
 				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( ), 'single-post-thumbnail' ); ?>
 				<a class="right-side-images" href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>"></a>
