@@ -63,6 +63,13 @@ article p {
 	clear:left;
 }
 .block-4 {
+	width: 25%;
+	float: left;
+	padding-right: 2.2082%;
+	img {
+		width: 100%;
+		height: 228px;
+	}
 	@include span(3 of 12);
 		margin-bottom: 2em;
 		@include breakpoint($mobile) {
