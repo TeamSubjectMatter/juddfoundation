@@ -39,5 +39,3 @@
 				</div>
 			</section>
 		</header>
-
-		<?php echo "template: " . get_page_template_slug( $post->ID ); ?>
