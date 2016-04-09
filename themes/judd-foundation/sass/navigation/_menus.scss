@@ -38,6 +38,7 @@
 				    background-color: rgba(155, 145, 135, 0.4);
 				    position: absolute;
 				    bottom: 4em;
+				    transition: opacity 0.5s, visibility 0s 0.5s;
 				}
 				div.sub-container{
 					display: none;

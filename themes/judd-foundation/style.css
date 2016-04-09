@@ -595,7 +595,8 @@ a {
           box-shadow: 0 3px 3px transparent;
           background-color: rgba(155, 145, 135, 0.4);
           position: absolute;
-          bottom: 4em; }
+          bottom: 4em;
+          transition: opacity 0.5s, visibility 0s 0.5s; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu div.sub-container {
           display: none; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu {
