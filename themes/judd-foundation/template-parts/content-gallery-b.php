@@ -28,11 +28,7 @@
 
 <?php
 $custom_fields = get_post_custom();
-
-foreach ( $custom_fields as $field_key => $field_values ) {
-	foreach ( $field_values as $key => $value )
-		echo $field_key . ' - ' . $value . '<br />';
-}
+	get_field('image');
 ?>
 	<div class="block-4">
         <a href="<?php the_permalink(); ?>" class="">
