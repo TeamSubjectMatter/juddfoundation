@@ -30,7 +30,8 @@
 			<?php setup_postdata($post); ?>
 			<?php var_dump($post); ?>
 			<li>
-				<a class="right-side-images" href="<?php the_permalink(); ?>"><img src="<?php the_field('hero_image', 14); ?>"></a>
+				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+				<a class="right-side-images" href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>"></a>
 			</li>
 		<?php endforeach; ?>
 		</ul>
