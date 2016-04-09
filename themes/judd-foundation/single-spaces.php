@@ -13,7 +13,7 @@
  */
 
 get_header(); 
-echo get_page_template_slug( $post->ID ); 
+
 while ( have_posts() ) : the_post();
 
 	get_template_part( 'template-parts/content', 'hero-carousel' );
