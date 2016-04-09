@@ -16,13 +16,13 @@
     </div>
     <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
         <div data-p="225.00">
-            <img data-u="image" src="<?php bloginfo('template_directory'); ?>/img/blue.png" />
+            <img data-u="image" src="<?php get_template_directory(); ?>/img/blue.png" />
         </div>
         <div data-p="225.00">
-            <img data-u="image" src="<?php bloginfo('template_directory'); ?>/img/purple.png" />
+            <img data-u="image" src="<?php get_template_directory(); ?>/img/purple.png" />
         </div>
         <div data-p="225.00">
-            <img data-u="image" src="<?php bloginfo('template_directory'); ?>/img/red.png" />
+            <img data-u="image" src="<?php get_template_directory(); ?>/img/red.png" />
         </div>        
     </div>
     <!-- Arrow Navigator -->
