@@ -28,9 +28,9 @@
 		<ul>
 		<?php foreach( $post_objects as $post):  ?>
 			<?php setup_postdata($post); ?>
+			<?php var_dump($post); ?>
 			<li>
 				<a class="right-side-images" href="<?php the_permalink(); ?>"><img src="<?php the_field('hero_image', 14); ?>"></a>
-				
 			</li>
 		<?php endforeach; ?>
 		</ul>
