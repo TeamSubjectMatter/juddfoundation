@@ -15,16 +15,6 @@
         <div style="position:absolute;display:block;background:url('<?= get_template_directory_uri (); ?>/img/blue.png/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
     </div>
     <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
-        <div data-p="225.00">
-            <img data-u="image" src="<?= get_template_directory_uri (); ?>/img/blue.jpg" />
-        </div>
-        <div data-p="225.00">
-            <img data-u="image" src="<?= get_template_directory_uri (); ?>/img/purple.jpg" />
-        </div>
-        <div data-p="225.00">
-            <img data-u="image" src="<?= get_template_directory_uri (); ?>/img/red.jpg" />
-        </div>        
-
        	<?php
         $images = get_field('images');
 	
