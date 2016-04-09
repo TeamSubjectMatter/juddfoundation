@@ -16,8 +16,13 @@
     </div>
     <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
 		<!-- get featured image -->
+		<?php
+			$thumb_id = get_post_thumbnail_id();
+			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+			$thumb_url = $thumb_url_array[0];
+		?>
 		<div data-p="225.00">
-            <img data-u="image" src="<?php the_post_thumbnail(); ?>" />
+            <img data-u="image" src="<?php echo $thumb_url; ?>" />
         </div>
 
 		<!-- get other images -->
