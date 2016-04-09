@@ -15,7 +15,12 @@
         <div style="position:absolute;display:block;background:url('<?= get_template_directory_uri (); ?>/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
     </div>
     <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+		<!-- get featured image -->
+		<div data-p="225.00">
+            <img data-u="image" src="<?php the_post_thumbnail(); ?>" />
+        </div>
 
+		<!-- get other images -->
        	<?php if( have_rows('images') ): ?>
 		<?php while( have_rows('images') ): the_row();  ?>
         <div data-p="225.00">
