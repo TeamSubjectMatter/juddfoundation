@@ -17,14 +17,12 @@
 <article>
 
 <?php 
+	query_posts( array( 
+					'post_type' => array('spaces'),
+					'showposts' => 10
+				 ) );
 
-	$args = array(
-		'post_type' => 'spaces'
-	);
-	$query = new WP_Query($args);
-	
-	if(have_posts()) : 
-		while(have_posts()) : the_post(); 
+	while(have_posts()) : the_post(); 
 ?>
  
 	<div class="block-4">
@@ -32,9 +30,8 @@
         <?php the_title(); ?>
         <?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></a>
 	</div>
-	<?php 
-			wp_reset_postdata();
-		endwhile; 
-	endif; 
-	?>
+<?php 
+		wp_reset_postdata();
+	endwhile; 
+?>
 </article>
