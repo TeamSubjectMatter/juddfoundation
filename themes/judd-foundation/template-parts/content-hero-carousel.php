@@ -17,17 +17,17 @@
     <!-- Loading Screen -->
     <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
         <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-        <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        <div style="position:absolute;display:block;background:url('<?= get_template_directory_uri (); ?>/img/blue.png/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
     </div>
     <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
         <div data-p="225.00">
-            <img data-u="image" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />
+            <img data-u="image" src="<?= get_template_directory_uri (); ?>/img/blue.png" />
         </div>
         <div data-p="225.00">
-            <img data-u="image" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />
+            <img data-u="image" src="<?= get_template_directory_uri (); ?>/img/purple.png" />
         </div>
         <div data-p="225.00">
-            <img data-u="image" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />
+            <img data-u="image" src="<?= get_template_directory_uri (); ?>/img/red.png" />
         </div>        
     </div>
     <!-- Arrow Navigator -->
