@@ -18,7 +18,7 @@
 
 <?php 
 	query_posts( array( 
-					'post_type' => array(get_post_field( 'post_name', get_post() );),
+					'post_type' => array(get_post_field( 'post_name', get_post() )),
 					'showposts' => 10
 				 ) );
 
