@@ -12,7 +12,7 @@
     <!-- Loading Screen -->
     <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
         <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-        <div style="position:absolute;display:block;background:url('<?= get_template_directory_uri (); ?>/img/blue.png/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        <div style="position:absolute;display:block;background:url('<?= get_template_directory_uri (); ?>/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
     </div>
     <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
        	<?php
@@ -20,6 +20,8 @@
 	
 		if( $images ): ?>
 		<?php foreach( $images as $image):  ?>
+
+			<?php var_dump($image); ?>
         <div data-p="225.00">
             <img data-u="image" src="<?php echo $image; ?>" />
         </div>        
