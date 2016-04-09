@@ -274,7 +274,7 @@ function custom_post_type() {
 									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
 								),
 		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-		'taxonomies' 		  => array('category',),
+		'taxonomies' 		  => array(),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,

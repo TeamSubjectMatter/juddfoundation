@@ -40,4 +40,4 @@
 			</section>
 		</header>
 
-		<?php echo get_page_template_slug( $post->ID ); ?>
+		<?php echo "template: " . get_page_template_slug( $post->ID ); ?>
