@@ -6,7 +6,6 @@
  *
  * @package judd-foundation
  */
-
 ?>
 
 <article>
