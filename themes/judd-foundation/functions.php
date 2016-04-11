@@ -176,44 +176,7 @@ function custom_post_type() {
 	register_post_type( 'art', $args );
 
 
-	/*
-	 * Writing
-	 */
-	$args = array(
-		'label'               => __( 'writing', 'judd-foundation' ),
-		'description'         => __( 'Donald Judd\'s Writing', 'judd-foundation' ),
-		'labels'              => array(
-									'name'                => _x( 'Writing', 'Post Type General Name', 'judd-foundation' ),
-									'singular_name'       => _x( 'Writing', 'Post Type Singular Name', 'judd-foundation' ),
-									'menu_name'           => __( 'Writing', 'judd-foundation' ),
-									'parent_item_colon'   => __( 'Parent Locations', 'judd-foundation' ),
-									'all_items'           => __( 'All Writing', 'judd-foundation' ),
-									'view_item'           => __( 'View Writing', 'judd-foundation' ),
-									'add_new_item'        => __( 'Add New Writing', 'judd-foundation' ),
-									'add_new'             => __( 'Add New', 'judd-foundation' ),
-									'edit_item'           => __( 'Edit Writing', 'judd-foundation' ),
-									'update_item'         => __( 'Update Writing', 'judd-foundation' ),
-									'search_items'        => __( 'Search Writing', 'judd-foundation' ),
-									'not_found'           => __( 'Not Found', 'judd-foundation' ),
-									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
-								),
-		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-		'taxonomies' 		  => array(),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 6,
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'post',
-	);
 	
-	register_post_type( 'writing', $args );
 
 	/*
 	 * Spaces
@@ -332,44 +295,7 @@ function custom_post_type() {
 	
 	register_post_type( 'news', $args );
 
-	/*
-	 * Visit
-	 */
-	$args = array(
-		'label'               => __( 'visit', 'judd-foundation' ),
-		'description'         => __( 'Donald Judd\'s Visit', 'judd-foundation' ),
-		'labels'              => array(
-									'name'                => _x( 'Visit', 'Post Type General Name', 'judd-foundation' ),
-									'singular_name'       => _x( 'Visit', 'Post Type Singular Name', 'judd-foundation' ),
-									'menu_name'           => __( 'Visit', 'judd-foundation' ),
-									'parent_item_colon'   => __( 'Parent Locations', 'judd-foundation' ),
-									'all_items'           => __( 'All Visit', 'judd-foundation' ),
-									'view_item'           => __( 'View Visit', 'judd-foundation' ),
-									'add_new_item'        => __( 'Add New Visit', 'judd-foundation' ),
-									'add_new'             => __( 'Add New', 'judd-foundation' ),
-									'edit_item'           => __( 'Edit Visit', 'judd-foundation' ),
-									'update_item'         => __( 'Update Visit', 'judd-foundation' ),
-									'search_items'        => __( 'Search Visit', 'judd-foundation' ),
-									'not_found'           => __( 'Not Found', 'judd-foundation' ),
-									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
-								),
-		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-		'taxonomies' 		  => array('category',),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 6,
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'post',
-	);
 	
-	register_post_type( 'visit', $args );
 
 }
 
@@ -400,29 +326,6 @@ function add_custom_taxonomies() {
     // Control the slugs used for this taxonomy
     'rewrite' => array(
       'slug' => 'art_type', // This controls the base slug that will display before each term
-      'with_front' => false, // Don't display the category base before "/locations/"
-      'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
-    ),
-  ));
-
-  register_taxonomy('writing_type', 'writing', array(
-    // Hierarchical taxonomy (like categories)
-    'hierarchical' => true,
-    // This array of options controls the labels displayed in the WordPress Admin UI
-    'labels' => array(
-      'name' => _x( 'Writing Types', 'taxonomy general name' ),
-      'singular_name' => _x( 'Writing Type', 'taxonomy singular name' ),
-      'search_items' =>  __( 'Search Writing Types' ),
-      'all_items' => __( 'All Writing Types' ),
-      'edit_item' => __( 'Edit Writing Type' ),
-      'update_item' => __( 'Update Writing Type' ),
-      'add_new_item' => __( 'Add New Writing Type' ),
-      'new_item_name' => __( 'New Writing Type' ),
-      'menu_name' => __( 'Writing Types' ),
-    ),
-    // Control the slugs used for this taxonomy
-    'rewrite' => array(
-      'slug' => 'writing_type', // This controls the base slug that will display before each term
       'with_front' => false, // Don't display the category base before "/locations/"
       'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
     ),
