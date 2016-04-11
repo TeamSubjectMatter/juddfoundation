@@ -90,13 +90,14 @@
 				  	 function() {
 				  	 	$('div.overlay').css('display','block');
 				  	 	$('div.top-bar').css('display','none');
-
+				  	 	
 				  	 },
 				  	 function() {
 				  	 	$('div.overlay').css('display','none');
 				  	 	$('div.top-bar').css('display','block');
+
 				  	 }
-				);console.log($containerWidth);
+				);//console.log($containerWidth);
 			}
 		else{
 			$( "ul#menu-primary-navigation" ).hover(function(){
@@ -119,11 +120,13 @@
             $(this).removeClass('active');
             $('div.navigation-overlay').css('display','none');
             $('body').css('overflow','auto');
+			$('div.block-4').css('z-index','0');
         } 
         else{
         	$('i.fa-bars').addClass('active');
         	$('div.navigation-overlay').css('display','block');
         	$('body').css('overflow','hidden');
+        	$('div.block-4').css('z-index','-1');
         }
 
     });

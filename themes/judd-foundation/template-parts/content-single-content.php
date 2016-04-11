@@ -34,7 +34,7 @@
                     <?php $post = $post_object; setup_postdata( $post ); ?>
 					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); ?>
                     <a class="right-side-images" href="<?php the_permalink(); ?>">
-						<div class="overlay">
+						<div class="overlay-content">
 							<p><?php the_title(); ?></p>
 						</div>
 						<img src="<?php echo $image[0]; ?>">
