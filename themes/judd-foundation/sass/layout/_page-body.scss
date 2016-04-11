@@ -63,14 +63,20 @@ article p {
 	clear:left;
 }
 .block-4 {
-	width: 25%;
-	float: left;
-	padding-right: 2.2082%;
-	position: relative;
-	display: block;
+	width: 22%;
+    float: left;
+    margin-left: 2%;
+    margin-right: 1%;
+    position: relative;
+    display: block;
+    margin-bottom: 2.5em;
+    height: 208px;
 	img {
 		width: auto;
-		height: 228px;
+		height: 100%;
+		a{
+			display:block;
+		}
 	}
 	.overlay {
 	    background: #000000;
@@ -82,21 +88,32 @@ article p {
 	    position: absolute;
 	    padding: 0;
 	    transition: opacity .5s;
-
+	    display:none;
 	    p {
-	      color: #FFFFFF;
-	      font-family: 'Helvetica';
-	      text-align: center;
+	      	color: #FFFFFF;
+	      	font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+	        font-size: 1.2em;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    text-align:center;
+		    text-transform:uppercase;
 	    }
   	}
 	&:hover {
+		img{
+			opacity:.3;
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
+		}
 	    .overlay {
-	    	opacity: .9;
+	    	opacity: 1;
 	      	transition: opacity .5s;
+	      	display:block;
 	   	}
 	}
-	@include span(3 of 12);
-		margin-bottom: 2em;
+	//@include span(3 of 12);
 		@include breakpoint($mobile) {
       		@include span(12);
       		margin-bottom: 1em;
@@ -110,7 +127,7 @@ article p {
 
 
 .block-4:nth-child(4n+4) {  
-	@include last;
+	//@include last;
 }
 
 

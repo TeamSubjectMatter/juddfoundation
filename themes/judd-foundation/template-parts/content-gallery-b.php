@@ -30,10 +30,11 @@
 ?>
 	<div class="block-4">
 		<a href="<?php the_permalink(); ?>" class="">
-        	<img src="<?= $thumb_url; ?>">
-			<div class="overlay">
+        	<div class="overlay">
 				<p><?php the_title(); ?></p>
 			</div>
+			<img src="<?= $thumb_url; ?>">
+			
         </a>
 	</div>
 <?php endwhile; ?>
