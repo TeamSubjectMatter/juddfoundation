@@ -989,7 +989,9 @@ article p {
     .block-4 {
       height: auto; } }
   .block-4 a {
-    display: block; }
+    display: block;
+    width: 100%;
+    height: 100%; }
   .block-4 img {
     width: auto;
     height: 100%; }
