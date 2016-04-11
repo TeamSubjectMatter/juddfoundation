@@ -18,13 +18,16 @@
 	</nav>
 	<p class="label">Sort By</p>
 	<ul class="dropdown">
-		<p id="title">Decade:</p>
-		<li class="dropdown-list"><a href="#">1950s</a></li>
-		<li class="dropdown-list"><a href="#">11960s</a></li>
-		<li class="dropdown-list"><a href="#">1970s</a></li>
+		<p id="title">Art Type:</p>
+		<li class="dropdown-list"  data-filter="Prints"><a href="#">All</a></li>
+			<?php $terms= get_terms('art_type');
+			  foreach ( $terms as $term ) {
+				echo '<li class="dropdown-list" data-filter="'.$term->name.' "><a href="#">'.$term->name.'</a></li>';
+			}
+			?>
 	</ul>
 </article>
-<article>
+<article class="grid">
 
 <?php 
 	// query custom post types based on page slug 
@@ -37,8 +40,12 @@
 	$thumb_id = get_post_thumbnail_id();
 	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 	$thumb_url = $thumb_url_array[0];
+	
+	$id=get_the_ID();
+	$terms = get_the_terms( $id , 'art_type' );
+	
 ?>
-	<div class="block-4">
+	<div class="block-4 grid-item <?php  foreach ( $terms as $term ) {echo $term->name;}?>">
 			<a href="<?php the_permalink(); ?>" class="">
 	        	<img src="<?= $thumb_url; ?>">
 				<div class="overlay-content">

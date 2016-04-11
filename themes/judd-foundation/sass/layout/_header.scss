@@ -27,6 +27,7 @@ header h1 {
 	@include span(1 of 12 last);
 	.fa-3x{
 		font-size:2em;
+		z-index:9;
 	}
 		@include breakpoint($mobile) {
 			@include push (0);
