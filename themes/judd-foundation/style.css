@@ -652,7 +652,8 @@ a {
   position: fixed;
   overflow: scroll;
   display: none;
-  left: 0; }
+  left: 0;
+  z-index: 9; }
   .navigation-overlay .primary-navigation {
     background-color: white;
     top: 50%;
@@ -1231,6 +1232,36 @@ article {
 
 a:visited {
   color: #ecb731; }
+
+ul.dropdown {
+  width: 165px;
+  z-index: 1;
+  position: absolute;
+  background: #fff;
+  display: inline-block;
+  margin-top: -9px; }
+  ul.dropdown li {
+    padding: 10px 40px;
+    font-size: .875em;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    display: none; }
+    ul.dropdown li a {
+      color: #333;
+      text-decoration: none; }
+  ul.dropdown p {
+    padding: 10px 40px;
+    font-size: .875em;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    margin-bottom: 0; }
+
+ul.dropping {
+  border: 1px solid #ddd;
+  box-shadow: 0 0 1px #888; }
+
+p.label {
+  display: inline-block;
+  margin-right: 49px;
+  font-weight: 500; }
 
 .page-template-page-section-landing article {
   margin-top: 20px; }

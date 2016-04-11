@@ -25,4 +25,39 @@ article{
 }
 a:visited{
 	color: $gold;
-}    
+}
+
+ul.dropdown{
+	width: 165px;
+	z-index: 1;
+    position: absolute;
+    background: #fff;
+    display:inline-block;
+    margin-top:-9px;
+    li{
+    	padding: 10px 40px;
+    	font-size: .875em;
+    	font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    	display:none;
+    	a{
+    		color:#333;
+    		text-decoration:none;
+    	}
+    }
+    p{
+    	padding: 10px 40px;
+    	font-size: .875em;
+    	font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    	margin-bottom:0;
+    } 
+}
+ul.dropping{
+	border: 1px solid #ddd;
+    box-shadow: 0 0 1px #888;
+}
+p.label{
+	display: inline-block;
+    margin-right: 49px;
+    font-weight: 500;
+}
+   

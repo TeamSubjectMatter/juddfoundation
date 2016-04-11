@@ -16,12 +16,13 @@
 			<li></li>
 		</ul>
 	</nav>
-
-	<section>
-	Sort by: <select>
-				<option>Work Type</option>
-			 </select>
-	</section>
+	<p class="label">Sort By</p>
+	<ul class="dropdown">
+		<p id="title">Decade:</p>
+		<li class="dropdown-list"><a href="#">1950s</a></li>
+		<li class="dropdown-list"><a href="#">11960s</a></li>
+		<li class="dropdown-list"><a href="#">1970s</a></li>
+	</ul>
 </article>
 <article>
 
@@ -38,12 +39,12 @@
 	$thumb_url = $thumb_url_array[0];
 ?>
 	<div class="block-4">
-		<a href="<?php the_permalink(); ?>" class="">
-        	<img src="<?= $thumb_url; ?>">
-			<div class="overlay">
-				<p><?php the_title(); ?></p>
-			</div>
-        </a>
+			<a href="<?php the_permalink(); ?>" class="">
+	        	<img src="<?= $thumb_url; ?>">
+				<div class="overlay-content">
+					<p><?php the_title(); ?></p>
+				</div>
+	        </a>
 	</div>
 <?php endwhile; ?>
 </article>
