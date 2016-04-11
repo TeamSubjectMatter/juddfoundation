@@ -21,7 +21,7 @@
 	query_posts( array( 
 					'post_type' => array(get_post_field( 'post_name', get_post() ) )
 				 ) );
-	while(have_posts()) : the_post(); 
+	while(have_posts()) : the_post(); 	
 
 	//get thumbnail URL
 	$thumb_id = get_post_thumbnail_id();
