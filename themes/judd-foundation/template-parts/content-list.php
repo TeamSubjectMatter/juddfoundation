@@ -30,6 +30,5 @@ while(have_posts()) : the_post();
 	<p>
 		<a href="<?php the_permalink(); ?>">Read More</a>
 	</p>
-<?php endwhile; ?>
-		
 </article>
+<?php endwhile; ?>
