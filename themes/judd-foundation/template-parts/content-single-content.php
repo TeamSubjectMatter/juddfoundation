@@ -15,7 +15,7 @@
 		<h1><?php the_title(); ?></h1>
 		
 		<!-- For Spaces -->
-		<?php if the_field('location'): ?>
+		<?php if (the_field('location')): ?>
 		<p><?php the_field('location'); ?></p>
 		<?php endif; ?>
 
