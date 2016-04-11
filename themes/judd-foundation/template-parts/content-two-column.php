@@ -8,7 +8,11 @@
  */
 
 ?>
-<?php get_page_children( $page_id, $pages ) ?>
+<?php 
+	$query = new WP_Query();
+	$pages = $query->query(array('post_type' => 'page'));
+
+get_page_children( $page_id, $pages ) ?>
 
 
 
