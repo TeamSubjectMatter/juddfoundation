@@ -872,7 +872,9 @@ footer a {
   .footer-container ul li {
     display: inline-block;
     padding: 0 2.6px;
-    font-size: 13px; }
+    font-size: 13px;
+    width: auto;
+    height: auto; }
     .footer-container ul li a:visited {
       color: #fff; }
   .footer-container ul li:first-child {
