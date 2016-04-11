@@ -26,16 +26,8 @@
 	<?php if( have_rows('sidebar_content_blocks') ): ?>
 		<ul>
 		<?php while( have_rows('sidebar_content_blocks') ): the_row();  ?>
-			<li class="thumbs">
-				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); ?>
-				<a class="right-side-images" href="<?php the_permalink(); ?>">
-					<div class="overlay">
-						<p><?php the_title(); ?></p>
-					</div>
-					<img src="<?php echo $image[0]; ?>">
-				</a>
 
-			<li>
+			<li class="thumbs">
 
 		  		<?php $post_object = get_sub_field('sidebar_post'); ?> 
                 <?php if( $post_object ): ?>

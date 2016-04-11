@@ -5,13 +5,6 @@
    		height: 160px;
 		a{
 			height:100%;
-		img {
-				width: 100%;
-				height: 100%;
-				@include breakpoint($mobile){
-		    		height:auto;
-		    	}
-			}
 			.overlay {
 			    background: #000000;
 			    height: 100%;
@@ -35,6 +28,13 @@
 				    text-transform:uppercase;
 			    }
 		  	}
+		  	img {
+				width: 100%;
+				height: 100%;
+				@include breakpoint($mobile){
+		    		height:auto;
+		    	}
+			}
 			&:hover {
 				img{
 					opacity:.3;
@@ -63,7 +63,7 @@
 			width:100%;
 		}
 	}
-	li:not(:first-child){
+	li.thumbs:not(:first-child){
 		margin-top:1.4em;
 	}
 
