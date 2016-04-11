@@ -86,7 +86,7 @@ article p {
     		height:auto;
     	}
 	}
-	.overlay {
+	.overlay-content {
 	    background: #000000;
 	    height: 100%;
 	    width: 100%;
@@ -115,7 +115,7 @@ article p {
 			-webkit-filter: grayscale(100%);
 			filter: grayscale(100%);
 		}
-	    .overlay {
+	    .overlay-content {
 	    	opacity: 1;
 	      	transition: opacity .5s;
 	      	display:block;

@@ -30,7 +30,7 @@
 ?>
 	<div class="block-4">
 		<a href="<?php the_permalink(); ?>" class="">
-        	<div class="overlay">
+        	<div class="overlay-content">
 				<p><?php the_title(); ?></p>
 			</div>
 			<img src="<?= $thumb_url; ?>">
