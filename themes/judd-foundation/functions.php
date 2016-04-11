@@ -177,8 +177,6 @@ function custom_post_type() {
 
 
 	
-	
-	register_post_type( 'writing', $args );
 
 	/*
 	 * Spaces
