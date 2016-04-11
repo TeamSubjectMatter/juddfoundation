@@ -71,12 +71,18 @@ article p {
     display: block;
     margin-bottom: 2.5em;
     height: 208px;
+    @include breakpoint($mobile){
+    	height:auto;
+    }
+	a {
+		display:block;
+	}
 	img {
 		width: auto;
 		height: 100%;
-		a{
-			display:block;
-		}
+		@include breakpoint($mobile){
+    		height:auto;
+    	}
 	}
 	.overlay {
 	    background: #000000;
@@ -112,6 +118,16 @@ article p {
 	      	transition: opacity .5s;
 	      	display:block;
 	   	}
+	   	@include breakpoint($mobile) {
+	   		img{
+	   			opacity:1;
+	   			filter:none;
+	   			-webkit-filter:none;
+	   		}
+	   		.overlay{
+	   			display:none;
+	   		}
+	   	}
 	}
 	//@include span(3 of 12);
 		@include breakpoint($mobile) {
@@ -136,6 +152,7 @@ article p {
 }
 
 .page-content-area {
+    padding-right: 3%;
 	@include span(9 of 12);
 		@include breakpoint($mobile) {
       		@include span(12);
@@ -155,11 +172,22 @@ article p {
 }
 
 .right-side-images {
-	margin-top:1em;
 	text-align:right;
 	display:inline-block;
+	width: 263px;
+    height: 160px;
+    img{
+    	height:100%;
+    	width:100%;
+    } 
+    @include breakpoint($mobile){
+    	width:100%;
+    	height:100%;
+    }
 }
-
+li:not(:first-child) .right-side-images{
+		margin-top:1.4em;
+}
 .column-one {
 	@include span(6 of 12);
 		@include breakpoint($mobile) {
