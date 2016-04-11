@@ -428,28 +428,29 @@ function add_custom_taxonomies() {
     ),
   ));
 
-  register_taxonomy('furniture_type', 'furniture', array(
+   register_taxonomy('program_type', 'programs', array(
     // Hierarchical taxonomy (like categories)
     'hierarchical' => true,
     // This array of options controls the labels displayed in the WordPress Admin UI
     'labels' => array(
-      'name' => _x( 'Furniture Types', 'taxonomy general name' ),
-      'singular_name' => _x( 'Furniture Type', 'taxonomy singular name' ),
-      'search_items' =>  __( 'Search Furniture Types' ),
-      'all_items' => __( 'All Furniture Types' ),
-      'edit_item' => __( 'Edit Furniture Type' ),
-      'update_item' => __( 'Update Furniture Type' ),
-      'add_new_item' => __( 'Add New Furniture Type' ),
-      'new_item_name' => __( 'New Furniture Type' ),
-      'menu_name' => __( 'Furniture Types' ),
+      'name' => _x( 'Program Types', 'taxonomy general name' ),
+      'singular_name' => _x( 'Program Type', 'taxonomy singular name' ),
+      'search_items' =>  __( 'Search Program Types' ),
+      'all_items' => __( 'All Program Types' ),
+      'edit_item' => __( 'Edit Program Type' ),
+      'update_item' => __( 'Update Program Type' ),
+      'add_new_item' => __( 'Add New Program Type' ),
+      'new_item_name' => __( 'New Program Type' ),
+      'menu_name' => __( 'Program Types' ),
     ),
     // Control the slugs used for this taxonomy
     'rewrite' => array(
-      'slug' => 'writing_type', // This controls the base slug that will display before each term
+      'slug' => 'program_type', // This controls the base slug that will display before each term
       'with_front' => false, // Don't display the category base before "/locations/"
       'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
     ),
   ));
+
 }
 add_action( 'init', 'add_custom_taxonomies', 0 );
 
