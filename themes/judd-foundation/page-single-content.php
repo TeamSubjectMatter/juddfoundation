@@ -8,16 +8,13 @@
  * different template.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
- * Template Name: Single Content Page 
+ * 
  * @package judd-foundation
  */
 
 get_header(); 
-while ( have_posts() ) : the_post();
 
-	get_template_part( 'template-parts/content', 'hero-body-width' );
-	get_template_part( 'template-parts/content', 'single-content' );
-
-endwhile; // End of the loop.
+get_template_part( 'template-parts/content', 'hero-carousel' );
+get_template_part( 'template-parts/content', 'single-content' );
 
 get_footer();
