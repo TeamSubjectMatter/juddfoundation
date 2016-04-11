@@ -11,13 +11,21 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<h1><?php the_title(); ?></h1>
-	<?php the_content(); ?>
-</article>
+	<nav>
+		<ul>
+			<li></li>
+		</ul>
+	</nav>
 
+	<section>
+	Sort by: <select>
+				<option>Work Type</option>
+			 </select>
+	</section>
+</article>
 <article>
 
 <?php 
-echo get_post_field( 'post_name', get_post() );
 	// query custom post types based on page slug 
 	query_posts( array( 
 					'post_type' => array(get_post_field( 'post_name', get_post() ) )

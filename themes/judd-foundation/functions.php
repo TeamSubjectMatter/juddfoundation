@@ -175,43 +175,6 @@ function custom_post_type() {
 	
 	register_post_type( 'art', $args );
 
-	/*
-	 * Furniture
-	 */
-	$args = array(
-		'label'               => __( 'furniture', 'judd-foundation' ),
-		'description'         => __( 'Donald Judd\'s Furniture', 'judd-foundation' ),
-		'labels'              => array(
-									'name'                => _x( 'Furniture', 'Post Type General Name', 'judd-foundation' ),
-									'singular_name'       => _x( 'Furniture', 'Post Type Singular Name', 'judd-foundation' ),
-									'menu_name'           => __( 'Furniture', 'judd-foundation' ),
-									'parent_item_colon'   => __( 'Parent Locations', 'judd-foundation' ),
-									'all_items'           => __( 'All Furniture', 'judd-foundation' ),
-									'view_item'           => __( 'View Furniture', 'judd-foundation' ),
-									'add_new_item'        => __( 'Add New Furniture', 'judd-foundation' ),
-									'add_new'             => __( 'Add New', 'judd-foundation' ),
-									'edit_item'           => __( 'Edit Furniture', 'judd-foundation' ),
-									'update_item'         => __( 'Update Furniture', 'judd-foundation' ),
-									'search_items'        => __( 'Search Furniture', 'judd-foundation' ),
-									'not_found'           => __( 'Not Found', 'judd-foundation' ),
-									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
-								),
-		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-		'taxonomies' 		  => array(),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 6,
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'post',
-	);
-	register_post_type( 'furniture', $args );
 
 	/*
 	 * Writing
