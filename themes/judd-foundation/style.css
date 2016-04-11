@@ -977,18 +977,19 @@ article p {
   clear: left; }
 
 .block-4 {
-  width: 25%;
+  width: 22%;
   float: left;
-  padding-right: 2.2082%;
+  margin-left: 2%;
+  margin-right: 1%;
   position: relative;
   display: block;
-  width: 23.34385%;
-  float: left;
-  margin-right: 2.2082%;
-  margin-bottom: 2em; }
+  margin-bottom: 2.5em;
+  height: 208px; }
   .block-4 img {
     width: auto;
-    height: 228px; }
+    height: 100%; }
+    .block-4 img a {
+      display: block; }
   .block-4 .overlay {
     background: #000000;
     height: 100%;
@@ -998,14 +999,26 @@ article p {
     left: 0;
     position: absolute;
     padding: 0;
-    transition: opacity .5s; }
+    transition: opacity .5s;
+    display: none; }
     .block-4 .overlay p {
       color: #FFFFFF;
-      font-family: 'Helvetica';
-      text-align: center; }
+      font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-size: 1.2em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      text-transform: uppercase; }
+  .block-4:hover img {
+    opacity: .3;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
   .block-4:hover .overlay {
-    opacity: .9;
-    transition: opacity .5s; }
+    opacity: 1;
+    transition: opacity .5s;
+    display: block; }
   @media (min-width: 280px) and (max-width: 769px) {
     .block-4 {
       width: 100%;
@@ -1013,10 +1026,6 @@ article p {
       margin-left: 0;
       margin-right: 0;
       margin-bottom: 1em; } }
-
-.block-4:nth-child(4n+4) {
-  float: right;
-  margin-right: 0; }
 
 .last {
   float: right;
@@ -1194,7 +1203,7 @@ h5 a:visited {
 
 article {
   width: 90%;
-  margin: 80px auto; }
+  margin: 73px auto; }
   article p {
     line-height: 1.7; }
 
@@ -1270,6 +1279,11 @@ a:visited {
   box-sizing: border-box;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em; }
+
+#jssor_1 {
+  z-index: -1; }
+  #jssor_1 img {
+    height: auto !important; }
 
 /* jssor slider bullet navigator skin 05 css */
 /*
