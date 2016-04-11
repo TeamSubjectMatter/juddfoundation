@@ -86,7 +86,7 @@
 	function hover(){
 		var $containerWidth = $(window).width();
 		if($containerWidth > 768){
-				$( "ul.menu" ).hover(
+				$( "ul#menu-primary-navigation" ).hover(
 				  	 function() {
 				  	 	$('div.overlay').css('display','block');
 				  	 	$('div.top-bar').css('display','none');
@@ -99,7 +99,7 @@
 				);console.log($containerWidth);
 			}
 		else{
-			$( "ul.menu" ).hover(function(){
+			$( "ul#menu-primary-navigation" ).hover(function(){
 				$('div.overlay').css('display','block');
 				$('div.top-bar').css('display','none');
 			});
