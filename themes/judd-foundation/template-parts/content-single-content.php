@@ -26,7 +26,7 @@
 	<?php if( have_rows('sidebar_content_blocks') ): ?>
 		<ul>
 		<?php while( have_rows('sidebar_content_blocks') ): the_row();  ?>
-			<li>
+			<li class="thumbs">
 				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); ?>
 				<a class="right-side-images" href="<?php the_permalink(); ?>">
 					<div class="overlay">
