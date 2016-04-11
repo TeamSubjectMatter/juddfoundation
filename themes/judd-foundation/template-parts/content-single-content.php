@@ -25,7 +25,12 @@
 		<?php while( have_rows('sidebar_content_blocks') ): the_row();  ?>
 			<li>
 				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); ?>
-				<a class="right-side-images" href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>"></a>
+				<a class="right-side-images" href="<?php the_permalink(); ?>">
+					<div class="overlay">
+						<p><?php the_title(); ?></p>
+					</div>
+					<img src="<?php echo $image[0]; ?>">
+				</a>
 			</li>
 		<?php endwhile; ?>
 		</ul>

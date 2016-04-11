@@ -139,11 +139,6 @@ article p {
 }
 
 
-
-
-
-
-
 .block-4:nth-child(4n+4) {  
 	//@include last;
 }
@@ -176,8 +171,6 @@ article p {
 .right-side-images {
 	text-align:right;
 	display:inline-block;
-	width: 263px;
-    height: 160px;
     img{
     	height:100%;
     	width:100%;
@@ -187,9 +180,7 @@ article p {
     	height:100%;
     }
 }
-li:not(:first-child) .right-side-images{
-		margin-top:1.4em;
-}
+
 .column-one {
 	@include span(6 of 12);
 		@include breakpoint($mobile) {
