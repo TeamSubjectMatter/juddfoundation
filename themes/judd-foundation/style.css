@@ -801,6 +801,8 @@ header h1 {
   width: 23.34385%;
   float: left;
   margin-right: 2.2082%; }
+  .header-left h1 a.parent-link {
+    color: #333; }
   @media (min-width: 280px) and (max-width: 769px) {
     .header-left {
       width: 74.44795%;

@@ -44,9 +44,9 @@
 							echo $post_type->label;
 							} 
 						if($parentID != null && $parentID != 0){
-							echo "<a href=\"" . get_the_permalink($post->post_parent) . "\">". get_the_title( $post->post_parent ) . "</a>";
+							echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\">". get_the_title( $post->post_parent ) . "</a>";
 						} else {
-							echo "<a href=\"" . get_the_permalink($post->ID) . "\">". get_the_title( $post->ID ) . "</a>";
+							echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->ID) . "\">". get_the_title( $post->ID ) . "</a>";
 						}
 
 						
