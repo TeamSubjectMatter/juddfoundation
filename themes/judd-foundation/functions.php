@@ -433,5 +433,5 @@ function color_a_link() {
 	return $colors[array_rand($colors, 1)];
 }
 
-
+$random_link_color = color_a_link();
 
