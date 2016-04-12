@@ -226,11 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-<<<<<<< HEAD
-  color: #2c4636; }
-=======
-  color: #9f9fa2; }
->>>>>>> 3fe427cf065a4af78e04a21ac819256a6ab9921f
+  color: #5e9299; }
 
 .gold {
   color: #ecb731; }
@@ -938,11 +934,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-<<<<<<< HEAD
-  color: #2c4636; }
-=======
-  color: #9f9fa2; }
->>>>>>> 3fe427cf065a4af78e04a21ac819256a6ab9921f
+  color: #5e9299; }
 
 .hero {
   margin-bottom: 2em;
@@ -1244,11 +1236,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-<<<<<<< HEAD
-  color: #2c4636; }
-=======
-  color: #9f9fa2; }
->>>>>>> 3fe427cf065a4af78e04a21ac819256a6ab9921f
+  color: #5e9299; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
@@ -1263,12 +1251,6 @@ h2 {
   font-size: 1.2em;
   font-weight: 300; }
 
-<<<<<<< HEAD
-h5 a:visited {
-  color: #2c4636; }
-
-=======
->>>>>>> 3fe427cf065a4af78e04a21ac819256a6ab9921f
 .container > header {
   width: 90%;
   margin: auto; }
@@ -1279,12 +1261,6 @@ article {
   article p {
     line-height: 1.7; }
 
-<<<<<<< HEAD
-a:visited {
-  color: #2c4636; }
-
-=======
->>>>>>> 3fe427cf065a4af78e04a21ac819256a6ab9921f
 a:hover {
   text-decoration: none; }
 
