@@ -32,10 +32,44 @@
 		<header>
 			<section class="header-container">
 				<div class="header-left">
-					<h1><a href="<?= home_url(); ?>"><span class="<?php the_field("logo_color"); ?>">JUDD</span></a> <?php the_field("site_section"); ?></h1>
+					<h1>
+						<a href="<?= home_url(); ?>">
+						<span class="<?php the_field("logo_color"); ?>">JUDD</span>
+						</a> 
+						<?php the_field("site_section"); ?>
+						<?php 
+						$post_type = get_post_type_object( get_post_type($post) );
+						if($post_type->label !== 'Pages'){
+							echo $post_type->label;
+							} ?>
+					</h1>
+					
+
+
+					
 				</div>
 				<div class="header-right">
 					<i class="fa fa-bars fa-3x"></i>
 				</div>
+
+				<div class="sub-nav">				
+					<?php 
+					$parentID = $post->post_parent;
+					if($parentID):
+						$args = array(
+							'post_parent' => $post->post_parent,
+							'post_status' => 'publish'
+							);
+						$child_page = get_children( $args);
+						foreach($child_page as $child){
+							$childID = $child->ID;
+							echo '<h2 class="breadcrum"><a href="'.get_the_permalink($childID).'" class=';
+							if($childID == $post->ID){
+								echo "current";
+							} 
+							echo '>' .get_the_title($childID).'</a></h2>';
+						}
+						endif;?>
+				</div>	
 			</section>
 		</header>

@@ -687,6 +687,17 @@ a {
   text-align: right;
   width: 50%; }
 
+div.sub-nav {
+  width: 100%;
+  float: left; }
+  div.sub-nav h2.breadcrum {
+    display: inline-block;
+    margin-right: 35px; }
+    div.sub-nav h2.breadcrum a, div.sub-nav h2.breadcrum a:visited {
+      color: #333; }
+    div.sub-nav h2.breadcrum a.current {
+      font-weight: 500; }
+
 /****Tablet Break***/
 @media screen and (max-width: 768px) {
   .top-bar {
