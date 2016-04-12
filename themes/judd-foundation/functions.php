@@ -435,3 +435,22 @@ function color_a_link() {
 
 $random_link_color = color_a_link();
 
+function instagram_homepage_color_link() {
+	$colors = array('#da7a2d',
+					  '#601900', 
+					  '#c3248a',
+					  '#204c8a',
+					  //'#5e9299', -- too light for # button
+					  '#2c4636',
+					  '#269a7b',
+					  '#9e6f32',
+					  //'#de97a8',
+					  //'#9f9fa2',
+					  //'#a6a8aa',
+					  '#57245d', 
+					  );
+	return $colors[array_rand($colors, 1)];
+}
+
+
+$instagram_homepage_color_link = instagram_homepage_color_link();
