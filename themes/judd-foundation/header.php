@@ -34,7 +34,7 @@
 				<div class="header-left">
 					<h1>
 						<a href="<?= home_url(); ?>">
-						<span>JUDD</span> /
+						<span>JUDD</span> 
 						</a> 
 						<?php the_field("site_section"); ?>
 						<?php
@@ -47,9 +47,9 @@
 							echo $post_type->label;
 							} 
 						if($parentID != null && $parentID != 0){
-							echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\">". get_the_title( $post->post_parent ) . "</a>";
+							echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\"> / ". get_the_title( $post->post_parent ) . "</a>";
 						} else {
-							echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->ID) . "\">". get_the_title( $post->ID ) . "</a>";
+							echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->ID) . "\"> / ". get_the_title( $post->ID ) . "</a>";
 						}		
 						}				
 						?>
