@@ -799,9 +799,7 @@ header h1 {
       padding: 0 1em; } }
 
 .header-left {
-  width: 23.34385%;
-  float: left;
-  margin-right: 2.2082%; }
+  float: left; }
   .header-left h1 a.parent-link {
     color: #333; }
   @media (min-width: 280px) and (max-width: 769px) {
@@ -1163,6 +1161,10 @@ article p {
     margin-right: -100%;
     clear: none; }
 
+.galleryViewB {
+  margin-bottom: 0;
+  padding-left: 1.4%; }
+
 /*--------------------------------------------------------------
 # Page styles
 --------------------------------------------------------------*/
@@ -1282,11 +1284,15 @@ ul.dropdown {
     ul.dropdown li a {
       color: #333;
       text-decoration: none; }
+    ul.dropdown li:hover {
+      background: #ddd;
+      cursor: pointer; }
   ul.dropdown p {
     padding: 10px 40px;
     font-size: .875em;
     font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    cursor: pointer; }
 
 ul.dropping {
   border: 1px solid #ddd;

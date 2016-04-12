@@ -19,7 +19,8 @@ header h1 {
 	h1 a.parent-link{
 		color:#333;
 	}
-	@include span(3 of 12);
+	//@include span(3 of 12);
+	float:left;
 		@include breakpoint($mobile) {
 			@include span(9 of 12)
 	}
