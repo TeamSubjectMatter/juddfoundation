@@ -121,12 +121,14 @@
             $('div.navigation-overlay').css('display','none');
             $('body').css('overflow','auto');
 			$('div.block-4').css('z-index','0');
+			$('li.thumbs').css('z-index','0');
         } 
         else{
         	$('i.fa-bars').addClass('active');
         	$('div.navigation-overlay').css('display','block');
         	$('body').css('overflow','hidden');
         	$('div.block-4').css('z-index','-1');
+        	$('li.thumbs').css('z-index','-1');
         }
 
     });
