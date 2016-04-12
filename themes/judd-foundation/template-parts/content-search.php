@@ -48,6 +48,8 @@ if( strlen($query_string) > 0 ) {
 
 $search = new WP_Query($search_query);
 $posts = $search->get_posts();
-var_dump($search);
+foreach($posts as $post) {
+	
+}
 ?>
 </article><!-- #post-## -->
