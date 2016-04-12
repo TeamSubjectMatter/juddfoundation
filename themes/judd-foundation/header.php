@@ -44,7 +44,7 @@
 							echo $post_type->label;
 							} 
 						if($parentID):
-							echo get_the_title( $post->post_parent );
+							echo "<a href=\"" . get_the_permalink($post->post_parent) . "\">". get_the_title( $post->post_parent ) . "</a>";
 						endif;
 						?>
 					</h1>
