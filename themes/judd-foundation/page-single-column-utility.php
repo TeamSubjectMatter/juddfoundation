@@ -9,11 +9,7 @@
 
 get_header(); 
 
-while ( have_posts() ) : the_post();
-
-	get_template_part( 'template-parts/content', 'hero' );
-	get_template_part( 'template-parts/content', 'single-column' );
-
-endwhile; // End of the loop.
+get_template_part( 'template-parts/content', 'hero-carousel' );
+get_template_part( 'template-parts/content', 'single-column' );
 
 get_footer();

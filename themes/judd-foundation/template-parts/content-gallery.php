@@ -10,12 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<h1><?php the_title(); ?></h1>
-	<nav>
-		<ul>
-			<li></li>
-		</ul>
-	</nav>
+	
 	<p class="label">Sort By</p>
 	<ul class="dropdown">
 		<p id="title">Art Type:</p>
@@ -32,7 +27,8 @@
 <?php 
 	// query custom post types based on page slug 
 	query_posts( array( 
-					'post_type' => array(get_post_field( 'post_name', get_post() ) )
+					'post_type' => array(get_post_field( 'post_name', get_post() ) ),
+					'posts_per_page' => -1,
 				 ) );
 	while(have_posts()) : the_post(); 
 

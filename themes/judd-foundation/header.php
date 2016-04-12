@@ -34,7 +34,7 @@
 				<div class="header-left">
 					<h1>
 						<a href="<?= home_url(); ?>">
-						<span class="<?php the_field("logo_color"); ?>">JUDD</span>
+						<span>JUDD</span>
 						</a> 
 						<?php the_field("site_section"); ?>
 						<?php
@@ -43,15 +43,15 @@
 						if($post_type->label !== 'Pages'){
 							echo $post_type->label;
 							} 
-						if($parentID):
-							echo get_the_title( $post->post_parent );
-						endif;
+						if($parentID != null && $parentID != 0){
+							echo "<a href=\"" . get_the_permalink($post->post_parent) . "\">". get_the_title( $post->post_parent ) . "</a>";
+						} else {
+							echo "<a href=\"" . get_the_permalink($post->ID) . "\">". get_the_title( $post->ID ) . "</a>";
+						}
+
+						
 						?>
 					</h1>
-					
-
-
-					
 				</div>
 				<div class="header-right">
 					<i class="fa fa-bars fa-3x"></i>
@@ -76,5 +76,22 @@
 						}
 						endif;?>
 				</div>	
+					<div class="sub-nav">				
+					<?php 
+						$args = array(
+							'post_parent' => $post->ID,
+							'post_status' => 'publish'
+							);
+						$child_page = get_children( $args);
+						foreach($child_page as $child){
+							$childID = $child->ID;
+							echo '<h2 class="breadcrum"><a href="'.get_the_permalink($childID).'" class=';
+							if($childID == $post->ID){
+								echo "current";
+							} 
+							echo '>' .get_the_title($childID).'</a></h2>';
+						}
+?>
+				</div>
 			</section>
 		</header>
