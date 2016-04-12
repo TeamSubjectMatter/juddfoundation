@@ -9,7 +9,7 @@ h2{
     font-weight: 300;
 }
 h5 a:visited{
-	color: $gold;
+	color: $link-color;
 }
 .container>header{
 	width:90%;
@@ -24,7 +24,7 @@ article{
 	}
 }
 a:visited{
-	color: $gold;
+	color: $link-color;
 }
 a:hover{
 	    text-decoration:none;
