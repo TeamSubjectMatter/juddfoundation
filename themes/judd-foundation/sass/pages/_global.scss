@@ -163,3 +163,22 @@ div.img-thumb {
 .img-contain{
 	height:228px;
 }
+
+div.button-container{
+	margin-top:40px;
+}
+.visit-button{
+	background: #d02139;
+    padding: 5px 8px;
+    color: white;
+    font-weight:300;
+    text-decoration:none;
+    &:hover{
+    	text-decoration:none;
+    	color:#fff;
+    }
+    &:visited{
+    	text-decoration:none;
+    	color:#fff;
+    }
+}
