@@ -34,7 +34,7 @@
 				<div class="header-left">
 					<h1>
 						<a href="<?= home_url(); ?>">
-						<span class="<?php the_field("logo_color"); ?>">JUDD</span>
+						<span>JUDD</span>
 						</a> 
 						<?php the_field("site_section"); ?>
 						<?php
@@ -43,9 +43,13 @@
 						if($post_type->label !== 'Pages'){
 							echo $post_type->label;
 							} 
-						if($parentID):
+						if($parentID){
 							echo "<a href=\"" . get_the_permalink($post->post_parent) . "\">". get_the_title( $post->post_parent ) . "</a>";
-						endif;
+						} else {
+							echo "<a href=\"" . get_the_permalink($post->ID) . "\">". get_the_title( $post->ID ) . "</a>";
+						}
+
+						
 						?>
 					</h1>
 				</div>
