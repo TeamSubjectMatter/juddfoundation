@@ -29,5 +29,6 @@
 </footer>
 
 <?php wp_footer(); ?>
+<?= $random_color_link; ?>
 </body>
 </html>
