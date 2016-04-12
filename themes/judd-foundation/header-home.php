@@ -18,6 +18,10 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
+<?php global $random_link_color; ?>
+<style>
+.instagramRandomColor{ color: <?php echo $random_link_color;?> }
+</style>
 </head>
 
 <?php if (has_post_thumbnail( ) ): ?>
