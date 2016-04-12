@@ -418,18 +418,18 @@ class Child_Wrap extends Walker_Nav_Menu
 
 
 function color_a_link() {
-	$colors = array('.orange',
-					  '.red',
-					  '.pink',
-					  '.blue ',
-					  '.light-blue',
-					  '.dark-green',
-					  '.aqua ',
-					  '.brown',
-					  '.light-pink ',
-					  '.grey',
-					  '.light-grey ',
-					  '.purple',
+	$colors = array('orange',
+					  'red',
+					  'pink',
+					  'blue ',
+					  'light-blue',
+					  'dark-green',
+					  'aqua ',
+					  'brown',
+					  'light-pink ',
+					  'grey',
+					  'light-grey ',
+					  'purple',
 					  );
 	return $colors[array_rand($colors, 1)];
 }
