@@ -431,7 +431,7 @@ function color_a_link() {
 					  '.light-grey ',
 					  '.purple',
 					  );
-	$k = array_rand($array);
+	$k = array_rand($colors);
 	return $array[$k];
 }
 
