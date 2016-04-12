@@ -453,4 +453,4 @@ function instagram_homepage_color_link() {
 }
 
 
-$instagram_homepage_color_link = color_a_link();
+$instagram_homepage_color_link = instagram_homepage_color_link();

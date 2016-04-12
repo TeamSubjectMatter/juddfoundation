@@ -11,6 +11,7 @@
 
 ?>
 </div>
+<?php global $random_color_link; ?>
 <footer>
 	<section class="footer-container">
 		<nav id="site-navigation" class="global-foot-left-navigation" role="navigation">
