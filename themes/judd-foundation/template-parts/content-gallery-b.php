@@ -19,13 +19,15 @@
 <?php 
 	// query custom post types based on page slug 
 	query_posts( array( 
-					'post_type' => array('spaces' )
+					'post_type' => array('spaces'),
+					'posts_per_page' => -1,
 				 ) );
+
 	while(have_posts()) : the_post(); 	
 
 	//get thumbnail URL
 	$thumb_id = get_post_thumbnail_id();
-	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail', true);
 	$thumb_url = $thumb_url_array[0];
 ?>
 	<div class="block-4">
@@ -34,7 +36,6 @@
 				<p><?php the_title(); ?></p>
 			</div>
 			<img src="<?= $thumb_url; ?>">
-			
         </a>
 	</div>
 <?php endwhile; ?>
