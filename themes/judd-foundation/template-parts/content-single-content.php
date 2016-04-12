@@ -19,7 +19,7 @@
 		<p><?php the_field('location'); ?></p>
 		<?php endif; ?>
 
-		<?php echo '<p>' .$post->post_content.'</p>'; ?>
+		<?php echo wpautop($post->post_content); ?>
 
 	</section>
 
