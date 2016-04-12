@@ -18,9 +18,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
-<?php global $random_link_color; ?>
+<?php global $instagram_homepage_color_link; ?>
 <style>
-.instagramRandomColor a { color: <?php echo $random_link_color;?> !important; }
+.instagramRandomColor a { color: <?php echo $instagram_homepage_color_link;?> !important; font-weight: bold; }
 </style>
 </head>
 
