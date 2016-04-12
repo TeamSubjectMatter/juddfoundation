@@ -693,7 +693,8 @@ div.sub-nav {
   div.sub-nav h2.breadcrum {
     display: inline-block;
     margin-right: 35px;
-    padding-left: 0; }
+    padding-left: 0;
+    margin-bottom: 15px; }
     div.sub-nav h2.breadcrum a, div.sub-nav h2.breadcrum a:visited {
       color: #333; }
     div.sub-nav h2.breadcrum a.current {
@@ -740,6 +741,12 @@ div.sub-nav {
             color: #fff; }
       .navigation-overlay .primary-navigation i:first-child {
         color: #fff; } }
+
+@media screen and (max-width: 665px) {
+  div.sub-nav h2.breadcrum {
+    margin-right: 0;
+    width: 50%;
+    margin-bottom: 10px; } }
 
 /***** Mobile Break ****/
 @media screen and (max-width: 420px) {
@@ -795,6 +802,8 @@ header h1 {
   width: 23.34385%;
   float: left;
   margin-right: 2.2082%; }
+  .header-left h1 a.parent-link {
+    color: #333; }
   @media (min-width: 280px) and (max-width: 769px) {
     .header-left {
       width: 74.44795%;
@@ -927,7 +936,6 @@ footer a {
   color: #ecb731; }
 
 .hero {
-  margin-top: 1.2em;
   margin-bottom: 2em;
   background-repeat: no-repeat;
   background-position: center;
@@ -1252,7 +1260,7 @@ h5 a:visited {
 
 article {
   width: 90%;
-  margin: 73px auto; }
+  margin: 37px auto 73px auto; }
   article p {
     line-height: 1.7; }
 

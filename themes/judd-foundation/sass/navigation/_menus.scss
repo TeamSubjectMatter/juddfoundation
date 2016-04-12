@@ -191,15 +191,16 @@ div.sub-nav{
 		display: inline-block;
 	    margin-right: 35px;
 	    padding-left:0;
+	    margin-bottom:15px;
 	    a,a:visited{
 	    	color: #333;
 	    }
 	    a.current{
 	    	font-weight: 500;
 	    }
+	    
 	}
 }
-
 
 
 /****Tablet Break***/
@@ -259,11 +260,19 @@ div.sub-nav{
 		}
 	} 
 }
+@media screen and (max-width:665px){
+	div.sub-nav h2.breadcrum{
+		margin-right: 0;
+    	width: 50%;
+    	 margin-bottom: 10px;
 
+	}
+}
 /***** Mobile Break ****/
 @media screen and (max-width:420px){
 	.primary-navigation div.menu-primary-navigation-container ul.menu li{
 		font-size: 1.4em;
 	}
+
 }
 
