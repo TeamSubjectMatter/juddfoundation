@@ -34,21 +34,22 @@
 				<div class="header-left">
 					<h1>
 						<a href="<?= home_url(); ?>">
-						<span>JUDD</span>
+						<span>JUDD</span> /
 						</a> 
 						<?php the_field("site_section"); ?>
 						<?php
-						$parentID = $post->post_parent; 
-						$post_type = get_post_type_object( get_post_type($post) );
-						if($post_type->label !== 'Pages'){
-							echo $post_type->label;
-							} 
-						if($parentID != null && $parentID != 0){
-							echo "<a href=\"" . get_the_permalink($post->post_parent) . "\">". get_the_title( $post->post_parent ) . "</a>";
-						} else {
-							echo "<a href=\"" . get_the_permalink($post->ID) . "\">". get_the_title( $post->ID ) . "</a>";
+						if ($post) {
+							$parentID = $post->post_parent; 
+							$post_type = get_post_type_object( get_post_type($post) );
+							if($post_type->label !== 'Pages'){
+								echo $post_type->label;
+								} 
+							if($parentID != null && $parentID != 0){
+								echo "<a href=\"" . get_the_permalink($post->post_parent) . "\">". get_the_title( $post->post_parent ) . "</a>";
+							} else {
+								echo "<a href=\"" . get_the_permalink($post->ID) . "\">". get_the_title( $post->ID ) . "</a>";
+							}
 						}
-
 						
 						?>
 					</h1>
@@ -59,6 +60,7 @@
 
 				<div class="sub-nav">				
 					<?php 
+					if($post) {
 					$parentID = $post->post_parent;
 					if($parentID):
 						$args = array(
@@ -74,22 +76,26 @@
 							} 
 							echo '>' .get_the_title($childID).'</a></h2>';
 						}
-						endif;?>
+						endif;
+					}
+					?>
 				</div>	
 					<div class="sub-nav">				
 					<?php 
-						$args = array(
-							'post_parent' => $post->ID,
-							'post_status' => 'publish'
-							);
-						$child_page = get_children( $args);
-						foreach($child_page as $child){
-							$childID = $child->ID;
-							echo '<h2 class="breadcrum"><a href="'.get_the_permalink($childID).'" class=';
-							if($childID == $post->ID){
-								echo "current";
-							} 
-							echo '>' .get_the_title($childID).'</a></h2>';
+						if($post) {
+							$args = array(
+								'post_parent' => $post->ID,
+								'post_status' => 'publish'
+								);
+							$child_page = get_children( $args);
+							foreach($child_page as $child){
+								$childID = $child->ID;
+								echo '<h2 class="breadcrum"><a href="'.get_the_permalink($childID).'" class=';
+								if($childID == $post->ID){
+									echo "current";
+								} 
+								echo '>' .get_the_title($childID).'</a></h2>';
+							}
 						}
 ?>
 				</div>
