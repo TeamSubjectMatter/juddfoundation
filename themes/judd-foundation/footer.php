@@ -11,7 +11,12 @@
 
 ?>
 </div>
-<?php global $random_color_link; echo $random_color_link;?>
+<?php global $random_color_link;?>
+
+<style>
+.instagramRandomColorFooter a { color: <?php echo $random_color_link;?> !important; font-weight: bold; }
+</style>
+
 <footer>
 	<section class="footer-container">
 		<nav id="site-navigation" class="global-foot-left-navigation" role="navigation">
@@ -24,6 +29,5 @@
 </footer>
 
 <?php wp_footer(); ?>
-asdf
 </body>
 </html>
