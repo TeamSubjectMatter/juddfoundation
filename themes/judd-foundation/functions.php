@@ -371,7 +371,7 @@ function judd_foundation_scripts() {
 	   is_page_template( 'page-section-landing.php') ||
 	   is_page_template( 'single-news.php') ||
 	   is_page_template( 'single-spaces.php') ||
-	   is_page_template( 'single-programs.php') {
+	   is_page_template( 'single-programs.php')) {
 	wp_enqueue_script( 'judd-foundation-slider', get_template_directory_uri() . '/js/jssor.js', array(), '20120206', true );
 	wp_enqueue_script( 'judd-foundation-slider-mini', get_template_directory_uri() . '/js/jssor.slider.mini.js', array(), '20120206', true );
 	}
