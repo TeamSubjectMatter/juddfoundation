@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
     
     var jssor_1_options = {
       $AutoPlay: true,
-      $SlideDuration: 800,
+      $SlideDuration: 1200,
       $SlideEasing: $Jease$.$OutQuint,
       $CaptionSliderOptions: {
         $Class: $JssorCaptionSlideo$,
