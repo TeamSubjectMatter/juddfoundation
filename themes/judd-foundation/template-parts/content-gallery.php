@@ -10,12 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<h1><?php the_title(); ?></h1>
-	<nav>
-		<ul>
-			<li></li>
-		</ul>
-	</nav>
+	
 	<p class="label">Sort By</p>
 	<ul class="dropdown">
 		<p id="title">Art Type:</p>

@@ -43,10 +43,6 @@
 							echo $post_type->label;
 							} ?>
 					</h1>
-					
-
-
-					
 				</div>
 				<div class="header-right">
 					<i class="fa fa-bars fa-3x"></i>
@@ -71,5 +67,27 @@
 						}
 						endif;?>
 				</div>	
+			 <?php if(get_page_template_slug( $post->ID ) == "page-gallery-view.php") {?>
+
+
+					<div class="sub-nav">				
+					<?php 
+						$args = array(
+							'post_parent' => $post->ID,
+							'post_status' => 'publish'
+							);
+						$child_page = get_children( $args);
+						foreach($child_page as $child){
+							$childID = $child->ID;
+							echo '<h2 class="breadcrum"><a href="'.get_the_permalink($childID).'" class=';
+							if($childID == $post->ID){
+								echo "current";
+							} 
+							echo '>' .get_the_title($childID).'</a></h2>';
+						}
+?>
+				</div>
+						<?php	 	} ?>
+
 			</section>
 		</header>
