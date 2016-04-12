@@ -34,7 +34,7 @@
 				<div class="header-left">
 					<h1>
 						<a href="<?= home_url(); ?>">
-						<span>JUDD</span> 
+						<span style="color: <?php echo color_a_link(); ?>;">JUDD</span> 
 						</a> 
 						<?php
 
