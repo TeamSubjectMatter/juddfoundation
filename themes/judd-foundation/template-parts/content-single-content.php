@@ -19,7 +19,8 @@
 		<p><?php the_field('location'); ?></p>
 		<?php endif; ?>
 
-		<?php the_content(); ?>
+		<?php echo '<p>' .$post->post_content.'</p>'; ?>
+
 	</section>
 
 	<section class="right-sidebar">
