@@ -38,6 +38,7 @@
 						</a> 
 						<?php the_field("site_section"); ?>
 						<?php
+
 						if ($post) {
 
 						$parentID = $post->post_parent; 
@@ -49,10 +50,8 @@
 							echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\">". get_the_title( $post->post_parent ) . "</a>";
 						} else {
 							echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->ID) . "\">". get_the_title( $post->ID ) . "</a>";
-						}
-
-
-						
+						}		
+						}				
 						?>
 					</h1>
 				</div>
