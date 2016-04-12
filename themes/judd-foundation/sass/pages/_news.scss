@@ -2,13 +2,17 @@
 
 .page-template-page-list-view{
 	h2{
-		padding-top: 29px;
 	    padding-left: 19px;
 	    margin-bottom:13px;
 	}
 	p{
 		padding-left: 19px;
-    	margin-bottom: 37px;
+	}
+	article{
+		margin:32px auto;
+	}
+	a{
+		color:$gold;
 	}
 }
 

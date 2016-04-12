@@ -87,7 +87,8 @@ a {
 
 a:active,
 a:hover {
-  outline: 0; }
+  outline: 0;
+  text-decoration: none; }
 
 abbr[title] {
   border-bottom: 1px dotted; }
@@ -652,8 +653,7 @@ a {
   position: fixed;
   overflow: scroll;
   display: none;
-  left: 0;
-  z-index: 9; }
+  left: 0; }
   .navigation-overlay .primary-navigation {
     background-color: white;
     top: 50%;
@@ -795,7 +795,8 @@ header h1 {
   float: right;
   margin-right: 0; }
   .header-right .fa-3x {
-    font-size: 2em; }
+    font-size: 2em;
+    z-index: 9; }
   @media (min-width: 280px) and (max-width: 769px) {
     .header-right {
       margin-left: 0%;
@@ -1196,13 +1197,17 @@ div.overlay {
 
 /** News Page Styles ***/
 .page-template-page-list-view h2 {
-  padding-top: 29px;
   padding-left: 19px;
   margin-bottom: 13px; }
 
 .page-template-page-list-view p {
-  padding-left: 19px;
-  margin-bottom: 37px; }
+  padding-left: 19px; }
+
+.page-template-page-list-view article {
+  margin: 32px auto; }
+
+.page-template-page-list-view a {
+  color: #ecb731; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
@@ -1233,13 +1238,18 @@ article {
 a:visited {
   color: #ecb731; }
 
+a:hover {
+  text-decoration: none; }
+
 ul.dropdown {
   width: 165px;
   z-index: 1;
   position: absolute;
   background: #fff;
   display: inline-block;
-  margin-top: -9px; }
+  margin-top: -9px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 1px #888; }
   ul.dropdown li {
     padding: 10px 40px;
     font-size: .875em;
@@ -1262,6 +1272,17 @@ p.label {
   display: inline-block;
   margin-right: 49px;
   font-weight: 500; }
+
+.pagination {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+  font-size: .875em; }
+  .pagination div.nav-previous {
+    float: left; }
+  .pagination div.nav-next {
+    float: right; }
 
 .page-template-page-section-landing article {
   margin-top: 20px; }

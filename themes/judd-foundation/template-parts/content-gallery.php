@@ -19,7 +19,7 @@
 	<p class="label">Sort By</p>
 	<ul class="dropdown">
 		<p id="title">Art Type:</p>
-		<li class="dropdown-list"  data-filter="Prints"><a href="#">All</a></li>
+		<li class="dropdown-list"><a href="#">All</a></li>
 			<?php $terms= get_terms('art_type');
 			  foreach ( $terms as $term ) {
 				echo '<li class="dropdown-list" data-filter="'.$term->name.' "><a href="#">'.$term->name.'</a></li>';

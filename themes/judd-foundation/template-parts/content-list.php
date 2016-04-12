@@ -14,8 +14,11 @@
 
 <?php
 // query custom post types based on page slug 
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 query_posts( array( 
-				'post_type' => array(get_post_field( 'post_name', get_post() ) )
+				'post_type' => array(get_post_field( 'post_name', get_post() )),
+				'posts_per_page'=>3,
+				'paged' => $paged 
 			 ) );
 while(have_posts()) : the_post(); 
 	$thumb_id = get_post_thumbnail_id();
@@ -30,5 +33,12 @@ while(have_posts()) : the_post();
 	<p>
 		<a href="<?php the_permalink(); ?>">Read More</a>
 	</p>
+
+
 </article>
 <?php endwhile; ?>
+
+<div class="pagination">
+	<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+	<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+</div>
