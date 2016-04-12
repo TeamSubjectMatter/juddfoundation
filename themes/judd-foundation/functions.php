@@ -418,7 +418,7 @@ class Child_Wrap extends Walker_Nav_Menu
 
 function color_a_link() {
 	$colors = array('#da7a2d',
-					  '#601900',
+					  //'#601900', -- too dark for # button
 					  '#c3248a',
 					  '#204c8a',
 					  '#5e9299',
@@ -428,7 +428,7 @@ function color_a_link() {
 					  '#de97a8',
 					  '#9f9fa2',
 					  '#a6a8aa',
-					  '#57245d',
+					  //'#57245d', -- too dark for # button
 					  );
 	return $colors[array_rand($colors, 1)];
 }
