@@ -8,7 +8,7 @@
  */
 
 ?>
-
+<?php global $random_link_color; ?>
 <article id="page-<?php the_ID(); ?>" class="sectionLanding">
 	<header>
 		<h1><?php the_title(); ?></h1>
@@ -18,12 +18,9 @@
 	<section class="block-3">
 		
 		<div class="img-contain">
-			<a href="<?php echo get_sub_field('link');?>">
-				
-				<div class="img-thumb" style="background:url(' <?php echo get_sub_field("image");?>');    background-size: cover;
-							    background-repeat: no-repeat;
-							    background-position: center center;">
-							</div>
+			<a href="<?php echo get_sub_field('link');?>">				
+				<div class="img-thumb" style="background:url(' <?php echo get_sub_field("image");?>'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+				</div>
 			</a>
 		</div>
 
