@@ -11,7 +11,7 @@
 <article>
 	<h1><?php the_title(); ?></h1>
 </article>
-
+<?php global $random_link_color; ?>
 <?php
 // query custom post types based on page slug 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -31,7 +31,7 @@ while(have_posts()) : the_post();
 	<h2><?php the_title(); ?></h2>
 	<?php the_excerpt(); ?>
 	<p>
-		<a href="<?php the_permalink(); ?>">Read More</a>
+		<a href="<?php the_permalink(); ?>" style="color: <?php echo $random_link_color ?>;">Read More</a>
 	</p>
 
 
