@@ -369,9 +369,9 @@ function judd_foundation_scripts() {
 	   is_page_template( 'page-gallery-view-b.php' ) ||
 	   is_page_template( 'page-two-column-utility.php' ) ||
 	   is_page_template( 'page-section-landing.php') ||
-	   is_page_template( 'single-news.php') ||
-	   is_page_template( 'single-spaces.php') ||
-	   is_page_template( 'single-programs.php')) {
+	   is_singular( 'news') ||
+	   is_singular( 'spaces') ||
+	   is_singular( 'programs')) {
 	wp_enqueue_script( 'judd-foundation-slider', get_template_directory_uri() . '/js/jssor.js', array(), '20120206', true );
 	wp_enqueue_script( 'judd-foundation-slider-mini', get_template_directory_uri() . '/js/jssor.slider.mini.js', array(), '20120206', true );
 	}

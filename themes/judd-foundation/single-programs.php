@@ -14,6 +14,7 @@
 
 get_header(); 
 
+echo   is_singular( 'programs');
 get_template_part( 'template-parts/content', 'hero-carousel' );
 get_template_part( 'template-parts/content', 'single-content' );
 
