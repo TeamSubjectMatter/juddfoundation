@@ -46,6 +46,7 @@ $nth: nth( $colors, $key );
 
 $link-color: $nth !default;
 
+.link-color { color: $link-color; }
 
 
 // Font Colors
