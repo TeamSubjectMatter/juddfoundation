@@ -415,3 +415,24 @@ class Child_Wrap extends Walker_Nav_Menu
         $output .= "$indent</ul></div>\n";
     }
 }
+
+
+function color_a_link() {
+	$colors = array('orange',
+					  'red',
+					  'pink',
+					  'blue ',
+					  'light-blue',
+					  'dark-green',
+					  'aqua ',
+					  'brown',
+					  'light-pink ',
+					  'grey',
+					  'light-grey ',
+					  'purple',
+					  );
+	return $colors[array_rand($colors, 1)];
+}
+
+
+

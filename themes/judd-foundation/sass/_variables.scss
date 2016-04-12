@@ -24,6 +24,30 @@ $light-gray: #ddd;
 $black: #000;
 $white: #fff;
 
+//for the random color generation
+$orange: #da7a2d;
+$red: #601900;
+$pink: #c3248a;
+$blue: #204c8a;
+$light-blue: #5e9299;
+$dark-green: #2c4636;
+$aqua: #269a7b;
+$brown: #9e6f32;
+$light-pink: #de97a8;
+$grey: #9f9fa2;
+$light-grey: #a6a8aa;
+$purple: #57245d;
+
+$colors: $orange, $red, $pink, $blue, $light-blue, $dark-green, $aqua, $brown, $light-pink, $grey, $light-grey, $purple, $black;
+
+$key: random( length($colors) );
+$nth: nth( $colors, $key );
+
+$link-color: $nth !default;
+
+.link-color { color: $link-color; }
+
+
 // Font Colors
 $base-font-color: $dark-gray;
 $action-color: $blue;
