@@ -17,7 +17,7 @@
 		<li class="dropdown-list"><a href="#">All</a></li>
 			<?php $terms= get_terms('art_type');
 			  foreach ( $terms as $term ) {
-				echo '<li class="dropdown-list" data-filter="'.$term->name.' "><a href="#">'.$term->name.'</a></li>';
+				echo '<li class="dropdown-list" data-filter="'.$term->name.'"><a href="#">'.$term->name.'</a></li>';
 			}
 			?>
 	</ul>
