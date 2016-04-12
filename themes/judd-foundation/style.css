@@ -693,7 +693,8 @@ div.sub-nav {
   div.sub-nav h2.breadcrum {
     display: inline-block;
     margin-right: 35px;
-    padding-left: 0; }
+    padding-left: 0;
+    margin-bottom: 15px; }
     div.sub-nav h2.breadcrum a, div.sub-nav h2.breadcrum a:visited {
       color: #333; }
     div.sub-nav h2.breadcrum a.current {
@@ -935,7 +936,6 @@ footer a {
   color: #ecb731; }
 
 .hero {
-  margin-top: 1.2em;
   margin-bottom: 2em;
   background-repeat: no-repeat;
   background-position: center;
@@ -1260,7 +1260,7 @@ h5 a:visited {
 
 article {
   width: 90%;
-  margin: 73px auto; }
+  margin: 37px auto 73px auto; }
   article p {
     line-height: 1.7; }
 
