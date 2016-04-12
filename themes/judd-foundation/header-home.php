@@ -21,7 +21,7 @@
 <?php global $instagram_homepage_color_link; ?>
 <style>
 .instagramRandomColor a { color: <?php echo $instagram_homepage_color_link;?> !important; font-weight: bold; }
-.ctaRandomColor p  { color: <?php echo $instagram_homepage_color_link;?> !important;  }
+.ctaRandomColor p a { color: <?php echo $instagram_homepage_color_link;?> !important;  }
 </style>
 </head>
 
