@@ -14,11 +14,7 @@
 
 get_header(); 
 
-while ( have_posts() ) : the_post();
-
-	get_template_part( 'template-parts/content', 'hero-carousel' );
-	get_template_part( 'template-parts/content', 'single-content' );
-
-endwhile; // End of the loop.
+get_template_part( 'template-parts/content', 'hero-carousel' );
+get_template_part( 'template-parts/content', 'single-content' );
 
 get_footer();
