@@ -20,7 +20,7 @@
 <?php wp_head(); ?>
 <?php global $random_link_color; ?>
 <style>
-.instagramRandomColor{ color: <?php echo $random_link_color;?> }
+.instagramRandomColor a { color: <?php echo $random_link_color;?> }
 </style>
 </head>
 
