@@ -38,7 +38,10 @@
 						<div class="overlay-content">
 							<p><?php the_title(); ?></p>
 						</div>
-						<img src="<?php echo $image[0]; ?>">
+						<div class="img-thumb" style="background:url('<?php echo $image[0]; ?>');    background-size: cover;
+						    background-repeat: no-repeat;
+						    background-position: center center;">
+						</div>
 					</a>
                     <?php wp_reset_postdata(); ?>
                 <?php endif; ?>

@@ -85,7 +85,8 @@ li.thumbs{
 		width: 263px;
    		height: 160px;
 		a{
-			height:100%;
+			height: 100%;
+    		width: 100%;
 			.overlay-content {
 			    background: #000000;
 			    height: 100%;
@@ -109,15 +110,18 @@ li.thumbs{
 				    text-transform:uppercase;
 			    }
 		  	}
-		  	img {
+		  	div.img-thumb {
 				width: 100%;
 				height: 100%;
+				background-size: cover;
+			    background-repeat: no-repeat;
+			    background-position: center center;
 				@include breakpoint($mobile){
-		    		height:auto;
+		    		
 		    	}
 			}
 			&:hover {
-				img{
+				div.img-thumb{
 					opacity:.3;
 					-webkit-filter: grayscale(100%);
 					filter: grayscale(100%);
@@ -128,7 +132,7 @@ li.thumbs{
 			      	display:block;
 			   	}
 			   	@include breakpoint($mobile) {
-			   		img{
+			   		div.img-thumb{
 			   			opacity:1;
 			   			filter:none;
 			   			-webkit-filter:none;
@@ -141,7 +145,6 @@ li.thumbs{
 		}
 
 		@include breakpoint($mobile){
-			height:auto;
 			width:100%;
 		}
 	}

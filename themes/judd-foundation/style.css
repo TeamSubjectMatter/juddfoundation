@@ -692,7 +692,8 @@ div.sub-nav {
   float: left; }
   div.sub-nav h2.breadcrum {
     display: inline-block;
-    margin-right: 35px; }
+    margin-right: 35px;
+    padding-left: 0; }
     div.sub-nav h2.breadcrum a, div.sub-nav h2.breadcrum a:visited {
       color: #333; }
     div.sub-nav h2.breadcrum a.current {
@@ -1309,7 +1310,8 @@ li.thumbs {
   width: 263px;
   height: 160px; }
   li.thumbs a {
-    height: 100%; }
+    height: 100%;
+    width: 100%; }
     li.thumbs a .overlay-content {
       background: #000000;
       height: 100%;
@@ -1331,13 +1333,13 @@ li.thumbs {
         transform: translate(-50%, -50%);
         text-align: center;
         text-transform: uppercase; }
-    li.thumbs a img {
+    li.thumbs a div.img-thumb {
       width: 100%;
-      height: 100%; }
-      @media (min-width: 280px) and (max-width: 769px) {
-        li.thumbs a img {
-          height: auto; } }
-    li.thumbs a:hover img {
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
+    li.thumbs a:hover div.img-thumb {
       opacity: .3;
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%); }
@@ -1346,7 +1348,7 @@ li.thumbs {
       transition: opacity .5s;
       display: block; }
     @media (min-width: 280px) and (max-width: 769px) {
-      li.thumbs a:hover img {
+      li.thumbs a:hover div.img-thumb {
         opacity: 1;
         filter: none;
         -webkit-filter: none; }
@@ -1354,7 +1356,6 @@ li.thumbs {
         display: none; } }
   @media (min-width: 280px) and (max-width: 769px) {
     li.thumbs {
-      height: auto;
       width: 100%; } }
 
 li.thumbs:not(:first-child) {
