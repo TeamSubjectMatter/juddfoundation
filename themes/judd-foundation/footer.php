@@ -11,10 +11,10 @@
 
 ?>
 </div>
-<?php global $random_color_link;?>
+<?php global $random_link_color;?>
 
 <style>
-.instagramRandomColorFooter a { color: <?php echo $random_color_link;?> !important; font-weight: bold; }
+.instagramRandomColorFooter a { color: <?php echo $random_link_color;?> !important; font-weight: bold; }
 </style>
 
 <footer>
@@ -29,6 +29,5 @@
 </footer>
 
 <?php wp_footer(); ?>
-<?= $random_color_link; ?>
 </body>
 </html>
