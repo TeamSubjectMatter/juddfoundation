@@ -12,7 +12,7 @@
  * @package judd-foundation
  */
 
-get_header(); 
+get_header();
 
 get_template_part( 'template-parts/content', 'hero-carousel' );
 get_template_part( 'template-parts/content', 'single-content' );
