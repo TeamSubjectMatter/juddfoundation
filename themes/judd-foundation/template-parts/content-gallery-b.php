@@ -35,7 +35,10 @@
         	<div class="overlay-content">
 				<p><?php the_title(); ?></p>
 			</div>
-			<img src="<?= $thumb_url; ?>">
+			<div class="img-thumb" style="background:url('<?php echo $thumb_url; ?>');    background-size: cover;
+						    background-repeat: no-repeat;
+						    background-position: center center;">
+						</div>
         </a>
 	</div>
 <?php endwhile; ?>

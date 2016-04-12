@@ -71,9 +71,6 @@ article p {
     display: block;
     margin-bottom: 2.5em;
     height: 208px;
-    @include breakpoint($mobile){
-    	height:auto;
-    }
 	a {
 		display: block;
 	    width: 100%;
@@ -149,7 +146,6 @@ article p {
 	.block-4{
 	@include span(12);
       margin-bottom: 1em;
-      height:auto;
 	}
 	
 }

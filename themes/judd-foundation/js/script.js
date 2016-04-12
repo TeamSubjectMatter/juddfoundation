@@ -1,15 +1,5 @@
 //Dropdown Menu for Art Page
 (function( $ ) {
-	var $grid= $('.grid').isotope({
-	  // options
-	  itemSelector: '.grid-item',
-	  layoutMode: 'fitRows'
-	});
-
-	$('li.dropdown-list').click(function() {
-	var filterValue = $(this).attr('data-filter');
-  	$grid.isotope({ filter: filterValue });
-  	});
 
 	$('ul.dropdown p').click(function(){
 		$(this).parent().addClass('dropping');
@@ -27,3 +17,14 @@
 
 })(jQuery);
 
+( function($) {
+	  // init Isotope
+	  var $grid = $('.grid').isotope({
+	    itemSelector: '.grid-item',
+	    layoutMode: 'fitRows'
+	  });
+	$('li.dropdown-list').click(function() {
+	var filterValue = $(this).attr('data-filter');
+	$grid.isotope({ filter: filterValue });
+	});
+})(jQuery);

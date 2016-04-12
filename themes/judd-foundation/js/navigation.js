@@ -122,6 +122,7 @@
             $('body').css('overflow','auto');
 			$('div.block-4').css('z-index','0');
 			$('li.thumbs').css('z-index','0');
+			$('ul.dropdown').css('z-index','1');
         } 
         else{
         	$('i.fa-bars').addClass('active');
@@ -129,6 +130,7 @@
         	$('body').css('overflow','hidden');
         	$('div.block-4').css('z-index','-1');
         	$('li.thumbs').css('z-index','-1');
+        	$('ul.dropdown').css('z-index','-1');
         }
 
     });
