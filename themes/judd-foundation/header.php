@@ -37,11 +37,16 @@
 						<span class="<?php the_field("logo_color"); ?>">JUDD</span>
 						</a> 
 						<?php the_field("site_section"); ?>
-						<?php 
+						<?php
+						$parentID = $post->post_parent; 
 						$post_type = get_post_type_object( get_post_type($post) );
 						if($post_type->label !== 'Pages'){
 							echo $post_type->label;
-							} ?>
+							} 
+						if($parentID):
+							echo get_the_title( $post->post_parent );
+						endif;
+						?>
 					</h1>
 				</div>
 				<div class="header-right">
