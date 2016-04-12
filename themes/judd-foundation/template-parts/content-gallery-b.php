@@ -36,6 +36,6 @@
 			<img src="<?= $thumb_url; ?>">
 			
         </a>
-	</div>
+	</div> 
 <?php endwhile; ?>
 </article>
