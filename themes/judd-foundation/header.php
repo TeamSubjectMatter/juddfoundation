@@ -19,7 +19,7 @@
 
 <?php wp_head(); ?>
 
-<?php $random_link_color = color_a_link(); ?>
+<?php global $random_link_color = color_a_link(); ?>
 </head>
 
 <body <?php body_class(); ?>>

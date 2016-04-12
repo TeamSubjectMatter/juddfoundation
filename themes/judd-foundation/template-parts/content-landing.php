@@ -14,7 +14,6 @@
 		<h1><?php the_title(); ?></h1>
 		<h2><?php the_content(); ?></h2>
 	</header>
-	<?php $random_link_color = color_a_link(); ?>
 	<?php while( have_rows('content_blocks') ): the_row(); ?>
 	<section class="block-3">
 		
