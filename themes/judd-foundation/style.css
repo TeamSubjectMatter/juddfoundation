@@ -1036,13 +1036,22 @@ article p {
       -webkit-filter: none; }
     .block-4:hover .overlay {
       display: none; } }
-  @media (min-width: 280px) and (max-width: 769px) {
-    .block-4 {
-      width: 100%;
-      float: left;
-      margin-left: 0;
-      margin-right: 0;
-      margin-bottom: 1em; } }
+
+@media screen and (max-width: 1025px) {
+  .block-4 {
+    width: 30%;
+    height: 186px; }
+    .block-4 img {
+      width: 100%; } }
+
+@media screen and (max-width: 769px) {
+  .block-4 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1em;
+    height: auto; } }
 
 .last {
   float: right;

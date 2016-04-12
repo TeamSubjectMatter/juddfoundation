@@ -132,13 +132,27 @@ article p {
 	   	}
 	}
 	//@include span(3 of 12);
-		@include breakpoint($mobile) {
-      		@include span(12);
-      		margin-bottom: 1em;
-  	}
+  	
 }
 
-
+@media screen and (max-width:1025px){
+	  	.block-4{
+		  	width: 30%;
+		    height: 186px;
+		    img{
+		    	width:100%;
+		    }
+	  	}
+	  	
+  	}
+@media screen and (max-width:769px){
+	.block-4{
+	@include span(12);
+      margin-bottom: 1em;
+      height:auto;
+	}
+	
+}
 .block-4:nth-child(4n+4) {  
 	//@include last;
 }
