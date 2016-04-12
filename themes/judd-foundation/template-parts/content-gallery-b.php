@@ -19,8 +19,10 @@
 <?php 
 	// query custom post types based on page slug 
 	query_posts( array( 
-					'post_type' => array('spaces' )
+					'post_type' => array('spaces' ),
+					'show_posts' => 100
 				 ) );
+
 	while(have_posts()) : the_post(); 	
 
 	//get thumbnail URL
