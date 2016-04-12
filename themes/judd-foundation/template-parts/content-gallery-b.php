@@ -34,7 +34,6 @@
 				<p><?php the_title(); ?></p>
 			</div>
 			<img src="<?= $thumb_url; ?>">
-			
         </a>
 	</div>
 <?php endwhile; ?>
