@@ -47,5 +47,7 @@ if( strlen($query_string) > 0 ) {
 } //if
 
 $search = new WP_Query($search_query);
+$posts = $search->get_posts();
+var_dump($search);
 ?>
 </article><!-- #post-## -->
