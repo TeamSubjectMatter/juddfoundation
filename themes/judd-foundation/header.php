@@ -67,9 +67,6 @@
 						}
 						endif;?>
 				</div>	
-			 <?php if(get_page_template_slug( $post->ID ) == "page-gallery-view.php") {?>
-
-
 					<div class="sub-nav">				
 					<?php 
 						$args = array(
@@ -87,7 +84,5 @@
 						}
 ?>
 				</div>
-						<?php	 	} ?>
-
 			</section>
 		</header>
