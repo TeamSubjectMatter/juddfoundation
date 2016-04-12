@@ -416,20 +416,19 @@ class Child_Wrap extends Walker_Nav_Menu
     }
 }
 
-
 function color_a_link() {
-	$colors = array('orange',
-					  'red',
-					  'pink',
-					  'blue ',
-					  'light-blue',
-					  'dark-green',
-					  'aqua ',
-					  'brown',
-					  'light-pink ',
-					  'grey',
-					  'light-grey ',
-					  'purple',
+	$colors = array('#da7a2d',
+					  '#601900',
+					  '#c3248a',
+					  '#204c8a',
+					  '#5e9299',
+					  '#2c4636',
+					  '#269a7b',
+					  '#9e6f32',
+					  '#de97a8',
+					  '#9f9fa2',
+					  '#a6a8aa',
+					  '#57245d',
 					  );
 	return $colors[array_rand($colors, 1)];
 }
