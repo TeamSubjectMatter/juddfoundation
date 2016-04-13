@@ -367,6 +367,7 @@ function judd_foundation_scripts() {
 	
 	if(is_page_template( 'page-single-content.php' ) ||
 	   is_page_template( 'page-gallery-view-b.php' ) ||
+	   is_page_template( 'page-single-column-utility.php' ) ||
 	   is_page_template( 'page-two-column-utility.php' ) ||
 	   is_page_template( 'page-section-landing.php') ||
 	   is_singular( 'news') ||
