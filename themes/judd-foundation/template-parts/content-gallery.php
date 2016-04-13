@@ -46,7 +46,8 @@
 			<a href="<?= $thumb_url; ?>"  rel="lightbox" title="<?php the_content();?><?php echo get_field('copyright');?>">
 	        	<img src="<?= $thumb_url; ?>">
 				<div class="overlay-content">
-					<p><?php the_title(); ?></p>
+					<p><?php the_title(); ?><br/><?php echo get_field('date') ?></p>
+					
 				</div>
 	        </a>
 	</div>
