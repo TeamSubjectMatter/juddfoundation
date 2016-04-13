@@ -139,6 +139,7 @@
 		//Shows search
 		$('.primary-navigation div div.search i:first-child').click(function(e) {
 			$('.search form').show();
+			$('.search').addClass('active');
 			$(this).hide();
 
 		});

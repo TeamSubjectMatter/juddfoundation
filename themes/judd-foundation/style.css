@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #204c8a; }
+  color: #a6a8aa; }
 
 .gold {
   color: #ecb731; }
@@ -585,13 +585,14 @@ a {
     margin: auto; }
     .primary-navigation div.menu-container div.menu-primary-navigation-container {
       display: inline-block;
-      margin: auto 1em; }
+      margin: auto;
+      float: left; }
       .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu {
         text-align: center; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
           display: inline-block;
-          padding: 1.25em 2.4em;
-          font-size: 1.2em; }
+          padding: 1.25em 1em;
+          font-size: 1em; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li a {
             color: #000; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
@@ -599,7 +600,7 @@ a {
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
           display: block;
           height: 100vh;
-          width: 140px;
+          width: 160px;
           box-shadow: 0 3px 3px transparent;
           background-color: rgba(155, 145, 135, 0.4);
           position: absolute;
@@ -616,18 +617,28 @@ a {
             .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li a {
               color: #fff;
               width: 131px; }
+    .primary-navigation div.menu-container div.right-menu {
+      float: right; }
+      .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container {
+        float: left;
+        padding: 1.25em 1em;
+        font-size: 1em; }
+        .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container a {
+          color: #da7a2d; }
     .primary-navigation div.menu-container div.search {
       display: inline-block;
-      padding-left: 1em;
+      padding: 1.25em 1em 0em 1em;
       position: relative;
       float: right;
       margin-right: 1em; }
       .primary-navigation div.menu-container div.search form {
         display: none; }
       .primary-navigation div.menu-container div.search i.in-search-box {
-        top: 10px;
+        top: 22px;
         right: 27px;
         position: absolute; }
+    .primary-navigation div.menu-container div.search.active {
+      padding: .8em 1em 0 1.25em; }
   .primary-navigation ul {
     display: none;
     list-style: none;
@@ -665,21 +676,28 @@ a {
   left: 0; }
   .navigation-overlay .primary-navigation {
     background-color: white;
-    top: 7em;
+    top: 7.5em;
     bottom: inherit; }
     .navigation-overlay .primary-navigation ul.menu li:hover div.sub-container {
       background-color: transparent !important;
       top: 4em; }
     .navigation-overlay .primary-navigation ul.menu ul.sub-menu {
       text-align: left;
-      top: 0em;
+      top: .5em;
       bottom: inital; }
       .navigation-overlay .primary-navigation ul.menu ul.sub-menu li {
         padding: .5em 0em !important; }
 
 .fa-bars.active {
   color: #fff;
-  transform: rotate(90deg); }
+  background: url("img/close.svg");
+  width: 32px;
+  height: 27px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+  .fa-bars.active:before {
+    content: ''; }
 
 /* Small menu. */
 .menu-toggle,
@@ -743,7 +761,9 @@ div.sub-nav {
       min-height: 100vh;
       margin: auto; }
       .primary-navigation div.menu-container div.menu-primary-navigation-container {
-        display: block; }
+        display: block;
+        float: none;
+        margin: auto; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu {
           padding-top: 40%;
           display: block;
@@ -755,7 +775,24 @@ div.sub-nav {
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
             display: none; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
-            padding-top: 0; }
+            padding-top: 0;
+            padding-left: 1em; }
+      .primary-navigation div.menu-container div.right-menu {
+        float: none;
+        text-align: center; }
+        .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container {
+          float: none;
+          padding: 0; }
+          .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container li {
+            padding: 0 1em .6em 1em;
+            font-size: 1.8em; }
+            .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container li a {
+              color: #000; }
+      .primary-navigation div.menu-container div.search {
+        float: none;
+        margin-right: 0; }
+        .primary-navigation div.menu-container div.search i.in-search-box {
+          top: 29px; }
   .navigation-overlay {
     min-height: 100%;
     height: auto; }
@@ -965,7 +1002,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #204c8a; }
+  color: #a6a8aa; }
 
 .hero {
   margin-bottom: 2em;
@@ -1267,7 +1304,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #204c8a; }
+  color: #a6a8aa; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
