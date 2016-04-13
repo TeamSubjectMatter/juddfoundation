@@ -182,3 +182,19 @@ div.button-container{
     	color:#fff;
     }
 }
+
+#jqlb_closelabel{
+	position:absolute;
+	top:10px;
+	background:none !important;
+	font-size: 1.2em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: right;
+}
+#jqlb_closelabel:after{
+	content:"close";
+}
+#outerImageContainer{
+	margin-top:36px !important;
+}

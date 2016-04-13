@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #269a7b; }
+  color: #601900; }
 
 .gold {
   color: #ecb731; }
@@ -934,7 +934,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #269a7b; }
+  color: #601900; }
 
 .hero {
   margin-bottom: 2em;
@@ -1236,7 +1236,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #269a7b; }
+  color: #601900; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
@@ -1389,6 +1389,21 @@ div.button-container {
   .visit-button:visited {
     text-decoration: none;
     color: #fff; }
+
+#jqlb_closelabel {
+  position: absolute;
+  top: 10px;
+  background: none !important;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: right; }
+
+#jqlb_closelabel:after {
+  content: "close"; }
+
+#outerImageContainer {
+  margin-top: 36px !important; }
 
 .page-template-page-section-landing article {
   margin-top: 20px; }

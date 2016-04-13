@@ -10,12 +10,7 @@
     		//$('ul.dropdown').removeClass('active');
    		});
 	});
-
-
-})(jQuery);
-
-( function($) {
-	// init Isotope
+// init Isotope
 	var $grid = $('.grid').isotope({
 	    itemSelector: '.grid-item'
 	  });
@@ -23,4 +18,6 @@
 		var filterValue = $(this).attr('data-filter');
 		$grid.isotope({ filter: filterValue });
 	});
+
 })(jQuery);
+

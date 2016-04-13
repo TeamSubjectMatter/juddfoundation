@@ -42,7 +42,7 @@
 	
 ?>
 	<div class="block-4 grid-item <?php  foreach ( $terms as $term ) {echo $term->name;}?>">
-			<a href="<?php the_permalink(); ?>" class="">
+			<a href="<?= $thumb_url; ?>"  rel="lightbox" title="<?php the_content();?><?php echo get_field('copyright');?>">
 	        	<img src="<?= $thumb_url; ?>">
 				<div class="overlay-content">
 					<p><?php the_title(); ?></p>
