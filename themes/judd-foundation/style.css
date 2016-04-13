@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #9e6f32; }
+  color: #de97a8; }
 
 .gold {
   color: #ecb731; }
@@ -952,7 +952,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #9e6f32; }
+  color: #de97a8; }
 
 .hero {
   margin-bottom: 2em;
@@ -1254,7 +1254,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #9e6f32; }
+  color: #de97a8; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
@@ -1489,6 +1489,14 @@ div.button-container {
   z-index: -1; }
   #jssor_1 img {
     height: auto !important; }
+
+.search main {
+  max-width: 1100px;
+  margin: auto; }
+
+.search article {
+  margin: auto;
+  width: 100%; }
 
 /* jssor slider bullet navigator skin 05 css */
 /*
