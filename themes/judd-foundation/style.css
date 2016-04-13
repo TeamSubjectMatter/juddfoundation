@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #5e9299; }
+  color: #9e6f32; }
 
 .gold {
   color: #ecb731; }
@@ -952,7 +952,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #5e9299; }
+  color: #9e6f32; }
 
 .hero {
   margin-bottom: 2em;
@@ -1254,7 +1254,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #5e9299; }
+  color: #9e6f32; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
@@ -1588,13 +1588,11 @@ div.button-container {
 #prevLink {
   left: 3% !important;
   position: absolute;
-  background: url("img/a22.png") center center no-repeat !important;
-  width: 52px !important;
-  transform: rotate(180deg);
-  top: 26px; }
+  background: url("img/left_arrow.png") center center no-repeat !important;
+  width: 52px !important; }
 
 #nextLink {
   right: 3% !important;
   position: absolute;
-  background: url("img/a22.png") center center no-repeat !important;
+  background: url("img/right_arrow.png") center center no-repeat !important;
   width: 52px !important; }

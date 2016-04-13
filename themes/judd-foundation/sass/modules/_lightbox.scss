@@ -27,14 +27,13 @@
 #prevLink{
 	left: 3% !important;
     position: absolute;
-    background: url("img/a22.png") center center no-repeat !important;
+    background: url("img/left_arrow.png") center center no-repeat !important;
 	width:52px !important;
-	transform: rotate(180deg);
-	top: 26px;
+
     }
 #nextLink{
 	right:3% !important;
 	position:absolute;
-	background: url("img/a22.png") center center no-repeat !important;
+	background: url("img/right_arrow.png") center center no-repeat !important;
 	width:52px !important;
 }
