@@ -41,28 +41,29 @@
 						</a> 
 						<?php
 
-						if ($post) {
+							if ($post) {
 
-						$parentID = $post->post_parent; 
-						$post_type = get_post_type_object( get_post_type($post) );
-						if($post_type->label !== 'Pages'){
-							echo $post_type->label;
-							} 
-						if($parentID != null && $parentID != 0){
-							echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\"> / ". get_the_title( $post->post_parent ) . "</a>";
-						} else {
-							echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->ID) . "\"> / ". get_the_title( $post->ID ) . "</a>";
-						}		
-						}				
+								$parentID = $post->post_parent; 
+								$post_type = get_post_type_object( get_post_type($post) );
+								if($post_type->label !== 'Pages'){
+									echo $post_type->label;
+									} 
+								if($parentID != null && $parentID != 0){
+									echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\"> / ". get_the_title( $post->post_parent ) . "</a>";
+								} else {
+									echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->ID) . "\"> / ". get_the_title( $post->ID ) . "</a>";
+								}		
+							}				
 						?>
 					</h1>
 				</div>
 				<div class="header-right">
 					<i class="fa fa-bars fa-3x"></i>
 				</div>
-
+				<?php if (!is_search()):?>
 				<div class="sub-nav">				
 					<?php 
+
 					if($post) {
 					$parentID = $post->post_parent;
 					if($parentID):
@@ -82,7 +83,8 @@
 						endif;
 					}
 					?>
-				</div>	
+				</div>
+				<?php endif;?>	
 			</section>
 		</header>
 		

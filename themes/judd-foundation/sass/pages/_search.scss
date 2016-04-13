@@ -14,7 +14,17 @@
 		margin:auto;
 		width:100%;
 	}
-
+	nav{
+		h2{
+			display:none;
+		}
+		.nav-previous{
+			float:left;
+		}
+		.nav-next{
+			float:right;
+		}
+	}
 }
    
     
