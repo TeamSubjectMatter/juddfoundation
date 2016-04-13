@@ -72,7 +72,7 @@
             opts.inprogress = false;
 			opts.auto = -1;
 			var txt = opts.strings;
-            var outerImage = '<div id="outerImageContainer"><div id="imageContainer"><iframe id="lightboxIframe" /><img id="lightboxImage"><div id="hoverNav"><a href="javascript://" title="' + txt.prevLinkTitle + '" id="prevLink"></a><a href="javascript://" id="nextLink" title="' + txt.nextLinkTitle + '"></a></div><div id="jqlb_loading"><a href="javascript://" id="loadingLink"><div id="jqlb_spinner"></div></a></div></div></div>';
+            var outerImage = '<div id="hoverNav"><a href="javascript://" title="' + txt.prevLinkTitle + '" id="prevLink"></a><a href="javascript://" id="nextLink" title="' + txt.nextLinkTitle + '"></a></div><div id="outerImageContainer"><div id="imageContainer"><iframe id="lightboxIframe" /><img id="lightboxImage"><div id="jqlb_loading"><a href="javascript://" id="loadingLink"><div id="jqlb_spinner"></div></a></div></div></div>';
             var imageData = '<div id="imageDataContainer" class="clearfix"><div id="imageData"><div id="imageDetails"><span id="titleAndCaption"></span><div id="controls"><span id="numberDisplay"></span> <a id="playPause" href="#"></a> <span id="downloadLink"></span></div></div><div id="bottomNav">';
             imageData += '<a href="javascript://" id="bottomNavClose" title="' + txt.closeTitle + '"><div id="jqlb_closelabel"></div></a></div></div></div>';
             var string;

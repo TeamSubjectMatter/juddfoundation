@@ -11,6 +11,8 @@
    		});
 	});
 // init Isotope
+// layout mode that does not position items
+
 	var $grid = $('.grid').isotope({
 	    itemSelector: '.grid-item'
 	  });

@@ -31,7 +31,7 @@
 
 <body <?php body_class(); ?> style="background: url('<?php echo $image[0]; ?>') no-repeat center center fixed; background-size: cover;">
 	<div class="overlay"></div>
-	<div class="top-bar" class="ctaRandomColor"><?php echo the_content(); ?></div>
+	<!--<div class="top-bar" class="ctaRandomColor"><?php echo the_content(); ?></div>-->
 	<nav id="site-navigation" class="primary-navigation" role="navigation">
 		<div class="menu-container">
 			<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) ); get_search_form(); ?>
