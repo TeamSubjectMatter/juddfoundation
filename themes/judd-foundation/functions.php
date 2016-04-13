@@ -364,8 +364,19 @@ add_action( 'init', 'add_custom_taxonomies', 0 );
 function judd_foundation_scripts() {
 	wp_enqueue_style( 'judd-foundation-style', get_stylesheet_uri() );
 	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'); 
-	//wp_enqueue_script( 'judd-foundation-slider', get_template_directory_uri() . '/js/jssor.js', array(), '20120206', true );
-	//wp_enqueue_script( 'judd-foundation-slider-mini', get_template_directory_uri() . '/js/jssor.slider.mini.js', array(), '20120206', true );
+	
+	if(is_page_template( 'page-single-content.php' ) ||
+	   is_page_template( 'page-gallery-view-b.php' ) ||
+	   is_page_template( 'page-single-column-utility.php' ) ||
+	   is_page_template( 'page-two-column-utility.php' ) ||
+	   is_page_template( 'page-section-landing.php') ||
+	   is_singular( 'news') ||
+	   is_singular( 'spaces') ||
+	   is_singular( 'programs')) {
+	wp_enqueue_script( 'judd-foundation-slider', get_template_directory_uri() . '/js/jssor.js', array(), '20120206', true );
+	wp_enqueue_script( 'judd-foundation-slider-mini', get_template_directory_uri() . '/js/jssor.slider.mini.js', array(), '20120206', true );
+	}
+
 	wp_enqueue_script( 'judd-foundation-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'judd-foundation-isotope', get_template_directory_uri() . '/js/isotope.js', array(), '20120206', true );
 	wp_enqueue_script( 'judd-foundation-scripts', get_template_directory_uri() . '/js/script.js', array(), '20120206', true );
