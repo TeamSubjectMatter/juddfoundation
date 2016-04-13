@@ -24,6 +24,9 @@ header h1 {
 		@include breakpoint($mobile) {
 			@include span(9 of 12)
 	}
+	h1 a{
+	text-decoration:none;
+	}
 }
 
 .header-right {

@@ -10,6 +10,7 @@ h2{
 }
 h5 a:visited{
 	//color: $link-color;
+	color:#333;
 }
 .container>header{
 	width:90%;
@@ -25,6 +26,7 @@ article{
 }
 a:visited{
 	//color: $link-color;
+	color:#333;
 }
 a:hover{
 	    text-decoration:none;
@@ -113,6 +115,7 @@ li.thumbs{
 			    transform: translate(-50%, -50%);
 			    text-align:center;
 			    text-transform:uppercase;
+			    line-height: 1.2;
 		    }
 	  	}
 	  	div.img-thumb {
@@ -183,41 +186,3 @@ div.button-container{
     }
 }
 
-#jqlb_closelabel{
-	position:absolute;
-	top:10px;
-	background:none !important;
-	font-size: 1.2em;
-    text-transform: uppercase;
-    color: #fff;
-    text-align: right;
-}
-#jqlb_closelabel:after{
-	content:"close";
-}
-#outerImageContainer{
-	margin-top:36px !important;
-	max-width:80%;
-	max-height:74vh;
-	img{
-		max-height:70vh;
-		height: auto !important;
-	}
-}
-#imageDataContainer{
-	max-width:80%;
-}
-#prevLink{
-	left: 3% !important;
-    position: absolute;
-    background: url("img/a22.png") center center no-repeat !important;
-	width:52px !important;
-	transform: rotate(180deg);
-	top: 26px;
-    }
-#nextLink{
-	right:3% !important;
-	position:absolute;
-	background: url("img/a22.png") center center no-repeat !important;
-	width:52px !important;
-}

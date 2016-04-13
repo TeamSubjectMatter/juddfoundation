@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #57245d; }
+  color: #5e9299; }
 
 .gold {
   color: #ecb731; }
@@ -544,15 +544,18 @@ div#multiColumn {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #333;
+  text-decoration: underline; }
   a:visited {
-    color: #fff; }
+    color: #333; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #333; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
+  a:hover {
+    text-decoration: none; }
 
 /*--------------------------------------------------------------
 ## Menus
@@ -588,10 +591,12 @@ a {
         text-align: center; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
           display: inline-block;
-          padding: 1.25em 1em;
+          padding: 1.25em 2.4em;
           font-size: 1.2em; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li a {
             color: #000; }
+        .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
+          padding-left: 0; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
           display: block;
           height: 100vh;
@@ -614,7 +619,7 @@ a {
               width: 131px; }
     .primary-navigation div.menu-container div.search {
       display: inline-block;
-      padding: 0 1em;
+      padding-left: 1em;
       position: relative; }
       .primary-navigation div.menu-container div.search form {
         display: none; }
@@ -696,11 +701,22 @@ div.sub-nav {
     display: inline-block;
     margin-right: 35px;
     padding-left: 0;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    font-size: 1em; }
     div.sub-nav h2.breadcrum a, div.sub-nav h2.breadcrum a:visited {
-      color: #333; }
+      color: #333;
+      text-decoration: none; }
     div.sub-nav h2.breadcrum a.current {
       font-weight: 500; }
+    div.sub-nav h2.breadcrum a.nav {
+      font-weight: 500;
+      text-decoration: underline; }
+      div.sub-nav h2.breadcrum a.nav:hover {
+        text-decoration: none; }
+
+@media screen and (max-width: 1025px) {
+  .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
+    padding: 1.25em 1.3em; } }
 
 /****Tablet Break***/
 @media screen and (max-width: 768px) {
@@ -809,6 +825,8 @@ header h1 {
       width: 74.44795%;
       float: left;
       margin-right: 2.2082%; } }
+  .header-left h1 a {
+    text-decoration: none; }
 
 .header-right {
   text-align: right;
@@ -836,7 +854,8 @@ footer {
   padding-bottom: 2em; }
 
 footer a {
-  color: #fff; }
+  color: #fff;
+  text-decoration: none; }
 
 .footer-container {
   max-width: 1100px;
@@ -933,7 +952,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #57245d; }
+  color: #5e9299; }
 
 .hero {
   margin-bottom: 2em;
@@ -1235,7 +1254,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #57245d; }
+  color: #5e9299; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
@@ -1250,6 +1269,9 @@ h2 {
   font-size: 1.2em;
   font-weight: 300; }
 
+h5 a:visited {
+  color: #333; }
+
 .container > header {
   width: 90%;
   margin: auto; }
@@ -1259,6 +1281,9 @@ article {
   margin: 37px auto 73px auto; }
   article p {
     line-height: 1.7; }
+
+a:visited {
+  color: #333; }
 
 a:hover {
   text-decoration: none; }
@@ -1337,7 +1362,8 @@ li.thumbs {
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        line-height: 1.2; }
     li.thumbs a div.img-thumb {
       width: 100%;
       height: 100%;
@@ -1388,43 +1414,6 @@ div.button-container {
   .visit-button:visited {
     text-decoration: none;
     color: #fff; }
-
-#jqlb_closelabel {
-  position: absolute;
-  top: 10px;
-  background: none !important;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  color: #fff;
-  text-align: right; }
-
-#jqlb_closelabel:after {
-  content: "close"; }
-
-#outerImageContainer {
-  margin-top: 36px !important;
-  max-width: 80%;
-  max-height: 74vh; }
-  #outerImageContainer img {
-    max-height: 70vh;
-    height: auto !important; }
-
-#imageDataContainer {
-  max-width: 80%; }
-
-#prevLink {
-  left: 3% !important;
-  position: absolute;
-  background: url("img/a22.png") center center no-repeat !important;
-  width: 52px !important;
-  transform: rotate(180deg);
-  top: 26px; }
-
-#nextLink {
-  right: 3% !important;
-  position: absolute;
-  background: url("img/a22.png") center center no-repeat !important;
-  width: 52px !important; }
 
 .page-template-page-section-landing article {
   margin-top: 20px; }

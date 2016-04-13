@@ -8,7 +8,7 @@
  */
 
 ?>
-<?php global $random_link_color; ?>
+<?php //global $random_link_color; ?>
 <article id="page-<?php the_ID(); ?>" class="sectionLanding">
 	<header>
 		<h1><?php the_title(); ?></h1>
@@ -26,7 +26,8 @@
 
 		<h3><?= get_sub_field('heading'); ?></h3>
 		<h4><?= get_sub_field('text'); ?></h4>
-		<h5><a href="<?php echo get_sub_field('link');?>" style="color: <?php echo $random_link_color ?>;">Read More</a></h5>
+		<!--<h5><a href="<?php echo get_sub_field('link');?>" style="color: <?php echo $random_link_color ?>;">Read More</a></h5>-->
+		<h5><a href="<?php echo get_sub_field('link');?>">Read More</a></h5>
 	</section>
 	<?php endwhile; ?>
 </article>

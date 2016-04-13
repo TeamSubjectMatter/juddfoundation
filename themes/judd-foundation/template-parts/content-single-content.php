@@ -13,7 +13,25 @@
 
 	<section class="page-content-area">
 		<h1><?php the_title(); ?></h1>
-		
+		<?php 
+			$args = array(
+				'post_parent' => get_the_ID(),
+				'post_status' => 'publish'
+				);
+			$child_page = get_children( $args);
+			if($child_page):
+				echo '<div class="sub-nav">';
+					foreach($child_page as $child){
+						$childID = $child->ID;
+						echo '<h2 class="breadcrum"><a class="nav" href="'.get_the_permalink($childID).'"';
+						if($childID == $post->ID){
+							echo "current";
+						} 
+						echo '>' .get_the_title($childID).'</a></h2>';
+					}
+				echo '</div>';
+			endif;
+		?>
 		<!-- For Spaces -->
 		<?php if (the_field('location')): ?>
 		<p><?php the_field('location'); ?></p>
