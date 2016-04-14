@@ -35,6 +35,7 @@
 	<nav id="site-navigation" class="primary-navigation" role="navigation">
 		<div class="menu-container">
 			<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) );?>
+			<a href="#" class="insta"><img src="<?php echo get_template_directory(); ?>/img/instagram.svg"></a>
 			<?php echo '<div class="right-menu">'; wp_nav_menu( array( 'menu' => 'Primary Right Navigation', 'walker' => new Child_Wrap() ) );get_search_form(); echo '</div>' ?>
 		</div>
 		<!--<i class="fa fa-search"></i>

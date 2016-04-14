@@ -37,8 +37,6 @@
 					display: block;
 					height: 100vh;
 				    width: 160px;
-				    box-shadow: 0 3px 3px transparent;
-				    background-color: rgba(155, 145, 135, 0.4);
 				    position: absolute;
 				    bottom: 4em;
 				}
@@ -51,14 +49,21 @@
 					li{
 						font-size: .9em;
 						margin:0px;
-						padding:.5em .8em;
+						padding:.5em 0em;
+						margin-bottom:.5em;
 						a{
 							color: #fff;
 							width: 131px;
 						}
+						&:hover{
+							text-decoration:underline;
+						}
 					}
 				}
 			}
+		}
+		a.insta{
+			display: inline-block;
 		}
 		div.right-menu{
 			float:right;
@@ -250,15 +255,22 @@ div.sub-nav{
 	    }
 	}
 }
-@media screen and (max-width: 1025px){
-.primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li{
-	padding:1.25em 1.3em;
-}
+@media screen and (max-width: 1040px){
+	.primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li{
+		padding:1.25em .3em;
+	}
+	.primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container{
+		padding: 1.25em .3em;
+	}
+	.primary-navigation div.menu-container div.search.active{
+		padding: .8em .3em 0 .3em;
+		margin-right:0;
+	}
 
 }
 
 /****Tablet Break***/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 840px){
 	.top-bar{
 		display: none;
 	}
