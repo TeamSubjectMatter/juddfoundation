@@ -61,7 +61,12 @@
 				<div class="header-right">
 					<i class="fa fa-bars fa-3x"></i>
 				</div>
-				<?php if (!is_search()):?>
+
+				
+				<?php
+					//don't do this for the Donald Judd > Art Page or the search results page 
+					if (!is_search() &&  $post->ID != 104):
+				?>
 				<div class="sub-nav">				
 					<?php 
 
