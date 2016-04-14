@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #000; }
+  color: #601900; }
 
 .gold {
   color: #ecb731; }
@@ -739,7 +739,6 @@ div.sub-nav {
     margin-bottom: 15px;
     font-size: 1em; }
     div.sub-nav h2.breadcrum a, div.sub-nav h2.breadcrum a:visited {
-      color: #333;
       text-decoration: none; }
     div.sub-nav h2.breadcrum a.current {
       font-weight: 500; }
@@ -1004,7 +1003,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #000; }
+  color: #601900; }
 
 .hero {
   margin-bottom: 2em;
@@ -1308,7 +1307,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #000; }
+  color: #601900; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
