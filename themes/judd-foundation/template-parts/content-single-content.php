@@ -30,7 +30,7 @@
 						echo '>' .get_the_title($childID).'</a></h2>';
 					}
 				echo '</div>';
-			endif; 
+			endif;
 		?>
 		<!-- For Spaces -->
 		<?php if (the_field('location')): ?>
