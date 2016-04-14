@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #000; }
+  color: #9f9fa2; }
 
 .gold {
   color: #ecb731; }
@@ -1016,7 +1016,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #000; }
+  color: #9f9fa2; }
 
 .hero {
   margin-bottom: 2em;
@@ -1323,7 +1323,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #000; }
+  color: #9f9fa2; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
@@ -1509,6 +1509,17 @@ div.col3 {
   @media (min-width: 280px) and (max-width: 769px) {
     div.col3 {
       width: 50%; } }
+
+div.col2 {
+  width: 50%;
+  float: left; }
+  div.col2 iframe {
+    height: 360px;
+    width: 560px; }
+  @media (min-width: 280px) and (max-width: 769px) {
+    div.col2 {
+      float: none;
+      width: 100%; } }
 
 hr {
   border: 0;
