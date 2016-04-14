@@ -11,7 +11,7 @@
 <article>
 	<h1><?php the_title(); ?></h1>
 </article>
-<?php global $random_link_color; ?>
+<?php //global $random_link_color; ?>
 <?php
 // query custom post types based on page slug 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -29,9 +29,10 @@ while(have_posts()) : the_post();
 	<div class="hero" style='background-image: url("<?php echo $thumb_url; ?>");'></div>
 
 	<h2><?php the_title(); ?></h2>
+	<p><?php echo get_field('date'); $id =get_the_ID();echo get_the_terms($id,'programs');?></p>
 	<?php the_excerpt(); ?>
 	<p>
-		<a href="<?php the_permalink(); ?>" style="color: <?php echo $random_link_color ?>;">Read More</a>
+		<a href="<?php the_permalink(); ?>">Read More</a>
 	</p>
 
 

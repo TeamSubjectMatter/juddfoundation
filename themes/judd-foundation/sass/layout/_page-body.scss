@@ -28,10 +28,13 @@
 
 
 article {
+	width:90%;
+	margin: 37px auto 73px auto;
 	@include container;
 		@include breakpoint($mobile) {
       		padding-left: 1em;
       		padding-right: 1em;
+      		margin: 23px auto 73px auto;
   	}
 }
 

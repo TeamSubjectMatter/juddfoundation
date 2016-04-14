@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #c3248a; }
+  color: #9e6f32; }
 
 .gold {
   color: #ecb731; }
@@ -741,9 +741,9 @@ div.sub-nav {
       font-weight: 500; }
     div.sub-nav h2.breadcrum a.nav {
       font-weight: 500;
-      text-decoration: underline; }
+      text-decoration: none; }
       div.sub-nav h2.breadcrum a.nav:hover {
-        text-decoration: none; }
+        text-decoration: underline; }
 
 /****Tablet Break***/
 @media screen and (max-width: 768px) {
@@ -763,34 +763,37 @@ div.sub-nav {
         float: none;
         margin: auto; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu {
-          padding-top: 40%;
+          padding-top: 20%;
           display: block;
-          padding-bottom: 13px; }
+          padding-bottom: 0px;
+          text-align: left; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
             display: block;
-            padding: .6em 1em;
-            font-size: 1.8em; }
+            padding: .6em 0em;
+            font-size: 1.5em; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
             display: none; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
-            padding-top: 0;
-            padding-left: 1em; }
+            padding-top: 0; }
+          .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:last-child {
+            padding-bottom: 0; }
       .primary-navigation div.menu-container div.right-menu {
         float: none;
-        text-align: center; }
+        text-align: left; }
         .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container {
           float: none;
           padding: 0; }
           .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container li {
-            padding: 0 1em .6em 1em;
-            font-size: 1.8em; }
+            padding: 0 0em .6em 0em;
+            font-size: 1.5em; }
             .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container li a {
               color: #000; }
       .primary-navigation div.menu-container div.search {
         float: none;
-        margin-right: 0; }
+        margin-right: 0;
+        padding-left: 0; }
         .primary-navigation div.menu-container div.search i.in-search-box {
-          top: 29px; }
+          top: 28px; }
   .navigation-overlay {
     min-height: 100%;
     height: auto; }
@@ -807,9 +810,20 @@ div.sub-nav {
         color: #fff; } }
 
 @media screen and (max-width: 665px) {
-  div.sub-nav h2.breadcrum {
+  header div.sub-nav h2.breadcrum {
     margin-right: 0;
     width: 50%;
+    margin-bottom: 5px; }
+    header div.sub-nav h2.breadcrum:nth-child(odd) {
+      width: 40%; }
+    header div.sub-nav h2.breadcrum:nth-child(even) {
+      width: 60%; }
+  div.sub-nav h2.breadcrum {
+    margin-right: 20px;
+    margin-bottom: 10px; }
+    div.sub-nav h2.breadcrum:last-child {
+      margin-right: 0; }
+  h1 {
     margin-bottom: 10px; } }
 
 /***** Mobile Break ****/
@@ -887,7 +901,8 @@ header h1 {
       margin-left: 0%;
       width: 23.34385%;
       float: right;
-      margin-right: 0; } }
+      margin-right: 0;
+      margin-top: -6px; } }
 
 header {
   padding-top: 17px; }
@@ -1001,7 +1016,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #c3248a; }
+  color: #9e6f32; }
 
 .hero {
   margin-bottom: 2em;
@@ -1028,6 +1043,8 @@ footer a {
       min-height: 200px; } }
 
 article {
+  width: 90%;
+  margin: 37px auto 73px auto;
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto; }
@@ -1038,7 +1055,8 @@ article {
   @media (min-width: 280px) and (max-width: 769px) {
     article {
       padding-left: 1em;
-      padding-right: 1em; } }
+      padding-right: 1em;
+      margin: 23px auto 73px auto; } }
 
 article p {
   font-size: .875em;
@@ -1305,7 +1323,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #c3248a; }
+  color: #9e6f32; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
@@ -1327,11 +1345,8 @@ h5 a:visited {
   width: 90%;
   margin: auto; }
 
-article {
-  width: 90%;
-  margin: 37px auto 73px auto; }
-  article p {
-    line-height: 1.7; }
+article p {
+  line-height: 1.7; }
 
 a:visited {
   color: #333; }
