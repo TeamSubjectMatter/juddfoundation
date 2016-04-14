@@ -66,6 +66,7 @@
 			</li>
 		<?php endwhile; ?>
 		</ul>
+		<div class="right-sidebar-content"><?php get_field("right_side_bar_content")?></div>
 	<?php endif; ?>
    </section>
 </article>
