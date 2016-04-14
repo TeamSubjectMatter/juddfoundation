@@ -182,3 +182,33 @@ div.button-container{
     	color:#fff;
     }
 }
+ul.bullets{
+	list-style-type: initial;
+    list-style-position: inside;
+    margin-left: 2px;
+
+ 	@include breakpoint($mobile){
+ 		li.col3{
+ 			width:50%;
+ 		}
+ 	}
+} 
+ul{
+	li.col3{
+	   	width:33.333%;
+	    	ol{
+	    		li{
+	    			width:100%;
+	    		}
+	    	}
+	    }
+	 	li.col2{
+	 		width:50%;
+	 	}
+}
+div.col3{
+	width:33.333%;
+	@include breakpoint($mobile){
+		width:50%;
+	}
+}
