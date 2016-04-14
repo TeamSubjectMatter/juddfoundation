@@ -67,7 +67,7 @@
 				padding: 1.25em 1em;
 				font-size: 1em;
 				a{
-					color:$orange;
+					color:$homepage-red;
 				}
 			}
 		}
@@ -124,12 +124,14 @@
 
 			a:hover,
 			a.focus {
+				text-decoration: underline;
 			}
 		}
 
 		li:hover > ul,
 		li.focus > ul {
 			left: auto;
+
 		}
 	}
 	li {
@@ -137,6 +139,7 @@
 
 		&:hover > a,
 		&.focus > a {
+			text-decoration: underline;
 		}
 	}
 	a {
@@ -151,7 +154,7 @@
 	}
 }
 
-/*Navigation on All pages excpet Home */
+/*Navigation on All pages except Home */
 .navigation-overlay{
 	background: rgba(0,0,0,.85);
     width: 100%;

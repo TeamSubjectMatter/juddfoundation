@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #000; }
+  color: #601900; }
 
 .gold {
   color: #ecb731; }
@@ -624,7 +624,7 @@ a {
         padding: 1.25em 1em;
         font-size: 1em; }
         .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container a {
-          color: #da7a2d; }
+          color: #FE0100; }
     .primary-navigation div.menu-container div.search {
       display: inline-block;
       padding: 1.25em 1em 0em 1em;
@@ -656,16 +656,22 @@ a {
         left: 100%; }
       .primary-navigation ul ul a {
         width: 10em; }
+      .primary-navigation ul ul a:hover,
+      .primary-navigation ul ul a.focus {
+        text-decoration: underline; }
     .primary-navigation ul li:hover > ul,
     .primary-navigation ul li.focus > ul {
       left: auto; }
   .primary-navigation li {
     position: relative; }
+    .primary-navigation li:hover > a,
+    .primary-navigation li.focus > a {
+      text-decoration: underline; }
   .primary-navigation a {
     display: block;
     text-decoration: none; }
 
-/*Navigation on All pages excpet Home */
+/*Navigation on All pages except Home */
 .navigation-overlay {
   background: rgba(0, 0, 0, 0.85);
   width: 100%;
@@ -1002,7 +1008,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #000; }
+  color: #601900; }
 
 .hero {
   margin-bottom: 2em;
@@ -1280,7 +1286,7 @@ article p {
 }
 */
 div.overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.85);
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -1306,7 +1312,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #000; }
+  color: #601900; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
