@@ -237,6 +237,15 @@ div.col3{
 }
 p.col2{
 	margin-top:0;
+	&:nth-child(odd){
+		margin-left:0;
+	}
+}
+p.clear{
+	clear:both;
+}
+.col1{
+	width:100%;
 }
 hr{
 	border: 0;
