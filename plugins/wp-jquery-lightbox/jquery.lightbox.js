@@ -251,9 +251,9 @@
         }
         function resizeImageContainer(imgWidth, imgHeight, lightboxTop, lightboxLeft) {
             opts.widthCurrent = $("#outerImageContainer").outerWidth();
-            opts.heightCurrent = $("#outerImageContainer").outerHeight();
+            opts.heightCurrent = $("#outerImageContainer").height(imgHeight);
             var widthNew = Math.max(300, imgWidth + (opts.borderSize * 2)); //300 = iphone. http://wordpress.org/support/topic/image-not-resized-correctly-with-wptouch?replies=6#post-4205735
-            var heightNew = (imgHeight + (opts.borderSize * 2));                      
+            var heightNew = (imgHeight);                      
 			setLightBoxPos(lightboxTop, lightboxLeft);                    
 			$('#imageDataContainer').animate({width:widthNew}, opts.resizeSpeed, 'linear');
 			$('#outerImageContainer').animate({width:widthNew,height:heightNew}, opts.resizeSpeed, 'linear', function () {				

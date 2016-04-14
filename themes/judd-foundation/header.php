@@ -29,7 +29,6 @@
 			<nav id="site-navigation" class="primary-navigation" role="navigation">
 				<div class="menu-container">
 					<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) );?>
-					<a href="#" class="insta"><img src="<?php echo get_template_directory(); ?>img/instagram.svg"></a>
 					<?php echo '<div class="right-menu">'; wp_nav_menu( array( 'menu' => 'Primary Right Navigation', 'walker' => new Child_Wrap() ) );get_search_form(); echo '</div>' ?>
 				</div>
 			</nav>
@@ -48,8 +47,8 @@
 								$parentID = $post->post_parent; 
 								$post_type = get_post_type_object( get_post_type($post) );
 								if($post_type->label !== 'Pages'){
-									echo $post_type->label;
-									} 
+									echo "/ " . $post_type->label;
+								} else
 								if($parentID != null && $parentID != 0){
 									echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\"> / ". get_the_title( $post->post_parent ) . "</a>";
 								} else {

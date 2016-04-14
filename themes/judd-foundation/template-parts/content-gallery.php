@@ -21,6 +21,25 @@
 			}
 			?>
 	</ul>
+		<?php 
+			$args = array(
+				'post_parent' => get_the_ID(),
+				'post_status' => 'publish'
+				);
+			$child_page = get_children( $args);
+			if($child_page):
+				echo '<div class="sub-nav">';
+					foreach($child_page as $child){
+						$childID = $child->ID;
+						echo '<h2 class="breadcrum"><a class="nav" href="'.get_the_permalink($childID).'"';
+						if($childID == $post->ID){
+							echo "current";
+						} 
+						echo '>' .get_the_title($childID).'</a></h2>';
+					}
+				echo '</div>';
+			endif;
+		?>
 </article>
 <article class="grid">
 
@@ -29,7 +48,8 @@
 	query_posts( array( 
 					'post_type' => array(get_post_field( 'post_name', get_post() ) ),
 					'posts_per_page' => -1,
-					'orderby'        => 'rand'
+					'orderby'        => 'iconic rand',
+					'order'			 => 'DESC'
 				 ) );
 	while(have_posts()) : the_post(); 
 

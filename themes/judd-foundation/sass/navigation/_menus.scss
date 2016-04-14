@@ -37,6 +37,8 @@
 					display: block;
 					height: 100vh;
 				    width: 160px;
+				    box-shadow: 0 3px 3px transparent;
+				    background-color: rgba(155, 145, 135, 0);
 				    position: absolute;
 				    bottom: 4em;
 				}
@@ -45,25 +47,18 @@
 				}
 				ul.sub-menu{
 					text-align: left;
-					bottom: 0;
+					bottom: 1.5em;
 					li{
 						font-size: .9em;
 						margin:0px;
 						padding:.5em 0em;
-						margin-bottom:.5em;
 						a{
 							color: #fff;
 							width: 131px;
 						}
-						&:hover{
-							text-decoration:underline;
-						}
 					}
 				}
 			}
-		}
-		a.insta{
-			display: inline-block;
 		}
 		div.right-menu{
 			float:right;
@@ -72,7 +67,7 @@
 				padding: 1.25em 1em;
 				font-size: 1em;
 				a{
-					color:$orange;
+					color:$homepage-red;
 				}
 			}
 		}
@@ -129,12 +124,14 @@
 
 			a:hover,
 			a.focus {
+				text-decoration: underline;
 			}
 		}
 
 		li:hover > ul,
 		li.focus > ul {
 			left: auto;
+
 		}
 	}
 	li {
@@ -142,6 +139,7 @@
 
 		&:hover > a,
 		&.focus > a {
+			text-decoration: underline;
 		}
 	}
 	a {
@@ -156,7 +154,7 @@
 	}
 }
 
-/*Navigation on All pages excpet Home */
+/*Navigation on All pages except Home */
 .navigation-overlay{
 	background: rgba(0,0,0,.85);
     width: 100%;
@@ -240,7 +238,7 @@ div.sub-nav{
 	    margin-bottom:15px;
 	    font-size: 1em;
 	    a,a:visited{
-	    	color: #333;
+	    	//color: #333;
 	    	text-decoration:none;
 	    }
 	    a.current{
@@ -255,22 +253,9 @@ div.sub-nav{
 	    }
 	}
 }
-@media screen and (max-width: 1040px){
-	.primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li{
-		padding:1.25em .3em;
-	}
-	.primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container{
-		padding: 1.25em .3em;
-	}
-	.primary-navigation div.menu-container div.search.active{
-		padding: .8em .3em 0 .3em;
-		margin-right:0;
-	}
-
-}
 
 /****Tablet Break***/
-@media screen and (max-width: 840px){
+@media screen and (max-width: 768px){
 	.top-bar{
 		display: none;
 	}
@@ -366,4 +351,3 @@ div.sub-nav{
 	}
 
 }
-
