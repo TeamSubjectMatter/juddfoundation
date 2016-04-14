@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #204c8a; }
+  color: #000; }
 
 .gold {
   color: #ecb731; }
@@ -1016,7 +1016,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #204c8a; }
+  color: #000; }
 
 .hero {
   margin-bottom: 2em;
@@ -1323,7 +1323,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #204c8a; }
+  color: #000; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
@@ -1486,27 +1486,36 @@ ul.bullets {
   list-style-position: inside;
   margin-left: 2px; }
 
-ul.col3 li {
-  width: 33.333%;
-  float: left; }
-  ul.col3 li ul li {
-    width: 100%;
-    font-style: italic;
-    font-size: .8em; }
-
-@media (min-width: 280px) and (max-width: 769px) {
+ul.col3 {
+  overflow: hidden; }
   ul.col3 li {
-    width: 50%; } }
+    width: 33.333%;
+    float: left; }
+    ul.col3 li ul li {
+      width: 100%;
+      font-style: italic;
+      font-size: .8em; }
+  @media (min-width: 280px) and (max-width: 769px) {
+    ul.col3 li {
+      width: 50%; } }
 
 ul.col2 li {
   width: 50%; }
 
 div.col3 {
   width: 33.333%;
-  float: left; }
+  float: left;
+  overflow: hidden; }
   @media (min-width: 280px) and (max-width: 769px) {
     div.col3 {
       width: 50%; } }
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  width: 100%;
+  margin: 38px 0; }
 
 .page-template-page-section-landing article {
   margin-top: 20px; }
