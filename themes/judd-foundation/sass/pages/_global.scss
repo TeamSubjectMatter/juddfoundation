@@ -187,15 +187,12 @@ ul.bullets{
     list-style-position: inside;
     margin-left: 2px;
 
- 	@include breakpoint($mobile){
- 		li.col3{
- 			width:50%;
- 		}
- 	}
+ 	
 } 
 ul.col3{
 	li{
 	   	width:33.333%;
+	   	float:left;
     	ul{
     		li{
     			width:100%;
@@ -204,6 +201,11 @@ ul.col3{
     		}
     	}
     }
+    @include breakpoint($mobile){
+	 	li{
+	 		width:50%;
+	 	}
+ 	}
 }
 ul.col2{
 	li{
@@ -212,6 +214,7 @@ ul.col2{
 }
 div.col3{
 	width:33.333%;
+	float:left;
 	@include breakpoint($mobile){
 		width:50%;
 	}
