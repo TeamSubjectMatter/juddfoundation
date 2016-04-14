@@ -47,8 +47,8 @@
 								$parentID = $post->post_parent; 
 								$post_type = get_post_type_object( get_post_type($post) );
 								if($post_type->label !== 'Pages'){
-									echo $post_type->label;
-									} 
+									echo "/ " . $post_type->label;
+								} else
 								if($parentID != null && $parentID != 0){
 									echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\"> / ". get_the_title( $post->post_parent ) . "</a>";
 								} else {

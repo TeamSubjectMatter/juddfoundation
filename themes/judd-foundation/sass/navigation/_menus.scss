@@ -38,7 +38,7 @@
 					height: 100vh;
 				    width: 160px;
 				    box-shadow: 0 3px 3px transparent;
-				    background-color: rgba(155, 145, 135, 0.4);
+				    background-color: rgba(155, 145, 135, 0);
 				    position: absolute;
 				    bottom: 4em;
 				}
@@ -47,11 +47,11 @@
 				}
 				ul.sub-menu{
 					text-align: left;
-					bottom: 0;
+					bottom: 1.5em;
 					li{
 						font-size: .9em;
 						margin:0px;
-						padding:.5em .8em;
+						padding:.5em 0em;
 						a{
 							color: #fff;
 							width: 131px;

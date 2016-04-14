@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #601900; }
+  color: #da7a2d; }
 
 .gold {
   color: #ecb731; }
@@ -602,18 +602,18 @@ a {
           height: 100vh;
           width: 160px;
           box-shadow: 0 3px 3px transparent;
-          background-color: rgba(155, 145, 135, 0.4);
+          background-color: rgba(155, 145, 135, 0);
           position: absolute;
           bottom: 4em; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu div.sub-container {
           display: none; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu {
           text-align: left;
-          bottom: 0; }
+          bottom: 1.5em; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li {
             font-size: .9em;
             margin: 0px;
-            padding: .5em .8em; }
+            padding: .5em 0em; }
             .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li a {
               color: #fff;
               width: 131px; }
@@ -1003,7 +1003,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #601900; }
+  color: #da7a2d; }
 
 .hero {
   margin-bottom: 2em;
@@ -1307,7 +1307,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #601900; }
+  color: #da7a2d; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
