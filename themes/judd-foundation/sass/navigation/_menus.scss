@@ -238,8 +238,10 @@ div.sub-nav{
 	    margin-bottom:15px;
 	    font-size: 1em;
 	    a,a:visited{
-	    	//color: #333;
 	    	text-decoration:none;
+	    }
+	    a:hover{
+	    	text-decoration:underline;
 	    }
 	    a.current{
 	    	font-weight: 500;

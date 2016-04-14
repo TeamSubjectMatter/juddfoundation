@@ -36,7 +36,6 @@ a {
   &:focus,
   &:hover {
 	  text-decoration:underline;
-    color: shade($action-color, 25%);
   }
 }
 

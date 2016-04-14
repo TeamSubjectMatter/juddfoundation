@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #9e6f32; }
+  color: #c3248a; }
 
 .gold {
   color: #ecb731; }
@@ -267,8 +267,7 @@ a {
   text-decoration: none;
   transition: color 150ms ease; }
   a:active, a:focus, a:hover {
-    text-decoration: underline;
-    color: #183968; }
+    text-decoration: underline; }
 
 hr {
   border-bottom: 1px solid #ddd;
@@ -546,10 +545,6 @@ div#multiColumn {
 a {
   color: #333;
   text-decoration: underline; }
-  a:visited {
-    color: #333; }
-  a:hover, a:focus, a:active {
-    color: #333; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -740,6 +735,8 @@ div.sub-nav {
     font-size: 1em; }
     div.sub-nav h2.breadcrum a, div.sub-nav h2.breadcrum a:visited {
       text-decoration: none; }
+    div.sub-nav h2.breadcrum a:hover {
+      text-decoration: underline; }
     div.sub-nav h2.breadcrum a.current {
       font-weight: 500; }
     div.sub-nav h2.breadcrum a.nav {
@@ -906,7 +903,8 @@ footer a {
   color: #fff;
   text-decoration: none; }
   footer a:hover {
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: #fff; }
 
 .footer-container {
   max-width: 1100px;
@@ -1003,7 +1001,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #9e6f32; }
+  color: #c3248a; }
 
 .hero {
   margin-bottom: 2em;
@@ -1307,7 +1305,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #9e6f32; }
+  color: #c3248a; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
