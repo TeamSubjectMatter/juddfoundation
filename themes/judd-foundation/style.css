@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #601900; }
+  color: #000; }
 
 .gold {
   color: #ecb731; }
@@ -749,10 +749,6 @@ div.sub-nav {
       div.sub-nav h2.breadcrum a.nav:hover {
         text-decoration: none; }
 
-@media screen and (max-width: 1025px) {
-  .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
-    padding: 1.25em 1.3em; } }
-
 /****Tablet Break***/
 @media screen and (max-width: 768px) {
   .top-bar {
@@ -1008,7 +1004,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #601900; }
+  color: #000; }
 
 .hero {
   margin-bottom: 2em;
@@ -1312,7 +1308,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #601900; }
+  color: #000; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
