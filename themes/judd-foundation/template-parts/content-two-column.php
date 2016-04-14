@@ -18,7 +18,7 @@ get_page_children( $page_id, $pages ) ?>
 
 <article id="page-<?php the_ID(); ?>" class="twoColumn">
 	<!--<h2><?php the_title(); ?></h2>-->
-	<?php 
+	<!--<?php 
 			$args = array(
 				'post_parent' => get_the_ID(),
 				'post_status' => 'publish'
@@ -36,12 +36,14 @@ get_page_children( $page_id, $pages ) ?>
 					}
 				echo '</div>';
 			endif;
-		?>
+		?>-->
 	<div class="column-one">
+		<h2><?php the_field('column_1_title'); ?></h2>
 		<?php the_field('column_1_text'); ?>
 	</div>
 
 	<div class="column-two">
+		<h2><?php the_field('column_2_title'); ?></h2>
 		<?php the_field('column_2_text'); ?>
 	</div>
 </article>
