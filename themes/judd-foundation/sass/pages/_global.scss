@@ -193,18 +193,22 @@ ul.bullets{
  		}
  	}
 } 
-ul{
-	li.col3{
+ul.col3{
+	li{
 	   	width:33.333%;
-	    	ol{
-	    		li{
-	    			width:100%;
-	    		}
-	    	}
-	    }
-	 	li.col2{
-	 		width:50%;
-	 	}
+    	ul{
+    		li{
+    			width:100%;
+    			font-style: italic;
+    			font-size: .8em;
+    		}
+    	}
+    }
+}
+ul.col2{
+	li{
+		width:50%;
+	}
 }
 div.col3{
 	width:33.333%;

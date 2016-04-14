@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #2c4636; }
+  color: #57245d; }
 
 .gold {
   color: #ecb731; }
@@ -1016,7 +1016,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #2c4636; }
+  color: #57245d; }
 
 .hero {
   margin-bottom: 2em;
@@ -1323,7 +1323,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #2c4636; }
+  color: #57245d; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
@@ -1489,12 +1489,14 @@ ul.bullets {
     ul.bullets li.col3 {
       width: 50%; } }
 
-ul li.col3 {
+ul.col3 li {
   width: 33.333%; }
-  ul li.col3 ol li {
-    width: 100%; }
+  ul.col3 li ul li {
+    width: 100%;
+    font-style: italic;
+    font-size: .8em; }
 
-ul li.col2 {
+ul.col2 li {
   width: 50%; }
 
 div.col3 {
