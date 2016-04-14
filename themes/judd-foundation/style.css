@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #57245d; }
+  color: #de97a8; }
 
 .gold {
   color: #ecb731; }
@@ -1016,7 +1016,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #57245d; }
+  color: #de97a8; }
 
 .hero {
   margin-bottom: 2em;
@@ -1323,7 +1323,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #57245d; }
+  color: #de97a8; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
@@ -1524,8 +1524,8 @@ div.col3 {
       width: 100%; } }
 
 p.col2 {
-  margin-top: 0; }
-  p.col2:nth-child(odd) {
+  margin: 0 4% 1.5% 0; }
+  p.col2:nth-child(even) {
     margin-left: 0; }
 
 p.clear {
@@ -1534,12 +1534,19 @@ p.clear {
 .col1 {
   width: 100%; }
 
+span.wpcf7-list-item {
+  margin-left: 0 !important; }
+
 hr {
   border: 0;
   height: 1px;
   background: #333;
   width: 100%;
   margin: 38px 0; }
+
+input[type="submit"] {
+  margin-top: 35px;
+  background-color: #333 !important; }
 
 .page-template-page-section-landing article {
   margin-top: 20px; }
