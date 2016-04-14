@@ -9,18 +9,19 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
-	<p class="label">Sort By</p>
-	<ul class="dropdown">
-		<p id="title">Art Type:</p>
-		<li class="dropdown-list"><a href="#">All</a></li>
-			<?php $terms= get_terms('art_type');
-			  foreach ( $terms as $term ) {
-				echo '<li class="dropdown-list" data-filter=".'.$term->name.'"><a href="#">'.$term->name.'</a></li>';
-			}
-			?>
-	</ul>
+<article id="post-<?php the_ID(); ?>" class="nav-3">
+	<div>
+		<p class="label">Sort By</p>
+		<ul class="dropdown">
+			<p id="title">Art Type:</p>
+			<li class="dropdown-list"><a href="#">All</a></li>
+				<?php $terms= get_terms('art_type');
+				  foreach ( $terms as $term ) {
+					echo '<li class="dropdown-list" data-filter=".'.$term->name.'"><a href="#">'.$term->name.'</a></li>';
+				}
+				?>
+		</ul>
+	</div>
 		<?php 
 			$args = array(
 				'post_parent' => get_the_ID(),
@@ -64,7 +65,8 @@
 ?>
 	<div class="block-4 grid-item <?php  foreach ( $terms as $term ) {echo $term->name;}?>">
 			<a href="<?= $thumb_url; ?>"  rel="lightbox" title="<?php the_content();?><?php echo get_field('copyright');?>">
-	        	<img src="<?= $thumb_url; ?>">
+	        	<div class="img-thumb" style="background:url(' <?php echo $thumb_url;?>'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+				</div>
 				<div class="overlay-content">
 					<p><?php the_title(); ?><br/><?php echo get_field('date') ?></p>
 					
