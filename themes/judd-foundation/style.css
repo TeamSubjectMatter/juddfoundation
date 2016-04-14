@@ -1510,16 +1510,21 @@ div.col3 {
     div.col3 {
       width: 50%; } }
 
-div.col2 {
-  width: 50%;
-  float: left; }
-  div.col2 iframe {
-    height: 360px;
-    width: 560px; }
+.col2 {
+  width: 46%;
+  float: left;
+  margin: 1.5% 2%; }
+  .col2 iframe {
+    max-height: 360px;
+    width: 560px;
+    max-width: 100%; }
   @media (min-width: 280px) and (max-width: 769px) {
-    div.col2 {
+    .col2 {
       float: none;
       width: 100%; } }
+
+p.col2 {
+  margin-top: 0; }
 
 hr {
   border: 0;

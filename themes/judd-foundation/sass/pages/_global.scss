@@ -221,17 +221,22 @@ div.col3{
 		width:50%;
 	}
 }
-div.col2{
-	width:50%;
-	float:left;
+.col2{
+	width: 46%;
+    float: left;
+    margin: 1.5% 2%;
 	iframe{
-	    height: 360px;
-    	width: 560px;
+	    max-height: 360px;
+	    width: 560px;
+	    max-width: 100%;
 	}
 	@include breakpoint($mobile){
 		float:none;
 		width:100%;
 	}
+}
+p.col2{
+	margin-top:0;
 }
 hr{
 	border: 0;
