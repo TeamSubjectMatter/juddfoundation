@@ -29,20 +29,18 @@ while(have_posts()) : the_post();
 	<div class="hero" style='background-image: url("<?php echo $thumb_url; ?>");'></div>
 
 	<h2><?php the_title(); ?></h2>
-	<p><?php echo get_field('date'); $
-	$id =get_the_ID(); 
-	$term_list= wp_get_post_terms($post->ID, 'programs');
-	if($term_list):
-		echo 'category';
-	print_r($term_list);
-	else: 
-		echo 'none';
-	endif;
+	<p><strong><?php echo get_field('date_location_time') . " | ";
 
+	$term_list= wp_get_post_terms($post->ID, 'program_type');
+
+	$i = 0;
 	foreach($term_list as $term_single) {
-echo $term_single->name; //do something here
-}
-	?></p>
+		if($i > 1) 
+			echo ", ";
+		echo $term_single->name . " "; //do something here
+		$i++;
+	}
+	?></strong></p>
 	<?php the_excerpt(); ?>
 	<p>
 		<a href="<?php the_permalink(); ?>">Read More</a>

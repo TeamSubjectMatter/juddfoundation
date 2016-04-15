@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #da7a2d; }
+  color: #c3248a; }
 
 .gold {
   color: #ecb731; }
@@ -1020,7 +1020,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #da7a2d; }
+  color: #c3248a; }
 
 .hero {
   margin-bottom: 2em;
@@ -1320,16 +1320,13 @@ div.overlay {
 /** News Page Styles ***/
 .page-template-page-list-view h2 {
   padding-left: 19px;
-  margin-bottom: 13px; }
+  margin-bottom: 3px; }
 
 .page-template-page-list-view p {
   padding-left: 19px; }
 
 .page-template-page-list-view article {
   margin: 32px auto; }
-
-.page-template-page-list-view a {
-  color: #da7a2d; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
