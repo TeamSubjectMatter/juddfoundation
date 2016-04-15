@@ -21,14 +21,14 @@ jQuery(document).ready(function ($) {
         $Transitions: jssor_1_SlideoTransitions
       },
       $ArrowNavigatorOptions: {
-        $Class: $JssorArrowNavigator$
+        $Class: $JssorArrowNavigator$,
       },
       $BulletNavigatorOptions: {
         $Class: $JssorBulletNavigator$
       }
     };
     
-    var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+    var jssor_1_slider = new $JssorSlider$("slider1_container", jssor_1_options);
     
     //responsive code begin
     //you can remove responsive code if you don't want the slider scales while window resizing
