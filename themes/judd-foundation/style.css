@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #2c4636; }
+  color: #5e9299; }
 
 .gold {
   color: #ecb731; }
@@ -1016,7 +1016,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #2c4636; }
+  color: #5e9299; }
 
 .hero {
   margin-bottom: 2em;
@@ -1325,7 +1325,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #2c4636; }
+  color: #5e9299; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
