@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #c3248a; }
+  color: #de97a8; }
 
 .gold {
   color: #ecb731; }
@@ -1020,7 +1020,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #c3248a; }
+  color: #de97a8; }
 
 .hero {
   margin-bottom: 2em;
@@ -1320,7 +1320,7 @@ div.overlay {
 /** News Page Styles ***/
 .page-template-page-list-view h2 {
   padding-left: 19px;
-  margin-bottom: 13px; }
+  margin-bottom: 3px; }
 
 .page-template-page-list-view p {
   padding-left: 19px; }
@@ -1329,7 +1329,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #c3248a; }
+  color: #de97a8; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
