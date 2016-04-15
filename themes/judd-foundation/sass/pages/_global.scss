@@ -187,11 +187,14 @@ ul.bullets{
 	list-style-type: initial;
     list-style-position: inside;
     margin-left: 2px;
-
+	padding-right: 31px;
+    font-size: .875em;
+    font-weight: 300;
  	
 } 
 ul.col3{
 	overflow:hidden;
+	
 	li{
 	   	width:33.333%;
 	   	float:left;

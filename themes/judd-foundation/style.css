@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #c3248a; }
+  color: #269a7b; }
 
 .gold {
   color: #ecb731; }
@@ -1020,7 +1020,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #c3248a; }
+  color: #269a7b; }
 
 .hero {
   margin-bottom: 2em;
@@ -1488,7 +1488,10 @@ div.button-container {
 ul.bullets {
   list-style-type: initial;
   list-style-position: inside;
-  margin-left: 2px; }
+  margin-left: 2px;
+  padding-right: 31px;
+  font-size: .875em;
+  font-weight: 300; }
 
 ul.col3 {
   overflow: hidden; }
