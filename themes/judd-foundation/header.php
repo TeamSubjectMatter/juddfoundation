@@ -54,10 +54,10 @@
 								if($post_type->label !== 'Pages'){
 									//echo "/ " . $post_type->label;
 									if('programs' == get_post_type()){
-										echo "<a class= 'parent-link' href=\"".get_site_url()."/foundation/programs/\">". $post_type->label."</a>";
+										echo "<a class= 'parent-link' href=\"".get_site_url()."/foundation/programs/\">/". $post_type->label."</a>";
 									}
 									else if('spaces' == get_post_type()){
-										echo "<a class= 'parent-link' href=\"".get_site_url()."/space\">". $post_type->label."</a>";
+										echo "<a class= 'parent-link' href=\"".get_site_url()."/space\">/". $post_type->label."</a>";
 									}
 								} else
 								if($parentID != null && $parentID != 0){
