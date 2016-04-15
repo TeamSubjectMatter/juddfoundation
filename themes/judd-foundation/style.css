@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #2c4636; }
+  color: #000; }
 
 .gold {
   color: #ecb731; }
@@ -1020,7 +1020,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #2c4636; }
+  color: #000; }
 
 .hero {
   margin-bottom: 2em;
@@ -1532,6 +1532,8 @@ div.col3 {
       margin-bottom: 5px;
       font-size: .875em;
       font-weight: 300; }
+  div.col3 p {
+    margin-bottom: 3px; }
 
 .col2 {
   width: 46%;
@@ -1570,6 +1572,9 @@ hr {
 input[type="submit"] {
   margin-top: 35px;
   background-color: #333 !important; }
+
+ul.nomargin li {
+  margin-bottom: 0; }
 
 .page-template-page-section-landing article {
   margin-top: 20px; }
