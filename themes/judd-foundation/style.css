@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #de97a8; }
+  color: #2c4636; }
 
 .gold {
   color: #ecb731; }
@@ -1016,7 +1016,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #de97a8; }
+  color: #2c4636; }
 
 .hero {
   margin-bottom: 2em;
@@ -1188,6 +1188,8 @@ article p {
       float: left;
       margin-left: 0;
       margin-right: 0; } }
+  .right-sidebar .right-sidebar-content {
+    margin-top: 50px; }
 
 .right-side-images {
   text-align: right;
@@ -1323,7 +1325,7 @@ div.overlay {
   margin: 32px auto; }
 
 .page-template-page-list-view a {
-  color: #de97a8; }
+  color: #2c4636; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
@@ -1490,7 +1492,10 @@ ul.col3 {
   overflow: hidden; }
   ul.col3 li {
     width: 33.333%;
-    float: left; }
+    float: left;
+    font-size: 1em;
+    font-weight: 200;
+    margin-bottom: 3px; }
     ul.col3 li ul li {
       width: 100%;
       font-style: italic;
@@ -1509,6 +1514,10 @@ div.col3 {
   @media (min-width: 280px) and (max-width: 769px) {
     div.col3 {
       width: 50%; } }
+  div.col3 strong {
+    font-size: .875em; }
+  div.col3 a {
+    font-size: .875em; }
 
 .col2 {
   width: 46%;

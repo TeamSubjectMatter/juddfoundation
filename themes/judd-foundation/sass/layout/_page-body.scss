@@ -181,6 +181,9 @@ article p {
 		@include breakpoint($mobile) {
       		@include span(12);
   	}
+  	.right-sidebar-content{
+  		margin-top: 50px;
+  	}
 }
 
 .right-side-images {

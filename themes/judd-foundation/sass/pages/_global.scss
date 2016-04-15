@@ -194,6 +194,9 @@ ul.col3{
 	li{
 	   	width:33.333%;
 	   	float:left;
+	   	font-size: 1em;
+    	font-weight: 200;
+    	 margin-bottom: 3px;
     	ul{
     		li{
     			width:100%;
@@ -219,6 +222,12 @@ div.col3{
 	overflow:hidden;
 	@include breakpoint($mobile){
 		width:50%;
+	}
+	strong{
+		font-size: .875em
+	}
+	a{
+		font-size: .875em;
 	}
 }
 .col2{
