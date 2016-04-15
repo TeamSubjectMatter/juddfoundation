@@ -1328,9 +1328,6 @@ div.overlay {
 .page-template-page-list-view article {
   margin: 32px auto; }
 
-.page-template-page-list-view a {
-  color: #de97a8; }
-
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
     padding-left: 0px; } }
