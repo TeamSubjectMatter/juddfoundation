@@ -46,8 +46,19 @@
 
 								$parentID = $post->post_parent; 
 								$post_type = get_post_type_object( get_post_type($post) );
+								$pageTemplate = get_page_template();
+
+								$pageArray = explode("/", $pageTemplate); 
+
+								$pageTemplate = end($pageArray);
 								if($post_type->label !== 'Pages'){
-									echo "/ " . $post_type->label;
+									//echo "/ " . $post_type->label;
+									if('programs' == get_post_type()){
+										echo "<a class= 'parent-link' href=\"".get_site_url()."/foundation/programs/\">". $post_type->label."</a>";
+									}
+									else if('spaces' == get_post_type()){
+										echo "<a class= 'parent-link' href=\"".get_site_url()."/space\">". $post_type->label."</a>";
+									}
 								} else
 								if($parentID != null && $parentID != 0){
 									echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\"> / ". get_the_title( $post->post_parent ) . "</a>";
