@@ -190,17 +190,20 @@ ul.bullets{
 	padding-right: 31px;
     font-size: .875em;
     font-weight: 300;
- 	
+ 	li{
+ 		margin-bottom:12px;
+ 	}
 } 
 ul.col3{
 	overflow:hidden;
-	
+	padding-right:31px;
 	li{
 	   	width:33.333%;
 	   	float:left;
 	   	font-size: 1em;
     	font-weight: 200;
-    	 margin-bottom: 3px;
+    	margin-bottom: 5px;
+
     	ul{
     		li{
     			width:100%;
