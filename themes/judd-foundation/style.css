@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #de97a8; }
+  color: #269a7b; }
 
 .gold {
   color: #ecb731; }
@@ -1020,7 +1020,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #de97a8; }
+  color: #269a7b; }
 
 .hero {
   margin-bottom: 2em;
@@ -1469,13 +1469,14 @@ div.img-thumb {
   height: 228px; }
 
 div.button-container {
-  margin-top: 40px; }
+  margin-bottom: 14px; }
 
 .visit-button {
   background: #333;
-  padding: 5px 8px;
+  padding: 7px 37px;
+  font-size: .875em;
   color: #fff;
-  font-weight: 300;
+  font-weight: 200;
   text-decoration: none; }
   .visit-button:hover {
     text-decoration: none;
@@ -1487,16 +1488,22 @@ div.button-container {
 ul.bullets {
   list-style-type: initial;
   list-style-position: inside;
-  margin-left: 2px; }
+  margin-left: 2px;
+  padding-right: 31px;
+  font-size: .875em;
+  font-weight: 300; }
+  ul.bullets li {
+    margin-bottom: 12px; }
 
 ul.col3 {
-  overflow: hidden; }
+  overflow: hidden;
+  padding-right: 31px; }
   ul.col3 li {
     width: 33.333%;
     float: left;
     font-size: 1em;
     font-weight: 200;
-    margin-bottom: 3px; }
+    margin-bottom: 5px; }
     ul.col3 li ul li {
       width: 100%;
       font-style: italic;
@@ -1519,6 +1526,12 @@ div.col3 {
     font-size: .875em; }
   div.col3 a {
     font-size: .875em; }
+  div.col3 ul {
+    padding-right: 31px; }
+    div.col3 ul li {
+      margin-bottom: 5px;
+      font-size: .875em;
+      font-weight: 300; }
 
 .col2 {
   width: 46%;
@@ -1538,7 +1551,7 @@ p.col2 {
   p.col2:nth-child(even) {
     margin-left: 0; }
 
-p.clear {
+.clear {
   clear: both; }
 
 .col1 {

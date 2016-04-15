@@ -165,14 +165,15 @@ div.img-thumb {
 }
 
 div.button-container{
-	margin-top:40px;
+	margin-bottom: 14px;
 }
 .visit-button{
 	background: #333;
-    padding: 5px 8px;
+    padding: 7px 37px;
+    font-size: .875em;
     color: #fff;
-    font-weight:300;
-    text-decoration:none;
+    font-weight: 200;
+    text-decoration: none;
     &:hover{
     	text-decoration:none;
     	color:#fff;
@@ -186,17 +187,23 @@ ul.bullets{
 	list-style-type: initial;
     list-style-position: inside;
     margin-left: 2px;
-
- 	
+	padding-right: 31px;
+    font-size: .875em;
+    font-weight: 300;
+ 	li{
+ 		margin-bottom:12px;
+ 	}
 } 
 ul.col3{
 	overflow:hidden;
+	padding-right:31px;
 	li{
 	   	width:33.333%;
 	   	float:left;
 	   	font-size: 1em;
     	font-weight: 200;
-    	 margin-bottom: 3px;
+    	margin-bottom: 5px;
+
     	ul{
     		li{
     			width:100%;
@@ -229,6 +236,14 @@ div.col3{
 	a{
 		font-size: .875em;
 	}
+	ul{
+		padding-right:31px;
+		li{
+			margin-bottom: 5px;
+			font-size: .875em;
+    		font-weight: 300;
+		}
+	}
 }
 .col2{
 	width: 46%;
@@ -250,7 +265,7 @@ p.col2{
 		margin-left:0;
 	}
 }
-p.clear{
+.clear{
 	clear:both;
 }
 .col1{
