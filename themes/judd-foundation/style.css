@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #9e6f32; }
+  color: #269a7b; }
 
 .gold {
   color: #ecb731; }
@@ -1020,7 +1020,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #9e6f32; }
+  color: #269a7b; }
 
 .hero {
   margin-bottom: 2em;
@@ -1579,6 +1579,12 @@ ul.nomargin li {
 
 p.nomargin {
   margin-bottom: 0; }
+
+.pad-top {
+  padding: 16px 0; }
+
+.pad-bottom {
+  padding-botttom: 16px; }
 
 .page-template-page-section-landing article {
   margin-top: 20px; }
