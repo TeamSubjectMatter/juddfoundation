@@ -45,33 +45,72 @@
 <article class="grid">
 
 <?php 
-	// query custom post types based on page slug 
+	// query custom post types based on page slug + iconic
 	query_posts( array( 
 					'post_type' => array(get_post_field( 'post_name', get_post() ) ),
-					'posts_per_page' => -1,
-					'orderby'        => 'iconic rand',
-					'order'			 => 'DESC'
-				 ) );
-	while(have_posts()) : the_post(); 
-
-	//get thumbnail URL
-	$thumb_id = get_post_thumbnail_id();
-	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail', true);
-	$thumb_url = $thumb_url_array[0];
-	
-	$id=get_the_ID();
-	$terms = get_the_terms( $id , 'art_type' );
-	
-?>
-	<div class="block-4 grid-item <?php  foreach ( $terms as $term ) {echo $term->name;}?>">
-			<a href="<?= $thumb_url; ?>"  rel="lightbox" title="<?php the_content();?><?php echo get_field('copyright');?>">
-	        	<div class="img-thumb" style="background:url(' <?php echo $thumb_url;?>'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
-				</div>
-				<div class="overlay-content">
-					<p><?php the_title(); ?><br/><?php echo get_field('date') ?></p>
 					
-				</div>
-	        </a>
-	</div>
-<?php endwhile; ?>
+					'meta_query'	 => array(
+											array('key' => 'iconic',
+											  'value' => true,
+											  'compare' => '=')
+											 ),
+					'posts_per_page' => -1,
+					'orderby' 	=> 'rand'
+				 ) );
+	$post_ids = array();
+	while(have_posts()) : the_post(); 
+		array_push($post_ids, $id=get_the_ID());
+	endwhile;
+	wp_reset_query();
+	wp_reset_postdata();
+
+	// query custom post types based on page slug + not iconic
+	query_posts( array( 
+					'post_type' => array(get_post_field( 'post_name', get_post() ) ),
+					
+					'meta_query'	 => array(
+											array('key' => 'iconic',
+												  'value' => true,
+												  'compare' => '!=')
+											 ),
+					'posts_per_page' => -1,
+					'orderby' 	=> 'rand'
+				 ) );
+
+	while(have_posts()) : the_post(); 
+		array_push($post_ids, $id=get_the_ID());
+	endwhile;
+	wp_reset_query();
+	wp_reset_postdata();
+
+	foreach ($post_ids as $single_post_id):
+
+		$post = get_post($single_post_id);
+
+		//get thumbnail URL
+		$thumb_id = get_post_thumbnail_id();
+		$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail', true);
+		$thumb_url = $thumb_url_array[0];
+		
+		$id=get_the_ID();
+		$terms = get_the_terms( $id , 'art_type' );
+		
+	?>
+		<div class="block-4 grid-item <?php  foreach ( $terms as $term ) {echo $term->name;}?>">
+				<a href="<?= $thumb_url; ?>"  rel="lightbox" title="<?php the_content();?><?php echo get_field('copyright');?>">
+		        	<div class="img-thumb" style="background:url(' <?php echo $thumb_url;?>'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+					</div>
+					<div class="overlay-content">
+						<p><?php the_title(); ?><br/><?php echo get_field('date') ?></p>
+						
+					</div>
+		        </a>
+		</div>
+	<?php 
+
+					wp_reset_query();
+			wp_reset_postdata();
+
+	endforeach;
+?>
 </article>
