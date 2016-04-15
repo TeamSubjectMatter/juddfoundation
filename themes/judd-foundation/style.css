@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #da7a2d; }
+  color: #269a7b; }
 
 .gold {
   color: #ecb731; }
@@ -1020,7 +1020,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #da7a2d; }
+  color: #269a7b; }
 
 .hero {
   margin-bottom: 2em;
@@ -1469,7 +1469,7 @@ div.img-thumb {
   height: 228px; }
 
 div.button-container {
-  margin-top: 40px; }
+  margin-bottom: 14px; }
 
 .visit-button {
   background: #333;
@@ -1528,6 +1528,10 @@ div.col3 {
     font-size: .875em; }
   div.col3 ul {
     padding-right: 31px; }
+    div.col3 ul li {
+      margin-bottom: 5px;
+      font-size: .875em;
+      font-weight: 300; }
 
 .col2 {
   width: 46%;
