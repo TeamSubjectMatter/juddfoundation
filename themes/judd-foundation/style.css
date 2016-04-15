@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #204c8a; }
+  color: #da7a2d; }
 
 .gold {
   color: #ecb731; }
@@ -1020,7 +1020,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #204c8a; }
+  color: #da7a2d; }
 
 .hero {
   margin-bottom: 2em;
@@ -1526,6 +1526,8 @@ div.col3 {
     font-size: .875em; }
   div.col3 a {
     font-size: .875em; }
+  div.col3 ul {
+    padding-right: 31px; }
 
 .col2 {
   width: 46%;
