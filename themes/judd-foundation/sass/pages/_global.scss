@@ -188,7 +188,6 @@ ul.bullets{
     list-style-position: inside;
     margin-left: 2px;
 	padding-right: 31px;
-    font-size: .875em;
     font-weight: 300;
  	li{
  		margin-bottom:12px;
@@ -227,6 +226,7 @@ div.col3{
 	width:33.333%;
 	float:left;
 	overflow:hidden;
+	margin-bottom:25px;
 	@include breakpoint($mobile){
 		width:50%;
 	}
