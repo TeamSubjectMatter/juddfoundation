@@ -200,7 +200,12 @@
 .primary-navigation.toggled ul {
 	display: block;
 }
-
+.home{
+	strong{
+	    color:  #FE0100;
+    	text-transform: uppercase;
+	}
+}
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
