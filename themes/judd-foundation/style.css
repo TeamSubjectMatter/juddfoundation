@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #9f9fa2; }
+  color: #da7a2d; }
 
 .gold {
   color: #ecb731; }
@@ -1020,7 +1020,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #9f9fa2; }
+  color: #da7a2d; }
 
 .hero {
   margin-bottom: 2em;
@@ -1699,6 +1699,10 @@ p.nomargin {
     float: right; }
     .page-template-page-gallery-view article.nav-3 div.sub-nav h2:last-child {
       margin-right: 16px; }
+    @media (min-width: 280px) and (max-width: 769px) {
+      .page-template-page-gallery-view article.nav-3 div.sub-nav {
+        float: left;
+        margin-top: 33px; } }
   .page-template-page-gallery-view article.nav-3 div {
     float: left;
     width: 316px;

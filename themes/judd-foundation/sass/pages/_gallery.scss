@@ -8,6 +8,10 @@
 		    h2:last-child{
 		    	margin-right:16px;
 		    }
+		    @include breakpoint($mobile){
+		    	float: left;
+    			margin-top: 33px;
+    		}
 		}
 		div{
 			float: left;
