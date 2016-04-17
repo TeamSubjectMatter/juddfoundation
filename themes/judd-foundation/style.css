@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #da7a2d; }
+  color: #269a7b; }
 
 .gold {
   color: #ecb731; }
@@ -1020,7 +1020,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #da7a2d; }
+  color: #269a7b; }
 
 .hero {
   margin-bottom: 2em;
@@ -1102,6 +1102,9 @@ article p {
     height: 100%;
     background: #f7f7f7;
     text-align: center; }
+    @media (min-width: 280px) and (max-width: 769px) {
+      .block-4 a {
+        width: 90%; } }
   .block-4 img {
     width: auto;
     height: 100%; }
@@ -1439,6 +1442,9 @@ li.thumbs {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center; }
+      @media (min-width: 280px) and (max-width: 769px) {
+        li.thumbs a div.img-thumb {
+          width: 90%; } }
     li.thumbs a:hover div.img-thumb {
       opacity: .3;
       -webkit-filter: grayscale(100%);

@@ -80,6 +80,9 @@ article p {
 	    height: 100%;
 	    background:#f7f7f7;
 	    text-align:center;
+	    @include breakpoint($mobile){
+	    		width: 90%;
+	    	}
 	}
 	img {
 		width: auto;
@@ -133,6 +136,9 @@ article p {
 	   		}
 	   	}
 	}
+	 div.img-thumb{
+	    	
+	    }
 	//@include span(3 of 12);
   	
 }
