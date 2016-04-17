@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #269a7b; }
+  color: #9e6f32; }
 
 .gold {
   color: #ecb731; }
@@ -744,7 +744,7 @@ div.sub-nav {
     div.sub-nav h2.breadcrum a.current {
       font-weight: 500; }
     div.sub-nav h2.breadcrum a.nav {
-      font-weight: 300;
+      font-weight: 500;
       text-decoration: none; }
       div.sub-nav h2.breadcrum a.nav:hover {
         text-decoration: underline; }
@@ -1020,7 +1020,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #269a7b; }
+  color: #9e6f32; }
 
 .hero {
   margin-bottom: 2em;
