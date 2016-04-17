@@ -231,6 +231,7 @@ div.col3{
 	float:left;
 	overflow:hidden;
 	margin-bottom:25px;
+	padding-right:20px;
 	@include breakpoint($mobile){
 		width:50%;
 	}
@@ -241,7 +242,6 @@ div.col3{
 		font-size: .875em;
 	}
 	ul{
-		padding-right:31px;
 		li{
 			margin-bottom: 5px;
 			font-size: .875em;
@@ -250,10 +250,12 @@ div.col3{
 	}
 	p{
 		margin-bottom:3px;
+		line-height: 1.3;
 	}
 	@include breakpoint($mobile){
 		float:none;
 		width:100%;
+		margin-bottom: 0;
 	}
 }
 .col2{
