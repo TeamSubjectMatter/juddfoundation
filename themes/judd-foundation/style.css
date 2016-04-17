@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #204c8a; }
+  color: #9f9fa2; }
 
 .gold {
   color: #ecb731; }
@@ -1020,7 +1020,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #204c8a; }
+  color: #9f9fa2; }
 
 .hero {
   margin-bottom: 2em;
@@ -1507,6 +1507,10 @@ ul.col3 {
       width: 100%;
       font-style: italic;
       font-size: .8em; }
+    @media (min-width: 280px) and (max-width: 769px) {
+      ul.col3 li {
+        float: none;
+        width: 100%; } }
   @media (min-width: 280px) and (max-width: 769px) {
     ul.col3 li {
       width: 50%; } }
@@ -1534,6 +1538,10 @@ div.col3 {
       font-weight: 300; }
   div.col3 p {
     margin-bottom: 3px; }
+  @media (min-width: 280px) and (max-width: 769px) {
+    div.col3 {
+      float: none;
+      width: 100%; } }
 
 .col2 {
   width: 46%;

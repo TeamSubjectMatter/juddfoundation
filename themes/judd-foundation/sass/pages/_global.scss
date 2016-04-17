@@ -210,6 +210,10 @@ ul.col3{
     			font-size: .8em;
     		}
     	}
+    	@include breakpoint($mobile){
+			float:none;
+			width:100%;
+		}
     }
     @include breakpoint($mobile){
 	 	li{
@@ -246,6 +250,10 @@ div.col3{
 	}
 	p{
 		margin-bottom:3px;
+	}
+	@include breakpoint($mobile){
+		float:none;
+		width:100%;
 	}
 }
 .col2{
