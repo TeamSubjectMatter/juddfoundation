@@ -2,6 +2,9 @@
 .home {
 	@include background-image(url("images/judd-foundation-homepage-image.jpg"));
   	background-size: cover;
+  	@include breakpoint($mobile){
+  		background-image:url("img/mobile-hero.jpg");
+  	}
 }
 
 .home-nav-bar {

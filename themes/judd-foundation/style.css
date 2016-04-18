@@ -753,50 +753,66 @@ div.sub-nav {
 @media screen and (max-width: 768px) {
   .top-bar {
     display: none; }
-  .primary-navigation {
+  .home .primary-navigation div.menu-container {
+    width: 86%; }
+    .home .primary-navigation div.menu-container div.menu-primary-navigation-container {
+      display: block;
+      float: none; }
+      .home .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu {
+        display: block; }
+        .home .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
+          display: inline-block;
+          padding: .5em 0em;
+          font-size: 1em;
+          width: 50%;
+          float: left;
+          text-align: left; }
+    .home .primary-navigation div.menu-container div.right-menu {
+      display: none; }
+  .navigation-overlay .primary-navigation {
     bottom: inherit;
     min-height: 100%;
     background: none; }
-    .primary-navigation div.menu-container {
+    .navigation-overlay .primary-navigation div.menu-container {
       background-color: rgba(255, 255, 255, 0.5);
       width: 70%;
       min-height: 100vh;
       margin: auto; }
-      .primary-navigation div.menu-container div.menu-primary-navigation-container {
+      .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container {
         display: block;
         float: none;
         margin: auto; }
-        .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu {
+        .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu {
           padding-top: 20%;
           display: block;
           padding-bottom: 0px;
           text-align: left; }
-          .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
+          .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
             display: block;
             padding: .6em 0em;
             font-size: 1.5em; }
-          .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
+          .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
             display: none; }
-          .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
+          .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
             padding-top: 0; }
-          .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:last-child {
+          .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:last-child {
             padding-bottom: 0; }
-      .primary-navigation div.menu-container div.right-menu {
+      .navigation-overlay .primary-navigation div.menu-container div.right-menu {
         float: none;
         text-align: left; }
-        .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container {
+        .navigation-overlay .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container {
           float: none;
           padding: 0; }
-          .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container li {
+          .navigation-overlay .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container li {
             padding: 0 0em .6em 0em;
             font-size: 1.5em; }
-            .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container li a {
+            .navigation-overlay .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container li a {
               color: #000; }
-      .primary-navigation div.menu-container div.search {
+      .navigation-overlay .primary-navigation div.menu-container div.search {
         float: none;
         margin-right: 0;
         padding-left: 0; }
-        .primary-navigation div.menu-container div.search i.in-search-box {
+        .navigation-overlay .primary-navigation div.menu-container div.search i.in-search-box {
           top: 28px; }
   .navigation-overlay {
     min-height: 100%;
@@ -1274,6 +1290,9 @@ article p {
 .home {
 	@include background-image(url("images/judd-foundation-homepage-image.jpg"));
   	background-size: cover;
+  	@include breakpoint($mobile){
+  		background-image:url("img/mobile-hero.jpg");
+  	}
 }
 
 .home-nav-bar {

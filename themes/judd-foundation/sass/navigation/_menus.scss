@@ -266,6 +266,30 @@ div.sub-nav{
 	.top-bar{
 		display: none;
 	}
+.home .primary-navigation{
+	div.menu-container{
+		width: 86%;
+		div.menu-primary-navigation-container {
+		 	display:block;
+		 	float:none;
+		 	ul.menu{
+		 		display:block;
+		 		li{
+			 	    display: inline-block;
+				    padding: .5em 0em;
+				    font-size: 1em;
+				    width: 50%;
+				    float: left;
+				    text-align: left;
+		 		}
+		 	} 
+		} 	
+		div.right-menu{
+			display:none;
+		}
+	}
+}
+.navigation-overlay{
 	.primary-navigation{
 		bottom: inherit;
 		min-height:100%;
@@ -325,6 +349,7 @@ div.sub-nav{
 			}
 		}
 	}
+}
 	.navigation-overlay{
 		min-height: 100%;
 		height: auto;
@@ -347,6 +372,7 @@ div.sub-nav{
 		}
 	} 
 }
+
 @media screen and (max-width:665px){
 	header{
 		div.sub-nav h2.breadcrum{
