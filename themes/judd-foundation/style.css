@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #601900; }
+  color: #da7a2d; }
 
 .gold {
   color: #ecb731; }
@@ -1036,7 +1036,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #601900; }
+  color: #da7a2d; }
 
 .hero {
   margin-bottom: 2em;
@@ -1133,7 +1133,7 @@ article p {
       opacity: 1;
       filter: none;
       -webkit-filter: none; }
-    .block-3:hover .overlay {
+    .block-3:hover .overlay-content {
       display: none; } }
   @media (min-width: 280px) and (max-width: 769px) {
     .block-3 {
@@ -1206,7 +1206,7 @@ article p {
       opacity: 1;
       filter: none;
       -webkit-filter: none; }
-    .block-4:hover .overlay {
+    .block-4:hover .overlay-content {
       display: none; } }
 
 @media screen and (max-width: 1025px) {
