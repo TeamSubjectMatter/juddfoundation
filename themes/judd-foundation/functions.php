@@ -257,6 +257,45 @@ function custom_post_type() {
 	register_post_type( 'programs', $args );
 
 	/*
+	 * Programs
+	 */
+	$args = array(
+		'label'               => __( 'pressroom_content', 'judd-foundation' ),
+		'description'         => __( 'Pressroom Content', 'judd-foundation' ),
+		'labels'              => array(
+									'name'                => _x( 'Pressroom Content', 'Post Type General Name', 'judd-foundation' ),
+									'singular_name'       => _x( 'Pressroom Content', 'Post Type Singular Name', 'judd-foundation' ),
+									'menu_name'           => __( 'Pressroom Content', 'judd-foundation' ),
+									'parent_item_colon'   => __( 'Parent Locations', 'judd-foundation' ),
+									'all_items'           => __( 'All Pressroom Content', 'judd-foundation' ),
+									'view_item'           => __( 'View Pressroom Content', 'judd-foundation' ),
+									'add_new_item'        => __( 'Add New Pressroom Content', 'judd-foundation' ),
+									'add_new'             => __( 'Add New', 'judd-foundation' ),
+									'edit_item'           => __( 'Edit Pressroom Content', 'judd-foundation' ),
+									'update_item'         => __( 'Update Pressroom Content', 'judd-foundation' ),
+									'search_items'        => __( 'Search Pressroom Content', 'judd-foundation' ),
+									'not_found'           => __( 'Not Found', 'judd-foundation' ),
+									'not_found_in_trash'  => __( 'Not found in Trash', 'judd-foundation' ),
+								),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+		'taxonomies' 		  => array(),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 6,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+	);
+	
+	register_post_type( 'Pressroom Content', $args );
+
+	/*
 	 * News
 	 */
 	$args = array(
