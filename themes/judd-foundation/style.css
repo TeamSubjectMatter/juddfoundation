@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #da7a2d; }
+  color: #204c8a; }
 
 .gold {
   color: #ecb731; }
@@ -1036,7 +1036,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #da7a2d; }
+  color: #204c8a; }
 
 .hero {
   margin-bottom: 2em;
@@ -1147,7 +1147,7 @@ article p {
         height: auto; } }
 
 .block-3:nth-child(4n+1) {
-  clear: left; }
+  clear: right; }
 
 .block-4 {
   width: 22%;
