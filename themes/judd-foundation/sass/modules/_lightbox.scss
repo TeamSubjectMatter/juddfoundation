@@ -39,7 +39,10 @@
     	@include breakpoint($mobile){
     		width:22px !important;
     		background-size:contain !important;
-    		left:5% !important;
+
+
+    		left:-13% !important;
+    		position:absolute !important;
     	}
     }
 #nextLink{
@@ -52,7 +55,10 @@
     	@include breakpoint($mobile){
     		width:22px !important;
     		background-size:contain !important;
-    		right:0% !important;
+
+    		right:-16% !important;
+
+    		position:absolute !important;
     	}
 }
 #hoverNav{

@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #57245d; }
+  color: #204c8a; }
 
 .gold {
   color: #ecb731; }
@@ -1036,7 +1036,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #57245d; }
+  color: #204c8a; }
 
 .hero {
   margin-bottom: 2em;
@@ -1889,7 +1889,8 @@ p.nomargin {
     #prevLink {
       width: 22px !important;
       background-size: contain !important;
-      left: 5% !important; } }
+      left: -13% !important;
+      position: absolute !important; } }
 
 #nextLink {
   right: 1% !important;
@@ -1902,7 +1903,8 @@ p.nomargin {
     #nextLink {
       width: 22px !important;
       background-size: contain !important;
-      right: 0% !important; } }
+      right: -16% !important;
+      position: absolute !important; } }
 
 @media (min-width: 280px) and (max-width: 769px) {
   #hoverNav {
