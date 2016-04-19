@@ -1,12 +1,12 @@
-/*
-.home {
-	@include background-image(url("images/judd-foundation-homepage-image.jpg"));
-  	background-size: cover;
+
+body.home{
+	background:url(attr(data-bckgrd));
+	background-size: cover;
   	@include breakpoint($mobile){
-  		background-image:url("img/mobile-hero.jpg");
+  		background:url("img/mobile-hero.jpg") no-repeat center center fixed !important;
   	}
 }
-
+/*
 .home-nav-bar {
 	margin-top: 550px;
 	background-color: rgba(155,145,135, .75)
