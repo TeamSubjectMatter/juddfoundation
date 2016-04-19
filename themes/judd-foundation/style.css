@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #204c8a; }
+  color: #57245d; }
 
 .gold {
   color: #ecb731; }
@@ -1036,7 +1036,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #204c8a; }
+  color: #57245d; }
 
 .hero {
   margin-bottom: 2em;
@@ -1880,7 +1880,7 @@ p.nomargin {
 
 #prevLink {
   left: 3% !important;
-  position: absolute;
+  position: fixed;
   background: url("img/left_arrow.png") center center no-repeat !important;
   width: 52px !important;
   top: 50%;
@@ -1889,13 +1889,11 @@ p.nomargin {
     #prevLink {
       width: 22px !important;
       background-size: contain !important;
-      transform: none !important;
-      top: 17% !important;
-      left: -16% !important; } }
+      left: 5% !important; } }
 
 #nextLink {
-  right: 3% !important;
-  position: absolute;
+  right: 1% !important;
+  position: fixed;
   background: url("img/right_arrow.png") center center no-repeat !important;
   width: 52px !important;
   top: 50%;
@@ -1904,12 +1902,8 @@ p.nomargin {
     #nextLink {
       width: 22px !important;
       background-size: contain !important;
-      top: 17% !important;
-      right: -16% !important;
-      transform: none !important; } }
+      right: 0% !important; } }
 
-#hoverNav {
-  position: fixed !important; }
-  @media (min-width: 280px) and (max-width: 769px) {
-    #hoverNav {
-      position: absolute !important; } }
+@media (min-width: 280px) and (max-width: 769px) {
+  #hoverNav {
+    position: absolute !important; } }

@@ -31,7 +31,7 @@
 }
 #prevLink{
 	left: 3% !important;
-    position: absolute;
+    position: fixed;
     background: url("img/left_arrow.png") center center no-repeat !important;
 	width:52px !important;
     top: 50%;
@@ -39,14 +39,12 @@
     	@include breakpoint($mobile){
     		width:22px !important;
     		background-size:contain !important;
-    		transform:none !important;
-    		top:17% !important;
-    		left:-16% !important;
+    		left:5% !important;
     	}
     }
 #nextLink{
-	right:3% !important;
-	position:absolute;
+	right:1% !important;
+	position:fixed;
 	background: url("img/right_arrow.png") center center no-repeat !important;
 	width:52px !important;
 	top: 50%;
@@ -54,13 +52,11 @@
     	@include breakpoint($mobile){
     		width:22px !important;
     		background-size:contain !important;
-			top:17% !important;
-    		right:-16% !important;
-    		transform:none !important;
+    		right:0% !important;
     	}
 }
 #hoverNav{
-	position:fixed !important;
+	
 	@include breakpoint($mobile){
 		position:absolute !important;
 	}
