@@ -51,9 +51,9 @@
 		<div class="navigation-overlay" style="background-color: <?php echo $random_link_color ?>">
 			<nav id="site-navigation" class="primary-navigation" role="navigation">
 				<div class="menu-container">
-					<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) );?>
+					<div class="close"><i class="fa fa-bars fa-3x"></i></div>
+					<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) ); ?>
 					<?php echo '<div class="right-menu">'; wp_nav_menu( array( 'menu' => 'Primary Right Navigation', 'walker' => new Child_Wrap() ) );get_search_form(); echo '</div>' ?>
-
 				</div>
 			</nav>
 		</div>

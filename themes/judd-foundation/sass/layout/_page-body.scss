@@ -61,7 +61,7 @@ article p {
 	    width: 100%;
 	    height: 100%;
 	    @include breakpoint($mobile){
-	    		width: 90%;
+	    		width: 100%;
 	    	}
 	}
   	.overlay-content {

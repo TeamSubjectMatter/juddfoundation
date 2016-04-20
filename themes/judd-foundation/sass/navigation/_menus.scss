@@ -175,56 +175,79 @@
     	margin:auto;
     	float:none;
     	div.menu-container{ 
-	    	div.menu-primary-navigation-container ul.menu{
-	    		li:hover div.sub-container{
-	    			background-color: transparent !important;
-	    			top:4em;
-	    		}
-	    		li{
-	    			a{
-	    				color:#fff;
-	    			}
+    		width:100%;
+    		max-width:1100px;
+	    	div.menu-primary-navigation-container{
+	    		float:right;
+		    	ul.menu{
+		    		li:hover div.sub-container{
+		    			background-color: transparent !important;
+		    			top:4em;
+		    		}
+		    		li{
+		    			a{
+		    				color:#fff;
+		    			}
 
-	    		}
+		    		}
 
-	    		ul.sub-menu{
-	    			text-align: left;
-	    			top: .5em;
-	    			bottom: inital;
-	    			li{
-	    				padding:.5em 0em !important;
-	    			}
-	    		}
-	    	}
-	    	div.right-menu .menu-primary-right-navigation-container{ 
-		    	a{
-		    		color:#fff;
+		    		ul.sub-menu{
+		    			text-align: left;
+		    			top: .5em;
+		    			bottom: inital;
+		    			li{
+		    				padding:.5em 0em !important;
+		    			}
+		    		}
 		    	}
-    		}
-    		.fa{
-		    	color:#fff;
-		    }
+	    	} 
+	    	div.right-menu{
+	    		float:left;
+		    	.menu-primary-right-navigation-container{ 
+			    	a{
+			    		color:#fff;
+			    	}
+	    		}
+	    		.fa{
+			    	color:#fff;
+			    }
+			    .in-search-box{
+			    	color:#333;
+			    }
+		    } 
 		}
     }
 }
-.fa-bars.active{
-	color:#fff;
-	background:url('img/close.png');
-	width: 32px;
-    height: 27px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-	&:before{
-		content:'';
+div.close{
+	padding: 1.25em 0 1.25em 1.5em;
+	float:right;
+	.fa-bars{
+		color:#fff;
+		background:url('img/close.png');
+		width: 32px;
+	    height: 27px;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: contain;
+		&:before{
+			content:'';
+		}
 	}
 }
+
 /* Small menu. */
 .menu-toggle,
 .primary-navigation.toggled ul {
 	display: block;
 }
 .home{
+	div.logo{
+	    float: left;
+    	padding: 1.25em .5em;
+		color:  #FE0100;
+		text-transform: uppercase;
+		font-weight:400;
+	}
 	a{
 		strong{
 		    color:  #FE0100;

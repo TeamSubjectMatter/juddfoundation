@@ -60,6 +60,7 @@
 	<!--<div class="top-bar" class="ctaRandomColor"><?php echo the_content(); ?></div>-->
 	<nav id="site-navigation" class="primary-navigation" role="navigation">
 		<div class="menu-container">
+			<div class="logo">JUDD</div>
 			<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) );?>
 			<?php echo '<div class="right-menu">'; wp_nav_menu( array( 'menu' => 'Primary Right Navigation', 'walker' => new Child_Wrap() ) );get_search_form(); echo '</div>' ?>
 		</div>
