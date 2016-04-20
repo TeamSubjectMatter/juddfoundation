@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #2c4636; }
+  color: #9e6f32; }
 
 .gold {
   color: #ecb731; }
@@ -1054,7 +1054,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #2c4636; }
+  color: #9e6f32; }
 
 .hero {
   margin-bottom: 2em;
@@ -1484,6 +1484,9 @@ p.label {
   overflow: hidden;
   font-size: .875em;
   width: 90%; }
+  @media (min-width: 280px) and (max-width: 769px) {
+    .pagination {
+      padding: 0 1em; } }
   .pagination div.nav-previous {
     float: left; }
   .pagination div.nav-next {

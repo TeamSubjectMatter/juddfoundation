@@ -76,6 +76,9 @@ p.label{
     overflow:hidden;
     font-size:.875em;
     width:90%;
+    @include breakpoint($mobile){
+    	padding:0 1em;
+    }
     div.nav-previous{
     	float:left;
     }
