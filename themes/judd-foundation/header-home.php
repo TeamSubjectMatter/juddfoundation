@@ -17,6 +17,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<!-- ADD FAVICON PACKAGE -->
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/android-icon-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/android-icon-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/android-icon-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/android-icon-192x192.png" sizes="192x192">
+<link rel="Shortcut Icon" href="' . get_stylesheet_directory_uri() . '/images/favicon/favicon.ico" type="image/x-icon" />
+<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/ms-icon-70x70.png">
+<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/ms-icon-150x150.png">
+<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri() ?>/images/favicon/ms-icon-310x310.png">
+<!-- END FAVICON PACKAGE -->
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon.ico" />
 <?php wp_head(); ?>
 <?php global $instagram_homepage_color_link; ?>
 <?php global $random_link_color; ?>
