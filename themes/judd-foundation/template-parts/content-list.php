@@ -26,7 +26,7 @@ while(have_posts()) : the_post();
 	$thumb_url = $thumb_url_array[0];
 ?>
 <article>
-	<div class="hero" style='background-image: url("<?php echo $thumb_url; ?>");'></div>
+	<a href="<?php the_permalink(); ?>"><div class="hero" style='background-image: url("<?php echo $thumb_url; ?>");'></div></a>
 
 	<h2><?php the_title(); ?></h2>
 	<p><strong><?php echo get_field('date_location_time') . " | ";
