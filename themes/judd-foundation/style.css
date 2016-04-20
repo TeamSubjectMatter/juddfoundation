@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #a6a8aa; }
+  color: #000; }
 
 .gold {
   color: #ecb731; }
@@ -679,7 +679,12 @@ a {
   .navigation-overlay .primary-navigation {
     background: none;
     bottom: inherit;
-    padding-top: 1.5em; }
+    padding-top: 1.5em;
+    position: relative;
+    max-width: 1100px;
+    width: 90%;
+    margin: auto;
+    float: none; }
     .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
       background-color: transparent !important;
       top: 4em; }
@@ -927,6 +932,7 @@ header h1 {
 
 .header-right {
   text-align: right;
+  margin-top: -11px;
   width: 6.30915%;
   float: right;
   margin-right: 0; }
@@ -1053,7 +1059,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #a6a8aa; }
+  color: #000; }
 
 .hero {
   margin-bottom: 2em;
@@ -1182,7 +1188,8 @@ article p {
     text-align: center; }
     @media (min-width: 280px) and (max-width: 769px) {
       .block-4 a {
-        width: 90%; } }
+        width: 90%;
+        margin: auto; } }
   .block-4 img {
     width: auto;
     height: 100%; }

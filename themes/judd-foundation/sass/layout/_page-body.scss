@@ -138,6 +138,7 @@ article p {
 	    text-align:center;
 	    @include breakpoint($mobile){
 	    		width: 90%;
+	    		margin:auto;
 	    	}
 	}
 	img {
