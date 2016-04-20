@@ -125,6 +125,7 @@
 			$('ul.dropdown').css('z-index','1');
 			$('input').css('z-index','0');
 			$('#slider1_container').css('z-index','1');
+			$('header').css('visibility','visible');
         } 
         else{
         	$('i.fa-bars').addClass('active');
@@ -135,11 +136,14 @@
         	$('ul.dropdown').css('z-index','-1');
         	$('input').css('z-index','-1');
         	$('#slider1_container').css('z-index','-1');
+        	$('header').css('visibility','hidden');
         }
 
     });
 	$('div.navigation-overlay').click(function(e) {
 		$('div.navigation-overlay').css('display','none');
+		$('header').css('visibility','visible');
+		$('i.fa-bars').removeClass('active');
 	});
 	if($(window).width() > 768){
 		//Shows search

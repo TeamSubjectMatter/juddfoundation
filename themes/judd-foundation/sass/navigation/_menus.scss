@@ -24,7 +24,7 @@
 				text-align: center;
 				li{
 					display: inline-block;
-					padding: 1.25em 1em;
+					padding: 1.25em .5em;
 					font-size: 1em;
 					a{
 						color: #000;
@@ -41,6 +41,7 @@
 				    background-color: rgba(155, 145, 135, 0);
 				    position: absolute;
 				    bottom: 4em;
+
 				}
 				div.sub-container{
 					display: none;
@@ -64,7 +65,7 @@
 			float:right;
 			.menu-primary-right-navigation-container{
 				float: left;
-				padding: 1.25em 1em;
+				padding: 1.25em .5em;
 				font-size: 1em;
 				a{
 					color:$homepage-red;
@@ -74,7 +75,7 @@
 		
 		div.search{
 			display: inline-block;
-			padding: 1.25em 1em 0em 1em;
+			padding: 1.25em .5em 0em .5em;
 			position: relative;
 			float:right;
 			margin-right:1em;
@@ -82,13 +83,13 @@
 			    display: none;
 			}
 			i.in-search-box{
-				top: 22px;
-			    right: 27px;
+				top: 23px;
+			    right: 24px;
 			    position: absolute;
 			}
 		}
 		div.search.active{
-			padding: .8em 1em 0 1.25em;
+			padding: .8em .5em 0 .5em;
 		}
 	}
 	ul {
@@ -162,25 +163,41 @@
     position: fixed;
     overflow: scroll;
     display: none; 
-    left:0; 
+    left:0;
+    z-index:1; 
     .primary-navigation{
-    	background-color: rgba(255, 255, 255, 1);
-    	top:7.5em;
+    	background:none;
     	bottom: inherit;
-    	ul.menu{
-    		li:hover div.sub-container{
-    			background-color: transparent !important;
-    			top:4em;
+    	padding-top: 1.5em;
+    	div.menu-container{ 
+	    	div.menu-primary-navigation-container ul.menu{
+	    		li:hover div.sub-container{
+	    			background-color: transparent !important;
+	    			top:4em;
+	    		}
+	    		li{
+	    			a{
+	    				color:#fff;
+	    			}
+	    		}
+	    		ul.sub-menu{
+	    			text-align: left;
+	    			top: .5em;
+	    			bottom: inital;
+	    			li{
+	    				padding:.5em 0em !important;
+	    			}
+	    		}
+	    	}
+	    	div.right-menu .menu-primary-right-navigation-container{ 
+		    	a{
+		    		color:#fff;
+		    	}
     		}
-    		ul.sub-menu{
-    			text-align: left;
-    			top: .5em;
-    			bottom: inital;
-    			li{
-    				padding:.5em 0em !important;
-    			}
-    		}
-    	}
+    		.fa{
+		    	color:#fff;
+		    }
+		}
     }
 }
 .fa-bars.active{
@@ -201,9 +218,16 @@
 	display: block;
 }
 .home{
-	strong{
-	    color:  #FE0100;
-    	text-transform: uppercase;
+	a{
+		strong{
+		    color:  #FE0100;
+	    	text-transform: uppercase;
+	    	font-weight:400;
+	    	
+		}
+		&:hover{
+	    		text-decoration:none;
+	    	}
 	}
 }
 @media screen and (min-width: 37.5em) {
@@ -242,6 +266,7 @@ div.sub-nav{
 	    padding-left:0;
 	    margin-bottom:15px;
 	    font-size: 1em;
+	    font-weight:700;
 	    a,a:visited{
 	    	text-decoration:none;
 	    }
@@ -262,7 +287,7 @@ div.sub-nav{
 }
 
 /****Tablet Break***/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 964px){
 	.top-bar{
 		display: none;
 	}
@@ -281,13 +306,21 @@ div.sub-nav{
 				    width: 50%;
 				    float: left;
 				    text-align: left;
-		 		}
+				   
+		 		} 
+		 		li:hover div.sub-container{
+				    	background:none;
+				    }
 		 	} 
 		} 	
 		div.right-menu{
 			display:none;
 		}
 	}
+}
+.overlay{display:none !important;}
+.primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container{
+	background:none;
 }
 .navigation-overlay{
 	.primary-navigation{
@@ -331,10 +364,10 @@ div.sub-nav{
 					float:none;
 					padding:0;
 					li{
-					    padding: 0 0em .6em 0em;
+					    padding: 1em 0em .5em 0em;
 					    font-size: 1.5em;
 					    a{
-					    	color:#000;
+					    	color:#fff;
 					    }
 					}
 				}

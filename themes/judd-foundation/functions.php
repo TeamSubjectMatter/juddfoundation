@@ -467,18 +467,18 @@ class Child_Wrap extends Walker_Nav_Menu
 }
 
 function color_a_link() {
-	$colors = array('#da7a2d',
-					  //'#601900', -- too dark for # button
-					  '#c3248a',
-					  '#204c8a',
-					  '#5e9299',
-					  '#2c4636',
-					  '#269a7b',
-					  '#9e6f32',
-					  '#de97a8',
-					  '#9f9fa2',
-					  '#a6a8aa',
-					  //'#57245d', -- too dark for # button
+	$colors = array('rgba(218, 122, 45,.8)',
+					  'rgba(96, 25, 0,.8)', 
+					  'rgba(195, 36, 138,.8)',
+					  'rgba(32, 76, 138,.8)',
+					  'rgba(94, 146, 153,.8)',
+					  'rgba(44, 70, 54, .8)',
+					  'rgba(38, 154, 123,.8)',
+					  'rgba(158, 111, 50,.8);',
+					  'rgba(222, 151, 168,.8)',
+					  'rgba(159, 159, 162,.8)',
+					  'rgba(166, 168, 170, .8)',
+					  'rgba(87, 36, 93,.8)', 
 					  );
 	return $colors[array_rand($colors, 1)];
 }
