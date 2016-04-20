@@ -320,7 +320,26 @@ div.sub-nav{
 		 	} 
 		} 	
 		div.right-menu{
-			display:none;
+			float:none;
+			.menu-primary-right-navigation-container{
+				float: left;
+			    padding: .5em 0em;
+			    font-size: 1em;
+			    width: 50%;
+			    ul{
+			    	display: block;
+			    }
+			}
+			.search{
+				margin-right: 0;
+				float: left;
+				width:50%;
+				padding: 0;
+				i{
+					top: 11px;
+    				right: 19px;
+				}
+			}
 		}
 	}
 }
