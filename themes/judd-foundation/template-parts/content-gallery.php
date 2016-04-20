@@ -97,7 +97,14 @@
 		
 	?>
 		<div class="block-4 grid-item <?php  foreach ( $terms as $term ) {echo $term->name;}?>">
-				<a href="<?= $thumb_url; ?>"  rel="lightbox" title="<?php the_content();?><?php echo get_field('copyright');?>">
+				<a href="<?= $thumb_url; ?>"  rel="lightbox" title="<?php 
+				echo get_field('artist').'<br>';
+				echo the_title().'<br>'; 
+				echo get_field('date').'<br>';
+				echo get_field('dimensions').'<br>';
+				echo get_field('material').'<br>';
+				echo get_field('misc').'<br>';
+				echo get_field('copyright');?>">
 		        	<div class="img-thumb" style="background:url(' <?php echo $thumb_url;?>'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
 					</div>
 					<div class="overlay-content">
