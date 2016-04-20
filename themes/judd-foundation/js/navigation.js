@@ -136,36 +136,34 @@
 	}*/
     //Displays Navigation
 	 $('div.header-right i.fa-bars').click(function(e) {
-
-        if ($('.active').hasClass('active')) {
-            $(this).removeClass('active');
-            $('div.navigation-overlay').css('display','none');
-            $('body').css('overflow','auto');
-			$('header').css('visibility','visible');
-        } 
-        else{
-        	$('i.fa-bars').addClass('active');
-        	$('div.navigation-overlay').css('display','block');
-        	$('body').css('overflow','hidden');
-        	$('header').css('visibility','hidden');
-        }
+    	$('i.fa-bars').addClass('active');
+    	$('div.navigation-overlay').css('display','block');
+    	$('body').css('overflow','hidden');
+    	$('header').css('visibility','hidden');
 
     });
-	$('div.navigation-overlay').click(function(e) {
-		$('div.search').click(function(){
-		  $(this).data('clicked', true);
-		});
-		if($('div.search').data('clicked')){
-			console.log('clicked');
-		}
-		else{
-			$('div.navigation-overlay').css('display','none');
-			$('header').css('visibility','visible');
-			$('i.fa-bars').removeClass('active');
-		}
-		
+	$('div.navigation-overlay div.close').click(function(e) {
+		hideOverlay();
+
 	});
-	
+// close overlay clicking on dark area
+$(document).mouseup(function(e) {
+    if( $('div.navigation-overlay').css('display') == 'block' ) {
+        var container = $('div.navigation-overlay .menu-container');
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            hideOverlay();
+        }
+    }
+});
+
+function hideOverlay(){
+	$('div.navigation-overlay').css('display','none');
+		$('header').css('visibility','visible');
+		$('i.fa-bars').removeClass('active');
+		$('.search').removeClass('active');
+		$('.search form').hide();
+		$('.search>i').show();
+}
 			
 	//Hide sub navigation on mobile
 	$( "ul.menu li" ).click(function(){

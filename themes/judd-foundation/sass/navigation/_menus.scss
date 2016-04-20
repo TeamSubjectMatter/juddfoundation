@@ -177,6 +177,7 @@
     	div.menu-container{ 
     		width:100%;
     		max-width:1100px;
+    		@include clearfix;
 	    	div.menu-primary-navigation-container{
 	    		float:right;
 		    	ul.menu{

@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #c3248a; }
+  color: #5e9299; }
 
 .gold {
   color: #ecb731; }
@@ -688,6 +688,10 @@ a {
     .navigation-overlay .primary-navigation div.menu-container {
       width: 100%;
       max-width: 1100px; }
+      .navigation-overlay .primary-navigation div.menu-container::after {
+        clear: both;
+        content: "";
+        display: table; }
       .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container {
         float: right; }
         .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
@@ -1094,7 +1098,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #c3248a; }
+  color: #5e9299; }
 
 .hero {
   margin-bottom: 2em;
