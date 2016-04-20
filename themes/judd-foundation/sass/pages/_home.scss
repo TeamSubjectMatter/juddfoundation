@@ -3,7 +3,7 @@ body.home{
 	background:url(attr(data-bckgrd));
 	background-size: cover;
   	@include breakpoint($mobile){
-  		background:url("img/mobile-hero.jpg") no-repeat center center !important;
+  		background:url("img/mobile-hero.jpg") no-repeat center center fixed !important;
   	}
 }
 /*
