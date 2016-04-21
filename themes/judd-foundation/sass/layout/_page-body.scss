@@ -52,6 +52,9 @@ article p {
     float: left;
     padding-right: 2.2082%;
     margin-bottom: 2em;
+    @include breakpoint($mobile){
+    	padding-right: 0;
+    }
     .img-contain{
     	position:relative;
     }

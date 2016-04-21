@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #57245d; }
+  color: #de97a8; }
 
 .gold {
   color: #ecb731; }
@@ -1105,7 +1105,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #57245d; }
+  color: #de97a8; }
 
 .hero {
   margin-bottom: 2em;
@@ -1158,6 +1158,9 @@ article p {
   float: left;
   padding-right: 2.2082%;
   margin-bottom: 2em; }
+  @media (min-width: 280px) and (max-width: 769px) {
+    .block-3 {
+      padding-right: 0; } }
   .block-3 .img-contain {
     position: relative; }
   .block-3 img {
