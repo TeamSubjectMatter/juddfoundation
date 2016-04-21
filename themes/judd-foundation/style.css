@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #000; }
+  color: #204c8a; }
 
 .gold {
   color: #ecb731; }
@@ -675,7 +675,7 @@ a {
   overflow: scroll;
   display: none;
   left: 0;
-  z-index: 1; }
+  z-index: 2; }
   .navigation-overlay .primary-navigation {
     background: none;
     bottom: inherit;
@@ -836,51 +836,60 @@ div.sub-nav {
     display: none !important; }
   .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
     background: none; }
-  .navigation-overlay .primary-navigation {
-    bottom: inherit;
-    min-height: 100%;
-    background: none; }
-    .navigation-overlay .primary-navigation div.menu-container {
-      background-color: rgba(255, 255, 255, 0.5);
-      width: 70%;
-      min-height: 100vh;
-      margin: auto; }
-      .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container {
-        display: block;
-        float: none;
+  .navigation-overlay {
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    .navigation-overlay .primary-navigation {
+      bottom: inherit;
+      min-height: 100%;
+      background: none; }
+      .navigation-overlay .primary-navigation div.menu-container {
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 70%;
+        min-height: 100vh;
         margin: auto; }
-        .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu {
-          padding-top: 20%;
+        .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container {
           display: block;
-          padding-bottom: 0px;
-          text-align: left; }
-          .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
-            display: block;
-            padding: .6em 0em;
-            font-size: 1.5em; }
-          .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
-            display: none; }
-          .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
-            padding-top: 0; }
-          .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:last-child {
-            padding-bottom: 0; }
-      .navigation-overlay .primary-navigation div.menu-container div.right-menu {
-        float: none;
-        text-align: left; }
-        .navigation-overlay .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container {
           float: none;
-          padding: 0; }
-          .navigation-overlay .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container li {
-            padding: 1em 0em .5em 0em;
-            font-size: 1.5em; }
-            .navigation-overlay .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container li a {
-              color: #fff; }
-      .navigation-overlay .primary-navigation div.menu-container div.search {
-        float: none;
-        margin-right: 0;
-        padding-left: 0; }
-        .navigation-overlay .primary-navigation div.menu-container div.search i.in-search-box {
-          top: 28px; }
+          margin: auto; }
+          .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu {
+            padding-top: 20%;
+            display: block;
+            padding-bottom: 0px;
+            text-align: left; }
+            .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
+              display: block;
+              padding: .6em 0em;
+              font-size: 1.5em; }
+            .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
+              display: none; }
+            .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
+              padding-top: 0; }
+            .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:last-child {
+              padding-bottom: 0; }
+        .navigation-overlay .primary-navigation div.menu-container div.right-menu {
+          float: none;
+          text-align: left; }
+          .navigation-overlay .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container {
+            float: none;
+            padding: 0; }
+            .navigation-overlay .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container li {
+              padding: 1em 0em .5em 0em;
+              font-size: 1.5em; }
+              .navigation-overlay .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container li a {
+                color: #fff; }
+        .navigation-overlay .primary-navigation div.menu-container div.search {
+          float: none;
+          margin-right: 0;
+          padding-left: 0; }
+          .navigation-overlay .primary-navigation div.menu-container div.search i.in-search-box {
+            top: 25px; }
+      .navigation-overlay .primary-navigation ul {
+        display: block; }
   .navigation-overlay {
     min-height: 100%;
     height: auto; }
@@ -1105,7 +1114,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #000; }
+  color: #204c8a; }
 
 .hero {
   margin-bottom: 2em;
