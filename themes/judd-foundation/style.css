@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #2c4636; }
+  color: #57245d; }
 
 .gold {
   color: #ecb731; }
@@ -1105,7 +1105,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #2c4636; }
+  color: #57245d; }
 
 .hero {
   margin-bottom: 2em;
@@ -1408,7 +1408,8 @@ body.home {
   background-size: cover; }
   @media (min-width: 280px) and (max-width: 769px) {
     body.home {
-      background: url("img/mobile-hero.jpg") no-repeat center center fixed !important; } }
+      background: url("img/mobile-hero.jpg") no-repeat center center fixed !important;
+      background-size: cover !important; } }
 
 /*
 .home-nav-bar {
