@@ -163,6 +163,7 @@ function hideOverlay(){
 		$('.search').removeClass('active');
 		$('.search form').hide();
 		$('.search>i').show();
+		$('body').css('overflow','auto');
 }
 			
 /*	//Hide sub navigation on mobile
