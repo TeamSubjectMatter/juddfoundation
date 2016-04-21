@@ -139,16 +139,17 @@ article p {
     //display: block;
     margin-bottom: 2.5em;
     height: 208px;
+     @include breakpoint($mobile){
+     	left: 0 !important;
+     	padding: 0 1em;
+     }
+
 	a {
 		display: block;
 	    width: 100%;
 	    height: 100%;
 	    background:#f7f7f7;
 	    text-align:center;
-	    @include breakpoint($mobile){
-	    		width: 90%;
-	    		margin:auto;
-	    	}
 	}
 	img {
 		width: auto;

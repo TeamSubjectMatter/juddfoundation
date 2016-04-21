@@ -127,7 +127,7 @@ li.thumbs{
 		    background-repeat: no-repeat;
 		    background-position: center center;
 			@include breakpoint($mobile){
-	    		width: 90%;
+	    		
 	    	}
 		}
 		&:hover {
