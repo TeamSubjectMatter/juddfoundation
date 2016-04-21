@@ -367,6 +367,14 @@ div.sub-nav{
 		}
 	}
 }
+.home div.logo {
+    float: none;
+    padding: .5em 0em;
+    color: #FE0100;
+    text-transform: uppercase;
+    font-weight: 400;
+    width: 50%;
+}
 .overlay{display:none !important;}
 .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container{
 	background:none;
