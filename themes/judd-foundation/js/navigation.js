@@ -165,9 +165,9 @@ function hideOverlay(){
 		$('.search>i').show();
 }
 			
-	//Hide sub navigation on mobile
+/*	//Hide sub navigation on mobile
 	$( "ul.menu li" ).click(function(){
 		$('.sub-container').hide();
-	})
+	})*/
 })
 (jQuery);
