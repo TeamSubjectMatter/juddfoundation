@@ -735,7 +735,7 @@ div.close {
 
 .home div.logo {
   float: left;
-  padding: 1.25em .5em;
+  padding: 1.25em 1em 1.25em .5em;
   color: #FE0100;
   text-transform: uppercase;
   font-weight: 400; }
@@ -1222,6 +1222,9 @@ article p {
 
 .block-3:nth-child(4n+1) {
   clear: both; }
+
+.block-3.press {
+  clear: none; }
 
 .block-4 {
   width: 22%;

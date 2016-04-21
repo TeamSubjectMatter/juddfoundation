@@ -48,7 +48,7 @@
 	?>
 
 
-		<div class="block-3">
+		<div class="block-3 press">
 			<div class="img-contain">
 				<a href="<?= $thumb_url; ?>"  rel="lightbox" title="<?php the_content();?><?php echo get_field('copyright');?>" data-download="<?php echo get_field('file');?>">
 		        	<div class="img-thumb" style="background:url(' <?php echo $thumb_url;?>'); background-size: cover; background-repeat: no-repeat; background-position: center center;">

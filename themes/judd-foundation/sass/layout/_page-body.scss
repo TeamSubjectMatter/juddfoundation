@@ -124,8 +124,11 @@ article p {
   		}
   	}
 }
+
 .block-3:nth-child(4n+1){
 	clear:both;
+}.block-3.press{
+	clear: none;
 }
 .block-4 {
 	width: 22%;
