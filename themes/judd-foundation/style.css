@@ -1146,6 +1146,8 @@ article {
       padding-left: 1em;
       padding-right: 1em;
       margin: 23px auto 73px auto; } }
+  article header {
+    height: auto; }
 
 article p {
   font-size: .875em;
@@ -1471,7 +1473,8 @@ div.overlay {
 /*** Global Page Styles ***/
 .container {
   min-height: 91vh;
-  margin: auto; }
+  margin: auto;
+  overflow: hidden; }
 
 h2 {
   font-size: 1.2em;
