@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #269a7b; }
+  color: #c3248a; }
 
 .gold {
   color: #ecb731; }
@@ -586,7 +586,7 @@ a {
         text-align: center; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
           display: inline-block;
-          padding: 1.25em .5em;
+          padding: 1.25em .2em;
           font-size: 1.1em; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li a {
             color: #000; }
@@ -616,7 +616,7 @@ a {
       float: right; }
       .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container {
         float: left;
-        padding: 1.25em .5em;
+        padding: 1.25em .2em;
         font-size: 1.1em; }
         .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container a {
           color: #FE0100; }
@@ -1115,7 +1115,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #269a7b; }
+  color: #c3248a; }
 
 .hero {
   margin-bottom: 2em;
