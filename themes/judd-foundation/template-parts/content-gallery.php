@@ -89,12 +89,12 @@
 
 		//get thumbnail URL
 		$thumb_id = get_post_thumbnail_id();
-		$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail', true);
+		$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'medium', true);
 		$thumb_url = $thumb_url_array[0];
 		
 		// get full size url
 		$full_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
-		$full_url = $thumb_url_array[0];
+		$full_url = $full_url_array[0];
 
 		$id=get_the_ID();
 		$terms = get_the_terms( $id , 'art_type' );
