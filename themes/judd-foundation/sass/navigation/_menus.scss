@@ -5,6 +5,7 @@
 /*
  * Primary Navigation -- The home page menu bar
  */
+
 .primary-navigation {
 	clear: both;
 	display: block;
@@ -33,7 +34,7 @@
 				li:first-child{
 					padding-left:0;
 				}
-				li:hover div.sub-container{
+				li:hover div.sub-container, li.hover div.sub-container{
 					display: block;
 					height: 100vh;
 				    width: 160px;
@@ -181,7 +182,7 @@
 	    	div.menu-primary-navigation-container{
 	    		float:right;
 		    	ul.menu{
-		    		li:hover div.sub-container{
+		    		li:hover div.sub-container, , li.hover div.sub-container{
 		    			background-color: transparent !important;
 		    			top:4em;
 		    		}

@@ -98,13 +98,27 @@
 
 				  	 }
 				);//console.log($containerWidth);
-			}
-		else{
-			$( "ul#menu-primary-navigation" ).hover(function(){
-				$('div.overlay').css('display','block');
-				$('div.top-bar').css('display','none');
+
+			$('ul.menu>li>a').on("touchstart", function (e) {
+			    'use strict'; //satisfy code inspectors
+			    var link = $(this); //preselect the link
+			    if (link.hasClass('hover')) {
+			        return true;
+			    } else {
+			        link.addClass('hover');
+			        link.parent().addClass('hover');
+			        $('div.overlay').css('display','block');
+			        $('ul.menu li>a').not(this).removeClass('hover');
+			        $('ul.menu li>a').not(this).parent().removeClass('hover');
+			        e.preventDefault();
+			        return false; //extra, and to make sure the function has consistent return points
+			    }
 			});
 		}
+		else{
+			$('div.sub-container').hide();
+		}
+
 	}
 	hover();
 	 $(window).resize(function() {
@@ -170,5 +184,9 @@ function hideOverlay(){
 	$( "ul.menu li" ).click(function(){
 		$('.sub-container').hide();
 	})*/
+  if ($(window).width() > 768) {
+	
+  }
+
 })
 (jQuery);
