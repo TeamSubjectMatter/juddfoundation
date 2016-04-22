@@ -92,12 +92,16 @@
 		$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail', true);
 		$thumb_url = $thumb_url_array[0];
 		
+		// get full size url
+		$full_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
+		$full_url = $thumb_url_array[0];
+
 		$id=get_the_ID();
 		$terms = get_the_terms( $id , 'art_type' );
 		
 	?>
 		<div class="block-4 grid-item <?php  foreach ( $terms as $term ) {echo $term->name;}?>">
-				<a href="<?= $thumb_url; ?>"  rel="lightbox" title="<?php 
+				<a href="<?= $full_url; ?>"  rel="lightbox" title="<?php 
 				echo get_field('artist').'<br>';
 				echo the_title().'<br>'; 
 				echo get_field('date').'<br>';

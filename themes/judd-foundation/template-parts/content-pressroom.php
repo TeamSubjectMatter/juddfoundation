@@ -45,12 +45,16 @@
 		$thumb_id = get_post_thumbnail_id();
 		$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail', true);
 		$thumb_url = $thumb_url_array[0];
+
+		// get full size url
+		$full_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
+		$full_url = $thumb_url_array[0];
 	?>
 
 
 		<div class="block-3 press">
 			<div class="img-contain">
-				<a href="<?= $thumb_url; ?>"  rel="lightbox" title="<?php the_content();?><?php echo get_field('copyright');?>" data-download="<?php echo get_field('file');?>">
+				<a href="<?= $full_url; ?>"  rel="lightbox" title="<?php the_content();?><?php echo get_field('copyright');?>" data-download="<?php echo get_field('file');?>">
 		        	<div class="img-thumb" style="background:url(' <?php echo $thumb_url;?>'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
 					</div>
 					<div class="overlay-content">
