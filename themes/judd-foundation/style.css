@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #204c8a; }
+  color: #269a7b; }
 
 .gold {
   color: #ecb731; }
@@ -587,7 +587,7 @@ a {
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
           display: inline-block;
           padding: 1.25em .5em;
-          font-size: 1em; }
+          font-size: 1.1em; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li a {
             color: #000; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
@@ -606,7 +606,7 @@ a {
           text-align: left;
           bottom: 1.5em; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li {
-            font-size: .9em;
+            font-size: 1em;
             margin: 0px;
             padding: .5em 0em; }
             .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li a {
@@ -617,7 +617,7 @@ a {
       .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container {
         float: left;
         padding: 1.25em .5em;
-        font-size: 1em; }
+        font-size: 1.1em; }
         .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container a {
           color: #FE0100; }
     .primary-navigation div.menu-container div.search {
@@ -738,7 +738,8 @@ div.close {
   padding: 1.25em 1em 1.25em .5em;
   color: #FE0100;
   text-transform: uppercase;
-  font-weight: 400; }
+  font-weight: 400;
+  font-size: 1.1em; }
 
 .home a strong {
   color: #FE0100;
@@ -1114,7 +1115,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #204c8a; }
+  color: #269a7b; }
 
 .hero {
   margin-bottom: 2em;

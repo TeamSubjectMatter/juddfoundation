@@ -26,7 +26,7 @@
 				li{
 					display: inline-block;
 					padding: 1.25em .5em;
-					font-size: 1em;
+					font-size: 1.1em;
 					a{
 						color: #000;
 					}
@@ -51,7 +51,7 @@
 					text-align: left;
 					bottom: 1.5em;
 					li{
-						font-size: .9em;
+						font-size: 1em;
 						margin:0px;
 						padding:.5em 0em;
 						a{
@@ -67,7 +67,7 @@
 			.menu-primary-right-navigation-container{
 				float: left;
 				padding: 1.25em .5em;
-				font-size: 1em;
+				font-size: 1.1em;
 				a{
 					color:$homepage-red;
 				}
@@ -249,6 +249,7 @@ div.close{
 		color:  #FE0100;
 		text-transform: uppercase;
 		font-weight:400;
+		font-size:1.1em;
 	}
 	a{
 		strong{
