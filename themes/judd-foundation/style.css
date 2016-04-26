@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #c3248a; }
+  color: #000; }
 
 .gold {
   color: #ecb731; }
@@ -1115,7 +1115,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #c3248a; }
+  color: #000; }
 
 .hero {
   margin-bottom: 2em;

@@ -128,10 +128,16 @@
     });
 	 
 	 $('div.search').click(function(e) {
-	 	console.log('clicked');
+	 	//console.log('clicked');
 	 	$('.search form').show();
 		$('.search').addClass('active');
 		$('.search>i').hide();
+		
+		//TweenMax.to('#searchInput', .5, {width:200, ease:Expo.easeOut});
+	 });
+
+	 $('.in-search-box').click(function(e){
+	 	$('#searchform').submit();
 	 });
 
 

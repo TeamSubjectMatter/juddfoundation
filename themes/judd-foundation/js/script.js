@@ -21,5 +21,7 @@
 		$grid.isotope({ filter: filterValue });
 	});
 
+
+
 })(jQuery);
 
