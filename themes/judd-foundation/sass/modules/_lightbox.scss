@@ -30,10 +30,10 @@
 	}
 }
 #prevLink{
-	left: 3% !important;
+	left: 9% !important;
     position: fixed;
-    background: url("img/left_arrow.png") center center no-repeat !important;
-	width:52px !important;
+    background: url("img/left_arrow.png") left center no-repeat !important;
+	width:99px !important;
     top: 50%;
     transform: translate(-50%,-50%);
     	@include breakpoint($mobile){
@@ -48,8 +48,8 @@
 #nextLink{
 	right:1% !important;
 	position:fixed;
-	background: url("img/right_arrow.png") center center no-repeat !important;
-	width:52px !important;
+	background: url("img/right_arrow.png") right center no-repeat !important;
+	width:99px !important;
 	top: 50%;
     transform: translate(-50%,-50%);
     	@include breakpoint($mobile){

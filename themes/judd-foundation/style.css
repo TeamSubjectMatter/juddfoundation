@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #000; }
+  color: #601900; }
 
 .gold {
   color: #ecb731; }
@@ -1115,7 +1115,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #000; }
+  color: #601900; }
 
 .hero {
   margin-bottom: 2em;
@@ -1970,10 +1970,10 @@ p.nomargin {
       max-width: 74%; } }
 
 #prevLink {
-  left: 3% !important;
+  left: 9% !important;
   position: fixed;
-  background: url("img/left_arrow.png") center center no-repeat !important;
-  width: 52px !important;
+  background: url("img/left_arrow.png") left center no-repeat !important;
+  width: 99px !important;
   top: 50%;
   transform: translate(-50%, -50%); }
   @media (min-width: 280px) and (max-width: 769px) {
@@ -1986,8 +1986,8 @@ p.nomargin {
 #nextLink {
   right: 1% !important;
   position: fixed;
-  background: url("img/right_arrow.png") center center no-repeat !important;
-  width: 52px !important;
+  background: url("img/right_arrow.png") right center no-repeat !important;
+  width: 99px !important;
   top: 50%;
   transform: translate(-50%, -50%); }
   @media (min-width: 280px) and (max-width: 769px) {

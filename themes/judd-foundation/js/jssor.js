@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+/*jQuery(document).ready(function ($) {
     
     var jssor_1_SlideoTransitions = [
       [{b:5500,d:3000,o:-1,r:240,e:{r:2}}],
