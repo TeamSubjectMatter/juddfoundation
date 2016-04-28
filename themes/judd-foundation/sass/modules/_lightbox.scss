@@ -30,31 +30,28 @@
 	}
 }
 #prevLink{
-	left: 9% !important;
-    position: fixed;
-    background: url("img/left_arrow.png") left center no-repeat !important;
-	width:99px !important;
-    top: 50%;
-    transform: translate(-50%,-50%);
+	left: -9% !important;
+    position: absolute;
+    background: url("img/left_arrow.png") center center no-repeat !important;
+	width:52px !important;
+
     	@include breakpoint($mobile){
-    		width:22px !important;
-    		background-size:contain !important;
+    		width:85px !important;
+    		background: url("img/left_arrow.png") left center no-repeat !important;
 
 
-    		left:-13% !important;
+    		left:-16% !important;
     		position:absolute !important;
     	}
     }
 #nextLink{
-	right:1% !important;
-	position:fixed;
-	background: url("img/right_arrow.png") right center no-repeat !important;
-	width:99px !important;
-	top: 50%;
-    transform: translate(-50%,-50%);
+	right:-9% !important;
+	position:absolute;
+	background: url("img/right_arrow.png") center center no-repeat !important;
+	width:52px !important;
     	@include breakpoint($mobile){
-    		width:22px !important;
-    		background-size:contain !important;
+    		width:85px !important;
+    		background: url("img/right_arrow.png") right center no-repeat !important;
 
     		right:-16% !important;
 

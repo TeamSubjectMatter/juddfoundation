@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #601900; }
+  color: #da7a2d; }
 
 .gold {
   color: #ecb731; }
@@ -1115,7 +1115,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #601900; }
+  color: #da7a2d; }
 
 .hero {
   margin-bottom: 2em;
@@ -1970,30 +1970,26 @@ p.nomargin {
       max-width: 74%; } }
 
 #prevLink {
-  left: 9% !important;
-  position: fixed;
-  background: url("img/left_arrow.png") left center no-repeat !important;
-  width: 99px !important;
-  top: 50%;
-  transform: translate(-50%, -50%); }
+  left: -9% !important;
+  position: absolute;
+  background: url("img/left_arrow.png") center center no-repeat !important;
+  width: 52px !important; }
   @media (min-width: 280px) and (max-width: 769px) {
     #prevLink {
-      width: 22px !important;
-      background-size: contain !important;
-      left: -13% !important;
+      width: 85px !important;
+      background: url("img/left_arrow.png") left center no-repeat !important;
+      left: -16% !important;
       position: absolute !important; } }
 
 #nextLink {
-  right: 1% !important;
-  position: fixed;
-  background: url("img/right_arrow.png") right center no-repeat !important;
-  width: 99px !important;
-  top: 50%;
-  transform: translate(-50%, -50%); }
+  right: -9% !important;
+  position: absolute;
+  background: url("img/right_arrow.png") center center no-repeat !important;
+  width: 52px !important; }
   @media (min-width: 280px) and (max-width: 769px) {
     #nextLink {
-      width: 22px !important;
-      background-size: contain !important;
+      width: 85px !important;
+      background: url("img/right_arrow.png") right center no-repeat !important;
       right: -16% !important;
       position: absolute !important; } }
 
