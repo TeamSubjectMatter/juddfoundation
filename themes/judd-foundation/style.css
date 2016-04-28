@@ -226,7 +226,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #da7a2d; }
+  color: #2c4636; }
 
 .gold {
   color: #ecb731; }
@@ -1115,7 +1115,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #da7a2d; }
+  color: #2c4636; }
 
 .hero {
   margin-bottom: 2em;
@@ -1868,6 +1868,39 @@ p.nomargin {
     width: 316px;
     display: inline-block;
     padding-left: 2%; }
+
+.content-area-404 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../judd-foundation/img/bg_404.jpg") no-repeat;
+  background-size: cover; }
+
+.bg-overlay {
+  width: 100%;
+  height: 100%; }
+  .bg-overlay article {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; }
+    .bg-overlay article h1 {
+      font-size: 2.7em;
+      font-weight: 400; }
+    .bg-overlay article p {
+      font-size: 1.1em;
+      letter-spacing: .8px;
+      margin-bottom: 1.55em; }
+    .bg-overlay article .nomargin-bottom {
+      margin-bottom: 0; }
+    .bg-overlay article a, .bg-overlay article a:visited, .bg-overlay article a:hover {
+      color: #fff;
+      border-bottom: 1px solid #fff;
+      text-decoration: none; }
 
 /* jssor slider bullet navigator skin 05 css */
 /*

@@ -1,0 +1,39 @@
+.content-area-404{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:url('../judd-foundation/img/bg_404.jpg') no-repeat;
+    background-size: cover;
+}
+
+.bg-overlay{
+	width: 100%;
+    height: 100%;
+    article{
+    	top: 50%;
+	    position: absolute;
+	    left: 50%;
+	    transform: translate(-50%,-50%);
+	    text-align: center;
+	    color:#fff;
+	    h1{
+	    	font-size: 2.7em;
+    		font-weight: 400;
+	    }
+	    p{
+	    	font-size: 1.1em;
+    		letter-spacing: .8px;
+    		margin-bottom: 1.55em;
+	    }
+	    .nomargin-bottom{
+	    	margin-bottom:0;
+	    }
+	    a, a:visited, a:hover{
+	    	color:#fff;
+	    	border-bottom: 1px solid #fff;
+	    	text-decoration:none;
+	    }
+    }
+}
