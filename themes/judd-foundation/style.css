@@ -1,12 +1,10 @@
 /*!
 Theme Name: judd-foundation
-Theme URI: http://underscores.me/
-Author: Peter Kaizer
+Theme URI: http://teamsubjectmatter.com
+Author: Subject Matter interactive team
 Author URI: http://teamsubjectmatter.com
 Description: Description
 Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: judd-foundation
 Tags:
 
@@ -226,7 +224,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #2c4636; }
+  color: #269a7b; }
 
 .gold {
   color: #ecb731; }
@@ -735,11 +733,17 @@ div.close {
 
 .home div.logo {
   float: left;
-  padding: 1.25em 1em 1.25em .5em;
+  padding: 1.25em 1em 1.25em 2em;
+  margin-right: 10px;
   color: #FE0100;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  background-image: url("img/Judd_Logotype_288.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  display: inline-block; }
 
 .home a strong {
   color: #FE0100;
@@ -832,7 +836,7 @@ div.sub-nav {
     color: #FE0100;
     text-transform: uppercase;
     font-weight: 400;
-    width: 50%; }
+    width: 60px; }
   .overlay {
     display: none !important; }
   .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
@@ -976,14 +980,25 @@ header h1 {
 .header-left {
   float: left; }
   .header-left h1 a.parent-link {
-    color: #333; }
+    color: #333;
+    background: none;
+    padding-left: 4px; }
   @media (min-width: 280px) and (max-width: 769px) {
     .header-left {
       width: 74.44795%;
       float: left;
       margin-right: 2.2082%; } }
   .header-left h1 a {
-    text-decoration: none; }
+    width: 120px;
+    text-decoration: none;
+    background-image: url("img/Judd_Logotype_288.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -99999px;
+    padding-left: 50px; }
+    .header-left h1 a span {
+      text-indent: -999999;
+      width: 60px; }
 
 .header-right {
   text-align: right;
@@ -1115,7 +1130,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #2c4636; }
+  color: #269a7b; }
 
 .hero {
   margin-bottom: 2em;
@@ -1261,7 +1276,7 @@ article p {
       .block-4 img {
         height: auto; } }
   .block-4 .overlay-content {
-    background: #000000;
+    background: #333;
     height: 100%;
     width: 100%;
     opacity: 0;
@@ -1280,7 +1295,7 @@ article p {
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      text-transform: uppercase; }
+      text-transform: capitalize; }
   .block-4:hover img {
     opacity: .3;
     -webkit-filter: grayscale(100%);
@@ -1572,7 +1587,7 @@ li.thumbs {
     height: 100%;
     width: 100%; }
     li.thumbs a .overlay-content {
-      background: #000000;
+      background: #333;
       height: 100%;
       width: 100%;
       opacity: 0;
@@ -1591,7 +1606,7 @@ li.thumbs {
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        text-transform: uppercase;
+        text-transform: capitalize;
         line-height: 1.2; }
     li.thumbs a div.img-thumb {
       width: 100%;

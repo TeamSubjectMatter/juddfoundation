@@ -29,7 +29,7 @@
         {
             <?php if( have_rows('images') ): ?> 
                 var options = { 
-                    $AutoPlay: true,
+                    $AutoPlay: false,
                     $SlideDuration: 1200,
                     $SlideEasing: $Jease$.$OutQuint,
                     $CaptionSliderOptions: {
@@ -45,7 +45,7 @@
                 };
             <?php else: ?>
                 var options = { 
-                    $AutoPlay: true,
+                    $AutoPlay: false,
                     $DragOrientation: 0,
                     $SlideDuration: 1200,
                     $SlideEasing: $Jease$.$OutQuint,

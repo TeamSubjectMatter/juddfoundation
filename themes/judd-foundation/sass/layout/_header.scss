@@ -2,7 +2,7 @@ header h1 {
 	font-size: 1.2em;
 	font-weight: 300;
 		@include breakpoint($mobile) {
-      	 font-size: 1.25em;	
+      	 font-size: 1.25em;         
     }
 }
 
@@ -18,6 +18,8 @@ header h1 {
 .header-left {
 	h1 a.parent-link{
 		color:#333;
+                background: none;
+                padding-left:4px;
 	}
 	//@include span(3 of 12);
 	float:left;
@@ -25,7 +27,18 @@ header h1 {
 			@include span(9 of 12)
 	}
 	h1 a{
+        width: 120px;
 	text-decoration:none;
+        background-image:url('img/Judd_Logotype_288.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        text-indent: -99999px;
+        padding-left:50px;
+        span {
+            text-indent: -999999;
+            width: 60px;
+        }
+        
 	}
 }
 

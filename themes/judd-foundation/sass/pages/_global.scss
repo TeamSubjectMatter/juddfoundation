@@ -97,7 +97,7 @@ li.thumbs{
 		height: 100%;
 		width: 100%;
 		.overlay-content {
-		    background: #000000;
+		    background: #333;
 		    height: 100%;
 		    width: 100%;
 		    opacity: 0;
@@ -116,7 +116,7 @@ li.thumbs{
 			    left: 50%;
 			    transform: translate(-50%, -50%);
 			    text-align:center;
-			    text-transform:uppercase;
+			    text-transform:capitalize;
 			    line-height: 1.2;
 		    }
 	  	}

@@ -243,25 +243,31 @@ div.close{
 	display: block;
 }
 .home{
-	div.logo{
-	    float: left;
-    	padding: 1.25em 1em 1.25em .5em;
-		color:  #FE0100;
-		text-transform: uppercase;
-		font-weight:400;
-		font-size:1.1em;
-	}
-	a{
-		strong{
-		    color:  #FE0100;
-	    	text-transform: uppercase;
-	    	font-weight:400;
-	    	
-		}
-		&:hover{
-	    		text-decoration:none;
-	    	}
-	}
+    div.logo{
+        float: left;
+        padding: 1.25em 1em 1.25em 2em;
+        margin-right: 10px;
+        color:  #FE0100;
+        text-transform: uppercase;
+        font-weight:400;
+        font-size:1.1em;
+        background-image:url('img/Judd_Logotype_288.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+        display:inline-block
+    }
+    a{
+        strong{
+            color:  #FE0100;
+            text-transform: uppercase;
+            font-weight:400;
+
+        }
+        &:hover{
+            text-decoration:none;
+        }
+    }
 }
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
@@ -270,6 +276,7 @@ div.close{
 	.primary-navigation ul {
 		display: block;
 	}
+        
 }
 
 .post-navigation {
@@ -375,7 +382,7 @@ div.sub-nav{
     color: #FE0100;
     text-transform: uppercase;
     font-weight: 400;
-    width: 50%;
+    width: 60px;
 }
 .overlay{display:none !important;}
 .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container{

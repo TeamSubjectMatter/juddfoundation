@@ -62,7 +62,7 @@
 				<div class="header-left">
 					<h1>
 						<a href="<?= home_url(); ?>">
-						<span style="color: <?php echo $random_link_color ?>;">JUDD</span> 
+                                                    
 						</a> 
 						<?php
 
