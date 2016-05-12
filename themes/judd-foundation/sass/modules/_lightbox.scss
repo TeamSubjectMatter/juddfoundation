@@ -25,6 +25,7 @@
 }
 #imageDataContainer{
 	max-width:80%;
+	font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 	@include breakpoint($mobile){
 		max-width:74%;
 	}

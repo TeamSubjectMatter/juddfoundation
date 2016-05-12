@@ -62,7 +62,7 @@
 		<div class="menu-container">
 			<div class="logo">JUDD</div>
 			<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) );?>
-			<?php echo '<div class="right-menu">'; wp_nav_menu( array( 'menu' => 'Primary Right Navigation', 'walker' => new Child_Wrap() ) );get_search_form(); echo '</div>' ?>
+			<?php echo '<div class="right-menu">'; /*wp_nav_menu( array( 'menu' => 'Primary Right Navigation', 'walker' => new Child_Wrap() ) );*/get_search_form(); echo '</div>' ?>
 		</div>
 		<!--<i class="fa fa-search"></i>
 		<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">

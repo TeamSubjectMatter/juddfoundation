@@ -12,6 +12,7 @@ header h1 {
 	padding-bottom: .25em;
 		@include breakpoint($mobile) {
       		padding: 0 1em;
+			
     }
 }
 

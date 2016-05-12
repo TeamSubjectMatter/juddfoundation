@@ -584,16 +584,16 @@ a {
         text-align: center; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
           display: inline-block;
-          padding: 1.25em .2em;
-          font-size: 1.1em; }
+          padding: 1.5em 1em;
+          font-size: 1em; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li a {
             color: #000; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
-          padding-left: 0; }
+          padding-left: 26px; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container, .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li.hover div.sub-container {
           display: block;
           height: 100vh;
-          width: 160px;
+          width: 200px;
           box-shadow: 0 3px 3px transparent;
           background-color: rgba(155, 145, 135, 0);
           position: absolute;
@@ -609,7 +609,7 @@ a {
             padding: .5em 0em; }
             .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li a {
               color: #fff;
-              width: 131px; }
+              width: 200px; }
     .primary-navigation div.menu-container div.right-menu {
       float: right; }
       .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container {
@@ -620,7 +620,7 @@ a {
           color: #FE0100; }
     .primary-navigation div.menu-container div.search {
       display: inline-block;
-      padding: 1.25em .5em 0em .5em;
+      padding: 1.5em .5em 0em .5em;
       position: relative;
       float: right;
       margin-right: 1em; }
@@ -673,6 +673,7 @@ a {
   overflow: scroll;
   display: none;
   left: 0;
+  margin-top:-.75em;
   z-index: 2; }
   .navigation-overlay .primary-navigation {
     background: none;
@@ -713,7 +714,7 @@ a {
           color: #333; }
 
 div.close {
-  padding: 1.25em 0 1.25em 1.5em;
+  padding: 1.35em 0 1.25em 1.5em;
   float: right; }
   div.close .fa-bars {
     color: #fff;
@@ -733,12 +734,12 @@ div.close {
 
 .home div.logo {
   float: left;
-  padding: 1.25em 1em 1.25em 2em;
+  padding: 1.95em 1.1em 1.25em 2em;
   margin-right: 10px;
   color: #FE0100;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 1.1em;
+  font-size: 1em;
   background-image: url("img/Judd_Logotype_288.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -774,13 +775,15 @@ div.close {
 
 div.sub-nav {
   width: 100%;
-  float: left; }
+  margin-left:150px; }
   div.sub-nav h2.breadcrum {
     display: inline-block;
     margin-right: 35px;
     padding-left: 0;
     margin-bottom: 15px;
     font-size: 1em; }
+	div.sub-nav .parent-link {
+      display: none; }
     div.sub-nav h2.breadcrum a, div.sub-nav h2.breadcrum a:visited {
       text-decoration: none; }
     div.sub-nav h2.breadcrum a:hover {
@@ -795,6 +798,11 @@ div.sub-nav {
 
 /****Tablet Break***/
 @media screen and (max-width: 964px) {
+	div.sub-nav {
+  	width: 100%;
+  	margin-left:0px;
+	margin-bottom:14px;
+	float:left; }
   .top-bar {
     display: none; }
   .home .primary-navigation div.menu-container {
@@ -832,7 +840,8 @@ div.sub-nav {
           right: 19px; }
   .home div.logo {
     float: none;
-    padding: .5em 0em;
+    padding: 1.75em 0 .1em 0em;
+	margin-left:-.25em;
     color: #FE0100;
     text-transform: uppercase;
     font-weight: 400;
@@ -958,6 +967,7 @@ div.sub-nav {
 --------------------------------------------------------------*/
 header h1 {
   font-size: 1.2em;
+  margin-bottom:-10px;
   font-weight: 300; }
   @media (min-width: 280px) and (max-width: 769px) {
     header h1 {
@@ -967,7 +977,7 @@ header h1 {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 1.5em;
+  padding-top: 1.25em;
   padding-bottom: .25em; }
   .header-container:after {
     content: " ";
@@ -982,7 +992,7 @@ header h1 {
   .header-left h1 a.parent-link {
     color: #333;
     background: none;
-    padding-left: 4px; }
+    padding-left: 4px;}
   @media (min-width: 280px) and (max-width: 769px) {
     .header-left {
       width: 74.44795%;
@@ -1002,7 +1012,7 @@ header h1 {
 
 .header-right {
   text-align: right;
-  margin-top: -11px;
+  margin-top: -5px;
   width: 6.30915%;
   float: right;
   margin-right: 0; }
@@ -1015,11 +1025,11 @@ header h1 {
       width: 23.34385%;
       float: right;
       margin-right: 0;
-      margin-top: -6px; } }
+      margin-top: 0px; } }
 
 header {
   padding-top: 17px;
-  height: 120px; }
+  height: 100px; }
 
 footer {
   background-color: #000;
@@ -1301,7 +1311,7 @@ article p {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%); }
   .block-4:hover .overlay-content {
-    opacity: 1;
+    opacity: .9;
     transition: opacity .5s;
     display: block; }
   @media (min-width: 280px) and (max-width: 769px) {

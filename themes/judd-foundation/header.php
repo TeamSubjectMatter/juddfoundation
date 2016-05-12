@@ -53,7 +53,7 @@
 				<div class="menu-container">
 					<div class="close"><i class="fa fa-bars fa-3x"></i></div>
 					<?php wp_nav_menu( array( 'menu' => 'Primary Navigation', 'walker' => new Child_Wrap() ) ); ?>
-					<?php echo '<div class="right-menu">'; wp_nav_menu( array( 'menu' => 'Primary Right Navigation', 'walker' => new Child_Wrap() ) );get_search_form(); echo '</div>' ?>
+					<?php echo '<div class="right-menu">'; /*wp_nav_menu( array( 'menu' => 'Primary Right Navigation', 'walker' => new Child_Wrap() ) );*/get_search_form(); echo '</div>' ?>
 				</div>
 			</nav>
 		</div>
@@ -64,7 +64,19 @@
 						<a href="<?= home_url(); ?>">
                                                     
 						</a> 
-						<?php
+					</h1>
+				</div>
+				<div class="header-right">
+					<i class="fa fa-bars fa-3x"></i>
+				</div>
+
+				
+				<?php
+					//don't do this for the Donald Judd > Art Page or the search results page 
+					if (!is_search() &&  $post->ID != 104):
+				?>
+				<div class="sub-nav">				
+					<?php
 
 							if ($post) {
 
@@ -78,31 +90,19 @@
 								if($post_type->label !== 'Pages'){
 									//echo "/ " . $post_type->label;
 									if('programs' == get_post_type()){
-										echo "<a class= 'parent-link' href=\"".get_site_url()."/foundation/programs/\">/ ". $post_type->label."</a>";
+										echo "<class= 'parent-link' href=\"".get_site_url()."/foundation/programs/\">". $post_type->label.  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."";
 									}
 									else if('spaces' == get_post_type()){
-										echo "<a class= 'parent-link' href=\"".get_site_url()."/spaces\">/ ". $post_type->label."</a>";
+										echo "<class= 'parent-link' href=\"".get_site_url()."/spaces\">". $post_type->label. "";
 									}
 								} else
 								if($parentID != null && $parentID != 0){
-									echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\"> / ". get_the_title( $post->post_parent ) . "</a>";
+									echo "<class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\">". get_the_title( $post->post_parent ) . "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."";
 								} else {
-									echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->ID) . "\"> / ". get_the_title( $post->ID ) . "</a>";
+									echo "<class= 'parent-link' href=\"" . get_the_permalink($post->ID) . "\">". get_the_title( $post->ID ) . "";
 								}		
 							}				
 						?>
-					</h1>
-				</div>
-				<div class="header-right">
-					<i class="fa fa-bars fa-3x"></i>
-				</div>
-
-				
-				<?php
-					//don't do this for the Donald Judd > Art Page or the search results page 
-					if (!is_search() &&  $post->ID != 104):
-				?>
-				<div class="sub-nav">				
 					<?php 
 
 					if($post) {

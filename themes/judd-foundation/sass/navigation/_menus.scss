@@ -37,7 +37,7 @@
 				li:hover div.sub-container, li.hover div.sub-container{
 					display: block;
 					height: 100vh;
-				    width: 160px;
+				    width: 260px;
 				    box-shadow: 0 3px 3px transparent;
 				    background-color: rgba(155, 145, 135, 0);
 				    position: absolute;
@@ -56,7 +56,7 @@
 						padding:.5em 0em;
 						a{
 							color: #fff;
-							width: 131px;
+							width: 260px;
 						}
 					}
 				}
@@ -221,7 +221,6 @@
     }
 }
 div.close{
-	padding: 1.25em 0 1.25em 1.5em;
 	float:right;
 	.fa-bars{
 		color:#fff;
