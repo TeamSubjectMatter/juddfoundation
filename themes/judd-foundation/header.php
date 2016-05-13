@@ -90,16 +90,16 @@
 								if($post_type->label !== 'Pages'){
 									//echo "/ " . $post_type->label;
 									if('programs' == get_post_type()){
-										echo "<class= 'parent-link' href=\"".get_site_url()."/foundation/programs/\">". $post_type->label.  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."";
+										echo "<class= 'parent-link' href=\"".get_site_url()."/foundation/programs/\"><span class='breaker'>". $post_type->label.  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>"."";
 									}
 									else if('spaces' == get_post_type()){
-										echo "<class= 'parent-link' href=\"".get_site_url()."/spaces\">". $post_type->label. "";
+										echo "<class= 'parent-link' href=\"".get_site_url()."/spaces\"><span class='breaker'>". $post_type->label. "</span>";
 									}
 								} else
 								if($parentID != null && $parentID != 0){
-									echo "<class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\">". get_the_title( $post->post_parent ) . "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."";
+									echo "<class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\"><span class='breaker'>". get_the_title( $post->post_parent ) . "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>"."";
 								} else {
-									echo "<class= 'parent-link' href=\"" . get_the_permalink($post->ID) . "\">". get_the_title( $post->ID ) . "";
+									echo ""; // "<class= 'parent-link' href=\"" . get_the_permalink($post->ID) . "\"><span class='breaker'>". get_the_title( $post->ID ) . "</span>";
 								}		
 							}				
 						?>

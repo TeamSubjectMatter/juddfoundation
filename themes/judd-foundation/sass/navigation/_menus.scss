@@ -182,7 +182,7 @@
 	    	div.menu-primary-navigation-container{
 	    		float:right;
 		    	ul.menu{
-		    		li:hover div.sub-container, , li.hover div.sub-container{
+		    		li:hover div.sub-container, li.hover div.sub-container{
 		    			background-color: transparent !important;
 		    			top:4em;
 		    		}
@@ -221,7 +221,8 @@
     }
 }
 div.close{
-	float:right;
+    padding: 1.35em 0 1.25em 1.5em;
+    float:right;
 	.fa-bars{
 		color:#fff;
 		background:url('img/close.png');
@@ -298,7 +299,8 @@ div.close{
 }
 div.sub-nav{
 	width: 100%;
-    float: left;
+        margin-left: 150px;
+    //float: left;
 	h2.breadcrum{
 		display: inline-block;
 	    margin-right: 35px;
@@ -329,6 +331,17 @@ div.sub-nav{
 	.top-bar{
 		display: none;
 	}
+        div.sub-nav {
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 14px;
+    float: left;
+    .breaker { 
+        width: 100%;
+        display: none;
+        
+    }
+}
 .home .primary-navigation{
 	div.menu-container{
 		width: 86%;
