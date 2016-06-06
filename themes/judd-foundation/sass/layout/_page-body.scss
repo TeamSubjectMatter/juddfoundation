@@ -174,10 +174,10 @@ article p {
 	      	font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 	        font-size: 1.2em;
 		    position: absolute;
-		    top: 50%;
-		    left: 50%;
-		    transform: translate(-50%, -50%);
-		    text-align:center;
+		    bottom: 10%;
+		    left: 10%;
+		    transform: translate(1%, 10%);
+		    text-align:left;
 		    text-transform:capitalize;
 	    }
   	}

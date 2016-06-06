@@ -224,7 +224,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #000; }
+  color: #2c4636; }
 
 .gold {
   color: #ecb731; }
@@ -1147,7 +1147,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #000; }
+  color: #2c4636; }
 
 .hero {
   margin-bottom: 2em;
@@ -1308,10 +1308,10 @@ article p {
       font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
       font-size: 1.2em;
       position: absolute;
-      bottom: 10%;
-      left: 10%;
-      transform: translate(1%, 10%);
-      text-align: left;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
       text-transform: capitalize; }
   .block-4:hover img {
     opacity: .3;

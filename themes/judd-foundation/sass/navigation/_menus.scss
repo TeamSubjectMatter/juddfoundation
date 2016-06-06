@@ -297,9 +297,18 @@ div.close{
 		width: 50%;
 	}
 }
+a.parent-link {
+            text-decoration: none;
+        }
 div.sub-nav{
 	width: 100%;
         margin-left: 150px;
+        a.parent-link {
+            text-decoration: none;
+        }
+        a {
+           text-decoration: none; 
+        }
     //float: left;
 	h2.breadcrum{
 		display: inline-block;
@@ -339,7 +348,9 @@ div.sub-nav{
     .breaker { 
         width: 100%;
         display: none;
-        
+        a {
+            text-decoration: none;
+        }
     }
 }
 .home .primary-navigation{
