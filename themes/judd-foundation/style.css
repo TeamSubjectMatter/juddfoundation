@@ -224,7 +224,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #000; }
+  color: #601900; }
 
 .gold {
   color: #ecb731; }
@@ -1147,7 +1147,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #000; }
+  color: #601900; }
 
 .hero {
   margin-bottom: 2em;
@@ -1357,6 +1357,8 @@ article p {
       float: left;
       margin-left: 0;
       margin-right: 0; } }
+  .page-content-area .sub-nav {
+    margin-left: 0px; }
 
 .page-content-area-full {
   width: 100%;

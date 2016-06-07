@@ -242,6 +242,9 @@ article p {
 		@include breakpoint($mobile) {
       		@include span(12);
   	}
+        .sub-nav {
+            margin-left: 0px;
+        }
 }
 
 .page-content-area-full {
