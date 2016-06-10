@@ -224,7 +224,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #601900; }
+  color: #9e6f32; }
 
 .gold {
   color: #ecb731; }
@@ -585,7 +585,7 @@ a {
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
           display: inline-block;
           padding: 1.25em .2em;
-          font-size: 1.1em; }
+          font-size: 1.0em; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li a {
             color: #000; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
@@ -606,7 +606,7 @@ a {
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li {
             font-size: 1em;
             margin: 0px;
-            padding: .5em 0em; }
+            padding: .4em 0em; }
             .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li a {
               color: #fff;
               width: 260px; }
@@ -700,7 +700,7 @@ a {
           top: .5em;
           bottom: inital; }
           .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li {
-            padding: .5em 0em !important; }
+            padding: .4em 0em !important; }
       .navigation-overlay .primary-navigation div.menu-container div.right-menu {
         float: left; }
         .navigation-overlay .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container a {
@@ -1147,7 +1147,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #601900; }
+  color: #9e6f32; }
 
 .hero {
   margin-bottom: 2em;
