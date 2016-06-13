@@ -224,7 +224,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #269a7b; }
+  color: #9f9fa2; }
 
 .gold {
   color: #ecb731; }
@@ -732,7 +732,7 @@ div.close {
 .home div.logo {
   float: left;
   padding: 1.25em 1em 1.25em 2em;
-  margin-right: 10px;
+  margin-right: 30px;
   color: #FE0100;
   text-transform: uppercase;
   font-weight: 400;
@@ -1147,7 +1147,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #269a7b; }
+  color: #9f9fa2; }
 
 .hero {
   margin-bottom: 2em;
