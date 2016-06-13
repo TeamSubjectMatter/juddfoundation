@@ -224,7 +224,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #9e6f32; }
+  color: #269a7b; }
 
 .gold {
   color: #ecb731; }
@@ -584,7 +584,7 @@ a {
         text-align: center; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
           display: inline-block;
-          padding: 1.25em .2em;
+          padding: 1.5em .2em 1.25em .2em;
           font-size: 1.0em; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li a {
             color: #000; }
@@ -1147,7 +1147,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #9e6f32; }
+  color: #269a7b; }
 
 .hero {
   margin-bottom: 2em;
