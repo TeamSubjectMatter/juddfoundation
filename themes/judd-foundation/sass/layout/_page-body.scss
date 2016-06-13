@@ -150,6 +150,7 @@ article p {
 	    height: 100%;
 	    background:#f7f7f7;
 	    text-align:center;
+            
 	}
 	img {
 		width: auto;
@@ -172,7 +173,8 @@ article p {
 	    p {
 	      	color: #FFFFFF;
 	      	font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-	        font-size: 1.2em;
+	        font-size: 1.0em;
+                font-weight: 100;
 		    position: absolute;
 		    bottom: 10%;
 		    left: 10%;
@@ -188,7 +190,7 @@ article p {
 			filter: grayscale(100%);
 		}
 	    .overlay-content {
-	    	opacity: 1;
+	    	opacity: 0.5;
 	      	transition: opacity .5s;
 	      	display:block;
 	   	}

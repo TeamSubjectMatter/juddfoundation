@@ -584,7 +584,7 @@ a {
         text-align: center; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
           display: inline-block;
-          padding: 1.5em .2em 1.25em .2em;
+          padding: 1.5em .8em 1.25em .8em;
           font-size: 1.0em; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li a {
             color: #000; }
@@ -1306,7 +1306,8 @@ article p {
     .block-4 .overlay-content p {
       color: #FFFFFF;
       font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-      font-size: 1.2em;
+      font-size: 1.0em;
+      font-weight: 100;
       position: absolute;
       bottom: 10%;
       left: 10%;
@@ -1318,7 +1319,7 @@ article p {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%); }
   .block-4:hover .overlay-content {
-    opacity: 1;
+    opacity: 0.5;
     transition: opacity .5s;
     display: block; }
   @media (min-width: 280px) and (max-width: 769px) {
