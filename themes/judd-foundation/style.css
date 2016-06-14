@@ -224,7 +224,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #9f9fa2; }
+  color: #9e6f32; }
 
 .gold {
   color: #ecb731; }
@@ -1147,7 +1147,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #9f9fa2; }
+  color: #9e6f32; }
 
 .hero {
   margin-bottom: 2em;
@@ -1319,7 +1319,7 @@ article p {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%); }
   .block-4:hover .overlay-content {
-    opacity: 0.5;
+    opacity: 0.8;
     transition: opacity .5s;
     display: block; }
   @media (min-width: 280px) and (max-width: 769px) {
