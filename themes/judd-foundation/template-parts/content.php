@@ -14,7 +14,9 @@ $thumb_id = get_post_thumbnail_id();
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php if ( has_post_thumbnail()) { ?>
     <a href="<?php the_permalink(); ?>"><div class="hero" style='background-image: url("<?php echo $thumb_url; ?>");'></div></a>
+    <?php } ?>
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
