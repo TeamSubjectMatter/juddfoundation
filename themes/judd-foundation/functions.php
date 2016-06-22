@@ -287,7 +287,7 @@ function custom_post_type() {
 		'show_in_admin_bar'   => true,
 		'menu_position'       => 6,
 		'can_export'          => true,
-		'has_archive'         => f,
+		'has_archive'         => true,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'post',
