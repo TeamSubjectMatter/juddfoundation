@@ -287,7 +287,7 @@ function custom_post_type() {
 		'show_in_admin_bar'   => true,
 		'menu_position'       => 6,
 		'can_export'          => true,
-		'has_archive'         => true,
+		'has_archive'         => f,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'post',
@@ -326,7 +326,7 @@ function custom_post_type() {
 		'show_in_admin_bar'   => true,
 		'menu_position'       => 6,
 		'can_export'          => true,
-		'has_archive'         => true,
+		'has_archive'         => false,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'post',
@@ -388,6 +388,29 @@ function add_custom_taxonomies() {
     // Control the slugs used for this taxonomy
     'rewrite' => array(
       'slug' => 'program_type', // This controls the base slug that will display before each term
+      'with_front' => false, // Don't display the category base before "/locations/"
+      'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
+    ),
+  ));
+   
+      register_taxonomy('news_type', 'news', array(
+    // Hierarchical taxonomy (like categories)
+    'hierarchical' => true,
+    // This array of options controls the labels displayed in the WordPress Admin UI
+    'labels' => array(
+      'name' => _x( 'News Types', 'taxonomy general name' ),
+      'singular_name' => _x( 'News Type', 'taxonomy singular name' ),
+      'search_items' =>  __( 'News Program Types' ),
+      'all_items' => __( 'All News Types' ),
+      'edit_item' => __( 'Edit News Type' ),
+      'update_item' => __( 'Update News Type' ),
+      'add_new_item' => __( 'Add New News Type' ),
+      'new_item_name' => __( 'New News Type' ),
+      'menu_name' => __( 'News Types' ),
+    ),
+    // Control the slugs used for this taxonomy
+    'rewrite' => array(
+      'slug' => 'news_type', // This controls the base slug that will display before each term
       'with_front' => false, // Don't display the category base before "/locations/"
       'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
     ),
