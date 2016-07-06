@@ -224,7 +224,7 @@ th {
 # Base styles
 --------------------------------------------------------------*/
 .link-color {
-  color: #c3248a; }
+  color: #5e9299; }
 
 .gold {
   color: #ecb731; }
@@ -1148,7 +1148,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #c3248a; }
+  color: #5e9299; }
 
 .hero {
   margin-bottom: 2em;
@@ -1963,14 +1963,6 @@ p.nomargin {
       border-bottom: 1px solid #fff;
       text-decoration: none; }
 
-/* jssor slider bullet navigator skin 05 css */
-/*
-.jssorb05 div           (normal)
-.jssorb05 div:hover     (normal mouseover)
-.jssorb05 .av           (active)
-.jssorb05 .av:hover     (active mouseover)
-.jssorb05 .dn           (mousedown)
-*/
 .jssorb05 {
   position: absolute; }
 
@@ -1995,42 +1987,35 @@ p.nomargin {
 .jssorb05 .dn, .jssorb05 .dn:hover {
   background-position: -97px -7px; }
 
-/* jssor slider arrow navigator skin 22 css */
-/*
-.jssora22l                  (normal)
-.jssora22r                  (normal)
-.jssora22l:hover            (normal mouseover)
-.jssora22r:hover            (normal mouseover)
-.jssora22l.jssora22ldn      (mousedown)
-.jssora22r.jssora22rdn      (mousedown)
-*/
 .jssora22l, .jssora22r {
   display: block;
   position: absolute;
-  /* size of arrow element */
-  width: 40px;
-  height: 58px;
   cursor: pointer;
-  background: url("img/a22.png") center center no-repeat;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 35% !important;
+  height: 100% !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  opacity: 0;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  transition: all .3s ease;
+  background-repeat: no-repeat;
+  background-size: 36px 72px; }
+  .jssora22l:hover, .jssora22r:hover {
+    opacity: 1; }
 
 .jssora22l {
-  background-position: -10px -31px; }
+  left: 0 !important;
+  background-image: url("img/left-arrow.png");
+  background-position: 5% center; }
 
 .jssora22r {
-  background-position: -70px -31px; }
-
-.jssora22l:hover {
-  background-position: -130px -31px; }
-
-.jssora22r:hover {
-  background-position: -190px -31px; }
-
-.jssora22l.jssora22ldn {
-  background-position: -250px -31px; }
-
-.jssora22r.jssora22rdn {
-  background-position: -310px -31px; }
+  right: 0 !important;
+  background-image: url("img/right-arrow.png");
+  background-position: 95% center; }
 
 /*--------------------------------------------------------------
 # Lightbox
