@@ -29,8 +29,10 @@ while(have_posts()) : the_post();
 	<a href="<?php the_permalink(); ?>"><div class="hero" style='background-image: url("<?php echo $thumb_url; ?>");'></div></a>
 
 	<h2><?php the_title(); ?></h2>
-	<p><strong><?php echo get_field('date_location_time') . " | ";
-
+	<p><strong><?php 
+        if(get_field('date_location_time')){
+        echo get_field('date_location_time') . " | ";
+        }
 	$term_list= wp_get_post_terms($post->ID, 'program_type');
 
 	$i = 0;

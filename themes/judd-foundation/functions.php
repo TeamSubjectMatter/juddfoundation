@@ -330,6 +330,12 @@ function custom_post_type() {
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'post',
+                'rewrite'             => array( 'slug' => 'article' ),
+            
+            
+            
+            
+            
 	);
 	
 	register_post_type( 'news', $args );
