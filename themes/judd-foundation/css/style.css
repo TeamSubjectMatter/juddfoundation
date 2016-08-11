@@ -223,8 +223,30 @@ th {
 /*--------------------------------------------------------------
 # Base styles
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'juddlogo';
+  src: url("../fonts/juddlogo.eot?qwwdwq");
+  src: url("../fonts/juddlogo.eot?qwwdwq#iefix") format("embedded-opentype"), url("../fonts/juddlogo.ttf?qwwdwq") format("truetype"), url("../fonts/juddlogo.woff?qwwdwq") format("woff"), url("../fonts/juddlogo.svg?qwwdwq#juddlogo") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="tsm-"], [class*=" tsm-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'juddlogo' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.tsm-judd_logo:before {
+  content: "\e900"; }
+
 .link-color {
-  color: #2c4636; }
+  color: #000; }
 
 .gold {
   color: #ecb731; }
@@ -584,8 +606,8 @@ a {
         text-align: center; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
           display: inline-block;
-          padding: 1.25em .2em;
-          font-size: 1.1em; }
+          padding: 1.5em .8em 1.25em .8em;
+          font-size: 1.0em; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li a {
             color: #000; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
@@ -606,7 +628,7 @@ a {
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li {
             font-size: 1em;
             margin: 0px;
-            padding: .5em 0em; }
+            padding: .4em 0em; }
             .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li a {
               color: #fff;
               width: 260px; }
@@ -700,7 +722,7 @@ a {
           top: .5em;
           bottom: inital; }
           .navigation-overlay .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu li {
-            padding: .5em 0em !important; }
+            padding: .4em 0em !important; }
       .navigation-overlay .primary-navigation div.menu-container div.right-menu {
         float: left; }
         .navigation-overlay .primary-navigation div.menu-container div.right-menu .menu-primary-right-navigation-container a {
@@ -732,7 +754,7 @@ div.close {
 .home div.logo {
   float: left;
   padding: 1.25em 1em 1.25em 2em;
-  margin-right: 10px;
+  margin-right: 30px;
   color: #FE0100;
   text-transform: uppercase;
   font-weight: 400;
@@ -1007,13 +1029,14 @@ header h1 {
       float: left;
       margin-right: 2.2082%; } }
   .header-left h1 a {
-    width: 120px;
-    text-decoration: none;
-    background-image: url("img/Judd_Logotype_288.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    text-indent: -99999px;
-    padding-left: 50px; }
+    font-size: 1.6em;
+    /*        width: 120px;
+    	text-decoration:none;
+            background-image:url('img/Judd_Logotype_288.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            text-indent: -99999px;
+            padding-left:50px;*/ }
     .header-left h1 a span {
       text-indent: -999999;
       width: 60px; }
@@ -1147,7 +1170,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #2c4636; }
+  color: #000; }
 
 .hero {
   margin-bottom: 2em;
@@ -1306,19 +1329,20 @@ article p {
     .block-4 .overlay-content p {
       color: #FFFFFF;
       font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-      font-size: 1.2em;
+      font-size: 1.0em;
+      font-weight: 100;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
+      bottom: 10%;
+      left: 10%;
+      transform: translate(1%, 10%);
+      text-align: left;
       text-transform: capitalize; }
   .block-4:hover img {
     opacity: .3;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%); }
   .block-4:hover .overlay-content {
-    opacity: 1;
+    opacity: 0.8;
     transition: opacity .5s;
     display: block; }
   @media (min-width: 280px) and (max-width: 769px) {
@@ -1357,6 +1381,8 @@ article p {
       float: left;
       margin-left: 0;
       margin-right: 0; } }
+  .page-content-area .sub-nav {
+    margin-left: 0px; }
 
 .page-content-area-full {
   width: 100%;

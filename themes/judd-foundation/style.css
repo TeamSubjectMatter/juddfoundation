@@ -223,8 +223,31 @@ th {
 /*--------------------------------------------------------------
 # Base styles
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'juddlogo';
+  src: url("fonts/juddlogo.eot?qwwdwq");
+  src: url("fonts/juddlogo.eot?qwwdwq#iefix") format("embedded-opentype"), url("fonts/juddlogo.ttf?qwwdwq") format("truetype"), url("fonts/juddlogo.woff?qwwdwq") format("woff"), url("fonts/juddlogo.svg?qwwdwq#juddlogo") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="tsm-"], [class*=" tsm-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'juddlogo' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.tsm-judd_logo:before {
+  content: "\e900"; }
+
 .link-color {
-  color: #9e6f32; }
+  color: #269a7b; }
 
 .gold {
   color: #ecb731; }
@@ -299,7 +322,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   vertical-align: middle;
   white-space: nowrap; }
   button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
-    background-color: #193c6e;
+    background-color: #1a3d6e;
     color: #fff; }
   button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled {
     cursor: not-allowed;
@@ -344,7 +367,7 @@ select[multiple] {
   width: 100%; }
   input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
   select[multiple]:hover {
-    border-color: #b0b0b0; }
+    border-color: #b1b1b1; }
   input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
   select[multiple]:focus {
     border-color: #204c8a;
@@ -399,7 +422,7 @@ table {
   width: 100%; }
 
 th {
-  border-bottom: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a6a6a6;
   font-weight: 600;
   padding: 0.75em 0;
   text-align: left; }
@@ -499,29 +522,29 @@ div#multiColumn {
 @media screen and (max-width: 34.5em) {
   .visible-phone {
     display: block !important; }
-
   .visible-desktop,
   .visible-tablet,
   .hidden-phone {
     display: none !important; } }
+
 /* Tablets */
 @media screen and (min-width: 34.5em) and (max-width: 64em) {
   .visible-tablet {
     display: block !important; }
-
   .visible-desktop,
   .visible-phone,
   .hidden-tablet {
     display: none !important; } }
+
 /* Desktops */
 @media screen and (min-width: 64em) {
   .visible-desktop {
     display: block !important; }
-
   .visible-phone,
   .visible-tablet,
   .hidden-desktop {
     display: none !important; } }
+
 /*--------------------------------------------------------------
 # Import libraries
 --------------------------------------------------------------*/
@@ -584,7 +607,7 @@ a {
         text-align: center; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li {
           display: inline-block;
-          padding: 1.5em .8em 1.25em .8em;
+          padding: 1.6em .8em 1.25em .8em;
           font-size: 1.0em; }
           .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li a {
             color: #000; }
@@ -644,7 +667,8 @@ a {
       .primary-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      .primary-navigation ul ul li:hover > ul, .primary-navigation ul ul li.focus > ul {
+      .primary-navigation ul ul li:hover > ul,
+      .primary-navigation ul ul li.focus > ul {
         left: 100%; }
       .primary-navigation ul ul a {
         width: 10em; }
@@ -656,7 +680,8 @@ a {
       left: auto; }
   .primary-navigation li {
     position: relative; }
-    .primary-navigation li:hover > a, .primary-navigation li.focus > a {
+    .primary-navigation li:hover > a,
+    .primary-navigation li.focus > a {
       text-decoration: underline; }
   .primary-navigation a {
     display: block;
@@ -731,36 +756,36 @@ div.close {
 
 .home div.logo {
   float: left;
-  padding: 1.25em 1em 1.25em 2em;
+  padding: 1.10em 1em 1.25em 2em;
   margin-right: 30px;
-  color: #FE0100;
+  color: #004B8D;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 1.1em;
-  background-image: url("img/Judd_Logotype_288.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  text-indent: -9999px;
+  font-size: 1.3em;
   display: inline-block; }
+
 .home a strong {
   color: #FE0100;
   text-transform: uppercase;
   font-weight: 400; }
+
 .home a:hover {
   text-decoration: none; }
 
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none; }
-
   .primary-navigation ul {
     display: block; } }
+
 .site-main .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
+
 .post-navigation .nav-previous {
   float: left;
   width: 50%; }
+
 .post-navigation .nav-next {
   float: right;
   text-align: right;
@@ -798,7 +823,6 @@ div.sub-nav {
 @media screen and (max-width: 964px) {
   .top-bar {
     display: none; }
-
   div.sub-nav {
     width: 100%;
     margin-left: 0px;
@@ -809,7 +833,6 @@ div.sub-nav {
       display: none; }
       div.sub-nav .breaker a {
         text-decoration: none; }
-
   .home .primary-navigation div.menu-container {
     width: 86%; }
     .home .primary-navigation div.menu-container div.menu-primary-navigation-container {
@@ -843,7 +866,6 @@ div.sub-nav {
         .home .primary-navigation div.menu-container div.right-menu .search i {
           top: 11px;
           right: 19px; }
-
   .home div.logo {
     float: none;
     padding: .5em 0em;
@@ -851,13 +873,10 @@ div.sub-nav {
     text-transform: uppercase;
     font-weight: 400;
     width: 60px; }
-
   .overlay {
     display: none !important; }
-
   .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container {
     background: none; }
-
   .navigation-overlay {
     position: fixed;
     overflow-y: scroll;
@@ -912,7 +931,6 @@ div.sub-nav {
             top: 25px; }
       .navigation-overlay .primary-navigation ul {
         display: block; }
-
   .navigation-overlay {
     min-height: 100%;
     height: auto; }
@@ -927,6 +945,7 @@ div.sub-nav {
             color: #fff; }
       .navigation-overlay .primary-navigation i:first-child {
         color: #fff; } }
+
 @media screen and (max-width: 665px) {
   header div.sub-nav h2.breadcrum {
     margin-right: 0;
@@ -936,19 +955,19 @@ div.sub-nav {
       width: 40%; }
     header div.sub-nav h2.breadcrum:nth-child(even) {
       width: 60%; }
-
   div.sub-nav h2.breadcrum {
     margin-right: 20px;
     margin-bottom: 10px; }
     div.sub-nav h2.breadcrum:last-child {
       margin-right: 0; }
-
   h1 {
     margin-bottom: 10px; } }
+
 /***** Mobile Break ****/
 @media screen and (max-width: 420px) {
   .primary-navigation div.menu-primary-navigation-container ul.menu li {
     font-size: 1.4em; } }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1007,13 +1026,9 @@ header h1 {
       float: left;
       margin-right: 2.2082%; } }
   .header-left h1 a {
-    width: 120px;
+    font-size: 1.4em;
     text-decoration: none;
-    background-image: url("img/Judd_Logotype_288.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    text-indent: -99999px;
-    padding-left: 50px; }
+    color: #004B8D; }
     .header-left h1 a span {
       text-indent: -999999;
       width: 60px; }
@@ -1124,6 +1139,7 @@ footer a {
       float: none; }
     .footer-container .global-foot-right-navigation {
       text-align: center; } }
+
 .top-nav {
   max-width: 1100px;
   margin-left: auto;
@@ -1147,7 +1163,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #9e6f32; }
+  color: #269a7b; }
 
 .hero {
   margin-bottom: 2em;
@@ -1336,6 +1352,7 @@ article p {
     height: 186px; }
     .block-4 img {
       width: 100%; } }
+
 @media screen and (max-width: 769px) {
   .block-4 {
     width: 100%;
@@ -1343,6 +1360,7 @@ article p {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 1em; } }
+
 .last {
   float: right;
   margin-right: 0; }
@@ -1509,14 +1527,17 @@ div.overlay {
 .page-template-page-list-view h2 {
   padding-left: 19px;
   margin-bottom: 3px; }
+
 .page-template-page-list-view p {
   padding-left: 19px; }
+
 .page-template-page-list-view article {
   margin: 32px auto; }
 
 @media screen and (max-width: 789px) {
   .page-template-page-list-view p, .page-template-page-list-view h2 {
     padding-left: 0px; } }
+
 /*** Global Page Styles ***/
 .container {
   min-height: 91vh;
@@ -1718,7 +1739,7 @@ div.col3 {
     div.col3 {
       width: 50%; } }
   div.col3 strong {
-    font-size: 0.875em; }
+    font-size: .875em; }
   div.col3 a {
     font-size: .875em; }
   div.col3 ul li {
@@ -1787,28 +1808,36 @@ p.nomargin {
 
 .page-template-page-section-landing article {
   margin-top: 20px; }
+
 .page-template-page-section-landing h2 {
   margin-bottom: 30px;
   line-height: 1.7; }
+
 .page-template-page-section-landing h3, .page-template-page-section-landing h4, .page-template-page-section-landing h5 {
   font-size: .875em;
   line-height: 1.7; }
+
 .page-template-page-section-landing h3 {
   margin-top: 13px;
   font-weight: 600; }
+
 .page-template-page-section-landing h5 {
   font-weight: 400; }
+
 .page-template-page-section-landing article p {
   font-size: 14px; }
 
 .page-template-page-two-column-utility .col-1 {
   width: 100%; }
+
 .page-template-page-two-column-utility .col-2 {
   width: 50%;
   float: left; }
+
 .page-template-page-two-column-utility .col-4 {
   width: 25%;
   float: left; }
+
 .page-template-page-two-column-utility .field-container {
   position: relative;
   z-index: -1; }
@@ -1821,17 +1850,21 @@ p.nomargin {
     font-size: .7em; }
   .page-template-page-two-column-utility .field-container input {
     padding-top: 21px; }
+
 .page-template-page-two-column-utility .multiple-fields {
   overflow: hidden; }
   .page-template-page-two-column-utility .multiple-fields .field-container {
     padding-right: 10px; }
   .page-template-page-two-column-utility .multiple-fields .field-container:last-child {
     padding-right: 0px; }
+
 .page-template-page-two-column-utility .wpcf7-response-output.wpcf7-display-none {
   display: none; }
+
 .page-template-page-two-column-utility .center {
   text-align: center;
   padding-top: 24px; }
+
 .page-template-page-two-column-utility select {
   padding: 21px .5em 0px .5em;
   -webkit-appearance: none;
@@ -1855,13 +1888,17 @@ p.nomargin {
   @media (min-width: 280px) and (max-width: 769px) {
     .search main header.page-header {
       padding-left: 1em; } }
+
 .search article {
   margin: auto;
   width: 100%; }
+
 .search nav h2 {
   display: none; }
+
 .search nav .nav-previous {
   float: left; }
+
 .search nav .nav-next {
   float: right; }
 
@@ -2044,5 +2081,3 @@ p.nomargin {
 @media (min-width: 280px) and (max-width: 769px) {
   #hoverNav {
     position: absolute !important; } }
-
-/*# sourceMappingURL=style.css.map */
