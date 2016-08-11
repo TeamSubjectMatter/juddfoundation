@@ -37,7 +37,10 @@
 		<p><?php the_field('location'); ?></p>
 		<?php endif; ?>
 
-		<?php echo wpautop($post->post_content); ?>
+		<?php 
+                $newspost = ($post->post_content);
+                $newspost = apply_filters('the_content', $newspost);
+                echo wpautop($newspost); ?>
 
 	</section>
 
