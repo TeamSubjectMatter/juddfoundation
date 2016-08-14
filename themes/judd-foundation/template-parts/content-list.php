@@ -11,22 +11,53 @@
 <article>
 	<h1><?php the_title(); ?></h1>
 </article>
+
+<!-- News page filters posts using url query -->
+<?php if(get_post( $post )->post_name == 'news') : 
+	$type_filter = get_query_var( 'filter' );?>
+	<article id="post-<?php the_ID(); ?>" class="nav-3">
+		<div>
+			<p class="label">Sort By</p>
+			<ul class="dropdown">
+				<p id="title">News Type:</p>
+				<a href="<?php the_permalink(); ?>" style="text-decoration:none;"><li class="dropdown-list">All</li></a>
+					<?php $terms= get_terms('news_type');
+				  	foreach ( $terms as $term ) {
+							echo '<a href="'.get_permalink().'?filter='.$term->slug.'" style="text-decoration:none;"><li class="dropdown-list">'.$term->name.'</li></a>';
+						}
+					?>
+			</ul>
+		</div>
+	</article>
+<?php endif; ?>
+
 <?php //global $random_link_color; ?>
 <?php
-// posts_per_page depending on page name
+// posts_per_page and filtering depending on page name
 if(get_post( $post )->post_name == 'programs'){
-	$posts_per_page = 10;
+	$args = array( 
+					'post_type' => array(get_post_field( 'post_name', get_post() )),
+					'posts_per_page'=> 10,
+					'paged' => $paged 
+				 );
+} else if(get_post( $post )->post_name == 'news'){
+	$args = array( 
+					'news_type' => $type_filter,
+					'post_type' => array(get_post_field( 'post_name', get_post() )),
+					'posts_per_page'=> 3,
+					'paged' => $paged 
+				 );
 } else {
-	$posts_per_page = 3;
+	$args = array( 
+					'post_type' => array(get_post_field( 'post_name', get_post() )),
+					'posts_per_page'=> 3,
+					'paged' => $paged 
+				 );
 }
 
 // query custom post types based on page slug 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-query_posts( array( 
-				'post_type' => array(get_post_field( 'post_name', get_post() )),
-				'posts_per_page'=> $posts_per_page,
-				'paged' => $paged 
-			 ) );
+query_posts( $args );
 while(have_posts()) : the_post(); 
 	$thumb_id = get_post_thumbnail_id();
 	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
