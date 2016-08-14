@@ -110,7 +110,9 @@
 					if($parentID):
 						$args = array(
 							'post_parent' => $post->post_parent,
-							'post_status' => 'publish'
+							'post_status' => 'publish',
+							'order' => 'ASC',
+							'orderby' => 'menu_order'
 							);
 						$child_page = get_children( $args);
 						foreach($child_page as $child){
