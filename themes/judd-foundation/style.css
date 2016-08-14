@@ -247,7 +247,7 @@ th {
   content: "\e900"; }
 
 .link-color {
-  color: #57245d; }
+  color: #c3248a; }
 
 .gold {
   color: #ecb731; }
@@ -869,7 +869,6 @@ div.sub-nav {
   .home div.logo {
     float: none;
     padding: .5em 0em;
-    color: #FE0100;
     text-transform: uppercase;
     font-weight: 400;
     width: 60px; }
@@ -1163,7 +1162,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #57245d; }
+  color: #c3248a; }
 
 .hero {
   margin-bottom: 2em;
@@ -1503,7 +1502,6 @@ body.home {
   background-size: cover; }
   @media (min-width: 280px) and (max-width: 769px) {
     body.home {
-      background: url("img/mobile-hero.jpg") no-repeat center center fixed !important;
       background-size: cover !important; } }
 
 /*
