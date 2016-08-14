@@ -16,7 +16,9 @@
 		<?php 
 			$args = array(
 				'post_parent' => get_the_ID(),
-				'post_status' => 'publish'
+				'post_status' => 'publish',
+				'order' => 'ASC',
+				'orderby' => 'menu_order'
 				);
 			$child_page = get_children( $args);
 			if($child_page):

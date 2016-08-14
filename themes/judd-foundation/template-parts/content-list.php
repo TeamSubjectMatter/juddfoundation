@@ -13,11 +13,18 @@
 </article>
 <?php //global $random_link_color; ?>
 <?php
+// posts_per_page depending on page name
+if(get_post( $post )->post_name == 'programs'){
+	$posts_per_page = 10;
+} else {
+	$posts_per_page = 3;
+}
+
 // query custom post types based on page slug 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 query_posts( array( 
 				'post_type' => array(get_post_field( 'post_name', get_post() )),
-				'posts_per_page'=>3,
+				'posts_per_page'=> $posts_per_page,
 				'paged' => $paged 
 			 ) );
 while(have_posts()) : the_post(); 
