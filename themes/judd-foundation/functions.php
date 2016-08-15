@@ -553,3 +553,12 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 
 });
+
+/**
+ * ZD: Custom url query for news_type filtering
+ */
+function add_custom_query_var( $vars ){
+  $vars[] = "filter";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_custom_query_var' );
