@@ -1377,6 +1377,8 @@ article p {
       margin-right: 0; } }
   .page-content-area .sub-nav {
     margin-left: 0px; }
+  .page-content-area p:nth-child(3) {
+    clear: both; }
 
 .page-content-area-full {
   width: 100%;
@@ -1901,6 +1903,13 @@ p.nomargin {
   box-sizing: border-box;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em; }
+
+#post-23 div.sub-nav {
+  margin-left: 0; }
+
+@media screen and (max-width: 665px) {
+  #post-23 div.sub-nav .breadcrum {
+    width: 100%; } }
 
 #jssor_1 {
   z-index: -1; }

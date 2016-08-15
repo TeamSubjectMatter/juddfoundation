@@ -247,6 +247,9 @@ article p {
         .sub-nav {
             margin-left: 0px;
         }
+     p:nth-child(3){
+     	clear:both;
+     }
 }
 
 .page-content-area-full {
