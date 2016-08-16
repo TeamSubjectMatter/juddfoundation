@@ -562,3 +562,13 @@ function add_custom_query_var( $vars ){
   return $vars;
 }
 add_filter( 'query_vars', 'add_custom_query_var' );
+
+/*  Add responsive container to embeds
+/* ------------------------------------ */ 
+function tsm_embed_html( $html ) {
+    $embed = '<div class="video-container">' . $html . '</div>';
+    return $embed;
+}
+ 
+add_filter( 'embed_oembed_html', 'tsm_embed_html', 10, 3 );
+add_filter( 'video_embed_html', 'tsm_embed_html' ); // Jetpack

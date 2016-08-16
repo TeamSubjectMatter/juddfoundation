@@ -26,6 +26,14 @@
 			<?php wp_nav_menu( array( 'menu' => 'Global Footer Right Navigation' ) ); ?>
 		</nav>
 	</section>
+	<section class="footer-container pad10">
+		<nav  class="global-foot-left-navigation-bottom" role="navigation">
+                    <div>&copy; <?php echo date("Y"); ?> Judd Foundation</div>
+		</nav>
+		<nav id="site-navigation" class="global-foot-right-navigation" role="navigation">
+			<?php wp_nav_menu( array( 'menu' => 'Global Footer Right icons' ) ); ?>
+		</nav>
+	</section>    
 </footer>
 
 <?php wp_footer(); ?>

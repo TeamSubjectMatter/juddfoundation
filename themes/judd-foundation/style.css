@@ -247,7 +247,7 @@ th {
   content: "\e900"; }
 
 .link-color {
-  color: #da7a2d; }
+  color: #601900; }
 
 .gold {
   color: #ecb731; }
@@ -301,6 +301,11 @@ img,
 picture {
   margin: 0;
   max-width: 100%; }
+
+@media screen and (max-width: 964px) {
+  img,
+  picture {
+    height: auto; } }
 
 button, input[type="button"], input[type="reset"], input[type="submit"] {
   appearance: none;
@@ -832,7 +837,7 @@ div.sub-nav {
     float: left; }
     div.sub-nav .breaker {
       width: 100%;
-      display: none; }
+      /*display: none;*/ }
       div.sub-nav .breaker a {
         text-decoration: none; }
   .home .primary-navigation div.menu-container {
@@ -946,6 +951,10 @@ div.sub-nav {
             color: #fff; }
       .navigation-overlay .primary-navigation i:first-child {
         color: #fff; } }
+
+.global-foot-left-navigation-bottom {
+  float: left;
+  width: 50%; }
 
 @media screen and (max-width: 665px) {
   header div.sub-nav h2.breadcrum {
@@ -1074,6 +1083,9 @@ footer a {
   margin-left: auto;
   margin-right: auto;
   width: 90%; }
+  .footer-container.pad10 {
+    padding-top: 10px;
+    font-size: 13px; }
   .footer-container:after {
     content: " ";
     display: block;
@@ -1164,7 +1176,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #da7a2d; }
+  color: #601900; }
 
 .hero {
   margin-bottom: 2em;
@@ -1509,6 +1521,19 @@ figure .alignright {
   font-weight: 200;
   line-height: 0; }
 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden; }
+
+.video-container iframe, .video-container object, .video-container embed, .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 /*--------------------------------------------------------------
 # Page styles
 --------------------------------------------------------------*/
@@ -1848,7 +1873,8 @@ p.nomargin {
   padding: 16px 0; }
 
 .pad-bottom {
-  padding-bottom: 16px; }
+  padding-bottom: 16px;
+  display: table; }
 
 .page-template-page-section-landing article {
   margin-top: 20px; }

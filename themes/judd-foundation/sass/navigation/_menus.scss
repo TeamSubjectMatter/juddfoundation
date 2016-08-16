@@ -344,7 +344,7 @@ div.sub-nav{
         float: left;
         .breaker { 
             width: 100%;
-            display: none;
+            /*display: none;*/
             a {
                 text-decoration: none;
             }
@@ -498,6 +498,10 @@ div.sub-nav{
             }
         }
     } 
+}
+.global-foot-left-navigation-bottom  {
+    float: left;
+        width: 50%;
 }
 
 @media screen and (max-width:665px){
