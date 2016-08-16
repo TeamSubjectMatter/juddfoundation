@@ -247,7 +247,7 @@ th {
   content: "\e900"; }
 
 .link-color {
-  color: #c3248a; }
+  color: #da7a2d; }
 
 .gold {
   color: #ecb731; }
@@ -390,7 +390,9 @@ textarea {
 [type="checkbox"],
 [type="radio"] {
   display: inline;
-  margin-right: 0.375em; }
+  margin-right: 0.375em;
+  position: relative;
+  z-index: 900; }
 
 [type="file"] {
   margin-bottom: 0.75em;
@@ -613,6 +615,8 @@ a {
             color: #000; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:first-child {
           padding-left: 0; }
+        .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu div.sub-container {
+          display: none; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li:hover div.sub-container, .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu li.hover div.sub-container {
           display: block;
           height: 100vh;
@@ -621,8 +625,6 @@ a {
           background-color: rgba(155, 145, 135, 0);
           position: absolute;
           bottom: 4em; }
-        .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu div.sub-container {
-          display: none; }
         .primary-navigation div.menu-container div.menu-primary-navigation-container ul.menu ul.sub-menu {
           text-align: left;
           bottom: 1.5em; }
@@ -1162,7 +1164,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #c3248a; }
+  color: #da7a2d; }
 
 .hero {
   margin-bottom: 2em;
@@ -1492,6 +1494,20 @@ figure .alignright {
 
 .page-template.page-template-page-gallery-view.page-template-page-gallery-view-php div#lightbox div#imageDataContainer.clearfix div#imageData div#imageDetails div#controls span#downloadLink a {
   display: none; }
+
+#slider1_container .caption {
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 12px;
+  font-size: 0.65em;
+  font-weight: 200;
+  line-height: 0; }
 
 /*--------------------------------------------------------------
 # Page styles
@@ -1878,6 +1894,9 @@ p.nomargin {
     font-size: .7em; }
   .page-template-page-two-column-utility .field-container input {
     padding-top: 21px; }
+
+.page-template-page-two-column-utility #wpcf7-f173-o1 .field-container {
+  z-index: 1; }
 
 .page-template-page-two-column-utility .multiple-fields {
   overflow: hidden; }

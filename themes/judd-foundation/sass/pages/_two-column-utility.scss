@@ -25,6 +25,11 @@
 			padding-top: 21px;
 		}
 	}
+        #wpcf7-f173-o1 {
+            .field-container{
+                z-index: 1;
+            }
+        }
 	.multiple-fields{
 		overflow:hidden;
 		.field-container{
