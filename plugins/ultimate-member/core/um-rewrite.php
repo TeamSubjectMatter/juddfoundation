@@ -32,7 +32,7 @@ class UM_Rewrite {
 
 		global $ultimatemember;
 
-		if ( isset( $ultimatemember->permalinks->core['user'] ) && !um_get_option('um_flush_stop') ) {
+		if ( isset( $ultimatemember->permalinks->core['user'] ) ) {
 
 			$user_page_id = $ultimatemember->permalinks->core['user'];
 			$account_page_id = $ultimatemember->permalinks->core['account'];
@@ -50,7 +50,7 @@ class UM_Rewrite {
 
 					if( function_exists('icl_get_current_language') ){
 						$language_code = icl_get_current_language();
-					}else if( function_exists('icl_object_id') ){
+					}else if( function_exists('icl_object_id') && defined('ICL_LANGUAGE_CODE') ){
 						$language_code = ICL_LANGUAGE_CODE;
 					}
 
@@ -84,8 +84,8 @@ class UM_Rewrite {
 									'top'
 				);
 
-
-				flush_rewrite_rules( true );
+				if( !apply_filters('um_rewrite_flush_rewrite_rules', um_get_option('um_flush_stop') ) )
+					flush_rewrite_rules( true );
 
 			}
 
@@ -124,6 +124,11 @@ class UM_Rewrite {
 					if ( isset( $the_user->ID ) ){
 						$user_id = $the_user->ID;
 					}
+					
+					if( !$user_id ){
+						$user_id = $ultimatemember->user->user_exists_by_email_as_username( $slug );
+					}
+
 				}
 
 			}
@@ -143,6 +148,8 @@ class UM_Rewrite {
 			if ( $user_id ) {
 
 				um_set_requested_user( $user_id );
+
+				do_action('um_access_profile', $user_id );
 
 			} else {
 

@@ -35,7 +35,7 @@
 				
 					<?php if ( isset( $_REQUEST['page_id'] ) && get_option('permalink_structure') == 0 ) { ?>
 					
-					<input type="hidden" name="page_id" id="page_id" value="<?php echo $_REQUEST['page_id']; ?>" />
+					<input type="hidden" name="page_id" id="page_id" value="<?php echo esc_attr( $_REQUEST['page_id']); ?>" />
 					
 					<?php }
 
@@ -135,7 +135,7 @@
 			<?php _e('Jump to page:','ultimatemember'); ?>
 			
 			<?php if ( um_members('pages_to_show') && is_array( um_members('pages_to_show') ) ) { ?>
-			<select onChange="window.location.href=this.value" class="um-s1" style="width: 100px">
+			<select onChange="window.location.href=this.value" class="um-s2" style="width: 100px">
 				<?php foreach( um_members('pages_to_show') as $i ) { ?>
 				<option value="<?php echo $ultimatemember->permalinks->add_query( 'members_page', $i ); ?>" <?php selected($i, um_members('page')); ?>><?php printf(__('%s of %d','ultimatemember'), $i, um_members('total_pages') ); ?></option>
 				<?php } ?>

@@ -14,15 +14,6 @@
 	}
 
 	/***
-	***	@change birth date label in view
-	***/
-	add_filter('um_view_label_birth_date', 'um_view_label_birth_date');
-	function um_view_label_birth_date( $label ) {
-		$label = __('Age','ultimatemember');
-		return $label;
-	}
-
-	/***
 	***	@outputs a soundcloud track
 	***/
 	add_filter('um_profile_field_filter_hook__soundcloud_track', 'um_profile_field_filter_hook__soundcloud_track', 99, 2);
@@ -44,10 +35,14 @@
 	***/
 	add_filter('um_profile_field_filter_hook__youtube_video', 'um_profile_field_filter_hook__youtube_video', 99, 2);
 	function um_profile_field_filter_hook__youtube_video( $value, $data ) {
+		if( empty( $value ) ){
+			return '';
+		}
 		$value = ( strstr( $value, 'http') || strstr( $value, '://' ) ) ? um_youtube_id_from_url( $value ) : $value;
 		$value = '<div class="um-youtube">
 					<iframe width="600" height="450" src="https://www.youtube.com/embed/' . $value . '" frameborder="0" allowfullscreen></iframe>
 					</div>';
+
 		return $value;
 	}
 
@@ -56,6 +51,10 @@
 	***/
 	add_filter('um_profile_field_filter_hook__vimeo_video', 'um_profile_field_filter_hook__vimeo_video', 99, 2);
 	function um_profile_field_filter_hook__vimeo_video( $value, $data ) {
+		if( empty( $value ) ){
+			return '';
+		}
+
 		$value = ( !is_numeric( $value ) ) ? (int) substr(parse_url($value, PHP_URL_PATH), 1) : $value;
 		$value = '<div class="um-vimeo">
 					<iframe src="https://player.vimeo.com/video/'. $value . '" width="600" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -365,3 +364,20 @@
 
 		return $options;
 	}
+    
+
+    /**
+     * Filter non-UTF8 strings
+     * @param  string $value 
+     * @return string
+     * @uses hook filter: um_field_non_utf8_value
+     */
+    add_filter('um_field_non_utf8_value','um_field_non_utf8_value');
+    function um_field_non_utf8_value( $value ){
+    	
+    	if( ! preg_match('/[^\\p{Common}\\p{Latin}]/u', $value ) ){
+								$value = htmlentities( $value );
+		}
+
+		return $value;
+    }

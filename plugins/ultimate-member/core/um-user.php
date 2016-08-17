@@ -133,6 +133,12 @@ class UM_User {
 	}
 
 	function setup_cache( $user_id, $profile ) {
+		
+		$disallow_cache = get_option('um_profile_object_cache_stop');
+		if( $disallow_cache ){
+			return '';
+		}
+
 		update_option( "um_cache_userdata_{$user_id}", $profile );
 	}
 
@@ -467,14 +473,15 @@ class UM_User {
 		delete_option( "um_cache_userdata_{$user_id}" );
 
 		if ( um_user('account_status') == 'awaiting_admin_review' ) {
-			$email_tpl = 'approved_email';
+			$this->password_reset_hash();
+			$ultimatemember->mail->send( um_user('user_email'), 'approved_email' );
+
 		} else {
-			$email_tpl = 'welcome_email';
+			$this->password_reset_hash();
+			$ultimatemember->mail->send( um_user('user_email'), 'welcome_email');
 		}
 
 		$this->set_status('approved');
-		$ultimatemember->mail->send( um_user('user_email'), $email_tpl );
-
 		$this->delete_meta('account_secret_hash');
 		$this->delete_meta('_um_cool_but_hard_to_guess_plain_pw');
 
@@ -642,6 +649,8 @@ class UM_User {
 	 *
 	 */
 	function get_role() {
+		global $ultimatemember;
+
 		if (isset($this->profile['role']) && !empty( $this->profile['role'] ) ) {
 			return $this->profile['role'];
 		} else {
@@ -653,10 +662,40 @@ class UM_User {
 		}
 	}
 
-	function get_role_name( $slug ) {
-		global $wpdb;
-		$post_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'um_role' AND post_name = '$slug'");
-		return get_the_title( $post_id );
+	function get_role_name( $slug, $return_role_id = false ) {
+		global $wpdb, $ultimatemember;
+
+		if( isset( $ultimatemember->profile->arr_user_roles[ 'is_'.$return_role_id ][ $slug ] ) ){
+			return $ultimatemember->profile->arr_user_roles[ 'is_'.$return_role_id ][ $slug ];
+		}
+
+		$args = array(
+		    	'posts_per_page' => 1,
+		    	'post_type' => 'um_role',
+		    	'name'	=> $slug,
+		    	'post_status' => array('publish'),
+		);
+
+		$roles = new WP_Query( $args );
+		$role_id = 0;
+		$role_title = '';
+
+		if ( $roles->have_posts() ) {
+			while ( $roles->have_posts() ) {
+				$roles->the_post();
+				$role_id = get_the_ID();
+				$role_title = get_the_title();
+			}
+		}
+
+		$ultimatemember->profile->arr_user_roles[ 'is_1' ][ $slug ] = $role_id;
+		$ultimatemember->profile->arr_user_roles[ 'is_'  ][ $slug ] = $role_title;
+
+		if( $return_role_id ){
+			return $role_id;
+		}
+		
+		return $role_title;
 	}
 
 	/***
@@ -834,15 +873,16 @@ class UM_User {
 		global $ultimatemember;
 
 		$args['ID'] = $this->id;
-
 		$changes = apply_filters('um_before_update_profile', $changes, $this->id);
+
+	    // hook for name changes
+		do_action('um_update_profile_full_name', $changes );
 
 		// save or update profile meta
 		foreach( $changes as $key => $value ) {
-
-			if ( !in_array( $key, $this->update_user_keys ) ) {
-
-				update_user_meta( $this->id, $key, $value );
+            if ( !in_array( $key, $this->update_user_keys ) ) {
+            	
+            	update_user_meta( $this->id, $key, $value );
 
 			} else {
 
@@ -851,10 +891,8 @@ class UM_User {
 			}
 
 		}
-
-		// hook for name changes
-		do_action('um_update_profile_full_name', $changes );
-
+        
+       
 		// update user
 		if ( count( $args ) > 1 ) {
 			wp_update_user( $args );
@@ -905,6 +943,7 @@ class UM_User {
 			return $ids[0];
 		}
 
+
 		$value = str_replace(".", "_", $value );
 		$value = str_replace(" ", "", $value );
 		
@@ -949,6 +988,42 @@ class UM_User {
 		} else {
 			return $user_id;
 		}
+	}
+	/**
+	 * @function user_exists_by_email_as_username()
+	 *
+	 * @description This method checks if a user exists or not in your site based on the user email as username
+	 *
+	 * @usage <?php $ultimatemember->user->user_exists_by_email_as_username( $slug ); ?>
+	 *
+	 * @param $slug (string) (required) A user slug must be passed to check if the user exists
+	 *
+	 * @returns Returns true if user exists and false if user does not exist.
+	 *
+	 * @example Basic Usage
+
+		<?php
+
+			$boolean = $ultimatemember->user->user_exists_by_email_as_username( 'calumgmail-com' );
+			if ( $boolean ) {
+				// That user exists
+			}
+
+		?>
+
+	 *
+	 *
+	 */
+	function user_exists_by_email_as_username( $slug ){
+
+		$user_id = false;
+
+		$ids = get_users( array( 'fields' => 'ID', 'meta_key' => 'um_email_as_username_'.$slug ) );
+		if ( isset( $ids[0] ) && ! empty( $ids[0] ) ){
+			$user_id = $ids[0];
+		}
+
+		return $user_id;
 	}
 
 }

@@ -5,9 +5,9 @@ Contributors: ultimatemember, champsupertramp
 Donate link: 
 Tags: access control, author, authors, author profile, comments, community, communities, conditional fields, conditional logic, conditional menus, content protection, custom fields, file uploads, form builder, front-end login, front-end registration, gravatar, hide wp-admin, login, login page, logged-in users, mandrill, member, members, membership, member directory, online users, profile, profiles, profile builder, registration, restriction, restrict content, role creation, role menus, search filters, sign in, sign up, social network, star ratings, toolbar, user, users, user fields, user profile, user-profile, user profiles, user roles
 Requires at least: 4.1
-Tested up to: 4.4
+Tested up to: 4.5.3
 
-Stable Tag: 1.3.49
+Stable Tag: 1.3.68
 
 License: GNU Version 2 or Any Later Version
 
@@ -148,6 +148,163 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.3.68: August 02, 2016 =
+
+* Fixed: radio field in account page
+
+= 1.3.67: August 02, 2016 =
+
+* New: allow non-editable fields in registration form
+* Fixed: member directory mobile pagination
+* Fixed: biography field validation in profile header and forms
+* Fixed: remove override 'birth date' label
+* Fixed: html support in biography field
+* Fixed: select options search
+* Fixed: select field's search query
+* Fixed: search filters and multi-select fields
+* Fixed: select, radio and checkbox field options
+* Fixed: multiple select in UM settings
+* Fixed: member directory's pagination links
+* Fixed: remove nonce and http referer from submitted user details
+* Fixed: disallow direct access link to posts with enabled category access restriction
+* Added: new filter hook: `um_get_default_cover_uri_filter`
+* Added: new filter hook: `um_register_allow_nonce_verification`
+* Added: new filter hook: `um_get_option_filter__{$option_id}`
+* Added: new filter hook: ` um_profile_{$key}__filter`
+* Added: new filter hook: `um_profile_{$key}_empty__filter`
+* Added: new filter hook `um_enable_ajax_urls`
+* Added: new filter hook `um_field_checkbox_item_title`
+
+
+= 1.3.66: July 14, 2016 =
+
+* Tweak: update translation strings and English translation file.
+* Fixed: alphabetic and lowercase validations
+* Fixed: checkbox and radio label encoding
+* Fixed: user_login field validation type
+* Fixed: registration form process
+* Fixed: remove comments with hidden/private posts from comment tab
+
+= 1.3.65: July 06, 2016 =
+
+* Tweak: update ReduxFramework to version 3.6.0.1
+* Added: new action hook 'um_registration_after_auto_login'
+* Added: new option for Network Permalink Structure
+* Added: an account option to require first and last name
+* Fixed: account deletion and password confirmation
+* Fixed: registration form submission process
+* Fixed: access settings in home page and posts conflict
+* Fixed: encoding non UTF8 strings
+
+= 1.3.64: June 29, 2016 =
+* Fixed: edit profile permission
+
+= 1.3.63: June 28, 2016 =
+* Fixed: admin navigation
+* Fixed: profile access and redirection
+
+= 1.3.62: June 27, 2016 =
+* Fixed: access settings and redirection for logged out users
+* Fixed: global access settings
+* Fixed: remove notice in permalink
+
+= 1.3.61: June 24, 2016 =
+* Fixed: edit profile url in multi-site setup
+* Fixed: global access settings
+
+= 1.3.60: June 23, 2016 =
+* Fixed: change password
+* Fixed: menu settings and roles
+* Fixed: cropper issue with Avada theme
+* Fixed: image cropper and modal
+* Fixed: nonce in registration forms
+* Fixed: user redirection for non-loggedin users
+* Fixed: global access setting
+
+= 1.3.59: June 17, 2016 =
+* Added: filter 'um_register_hidden_role_field'
+* Added: filters and action hooks in form post
+* Added: cache time filter in avatar url
+* Fixed: Nonces added to file uploads
+* Fixed: remove notices
+* Fixed: upload image cropper
+* Fixed: select field multiple select
+* Fixed: changing community role by admin
+* Fixed: current url method in multisite setup
+* Fixed: access settings
+
+= 1.3.58: June 09, 2016 =
+* Fixed: change password
+* Fixed: select field overlay
+
+= 1.3.57: June 09, 2016 =
+* Fixed: admin access restriction
+
+= 1.3.56: June 09, 2016 =
+* Fixed: query of pages
+
+= 1.3.55: June 09, 2016 =
+* Fixed: select fields styles
+* Fixed: select fields with accented characters
+* Fixed: select fields with accented text values
+* Fixed: select fields in overlay
+* Fixed: admin front-end access restriction 
+* Fixed: pages query
+
+= 1.3.54: June 02, 2016 =
+* Fixed: remove quick edit from Built-in roles row actions
+* Fixed: remove notices
+* Fixed: dropdown/select fields 
+* Fixed: upload file extension's case sensitive issue
+* Fixed: reset and change password
+
+= 1.3.53: June 01, 2016 =
+* New: generate dummy users tool
+* Added: filter 'um_submit_form_error' for custom error messages
+* Tweak: update compressed CSS
+* Tweak: update select2.js to version 4.0.2
+* Fixed: gravatar and transfer tool
+* Fixed: permalink base for username
+* Fixed: saving account fields
+* Fixed: remove notice
+* Fixed: upload form error logging
+* Fixed: cache option
+* Fixed: edit profile url
+* Fixed: login redirection
+* Fixed: remove account information from welcome email
+* Fixed: form error with users tags
+* Fixed: select fields with accented characters
+* Fixed: image upload
+
+= 1.3.52: May 14, 2016 =
+* Added: 'wp_authenticate_username_password_before' action hook
+* Tweak: remove access settings in media screens
+* Fixed: convert tags format
+* Fixed: ReduxFramework notice
+* Fixed: remove PHP notice
+
+= 1.3.51: May 10, 2016 =
+* Added: 'um_form_fields_textarea_settings' filter
+* Added: reset password limit options
+* Added: option to force display name to be capitlized
+* Fixed: remove notices
+* Fixed: redirect url on login
+* Fixed: optimize query and object caching 
+* Fixed: profile photo as required field
+* Fixed: admin access in front-end login
+* Fixed: typos in tooltips
+* Fixed: embedding video fields
+* Fixed: Flush rewrite rules
+
+= 1.3.50: April 21, 2016 =
+* Fixed: menu incompatibility issue
+* Fixed: username validation
+* Fixed: admin css conflict
+* Fixed: display name capitalization
+* Fixed: search member filter and fields
+* Fixed: member directory big SELECT query
+* Added: action hook 'um_access_post_type' & 'um_access_post_type_{current_page_type}' for current page type in access settings
 
 = 1.3.49: April 14, 2016 =
 * Fixed: remove core notices from ajax requests

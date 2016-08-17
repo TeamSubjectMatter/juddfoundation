@@ -204,7 +204,7 @@
 
 		$replace = apply_filters('um_template_tags_replaces_hook', $replace);
 
-		$content = str_replace($search, $replace, $content);
+		$content = wp_kses_decode_entities( str_replace($search, $replace, $content) );
 
 		if ( isset( $args['tags'] ) && isset( $args['tags_replace'] ) ) {
 			$content = str_replace($args['tags'], $args['tags_replace'], $content);
@@ -364,7 +364,7 @@ function um_user_ip() {
 					$v = um_user_uploads_uri() . $file;
 				}
 
-				if ( !strstr( $k, 'user_pass' ) && $k != 'g-recaptcha-response' && $k != 'request' ) {
+				if ( !strstr( $k, 'user_pass' ) && ! in_array( $k, array('g-recaptcha-response','request','_wpnonce','_wp_http_referer') ) ) {
 
 					if ( is_array($v) ) {
 						$v = implode(',', $v );
@@ -626,15 +626,22 @@ function um_profile_id() {
 	/***
 	***	@Check value of queried search in text input
 	***/
-	function um_queried_search_value( $filter ) {
+	function um_queried_search_value( $filter, $echo = true ) {
 		global $ultimatemember;
+		$value = '';
 		if ( isset($_REQUEST['um_search']) ) {
 			$query = $ultimatemember->permalinks->get_query_array();
-			if ( $query[$filter] != '' ) {
-				echo stripslashes_deep( $query[$filter] );
+			if ( $query[ $filter ] != '' ) {
+				$value = stripslashes_deep( $query[ $filter ] );
 			}
 		}
-		echo '';
+		
+		if( $echo ){
+			echo $value;
+		}else{
+			return $value;
+		}
+
 	}
 
 	/***
@@ -990,7 +997,13 @@ function um_reset_user() {
 	***/
 	function um_edit_profile_url(){
 		global $ultimatemember;
-		$url = um_user_profile_url();
+
+		if( um_is_core_page('user') ){
+			$url = $ultimatemember->permalinks->get_current_url();
+		}else{ 
+			$url = um_user_profile_url();
+		}
+		
 		$url = remove_query_arg('profiletab', $url);
 		$url = remove_query_arg('subnav', $url);
 		$url = add_query_arg( 'profiletab', 'main', $url );
@@ -1042,8 +1055,8 @@ function um_get_option($option_id) {
 	global $ultimatemember;
 	if ( !isset( $ultimatemember->options ) ) return '';
 	$um_options = $ultimatemember->options;
-	if ( isset($um_options[$option_id]) && !empty( $um_options[$option_id] ) )	{
-		return $um_options[$option_id];
+	if ( isset( $um_options[ $option_id ] ) && !empty( $um_options[ $option_id ] ) )	{
+		return apply_filters("um_get_option_filter__{$option_id}", $um_options[ $option_id ] );
 	}
 
 	switch($option_id){
@@ -1118,11 +1131,15 @@ function um_fetch_user( $user_id ) {
 	***/
 	function um_profile( $key ){
 		global $ultimatemember;
-		if (isset( $ultimatemember->user->profile[$key] ) && !empty( $ultimatemember->user->profile[$key] ) ){
-			return $ultimatemember->user->profile[$key];
+		
+		if (isset( $ultimatemember->user->profile[ $key ] ) && !empty( $ultimatemember->user->profile[ $key ] ) ){
+			$value = apply_filters("um_profile_{$key}__filter", $ultimatemember->user->profile[ $key ] );
 		} else {
-			return false;
+			$value = apply_filters("um_profile_{$key}_empty__filter", false );
 		}
+
+		return $value;
+			
 	}
 
 	/***
@@ -1218,9 +1235,12 @@ function um_fetch_user( $user_id ) {
 		$uri = false;
 		$find = false;
 		$ext = '.' . pathinfo($image, PATHINFO_EXTENSION);
+
+		$cache_time = apply_filters('um_filter_avatar_cache_time', current_time( 'timestamp' ), um_user('ID') );
+
 		if ( file_exists( $ultimatemember->files->upload_basedir . um_user('ID') . '/profile_photo-' . $attrs. $ext ) ) {
 
-			$uri = um_user_uploads_uri() . 'profile_photo-'.$attrs.$ext.'?' . current_time( 'timestamp' );
+			$uri = um_user_uploads_uri() . 'profile_photo-'.$attrs.$ext.'?' . $cache_time;
 
 		} else {
 
@@ -1229,16 +1249,16 @@ function um_fetch_user( $user_id ) {
 
 			if ( file_exists( $ultimatemember->files->upload_basedir . um_user('ID') . '/profile_photo-' . $find.$ext ) ) {
 
-				$uri = um_user_uploads_uri() . 'profile_photo-'.$find.$ext.'?' . current_time( 'timestamp' );
+				$uri = um_user_uploads_uri() . 'profile_photo-'.$find.$ext.'?' . $cache_time;
 
 			} else if ( file_exists( $ultimatemember->files->upload_basedir . um_user('ID') . '/profile_photo'.$ext ) ) {
 
-				$uri = um_user_uploads_uri() . 'profile_photo'.$ext.'?' . current_time( 'timestamp' );
+				$uri = um_user_uploads_uri() . 'profile_photo'.$ext.'?' . $cache_time;
 
 			}
 
 			if ( $attrs == 'original' ) {
-				$uri = um_user_uploads_uri() . 'profile_photo'.$ext.'?' . current_time( 'timestamp' );
+				$uri = um_user_uploads_uri() . 'profile_photo'.$ext.'?' . $cache_time;
 			}
 
 		}
@@ -1275,8 +1295,10 @@ function um_fetch_user( $user_id ) {
 	function um_get_default_cover_uri() {
 		$uri = um_get_option('default_cover');
 		$uri = $uri['url'];
-		if ( $uri )
+		if ( $uri ){
+			$uri = apply_filters('um_get_default_cover_uri_filter', $uri );
 			return $uri;
+		}
 		return '';
 	}
 
@@ -1327,14 +1349,20 @@ function um_fetch_user( $user_id ) {
 
 				if ( um_user('first_name') && um_user('last_name') ) {
 					$initial = um_user('last_name');
-					$f_and_l_initial =  um_user('first_name').' '.$initial[0];
+					$f_and_l_initial =  um_user('first_name').' '. $initial[0];
 				}else{
 					$f_and_l_initial = um_profile( $data );
 				}
 
 				$f_and_l_initial = $ultimatemember->validation->safe_name_in_url( $f_and_l_initial );
 
-				return $f_and_l_initial;
+				if( um_get_option('force_display_name_capitlized') ){
+					$name = ucwords( strtolower( $f_and_l_initial ) ); 
+				}else{
+					$name = $f_and_l_initial;
+				}
+				
+				return $name;
 
 			break;
 
@@ -1417,7 +1445,9 @@ function um_fetch_user( $user_id ) {
 					}
 				}
 
-
+				if( um_get_option('force_display_name_capitlized') ){
+					$name = ucwords( strtolower( $name ) ); 
+				}
 
 				return apply_filters('um_user_display_name_filter', $name, um_user('ID'), ( $attrs == 'html' ) ? 1 : 0 );
 
@@ -1446,10 +1476,14 @@ function um_fetch_user( $user_id ) {
 			case 'profile_photo':
 
 				$has_profile_photo = false;
+				$photo_type = 'um-avatar-default';
 
 				if ( um_profile('profile_photo') ) {
 						$avatar_uri = um_get_avatar_uri( um_profile('profile_photo'), $attrs );
 						$has_profile_photo = true;
+						$photo_type = 'um-avatar-uploaded';
+				} elseif( um_user('synced_profile_photo') ){
+						$avatar_uri = um_user('synced_profile_photo');
 				} else {
 						$avatar_uri = um_get_default_avatar_uri( um_user('ID') );
 				}
@@ -1459,10 +1493,11 @@ function um_fetch_user( $user_id ) {
 				if ( $avatar_uri )
 
 					if( um_get_option('use_gravatars') && ! um_user('synced_profile_photo') && ! $has_profile_photo ){
-						$avatar_uri  = um_get_domain_protocol().'gravatar.com/avatar/'.um_user('synced_gravatar_hashed_id');
+						$avatar_hash_id = get_user_meta( um_user('ID'),'synced_gravatar_hashed_id', true);
+						$avatar_uri  = um_get_domain_protocol().'gravatar.com/avatar/'.$avatar_hash_id;
 						$avatar_uri = add_query_arg('s',400, $avatar_uri);
 						$gravatar_type = um_get_option('use_um_gravatar_default_builtin_image');
-
+						$photo_type = 'um-avatar-gravatar';
 						if( $gravatar_type == 'default' ){
 							if( um_get_option('use_um_gravatar_default_image') ){
 								$avatar_uri = add_query_arg('d', um_get_default_avatar_uri(), $avatar_uri  );
@@ -1473,7 +1508,7 @@ function um_fetch_user( $user_id ) {
 						
 					}
 
-					return '<img src="' . $avatar_uri . '" class="func-um_user gravatar avatar avatar-'.$attrs.' um-avatar" width="'.$attrs.'" height="'.$attrs.'" alt="" />';
+					return '<img src="' . $avatar_uri . '" class="func-um_user gravatar avatar avatar-'.$attrs.' um-avatar '.$photo_type.'" width="'.$attrs.'" height="'.$attrs.'" alt="" />';
 
 				if ( !$avatar_uri )
 					return '';
@@ -1483,10 +1518,12 @@ function um_fetch_user( $user_id ) {
 			case 'cover_photo':
 				if ( um_profile('cover_photo') ) {
 					$cover_uri = um_get_cover_uri( um_profile('cover_photo'), $attrs );
-				} else {
+				} else if( um_profile('synced_cover_photo') ) {
+					$cover_uri = um_profile('synced_cover_photo');
+				}else{
 					$cover_uri = um_get_default_cover_uri();
 				}
-
+				
 				if ( $cover_uri )
 					return '<img src="'. $cover_uri .'" alt="" />';
 
@@ -1535,7 +1572,11 @@ function um_fetch_user( $user_id ) {
 	 * @return integer
 	 */
 	function um_is_meta_value_exists( $key, $value, $return_user_id = false ){
-		global $wpdb;
+		global $wpdb, $ultimatemember;
+
+		if( isset( $ultimatemember->profile->arr_user_slugs[ 'is_'.$return_user_id ][ $key ] ) ){
+			return $ultimatemember->profile->arr_user_slugs[ 'is_'.$return_user_id ][ $key ];
+		}
 
 		if( ! $return_user_id ){
 			$count = $wpdb->get_var( $wpdb->prepare(
@@ -1544,14 +1585,18 @@ function um_fetch_user( $user_id ) {
 					$value
 			) );
 
+			$ultimatemember->profile->arr_user_slugs[ 'is_'.$return_user_id ][ $key ] = $count;
+
 			return $count;
 		}
-
+			
 			$user_id = $wpdb->get_var( $wpdb->prepare(
 					"SELECT user_id FROM {$wpdb->usermeta} WHERE meta_key = %s AND meta_value = %s ",
 					$key,
 					$value
 			) );
+			
+			$ultimatemember->profile->arr_user_slugs[ 'is_'.$return_user_id ][ $key ] = $user_id;
 
 			return $user_id;
 
@@ -1646,4 +1691,56 @@ function um_fetch_user( $user_id ) {
 		}
 		
 		return $lang_code;
+	}
+
+	/**
+	 * Get current page type
+	 * @return string
+	 */
+	function um_get_current_page_type() {
+	    global $wp_query;
+	    $loop = 'notfound';
+
+	    if ( $wp_query->is_page ) {
+	        $loop = is_front_page() ? 'front' : 'page';
+	    } elseif ( $wp_query->is_home ) {
+	        $loop = 'home';
+	    } elseif ( $wp_query->is_single ) {
+	        $loop = ( $wp_query->is_attachment ) ? 'attachment' : 'single';
+	    } elseif ( $wp_query->is_category ) {
+	        $loop = 'category';
+	    } elseif ( $wp_query->is_tag ) {
+	        $loop = 'tag';
+	    } elseif ( $wp_query->is_tax ) {
+	        $loop = 'tax';
+	    } elseif ( $wp_query->is_archive ) {
+	        if ( $wp_query->is_day ) {
+	            $loop = 'day';
+	        } elseif ( $wp_query->is_month ) {
+	            $loop = 'month';
+	        } elseif ( $wp_query->is_year ) {
+	            $loop = 'year';
+	        } elseif ( $wp_query->is_author ) {
+	            $loop = 'author';
+	        } else {
+	            $loop = 'archive';
+	        }
+	    } elseif ( $wp_query->is_search ) {
+	        $loop = 'search';
+	    } elseif ( $wp_query->is_404 ) {
+	        $loop = 'notfound';
+	    }
+
+	    return $loop;
+	}
+
+	/**
+	 * Check if running local
+	 * @return boolean
+	 */
+	function um_core_is_local() {
+	    if( $_SERVER['HTTP_HOST'] == 'localhost'
+	        || substr($_SERVER['HTTP_HOST'],0,3) == '10.'
+	        || substr($_SERVER['HTTP_HOST'],0,7) == '192.168') return true;
+	    return false;
 	}

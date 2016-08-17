@@ -2,6 +2,9 @@
 
 class UM_Query {
 
+	public $wp_pages = array();
+	public $roles = array();
+
 	function __construct() {
 		
 		add_action('wp_loaded', array(&$this, 'get_post_types'), 100 );
@@ -13,18 +16,28 @@ class UM_Query {
 	***/
 	function wp_pages() {
 		global $wpdb;
-		$pages = $wpdb->get_results('SELECT * FROM '.$wpdb->posts.' WHERE post_type = "page" AND post_status = "publish" ', OBJECT);
-		$count_pages = $wpdb->num_rows;
+
+		if( isset( $this->wp_pages ) && ! empty( $this->wp_pages ) ){
+			return $this->wp_pages;
+		}
+
+		$count_pages = wp_count_posts('page');
 		
-		if ( $count_pages > 300 )
+		if ( $count_pages->publish > 300 ){
 			return 'reached_maximum_limit';
+		}
 		
+
+		$pages = $wpdb->get_results('SELECT * FROM '.$wpdb->posts.' WHERE post_type = "page" AND post_status = "publish" ', OBJECT);
+
 		$array = '';
 		if( $wpdb->num_rows > 0 ){
 			foreach ($pages as $page_data) {
 				$array[ $page_data->ID ] = $page_data->post_title;
 			}
 		}
+
+		$this->wp_pages = $array;
 
 		return $array;
 	}
@@ -78,7 +91,7 @@ class UM_Query {
 		if ( $post_type == 'comment' ) { // comments
 
 			unset( $args['post_type'] );
-			unset( $args['post_status'] );
+			
 			$args['type__not_in'] = apply_filters( 'um_excluded_comment_types', array('') );
 			
 			$comments = get_comments($args);
@@ -356,19 +369,34 @@ class UM_Query {
 	***	@Query for UM roles
 	***/
 	function get_roles( $add_default = false, $exclude = null ){
-	
+		
+		$exclude_str = '';
+
+		if( ! is_null( $exclude ) && is_array( $exclude ) ){
+			$exclude_str = implode('_', $exclude );
+		}
+
+		if( isset( $this->roles['is_add_default_'.$add_default ][ 'is_exclude_'.$exclude_str ] ) ){
+			return $this->roles['is_add_default_'.$add_default ][ 'is_exclude_'.$exclude_str ];
+		}
+
 		$roles = array();
 		
-		if ($add_default) $roles[0] = $add_default;
+		if ( $add_default ) {
+			$roles[0] = $add_default;
+		}
 		
 		$args = array(
 			'post_type' => 'um_role',
 			'posts_per_page' => -1,
 			'post_status' => array('publish')
 		);
+		
 		$results = new WP_Query($args);
-		if ($results->posts){
-			foreach($results->posts as $post) { setup_postdata($post);
+
+		if ( $results->posts ){
+
+			foreach($results->posts as $post) { setup_postdata( $post );
 			
 				if ( $this->is_core( $post->ID ) ){
 					$roles[ $this->is_core( $post->ID ) ] = $post->post_title;
@@ -377,6 +405,7 @@ class UM_Query {
 				}
 				
 			}
+
 		} else {
 		
 			$roles['member'] = 'Member';
@@ -389,7 +418,9 @@ class UM_Query {
 				unset($roles[$role]);
 			}
 		}
-	
+		
+		$this->roles['is_add_default_'.$add_default ][ 'is_exclude_'.$exclude_str ] = $roles;
+
 		return $roles;
 		
 	}

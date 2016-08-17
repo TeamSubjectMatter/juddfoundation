@@ -9,8 +9,10 @@
 
 		$is_email = false;
 
-		$form_id = $args['form_id'];
-		$mode = $args['mode'];
+			  $form_id = $args['form_id'];
+				 $mode = $args['mode'];
+		$user_password = $args['user_password'];
+
 
 		if ( isset( $args['username'] ) && $args['username'] == '' ) {
 			$ultimatemember->form->add_error( 'username',  __('Please enter your username or email','ultimatemember') );
@@ -156,9 +158,10 @@
 		extract( $args );
 
 		$rememberme = ( isset($args['rememberme']) ) ? 1 : 0;
-
-		if ( um_get_option('deny_admin_frontend_login') && ! isset( $_GET['provider'] ) && strstr( um_user('wp_roles' ), 'administrator' ) )
+		
+		if ( ( um_get_option('deny_admin_frontend_login')   && ! isset( $_GET['provider'] ) ) && strrpos( um_user('wp_roles' ), 'administrator' ) !== FALSE ){
 			wp_die( __('This action has been prevented for security measures.','ultimatemember') );
+		}
 
 		$ultimatemember->user->auto_login( um_user('ID'), $rememberme );
 
@@ -167,7 +170,7 @@
 
 		// Priority redirect
 		if ( isset( $args['redirect_to'] ) && ! empty( $args['redirect_to']  ) ) {
-			exit( wp_redirect(  urldecode( $args['redirect_to'] ) ) );
+			exit( wp_redirect(  $args['redirect_to']  ) );
 		}
 
 		// Role redirect
@@ -283,3 +286,13 @@
 		echo $ultimatemember->fields->display( 'login', $args );
 
 	}
+
+	/**
+	 * Remove authenticate filter
+	 * @uses 'wp_authenticate_username_password_before'
+	 */
+	add_action('wp_authenticate_username_password_before','um_auth_username_password_before',10,3);
+	function um_auth_username_password_before( $user, $username, $password ){
+		remove_filter( 'authenticate', 'wp_authenticate_username_password', 20, 3 );
+	}
+
