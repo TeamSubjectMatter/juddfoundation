@@ -70,8 +70,8 @@
 		$user_ip = um_user_ip();
 
 		foreach($ips as $ip) {
-			$ip = str_replace('*','',$ip);
-			if (strpos($user_ip, $ip) === 0) {
+			$ip = str_replace('*','',$ip); 
+			if ( !empty( $ip ) && strpos($user_ip, $ip) === 0) {
 				exit( wp_redirect(  esc_url(  add_query_arg('err', 'blocked_ip') ) ) );
 			}
 		}
@@ -92,7 +92,7 @@
 		if ( $words != '' ) {
 
 			$words = array_map("rtrim", explode("\n", $words));
-			if( isset( $fields ) ){
+			if( isset( $fields ) && ! empty( $fields ) && is_array( $fields ) ){
 				foreach( $fields as $key => $array ) {
 					if ( isset($array['validate']) && in_array( $array['validate'], array('unique_username','unique_email','unique_username_or_email') ) ) {
 						if ( !$ultimatemember->form->has_error( $key ) && isset( $args[$key] ) && in_array( $args[$key], $words ) ) {
@@ -152,8 +152,9 @@
 		$form_id = $args['form_id'];
 		$mode = $args['mode'];
 		$fields = unserialize( $args['custom_fields'] );
-   
-	    if ( get_post_meta( $form_id, '_um_profile_photo_required', true ) && empty( $args['profile_photo'] ) ) {
+   		$um_profile_photo = um_profile('profile_photo');
+
+	    if ( get_post_meta( $form_id, '_um_profile_photo_required', true ) && ( empty( $args['profile_photo'] ) && empty( $um_profile_photo ) ) ) {
 	        $ultimatemember->form->add_error('profile_photo', sprintf(__('%s is required.','ultimatemember'), 'Profile Photo' ) );
 	    }
 
@@ -166,7 +167,7 @@
 					$ultimatemember->form->add_error($key, sprintf(__('%s is required.','ultimatemember'), $array['title'] ) );
 				}
 
-                if ( isset( $array['type'] ) && $array['type'] == 'user_tags' && isset( $array['required'] ) && $array['required'] == 1 && !isset( $args[$key] ) ) {
+                if ( defined('um_user_tags_path') && isset( $array['type'] ) && $array['type'] == 'user_tags' && isset( $array['required'] ) && $array['required'] == 1 && !isset( $args[$key] ) ) {
                     $ultimatemember->form->add_error($key, sprintf(__('%s is required.','ultimatemember'), $array['title'] ) );
                 }
 
@@ -209,10 +210,14 @@
 						$ultimatemember->form->add_error($key, sprintf(__('Your %s must contain less than %s characters','ultimatemember'), $array['label'], $array['max_chars']) );
 						}
 					}
-
-					if ( isset( $array['html'] ) && $array['html'] == 0 ) {
-						if ( wp_strip_all_tags( $args[$key] ) != trim( $args[$key] ) ) {
-							$ultimatemember->form->add_error($key, __('You can not use HTML tags here','ultimatemember') );
+                     
+                    $profile_show_html_bio = um_get_option('profile_show_html_bio');
+					
+					if(  $profile_show_html_bio == 1 && $key !== "description" ){
+						if ( isset( $array['html'] ) && $array['html'] == 0 ) {
+							if ( wp_strip_all_tags( $args[$key] ) != trim( $args[$key] ) ) {
+								$ultimatemember->form->add_error($key, __('You can not use HTML tags here','ultimatemember') );
+							}
 						}
 					}
 
@@ -409,6 +414,27 @@
 									}
 								}
 							break;
+							
+							case 'alphabetic':
+
+								if ( $args[$key] != '' ) {
+
+									if( ! ctype_alpha( str_replace(' ', '', $args[$key] ) ) ){
+									   $ultimatemember->form->add_error( $key , __('You must provide alphabetic letters','ultimatemember') );
+									}
+								}
+							break;
+
+							case 'lowercase':
+
+								if ( $args[$key] != '' ) {
+
+									if( ! ctype_lower( str_replace(' ', '',$args[$key] ) ) ){
+									   $ultimatemember->form->add_error( $key , __('You must provide lowercase letters.','ultimatemember') );
+									}
+								}
+
+							break;
 
 						}
 
@@ -418,8 +444,8 @@
 
 				if ( isset( $args['description'] ) ) {
 					$max_chars = um_get_option('profile_bio_maxchars');
-					if ( strlen( utf8_decode( $args['description'] ) ) > $max_chars && $max_chars ) {
-						$ultimatemember->form->add_error('description', sprintf(__('Your user description must contain less than %s characters','ultimatemember'), $max_chars ) );
+					if ( strlen( utf8_decode( $args['description'] ) ) > $max_chars && $max_chars  ) {
+							$ultimatemember->form->add_error('description', sprintf(__('Your user description must contain less than %s characters','ultimatemember'), $max_chars ) );
 					}
 				}
 

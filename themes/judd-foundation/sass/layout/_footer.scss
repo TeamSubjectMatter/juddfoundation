@@ -16,6 +16,9 @@ footer a {
 }
 
 .footer-container {
+        &.pad10{ padding-top: 10px;
+               font-size: 13px;
+        }
 	@include container;
 	width:90%;
 		@include breakpoint($mobile) {

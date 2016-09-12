@@ -50,5 +50,11 @@ hr {
 img,
 picture {
   margin: 0;
-  max-width: 100%;
+  max-width: 100%;  
+}
+@media screen and (max-width: 964px){
+    img,
+    picture {
+        height: auto;
+    }
 }

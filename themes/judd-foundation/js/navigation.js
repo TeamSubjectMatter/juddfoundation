@@ -81,7 +81,18 @@
 	}
 } )();
 
+
+
 (function( $ ) {
+    
+    function setDivVisibility(){
+     if (($(window).width()) < '767'){  
+ 
+     } else {  
+     
+     $('div.sub-container').removeAttr('style');
+     } 
+     }
 
 	function hover(){
 		var $containerWidth = $(window).width();
@@ -89,15 +100,17 @@
 				$( "ul#menu-primary-navigation" ).hover(
 				  	 function() {
 				  	 	$('div.overlay').css('display','block');
-				  	 	$('div.top-bar').css('display','none');
+				  	 	$('div.top-bar').css('display','none');                                                
 				  	 	
 				  	 },
 				  	 function() {
 				  	 	$('div.overlay').css('display','none');
 				  	 	$('div.top-bar').css('display','block');
+                                                
 
 				  	 }
-				);//console.log($containerWidth);
+				);
+                        //console.log($containerWidth);
 
 			$('ul.menu>li>a').on("touchstart", function (e) {
 			    'use strict'; //satisfy code inspectors
@@ -108,15 +121,16 @@
 			        link.addClass('hover');
 			        link.parent().addClass('hover');
 			        $('div.overlay').css('display','block');
+                                
 			        $('ul.menu li>a').not(this).removeClass('hover');
-			        $('ul.menu li>a').not(this).parent().removeClass('hover');
+			        $('ul.menu li>a').not(this).parent().removeClass('hover');                                
 			        e.preventDefault();
 			        return false; //extra, and to make sure the function has consistent return points
 			    }
 			});
 		}
 		else{
-			$('div.sub-container').hide();
+                    $('div.sub-container').css('display','none');                    
 		}
 
 	}
@@ -124,6 +138,8 @@
 	 $(window).resize(function() {
 	 	
         hover();
+        setDivVisibility();
+        
 
     });
 	 

@@ -16,7 +16,9 @@
 		<?php 
 			$args = array(
 				'post_parent' => get_the_ID(),
-				'post_status' => 'publish'
+				'post_status' => 'publish',
+				'order' => 'ASC',
+				'orderby' => 'menu_order'
 				);
 			$child_page = get_children( $args);
 			if($child_page):
@@ -37,7 +39,10 @@
 		<p><?php the_field('location'); ?></p>
 		<?php endif; ?>
 
-		<?php echo wpautop($post->post_content); ?>
+		<?php 
+                $newspost = ($post->post_content);
+                $newspost = apply_filters('the_content', $newspost);
+                echo wpautop($newspost); ?>
 
 	</section>
 

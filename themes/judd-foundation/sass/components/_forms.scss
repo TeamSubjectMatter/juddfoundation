@@ -70,6 +70,8 @@ textarea {
 [type="radio"] {
   display: inline;
   margin-right: $small-spacing / 2;
+  position: relative;
+  z-index: 900;
 }
 
 [type="file"] {

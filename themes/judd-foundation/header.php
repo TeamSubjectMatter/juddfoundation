@@ -76,7 +76,7 @@ a.appendChild(r);
 				<div class="header-left">
 					<h1>
 						<a href="<?= home_url(); ?>">
-                                                    
+                                                   <i class="tsm-judd_logo"></i> 
 						</a> 
 					</h1>
 				</div>
@@ -104,14 +104,14 @@ a.appendChild(r);
 								if($post_type->label !== 'Pages'){
 									//echo "/ " . $post_type->label;
 									if('programs' == get_post_type()){
-										echo "<class= 'parent-link' href=\"".get_site_url()."/foundation/programs/\"><span class='breaker'>". $post_type->label.  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>"."";
+										echo "<a class= 'parent-link' href=\"".get_site_url()."/foundation/programs/\"><span class='breaker'>". $post_type->label.  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a>"."";
 									}
 									else if('spaces' == get_post_type()){
-										echo "<class= 'parent-link' href=\"".get_site_url()."/spaces\"><span class='breaker'>". $post_type->label. "</span>";
+										echo "<a class= 'parent-link' href=\"".get_site_url()."/spaces\"><span class='breaker'>". $post_type->label. "</span></a>";
 									}
 								} else
 								if($parentID != null && $parentID != 0){
-									echo "<class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\"><span class='breaker'>". get_the_title( $post->post_parent ) . "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>"."";
+									echo "<a class= 'parent-link' href=\"" . get_the_permalink($post->post_parent) . "\"><span class='breaker'>". get_the_title( $post->post_parent ) . "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>"."";
 								} else {
 									echo ""; // "<class= 'parent-link' href=\"" . get_the_permalink($post->ID) . "\"><span class='breaker'>". get_the_title( $post->ID ) . "</span>";
 								}		
@@ -124,7 +124,9 @@ a.appendChild(r);
 					if($parentID):
 						$args = array(
 							'post_parent' => $post->post_parent,
-							'post_status' => 'publish'
+							'post_status' => 'publish',
+							'order' => 'ASC',
+							'orderby' => 'menu_order'
 							);
 						$child_page = get_children( $args);
 						foreach($child_page as $child){

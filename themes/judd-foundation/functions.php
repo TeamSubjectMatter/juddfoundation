@@ -326,10 +326,16 @@ function custom_post_type() {
 		'show_in_admin_bar'   => true,
 		'menu_position'       => 6,
 		'can_export'          => true,
-		'has_archive'         => true,
+		'has_archive'         => false,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'post',
+                'rewrite'             => array( 'slug' => 'article' ),
+            
+            
+            
+            
+            
 	);
 	
 	register_post_type( 'news', $args );
@@ -388,6 +394,29 @@ function add_custom_taxonomies() {
     // Control the slugs used for this taxonomy
     'rewrite' => array(
       'slug' => 'program_type', // This controls the base slug that will display before each term
+      'with_front' => false, // Don't display the category base before "/locations/"
+      'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
+    ),
+  ));
+   
+      register_taxonomy('news_type', 'news', array(
+    // Hierarchical taxonomy (like categories)
+    'hierarchical' => true,
+    // This array of options controls the labels displayed in the WordPress Admin UI
+    'labels' => array(
+      'name' => _x( 'News Types', 'taxonomy general name' ),
+      'singular_name' => _x( 'News Type', 'taxonomy singular name' ),
+      'search_items' =>  __( 'News Program Types' ),
+      'all_items' => __( 'All News Types' ),
+      'edit_item' => __( 'Edit News Type' ),
+      'update_item' => __( 'Update News Type' ),
+      'add_new_item' => __( 'Add New News Type' ),
+      'new_item_name' => __( 'New News Type' ),
+      'menu_name' => __( 'News Types' ),
+    ),
+    // Control the slugs used for this taxonomy
+    'rewrite' => array(
+      'slug' => 'news_type', // This controls the base slug that will display before each term
       'with_front' => false, // Don't display the category base before "/locations/"
       'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
     ),
@@ -504,3 +533,42 @@ function instagram_homepage_color_link() {
 
 
 $instagram_homepage_color_link = instagram_homepage_color_link();
+
+add_filter( 'get_the_archive_title', function ($title) {
+
+    if ( is_category() ) {
+
+            $title = single_cat_title( '', false );
+
+        } elseif ( is_tag() ) {
+
+            $title = single_tag_title( '', false );
+
+        } elseif ( is_author() ) {
+
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+
+        }
+
+    return $title;
+
+});
+
+/**
+ * ZD: Custom url query for news_type filtering
+ */
+function add_custom_query_var( $vars ){
+  $vars[] = "filter";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_custom_query_var' );
+
+/*  Add responsive container to embeds
+/* ------------------------------------ */ 
+function tsm_embed_html( $html ) {
+    $embed = '<div class="video-container">' . $html . '</div>';
+    return $embed;
+}
+ 
+add_filter( 'embed_oembed_html', 'tsm_embed_html', 10, 3 );
+add_filter( 'video_embed_html', 'tsm_embed_html' ); // Jetpack

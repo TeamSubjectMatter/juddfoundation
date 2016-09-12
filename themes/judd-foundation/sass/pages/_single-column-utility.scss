@@ -1,0 +1,10 @@
+#post-23{
+	div.sub-nav{
+		margin-left: 0;
+	}
+	@media screen and (max-width:665px){
+		div.sub-nav .breadcrum{
+			width: 100%;
+		}
+	}
+}
