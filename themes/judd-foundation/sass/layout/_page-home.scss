@@ -24,6 +24,12 @@
 	@include breakpoint($mobile) {
 		display: block;
 	}
+	div {
+		@include breakpoint($mobile) {
+			height: auto;
+			bottom: 196px;
+		}
+	}
 }
 
 .home {

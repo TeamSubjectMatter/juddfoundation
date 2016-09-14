@@ -247,7 +247,7 @@ th {
   content: "\e900"; }
 
 .link-color {
-  color: #204c8a; }
+  color: #9f9fa2; }
 
 .gold {
   color: #ecb731; }
@@ -1176,7 +1176,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #204c8a; }
+  color: #9f9fa2; }
 
 .hero {
   margin-bottom: 2em;
@@ -1558,6 +1558,10 @@ figure .alignright {
   @media (min-width: 280px) and (max-width: 769px) {
     .back-mobile {
       display: block; } }
+  @media (min-width: 280px) and (max-width: 769px) {
+    .back-mobile div {
+      height: auto;
+      bottom: 196px; } }
 
 .home div.overlay {
   z-index: 1; }
