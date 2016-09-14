@@ -51,7 +51,6 @@
 </style>
 
 <!-- Hotjar Tracking Code for http://juddfoundation.org/ -->
-Wordpress installation steps: http://docs.hotjar.com/v1.0/docs/wordpress
 
 <script>
 (function(h,o,t,j,a,r){
