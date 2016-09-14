@@ -9,6 +9,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 0;
 }
 
 .back-desktop {
@@ -22,5 +23,14 @@
 	display: none;
 	@include breakpoint($mobile) {
 		display: block;
+	}
+}
+
+.home {
+	div.overlay {
+		z-index: 1;
+	}
+	.primary-navigation {
+		z-index: 2;
 	}
 }

@@ -247,7 +247,7 @@ th {
   content: "\e900"; }
 
 .link-color {
-  color: #9f9fa2; }
+  color: #204c8a; }
 
 .gold {
   color: #ecb731; }
@@ -1176,7 +1176,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #9f9fa2; }
+  color: #204c8a; }
 
 .hero {
   margin-bottom: 2em;
@@ -1544,7 +1544,8 @@ figure .alignright {
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  z-index: 0; }
 
 .back-desktop {
   display: block; }
@@ -1557,6 +1558,12 @@ figure .alignright {
   @media (min-width: 280px) and (max-width: 769px) {
     .back-mobile {
       display: block; } }
+
+.home div.overlay {
+  z-index: 1; }
+
+.home .primary-navigation {
+  z-index: 2; }
 
 /*--------------------------------------------------------------
 # Page styles
