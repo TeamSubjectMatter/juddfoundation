@@ -247,7 +247,7 @@ th {
   content: "\e900"; }
 
 .link-color {
-  color: #601900; }
+  color: #9f9fa2; }
 
 .gold {
   color: #ecb731; }
@@ -1176,7 +1176,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #601900; }
+  color: #9f9fa2; }
 
 .hero {
   margin-bottom: 2em;
@@ -1533,6 +1533,30 @@ figure .alignright {
   left: 0;
   width: 100%;
   height: 100%; }
+
+.back-desktop div, .back-mobile div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.back-desktop {
+  display: block; }
+  @media (min-width: 280px) and (max-width: 769px) {
+    .back-desktop {
+      display: none; } }
+
+.back-mobile {
+  display: none; }
+  @media (min-width: 280px) and (max-width: 769px) {
+    .back-mobile {
+      display: block; } }
 
 /*--------------------------------------------------------------
 # Page styles

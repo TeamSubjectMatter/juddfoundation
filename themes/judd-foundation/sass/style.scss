@@ -136,6 +136,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "layout/footer";
 @import "components/navigation";
 @import "layout/page-body";
+@import "layout/page-home";
+
 
 /*--------------------------------------------------------------
 # Page styles
@@ -149,4 +151,4 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Lightbox
 --------------------------------------------------------------*/
 
-@import "modules/lightbox"
+@import "modules/lightbox";

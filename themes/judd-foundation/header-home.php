@@ -69,7 +69,13 @@ a.appendChild(r);
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( ), 'single-post-thumbnail' ); ?>
 <?php endif; ?>
 
-<body <?php body_class(); ?> style="background: url('<?php echo $image[0]; ?>') no-repeat center center fixed; background-size: cover;">
+<body <?php body_class(); ?>>
+	<div class="back-desktop">
+		<div style="background-image: url('<?php echo get_field("homepage_desktop_background"); ?>');"></div>
+	</div>
+	<div class="back-mobile">
+		<div style="background-image: url('<?php echo get_field("homepage_mobile_background"); ?>');"></div>
+	</div>
 	<div class="overlay"  style="background-color: <?php echo $random_link_color ?>"></div>
 	<!--<div class="top-bar" class="ctaRandomColor"><?php echo the_content(); ?></div>-->
 	<nav id="site-navigation" class="primary-navigation" role="navigation">
