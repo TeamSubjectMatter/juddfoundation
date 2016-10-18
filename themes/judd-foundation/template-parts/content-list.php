@@ -44,7 +44,7 @@ if(get_post( $post )->post_name == 'programs'){
 	$args = array( 
 					'news_type' => $type_filter,
 					'post_type' => array(get_post_field( 'post_name', get_post() )),
-					'posts_per_page'=> 3,
+					'posts_per_page'=> 10,
 					'paged' => $paged 
 				 );
 } else {
