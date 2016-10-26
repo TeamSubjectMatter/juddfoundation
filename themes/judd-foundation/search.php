@@ -12,6 +12,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
+		$posts = query_posts( $query_string . '&posts_per_page=10' );
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
