@@ -90,9 +90,8 @@
         <!-- get featured image -->
 <?php
 $thumb_id = get_post_thumbnail_id();
-$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true, $attr);
+$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 $thumb_url = $thumb_url_array[0];
-$thumb_caption = $thumb_id->post_excerpt;
 ?>
         <div data-p="225.00">
             <img data-u="image" src="<?php echo $thumb_url; ?>" style="height: 100%; width: auto;"/>
