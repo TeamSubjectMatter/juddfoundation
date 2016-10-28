@@ -1669,7 +1669,7 @@ a:hover {
   text-decoration: none; }
 
 ul.dropdown {
-  width: 165px;
+  width: 200px;
   z-index: 1;
   position: absolute;
   background: #fff;
