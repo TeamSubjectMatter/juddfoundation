@@ -109,7 +109,7 @@
     echo get_field('misc') . '<br>';
     echo get_field('copyright');
         ?>">
-                <div class="img-thumb" style="background:url(' <?php echo $thumb_url; ?>'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+                <div class="img-thumb" style="background:url(' <?php echo $thumb_url; ?>'); background-size: contain; background-repeat: no-repeat; background-position: center center;">
                 </div>
                 <div class="overlay-content">
                     <p><?php the_title(); ?><br/><?php echo get_field('date') ?></p>

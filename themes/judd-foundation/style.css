@@ -247,7 +247,7 @@ th {
   content: "\e900"; }
 
 .link-color {
-  color: #9f9fa2; }
+  color: #9e6f32; }
 
 .gold {
   color: #ecb731; }
@@ -1176,7 +1176,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #9f9fa2; }
+  color: #9e6f32; }
 
 .hero {
   margin-bottom: 2em;
@@ -1313,7 +1313,6 @@ article p {
     display: block;
     width: 100%;
     height: 100%;
-    background: #f7f7f7;
     text-align: center; }
   .block-4 img {
     width: auto;
