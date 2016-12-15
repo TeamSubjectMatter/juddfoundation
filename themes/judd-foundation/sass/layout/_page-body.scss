@@ -229,10 +229,12 @@ article p {
 @media screen and (max-width:769px){
 	.block-4 { 
 		@include span(12);
-		height: auto;
     margin-bottom: 1em;
+	}
 
-		// kill all isotope positioning/animating
+	.block-4.grid-item {	
+		// kill all isotope positioning/animating in art gallery
+		height: auto;
 		position: relative !important;
 		top: 0 !important;
 		transform: none !important;

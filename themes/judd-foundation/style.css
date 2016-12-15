@@ -247,7 +247,7 @@ th {
   content: "\e900"; }
 
 .link-color {
-  color: #c3248a; }
+  color: #601900; }
 
 .gold {
   color: #ecb731; }
@@ -1176,7 +1176,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #c3248a; }
+  color: #601900; }
 
 .hero {
   margin-bottom: 2em;
@@ -1373,15 +1373,16 @@ article p {
     float: left;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 1em; }
+  .block-4.grid-item {
     height: auto;
-    margin-bottom: 1em;
     position: relative !important;
     top: 0 !important;
     transform: none !important;
     transition: none !important; }
-    .block-4 a {
+    .block-4.grid-item a {
       height: auto; }
-    .block-4 img.mobile-art-thumb {
+    .block-4.grid-item img.mobile-art-thumb {
       display: block; } }
 
 .last {
