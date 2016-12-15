@@ -247,7 +247,7 @@ th {
   content: "\e900"; }
 
 .link-color {
-  color: #9e6f32; }
+  color: #c3248a; }
 
 .gold {
   color: #ecb731; }
@@ -1176,7 +1176,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #9e6f32; }
+  color: #c3248a; }
 
 .hero {
   margin-bottom: 2em;
@@ -1320,6 +1320,8 @@ article p {
     @media (min-width: 280px) and (max-width: 769px) {
       .block-4 img {
         height: auto; } }
+  .block-4 img.mobile-art-thumb {
+    display: none; }
   .block-4 .overlay-content {
     background: #333;
     height: 100%;
@@ -1371,7 +1373,16 @@ article p {
     float: left;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 1em; } }
+    height: auto;
+    margin-bottom: 1em;
+    position: relative !important;
+    top: 0 !important;
+    transform: none !important;
+    transition: none !important; }
+    .block-4 a {
+      height: auto; }
+    .block-4 img.mobile-art-thumb {
+      display: block; } }
 
 .last {
   float: right;

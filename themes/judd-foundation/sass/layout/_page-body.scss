@@ -158,6 +158,11 @@ article p {
     		height:auto;
     	}
 	}
+
+	img.mobile-art-thumb {
+		display: none;
+	}
+
 	.overlay-content {
 	    background: $dark-gray;
 	    height: 100%;
@@ -222,9 +227,24 @@ article p {
 
   	}
 @media screen and (max-width:769px){
-	.block-4{
-	@include span(12);
-      margin-bottom: 1em;
+	.block-4 { 
+		@include span(12);
+		height: auto;
+    margin-bottom: 1em;
+
+		// kill all isotope positioning/animating
+		position: relative !important;
+		top: 0 !important;
+		transform: none !important;
+		transition: none !important;
+
+		a {
+			height: auto;
+		}
+
+		img.mobile-art-thumb {
+			display: block;
+		}
 	}
 
 }
