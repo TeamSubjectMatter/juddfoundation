@@ -11,7 +11,12 @@
 
 ?>
 </div>
-<?php global $random_link_color;?>
+<?php
+	global $random_link_color;
+	$page = get_page_by_title( 'terms-and-conditions' );
+
+
+?>
 
 <style>
 .instagramRandomColorFooter a { color: <?php echo $random_link_color;?> !important; font-weight: bold; }
@@ -28,12 +33,13 @@
 	</section>
 	<section class="footer-container pad10">
 		<nav  class="global-foot-left-navigation-bottom" role="navigation">
-                    <div>&copy; <?php echo date("Y"); ?> Judd Foundation</div>
+			<!-- link to terms-and-conditions -->
+      <a href="<?php echo get_page_link(3103); ?>">&copy; <?php echo date("Y"); ?> Judd Foundation</a>
 		</nav>
 		<nav id="site-navigation" class="global-foot-right-navigation" role="navigation">
 			<?php wp_nav_menu( array( 'menu' => 'Global Footer Right icons' ) ); ?>
 		</nav>
-	</section>    
+	</section>
 </footer>
 
 <?php wp_footer(); ?>

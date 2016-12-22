@@ -1143,10 +1143,11 @@ footer a {
     display: inline-block;
     padding: 0 2.6px;
     font-size: 13px; }
-    .footer-container ul li a:visited {
-      color: #fff; }
   .footer-container ul li:first-child {
     padding-left: 0px; }
+
+.footer-container a:visited {
+  color: #fff; }
 
 @media (min-width: 280px) and (max-width: 769px) {
   .footer-container {

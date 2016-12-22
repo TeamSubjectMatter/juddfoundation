@@ -67,15 +67,14 @@ footer a {
 			display: inline-block;
 			padding: 0 2.6px;
 			font-size: 13px;
-			a:visited{
-				color:#fff;
-			}
 		}
 		li:first-child{
 			padding-left: 0px;
 		}
 	}
-	
+	a:visited{
+		color:#fff;
+	}
 }
 
 @include breakpoint($mobile){
