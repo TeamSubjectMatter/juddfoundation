@@ -247,7 +247,7 @@ th {
   content: "\e900"; }
 
 .link-color {
-  color: #9f9fa2; }
+  color: #601900; }
 
 .gold {
   color: #ecb731; }
@@ -301,6 +301,10 @@ img,
 picture {
   margin: 0;
   max-width: 100%; }
+
+#imageDataContainer {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
+  font-weight: 500 !important; }
 
 @media screen and (max-width: 964px) {
   img,
@@ -765,7 +769,7 @@ div.close {
   float: left;
   padding: 1.10em 1em 1.25em 2em;
   margin-right: 30px;
-  color: #004B8D;
+  color: #6E1106;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 1.3em;
@@ -1038,7 +1042,7 @@ header h1 {
   .header-left h1 a {
     font-size: 1.4em;
     text-decoration: none;
-    color: #004B8D; }
+    color: #6E1106; }
     .header-left h1 a span {
       text-indent: -999999;
       width: 60px; }
@@ -1139,10 +1143,11 @@ footer a {
     display: inline-block;
     padding: 0 2.6px;
     font-size: 13px; }
-    .footer-container ul li a:visited {
-      color: #fff; }
   .footer-container ul li:first-child {
     padding-left: 0px; }
+
+.footer-container a:visited {
+  color: #fff; }
 
 @media (min-width: 280px) and (max-width: 769px) {
   .footer-container {
@@ -1176,7 +1181,7 @@ footer a {
   color: #000; }
 
 .top-nav a:hover {
-  color: #9f9fa2; }
+  color: #601900; }
 
 .hero {
   margin-bottom: 2em;
@@ -1313,7 +1318,6 @@ article p {
     display: block;
     width: 100%;
     height: 100%;
-    background: #f7f7f7;
     text-align: center; }
   .block-4 img {
     width: auto;
@@ -1321,6 +1325,8 @@ article p {
     @media (min-width: 280px) and (max-width: 769px) {
       .block-4 img {
         height: auto; } }
+  .block-4 img.mobile-art-thumb {
+    display: none; }
   .block-4 .overlay-content {
     background: #333;
     height: 100%;
@@ -1372,7 +1378,17 @@ article p {
     float: left;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 1em; } }
+    margin-bottom: 1em; }
+  .block-4.grid-item {
+    height: auto;
+    position: relative !important;
+    top: 0 !important;
+    transform: none !important;
+    transition: none !important; }
+    .block-4.grid-item a {
+      height: auto; }
+    .block-4.grid-item img.mobile-art-thumb {
+      display: block; } }
 
 .last {
   float: right;
@@ -1669,7 +1685,7 @@ a:hover {
   text-decoration: none; }
 
 ul.dropdown {
-  width: 165px;
+  width: 200px;
   z-index: 1;
   position: absolute;
   background: #fff;

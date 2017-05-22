@@ -52,6 +52,13 @@ picture {
   margin: 0;
   max-width: 100%;  
 }
+
+// override lightbox plugin default
+#imageDataContainer {
+  font-family: $base-font-family !important;
+  font-weight: 500 !important;
+}
+
 @media screen and (max-width: 964px){
     img,
     picture {
